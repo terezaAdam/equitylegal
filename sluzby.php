@@ -265,7 +265,7 @@ include 'includes/header.php';
   <div class="container">
     <h2>Potřebujete poradenství?</h2>
     <p>Kontaktujte nás pro nezávaznou konzultaci. Naši advokáti jsou připraveni vám pomoci.</p>
-    <a href="/kontakty.php" class="btn btn--primary">Kontaktujte nás</a>
+    <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
   </div>
 </section>
 

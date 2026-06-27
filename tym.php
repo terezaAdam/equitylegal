@@ -133,7 +133,7 @@ include 'includes/header.php';
   <div class="container">
     <h2>Chcete s námi spolupracovat?</h2>
     <p>Kontaktujte konkrétního advokáta nebo nás napište na kancelář@equitylegal.cz.</p>
-    <a href="/kontakty.php" class="btn btn--primary">Kontaktujte nás</a>
+    <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
   </div>
 </section>
 

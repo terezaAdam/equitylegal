@@ -2,23 +2,135 @@
   {
     "id": 1,
     "type": "book",
-    "title": "Občanský soudní řád. Komentář, 2. vydání",
-    "description": "Komentář k občanskému soudnímu řízení vydaný nakladatelstvím C. H. Beck, na jehož sepsání se advokáti kanceláře podíleli. Komentář představuje nejaktuálnější pravidla a otázky týkající se jednání u soudu a soudního rozhodování.",
-    "date": "2017-11-30",
-    "link": "http://www.beck.cz/obcansky-soudni-rad-komentar-2-vydani",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "title": "Civilní proces – Casebook",
+    "description": "Kniha představuje civilní právo v nové, v českých právních poměrech ojedinělé, podobě. Autorský kolektiv zde přináší výklad institutů a problematiky civilního řízení v kontextu s nejvýznamnějšími soudními rozhodnutími. Casebook je rozdělen do čtyř částí – nalézací sporné řízení, řízení exekuční, řízení dle zákona o zvláštních řízeních soudních a řízení ve věcech, o nichž bylo rozhodnuto jiným orgánem. Každá z jednotlivých kapitol se věnuje výkladu daného tématu, který je doplněn soudními rozhodnutí a diskuzí nad konkrétními navazujícími otázkami.",
+    "date": "2018-02-02",
+    "link": "",
+    "image": "https://www.equitylegal.cz/assets/images/content/civilni-proces-casebook.jpg.jpg",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D.", "Mgr. Kryštof Kobeda"]
   },
   {
     "id": 2,
     "type": "book",
-    "title": "Casebook: Judikatura k civilnímu právu a civilnímu procesu",
-    "description": "Kniha judikatury (casebook) týkající se civilního práva a zejména civilního procesu, vypracovaná pro významné nakladatelství. EQUITY LEGAL je součástí autorského kolektivu.",
-    "date": "2018-02-02",
-    "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D.", "Mgr. Kryštof Kobeda"]
+    "title": "Občanský soudní řád – komentář, 2. vydání",
+    "description": "Druhé vydání velmi úspěšného komentáře reaguje na změny občanského soudního řádu, k nimž došlo v mezidobí od prvního vydání z roku 2013. Novinky se týkají například výkonu rozhodnutí prodejem nemovitých věcí, předpokladů přípustnosti dovolání, režimu exekučního postihu majetku nacházejícího se ve společném jmění manželů a majetku manžela povinného. Komentář zohledňuje též vývoj judikatury – například přelomová rozhodnutí Ústavního soudu, která nově vykládají podstatu poučovací povinnosti soudu o hrozícím neúspěchu ve sporu.",
+    "date": "2017-11-30",
+    "link": "http://www.beck.cz/obcansky-soudni-rad-komentar-2-vydani",
+    "image": "https://www.equitylegal.cz/assets/images/content/obcansky-soudni-rad-kometar-2-vydani.jpg",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
   },
   {
     "id": 3,
+    "type": "book",
+    "title": "Předběžná opatření v civilním řízení",
+    "description": "Publikace Víta Hrnčiříka nabízí systematický pohled na předběžná opatření podle OSŘ a ZŘS. Je jedinou českou monografií zpracovávající toto živě diskutované a vysoce prakticky relevantní téma. Řada problémů spojených s předběžnými opatřeními je kontroverzní na společenské i právní úrovni. Práce se zabývá základními otázkami práva předběžných opatření, analyzuje je a přichází s řešením jednotlivých aplikačních a praktických problémů. Inspiruje se jak v historii, tak ve srovnatelných právních řádech (zejména Rakouska a Německa). Jde především o příručku pro právní a soudní praxi.",
+    "date": "2016-06-01",
+    "link": "",
+    "image": "https://www.equitylegal.cz/assets/images/content/predbezna-opatreni-v-civilnim-rizeni.jpg",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 4,
+    "type": "book",
+    "title": "Občanský soudní řád – komentář",
+    "description": "Komentář je praktickým textem zabývajícím se konkrétní aplikací procesních předpisů a postupem soudů. Vít Hrnčiřík je autorem části týkající se rozsudků a usnesení, směnečného platebního rozkazu, platebního rozkazu, evropského a elektronického platebního rozkazu, rozsudku pro uznání a rozsudku pro zmeškání.",
+    "date": "2013-09-01",
+    "link": "",
+    "image": "https://www.equitylegal.cz/assets/images/content/obcansky-soudni-rad-komentar.jpg",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 5,
+    "type": "article",
+    "title": "Aktivní věcná legitimace a stavení promlčení",
+    "description": "Odborný příspěvek publikovaný v časopise Soudní rozhledy, č. 4, ročník 21.",
+    "date": "2015-04-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 6,
+    "type": "article",
+    "title": "Předběžné opatření zakazující zadavateli uzavřít smlouvu na veřejnou zakázku",
+    "description": "Odborný příspěvek publikovaný v časopise Soudní rozhledy č. 7–8, ročník 20.",
+    "date": "2014-08-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 7,
+    "type": "article",
+    "title": "Srovnání právní úpravy předběžných opatření v USA a v ČR",
+    "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy, 2014, č. 12.",
+    "date": "2014-12-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 8,
+    "type": "article",
+    "title": "Jistoty k zajištění náhrady škody a na náklady řízení, včetně problematiky jejich včasného pozdějšího a pozdního složení",
+    "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy, č. 21, ročník 21.",
+    "date": "2013-11-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 9,
+    "type": "article",
+    "title": "Výzva k zaplacení aneb čím vším je věřitel oprávněn hrozit",
+    "description": "Odborný příspěvek publikovaný v časopise Právní rádce, 2010, č. 12.",
+    "date": "2010-12-01",
+    "link": "http://PRAVNIRADCE.IHNED.CZ/c1-48644740-vyzva-k-zaplaceni-aneb-cim-vsim-je-veritel-opravnen-hrozit",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 10,
+    "type": "article",
+    "title": "O neústavnosti a nepromyšlenosti právní úpravy předběžného opatření podle občanského soudního řádu",
+    "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy, 2010, č. 10.",
+    "date": "2010-10-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 11,
+    "type": "article",
+    "title": "(Polo)pravda o výši bezdůvodného obohacení při investicích do cizí nemovitosti",
+    "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy, 2010, č. 1.",
+    "date": "2010-01-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 12,
+    "type": "article",
+    "title": "Právo na doručení a projednání odvolání, jež se týká toliko nákladů řízení",
+    "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy 2009, č. 9.",
+    "date": "2009-09-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 13,
+    "type": "article",
+    "title": "Actus reus and Mens Rea",
+    "description": "Odborný příspěvek publikovaný v Common law review 2006, Issue Focus: Crime and Punishment.",
+    "date": "2006-01-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 14,
+    "type": "article",
+    "title": "Public participation and environmental protection in the building permit and land use process — comparison of Oregon and Czech law",
+    "description": "Odborný příspěvek publikovaný v 32 J. Envtl. L. & Litig. 247–270 (2017).",
+    "date": "2017-01-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 15,
     "type": "article",
     "title": "Oběžník: OSVČ a kompenzace v době COVID-19",
     "description": "Odborný oběžník věnovaný právům OSVČ na kompenzace a úlevy v souvislosti s krizí způsobenou opatřeními proti koronaviru. Zahrnuje analýzu kompenzačního bonusu, odpuštění záloh na sociální a zdravotní pojištění a EET.",
@@ -27,7 +139,7 @@
     "authors": ["EQUITY LEGAL tým"]
   },
   {
-    "id": 4,
+    "id": 16,
     "type": "article",
     "title": "Právní rámec zbrojního průmyslu v České republice",
     "description": "Odborný článek věnovaný specifickému segmentu veřejných zakázek v oblasti obrany a bezpečnosti, licencím k nakládání s vojenským materiálem a ochraně průmyslových práv v tomto odvětví.",
@@ -36,16 +148,16 @@
     "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D.", "Mgr. Kryštof Kobeda"]
   },
   {
-    "id": 5,
+    "id": 17,
     "type": "article",
     "title": "Politický a státní systém České republiky",
-    "description": "Odborná publikace zaměřená na politický a státní systém ČR, jakož i svobodu slova a novinářství v ČR. Autor Stephan Vodicka.",
+    "description": "Odborná publikace zaměřená na politický a státní systém ČR, jakož i svobodu slova a novinářství v ČR.",
     "date": "2019-03-15",
     "link": "",
     "authors": ["Stephan Vodicka"]
   },
   {
-    "id": 6,
+    "id": 18,
     "type": "article",
     "title": "Environmental Due Diligence v českém právu",
     "description": "Odborný článek o specifickém procesu právní a environmentální prověrky nemovitostí a průmyslových závodů před jejich akvizicí, s důrazem na českou a evropskou legislativu.",

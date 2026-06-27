@@ -19,12 +19,8 @@ include 'includes/header.php';
       <p>EQUITY LEGAL kombinuje hlubokou znalost práva s kreativním přístupem k řešení složitých právních případů. Poskytujeme poradenství v češtině, angličtině, němčině a dalších jazycích.</p>
     </div>
     <div class="hero__cta">
-      <a href="/kontakty.php" class="btn btn--primary">Nezávazná konzultace</a>
+      <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
       <a href="/sluzby.php"   class="btn btn--outline-white">Právní služby</a>
-    </div>
-    <div class="hero__scroll" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="hero__scroll-line"></div>
     </div>
   </div>
 </section>
@@ -96,7 +92,7 @@ include 'includes/header.php';
         ['Vymáhání pohledávek', 'Mimosoudní i soudní vymáhání, insolvence, exekuce, zahraniční pohledávky.', '#vymahani-a-sprava-pohledavek'],
         ['Rodinné právo', 'Rozvody, péče o děti, výživné, majetkové právo manželů, mezinárodní rodinné spory.', '#rodinne-pravo'],
       ];
-      foreach ($services as $s): ?>
+      foreach (array_slice($services, 0, 6) as $s): ?>
         <div class="service-card fade-in">
           <div class="service-card__title"><?= $s[0] ?></div>
           <p><?= $s[1] ?></p>
@@ -151,45 +147,48 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ── Reference ── -->
-<section class="section section--alt" aria-labelledby="ref-heading">
+<!-- ── Proces poptávky ── -->
+<section class="section" aria-labelledby="process-heading">
   <div class="container">
-    <p class="section-label">Reference</p>
-    <h2 class="section-title" id="ref-heading">Vybrané zkušenosti</h2>
+    <p class="section-label">Jak to funguje</p>
+    <h2 class="section-title" id="process-heading">Cesta vaší zakázky</h2>
     <div class="divider"></div>
-    <div class="references__grid">
+    <p style="max-width:640px;margin:0 auto 3rem;text-align:center;color:var(--text-muted);">Zakládáme si na transparentnosti a efektivitě. Přinášíme přehled kroků, které následují po odeslání poptávky.</p>
+    <div class="process-grid">
 
-      <div class="reference-card fade-in">
-        <p class="reference-card__text">V ojediněle krátkém čase – méně než během jednoho dne – se EQUITY LEGAL podařilo klienty zadržené na pražském letišti dostat z cely, vyjednat podmínky skončení trestního stíhání a bez záznamu v rejstříku trestů je dostat na svobodu.</p>
-        <div class="reference-card__author">Trestní právo</div>
-        <div class="reference-card__role">Mezinárodní případ · 2018</div>
-      </div>
-
-      <div class="reference-card fade-in">
-        <p class="reference-card__text">Naše kancelář se umístila v anketě „Právnická firma roku" jako Velmi doporučovaná v kategorii Zdravotnické právo a Doporučovaná v kategoriích Veřejné zakázky, Duševní vlastnictví, Daňové právo a dalších.</p>
-        <div class="reference-card__author">Ocenění kanceláře</div>
-        <div class="reference-card__role">Právnická firma roku · 2021</div>
-      </div>
-
-      <div class="reference-card fade-in">
-        <p class="reference-card__text">Kancelář byla vybrána pro psaní odborných textů pro portál o bydlení provozovaný Státním fondem rozvoje bydlení – ocenění za dlouhodobou aktivitu a zkušenosti v oblasti nemovitostí a bytového práva.</p>
-        <div class="reference-card__author">Nemovitosti a bytové právo</div>
-        <div class="reference-card__role">Státní fond rozvoje bydlení · 2018</div>
-      </div>
+      <?php
+      $steps = [
+        ['Posouzení a prověření',
+         'Vaši poptávku prověříme z hlediska naší odborné specializace a kapacit. Zároveň ze zákona ověříme případný střet zájmů. Pokud nám chybí detaily, ozveme se e-mailem nebo telefonicky.'],
+        ['Návrh řešení a konzultace',
+         'Zašleme konkrétní návrh postupu a transparentní odhad nákladů — hodinovou sazbu nebo fixní odměnu. U složitějších případů navrhneme osobní či online setkání, kde probereme strategii a vaše očekávání do hloubky. Nejasné pojmy vysvětluje náš <a href="/pripady.php?clanek=slovnik-advokata" class="process-step__link">Slovník advokáta</a>.'],
+        ['Smlouva a plná moc',
+         'Po odsouhlasení podmínek podepíšeme smlouvu o právní pomoci, která jasně definuje naše povinnosti a vaše práva. Pro zastupování před soudy, úřady či třetími stranami od vás obdržíme plnou moc.'],
+        ['Zahájení a průběžná informovanost',
+         'Váš spis přebírá konkrétní advokát a okamžitě začínáme pracovat na dosažení vašeho cíle. O každém důležitém kroku vás budeme pravidelně informovat — nikdy nebudete tápat, v jaké fázi se váš případ nachází.'],
+      ];
+      foreach ($steps as $i => $step): ?>
+        <div class="process-step fade-in">
+          <div class="process-step__num"><?= $i + 1 ?></div>
+          <div class="process-step__title"><?= htmlspecialchars($step[0]) ?></div>
+          <p class="process-step__desc"><?= $step[1] ?></p>
+        </div>
+      <?php endforeach; ?>
 
     </div>
     <div style="text-align:center;margin-top:3rem;">
-      <a href="/pripady.php" class="btn btn--outline">Všechny případy</a>
+      <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
     </div>
   </div>
 </section>
+
 
 <!-- ── CTA Banner ── -->
 <section class="cta-banner" aria-label="Kontaktujte nás">
   <div class="container">
     <h2>Potřebujete právní pomoc?</h2>
     <p>Kontaktujte nás pro nezávaznou konzultaci. Odpovíme do 24 hodin.</p>
-    <a href="/kontakty.php" class="btn btn--primary">Napište nám</a>
+    <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
   </div>
 </section>
 

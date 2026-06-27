@@ -30,7 +30,12 @@
     </div>
     <div class="footer__bottom">
       <span class="footer__copy">© <?= date('Y') ?> EQUITY LEGAL s.r.o. Všechna práva vyhrazena.</span>
-      <span class="footer__member">Člen České advokátní komory</span>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <a href="https://www.youtube.com/@EquityLegal-z1r" target="_blank" rel="noopener" aria-label="YouTube" style="color:rgba(255,255,255,.35);transition:color var(--tr);" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.35)'">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>
+        </a>
+        <span class="footer__member">Člen České advokátní komory</span>
+      </div>
     </div>
   </div>
 </footer>

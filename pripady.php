@@ -3,7 +3,10 @@ $pageTitle = 'Řešené případy – EQUITY LEGAL';
 $pageDesc  = 'Případové studie a odborné články z praxe advokátní kanceláře EQUITY LEGAL: obchodní právo, trestní právo, nemovitosti a další.';
 
 // Load articles from JSON
-$articles = json_decode(file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [];
+$articles = array_filter(
+  json_decode(file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [],
+  fn($a) => empty($a['hidden'])
+);
 
 // Filter by category if set
 $filterCat = $_GET['kategorie'] ?? '';
@@ -67,8 +70,6 @@ include 'includes/header.php';
       <article class="article-content">
         <div style="display:flex;gap:1.5rem;align-items:center;margin-bottom:2rem;flex-wrap:wrap;">
           <span style="font-family:var(--font-h);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--burgundy);padding:.25rem .75rem;border-radius:var(--r);"><?= htmlspecialchars($article['category']) ?></span>
-          <span style="font-size:.85rem;color:var(--text-muted);"><?= date('j. n. Y', strtotime($article['date'])) ?></span>
-          <span style="font-size:.85rem;color:var(--text-muted);"><?= htmlspecialchars($article['author'] ?? '') ?></span>
         </div>
         <?= $article['content'] ?>
         <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
@@ -79,15 +80,48 @@ include 'includes/header.php';
         <div class="article-sidebar__card">
           <div class="article-sidebar__title">Potřebujete pomoc?</div>
           <p style="font-size:.88rem;">Máte podobnou situaci? Naši advokáti jsou připraveni vám pomoci.</p>
-          <a href="/kontakty.php" class="btn btn--primary btn--sm" style="margin-top:1rem;">Kontaktujte nás</a>
+          <a href="/kontakty.php" class="btn btn--primary btn--sm" style="margin-top:1rem;">Poslat poptávku</a>
         </div>
         <div class="article-sidebar__card">
           <div class="article-sidebar__title">Související služby</div>
           <ul style="display:flex;flex-direction:column;gap:.5rem;">
             <?php
-            $related = ['Právní služby' => '/sluzby.php', 'Náš tým' => '/tym.php', 'Všechny případy' => '/pripady.php'];
-            foreach ($related as $label => $href): ?>
-              <li><a href="<?= $href ?>" style="font-size:.88rem;"><?= $label ?></a></li>
+            $serviceMap = [
+              'M&A & Transakce'       => [
+                'Fúze a akvizice'              => '/sluzby.php#fuze-a-akviziyce',
+                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
+                'Bankovnictví a financování'   => '/sluzby.php#bankovnictvi-a-financovani',
+              ],
+              'Restrukturalizace'     => [
+                'Insolvenční právo'            => '/sluzby.php#insolvencni-pravo',
+                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
+                'Daňové a celní právo'         => '/sluzby.php#danove-a-celni-pravo',
+              ],
+              'Sporná agenda'         => [
+                'Zastupování před soudy'       => '/sluzby.php#zastupovani-pred-soudy',
+                'Trestní právo'                => '/sluzby.php#trestni-pravo',
+                'Vymáhání pohledávek'          => '/sluzby.php#vymahani-a-sprava-pohledavek',
+              ],
+              'Duševní vlastnictví'   => [
+                'Duševní vlastnictví'          => '/sluzby.php#pravo-dusevniho-vlastnictvi',
+                'Informační technologie'       => '/sluzby.php#pravo-informacnich-technologii',
+                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
+              ],
+              'Korporátní právo'      => [
+                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
+                'Nemovitosti a stavební právo' => '/sluzby.php#pravo-nemovitosti-a-stavebni-pravo',
+                'Vymáhání pohledávek'          => '/sluzby.php#vymahani-a-sprava-pohledavek',
+              ],
+              'Technologie & právo'   => [
+                'Informační technologie'       => '/sluzby.php#pravo-informacnich-technologii',
+                'Duševní vlastnictví'          => '/sluzby.php#pravo-dusevniho-vlastnictvi',
+                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
+              ],
+            ];
+            $cat = $article['category'] ?? '';
+            $services = $serviceMap[$cat] ?? ['Právní služby' => '/sluzby.php'];
+            foreach ($services as $label => $href): ?>
+              <li><a href="<?= $href ?>" style="font-size:.88rem;"><?= htmlspecialchars($label) ?></a></li>
             <?php endforeach; ?>
           </ul>
         </div>
@@ -103,7 +137,10 @@ include 'includes/header.php';
 
     <!-- Category filter -->
     <?php
-    $allArticles = json_decode(file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [];
+    $allArticles = array_filter(
+      json_decode(file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [],
+      fn($a) => empty($a['hidden'])
+    );
     $allCats2 = array_unique(array_column($allArticles, 'category'));
     ?>
     <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:3rem;">
@@ -119,13 +156,16 @@ include 'includes/header.php';
       foreach ($displayArticles as $a): ?>
         <article class="article-card fade-in">
           <div class="article-card__image">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--navy) 0%,#263452 100%);display:flex;align-items:center;justify-content:center;">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="1" style="width:64px;height:64px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            </div>
+            <?php if (!empty($a['image'])): ?>
+              <img src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['title']) ?>" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <?php else: ?>
+              <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--navy) 0%,#263452 100%);display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="1" style="width:64px;height:64px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+            <?php endif; ?>
             <span class="article-card__cat"><?= htmlspecialchars($a['category']) ?></span>
           </div>
           <div class="article-card__body">
-            <div class="article-card__date"><?= date('j. n. Y', strtotime($a['date'])) ?></div>
             <h2 class="article-card__title"><?= htmlspecialchars($a['title']) ?></h2>
             <p class="article-card__excerpt"><?= htmlspecialchars($a['excerpt']) ?></p>
             <a href="/pripady.php?clanek=<?= urlencode($a['slug']) ?>" class="article-card__link">Číst celý článek</a>
@@ -146,7 +186,7 @@ include 'includes/header.php';
   <div class="container">
     <h2>Máte podobný případ?</h2>
     <p>Kontaktujte nás pro nezávaznou konzultaci.</p>
-    <a href="/kontakty.php" class="btn btn--primary">Napište nám</a>
+    <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
   </div>
 </section>
 

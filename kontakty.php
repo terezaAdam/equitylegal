@@ -147,15 +147,6 @@ include 'includes/header.php';
 
     </div>
 
-    <!-- Map -->
-    <div class="map-wrap">
-      <iframe
-        src="https://maps.google.com/maps?width=1200&height=400&hl=cs&q=Chrudimsk%C3%A1+1418%2F2%2C+Praha&t=&z=15&ie=UTF8&iwloc=B&output=embed"
-        title="Mapa – sídlo EQUITY LEGAL"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
 
   </div>
 </section>
