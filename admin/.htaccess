@@ -1,0 +1,7 @@
+# Protect the admin directory
+# Optional: add IP restriction for extra security
+# <RequireAll>
+#   Require ip 1.2.3.4
+# </RequireAll>
+
+Options -Indexes

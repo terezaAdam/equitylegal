@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "type": "book",
+    "title": "Občanský soudní řád. Komentář, 2. vydání",
+    "description": "Komentář k občanskému soudnímu řízení vydaný nakladatelstvím C. H. Beck, na jehož sepsání se advokáti kanceláře podíleli. Komentář představuje nejaktuálnější pravidla a otázky týkající se jednání u soudu a soudního rozhodování.",
+    "date": "2017-11-30",
+    "link": "http://www.beck.cz/obcansky-soudni-rad-komentar-2-vydani",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+  },
+  {
+    "id": 2,
+    "type": "book",
+    "title": "Casebook: Judikatura k civilnímu právu a civilnímu procesu",
+    "description": "Kniha judikatury (casebook) týkající se civilního práva a zejména civilního procesu, vypracovaná pro významné nakladatelství. EQUITY LEGAL je součástí autorského kolektivu.",
+    "date": "2018-02-02",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D.", "Mgr. Kryštof Kobeda"]
+  },
+  {
+    "id": 3,
+    "type": "article",
+    "title": "Oběžník: OSVČ a kompenzace v době COVID-19",
+    "description": "Odborný oběžník věnovaný právům OSVČ na kompenzace a úlevy v souvislosti s krizí způsobenou opatřeními proti koronaviru. Zahrnuje analýzu kompenzačního bonusu, odpuštění záloh na sociální a zdravotní pojištění a EET.",
+    "date": "2020-04-14",
+    "link": "/download/EL_Newsletter_00000003.pdf",
+    "authors": ["EQUITY LEGAL tým"]
+  },
+  {
+    "id": 4,
+    "type": "article",
+    "title": "Právní rámec zbrojního průmyslu v České republice",
+    "description": "Odborný článek věnovaný specifickému segmentu veřejných zakázek v oblasti obrany a bezpečnosti, licencím k nakládání s vojenským materiálem a ochraně průmyslových práv v tomto odvětví.",
+    "date": "2022-06-01",
+    "link": "",
+    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D.", "Mgr. Kryštof Kobeda"]
+  },
+  {
+    "id": 5,
+    "type": "article",
+    "title": "Politický a státní systém České republiky",
+    "description": "Odborná publikace zaměřená na politický a státní systém ČR, jakož i svobodu slova a novinářství v ČR. Autor Stephan Vodicka.",
+    "date": "2019-03-15",
+    "link": "",
+    "authors": ["Stephan Vodicka"]
+  },
+  {
+    "id": 6,
+    "type": "article",
+    "title": "Environmental Due Diligence v českém právu",
+    "description": "Odborný článek o specifickém procesu právní a environmentální prověrky nemovitostí a průmyslových závodů před jejich akvizicí, s důrazem na českou a evropskou legislativu.",
+    "date": "2023-05-20",
+    "link": "",
+    "authors": ["Mgr. Filip Šimák, Ph.D., LL.M."]
+  }
+]
