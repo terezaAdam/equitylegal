@@ -7,16 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Dark / Light mode ── */
   const root     = document.documentElement;
   const themeBtn = document.getElementById('themeToggle');
-  const saved    = localStorage.getItem('el-theme');
   const sysDark  = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+  function themeSaved() {
+    try { return localStorage.getItem('el-theme'); } catch(e) { return null; }
+  }
+  function themeSave(val) {
+    try { localStorage.setItem('el-theme', val); } catch(e) {}
+  }
+
   function setTheme(dark) {
-    root.setAttribute('data-theme', dark ? 'dark' : 'light');
+    const val = dark ? 'dark' : 'light';
+    root.setAttribute('data-theme', val);
+    document.body.setAttribute('data-theme', val);
     if (themeBtn) themeBtn.textContent = dark ? '☀' : '☾';
-    localStorage.setItem('el-theme', dark ? 'dark' : 'light');
+    themeSave(val);
   }
 
   // Synchronise button icon with theme already applied by inline <head> script
+  const saved = themeSaved();
   setTheme(saved ? saved === 'dark' : sysDark);
   if (themeBtn) themeBtn.addEventListener('click', () => {
     setTheme(root.getAttribute('data-theme') !== 'dark');
