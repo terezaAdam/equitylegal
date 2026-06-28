@@ -113,17 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileTabs = document.querySelectorAll('.smt-btn');
   if (mobileTabs.length) {
     const isMobile = () => window.innerWidth <= 768;
+    let currentServiceId = null;
 
-    function activateServiceSection(targetId) {
+    function activateServiceSection(targetId, scrollToTop) {
       if (!isMobile()) return;
+      currentServiceId = targetId;
       document.querySelectorAll('.service-section').forEach(s => s.classList.remove('active'));
       mobileTabs.forEach(b => b.classList.remove('active'));
       const targetSection = document.getElementById(targetId);
       if (targetSection) targetSection.classList.add('active');
       const targetBtn = document.querySelector(`.smt-btn[data-target="${targetId}"]`);
-      if (targetBtn) {
-        targetBtn.classList.add('active');
-        targetBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      if (targetBtn) targetBtn.classList.add('active');
+      if (scrollToTop) {
+        const tabsEl = document.querySelector('.services-mobile-tabs');
+        const top = tabsEl ? tabsEl.getBoundingClientRect().bottom + window.scrollY : 0;
+        window.scrollTo({ top: top, behavior: 'smooth' });
       }
     }
 
@@ -134,17 +138,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       const hash = location.hash.replace('#', '');
-      const initialTarget = (hash && document.getElementById(hash))
-        ? hash
-        : mobileTabs[0].dataset.target;
-      activateServiceSection(initialTarget);
+      const initialTarget = currentServiceId
+        || (hash && document.getElementById(hash) ? hash : mobileTabs[0].dataset.target);
+      activateServiceSection(initialTarget, false);
     }
 
     initMobileTabs();
     window.addEventListener('resize', initMobileTabs, { passive: true });
 
     mobileTabs.forEach(btn => {
-      btn.addEventListener('click', () => activateServiceSection(btn.dataset.target));
+      btn.addEventListener('click', () => activateServiceSection(btn.dataset.target, true));
     });
   }
 
