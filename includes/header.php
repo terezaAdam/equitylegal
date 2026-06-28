@@ -19,12 +19,16 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
   <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
   <script>
     (function(){
-      var s = localStorage.getItem('el-theme');
-      var dark = s ? s === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      try {
+        var s = localStorage.getItem('el-theme');
+        var dark = s ? s === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
     })();
   </script>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=<?= filemtime(__DIR__ . '/../assets/css/style.css') ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
