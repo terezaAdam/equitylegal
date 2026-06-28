@@ -114,6 +114,7 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   transition: box-shadow var(--tr);
+  overflow: hidden;
 }
 .nav.scrolled { box-shadow: 0 2px 16px rgba(30,41,65,.10); }
 [data-theme="dark"] .nav {
@@ -137,7 +138,9 @@ p:last-child { margin-bottom: 0; }
 }
 .nav__logo-img {
   height: 46px;
+  max-height: 46px;
   width: auto;
+  max-width: none;
   display: block;
 }
 .nav__links {
