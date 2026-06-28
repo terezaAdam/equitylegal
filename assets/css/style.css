@@ -541,6 +541,45 @@ body { padding-top: var(--nh); }
 [data-theme="dark"] .reference-card__author { color: var(--text); }
 .reference-card__role { font-size: .78rem; color: var(--text-muted); }
 
+/* ── Awards / Recognition ── */
+.section--values-with-badge { position: relative; }
+.awards-pfr-corner {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  max-height: 64px;
+  width: auto;
+  opacity: 0.85;
+}
+[data-theme="dark"] .awards-pfr-corner {
+  filter: brightness(0) invert(1);
+}
+.awards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.award-badge {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--burgundy);
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-family: var(--font-h);
+  font-weight: 700;
+  color: var(--burgundy);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.awards-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--burgundy);
+}
+.awards-link:hover { text-decoration: underline; }
+
 /* ── CTA Banner ── */
 .cta-banner {
   background: var(--navy);
@@ -759,7 +798,7 @@ body { padding-top: var(--nh); }
 .article-content ul li { color: var(--text-muted); margin-bottom: .5rem; }
 .article-content dl.glossary { margin-bottom: 1.5rem; }
 .article-content dl.glossary dt { font-family: var(--font-h); font-weight: 700; color: var(--navy); font-size: .95rem; margin-top: 1.25rem; }
-[data-theme="dark"] .article-content dl.glossary dt { color: var(--text-heading); }
+[data-theme="dark"] .article-content dl.glossary dt { color: var(--text); }
 .article-content dl.glossary dd { color: var(--text-muted); margin-left: 0; padding-left: 1rem; border-left: 2px solid var(--burgundy); margin-top: .35rem; font-size: .9rem; line-height: 1.6; }
 .article-sidebar { position: sticky; top: calc(var(--nh) + 24px); }
 .article-sidebar__card {
@@ -1410,11 +1449,13 @@ body { padding-top: var(--nh); }
   .section { padding: 60px 0; }
   .page-hero { padding: 60px 0 48px; }
   .pub-item { grid-template-columns: 1fr; }
+  .services-nav { display: none; }
 }
 
 @media (max-width: 480px) {
   .hero__cta { flex-direction: column; }
-  .btn { width: 100%; justify-content: center; }
+  .hero__cta .btn,
+  .cta-banner .btn { width: 100%; justify-content: center; }
   .services-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr 1fr; }
   .articles-grid { grid-template-columns: 1fr; }

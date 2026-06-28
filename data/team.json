@@ -7,7 +7,7 @@
     "email": "vit.hrncirik@equitylegal.cz",
     "phone": "+420 734 551 413",
     "languages": ["CS", "DE", "EN"],
-    "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy v Praze (obor právo a právní věda, 2006). Členem České advokátní komory od roku 2007, advokátem od roku 2010.</p><p>Ve své praxi působil v advokátní kanceláři zaměřené na českou a německou klientelu. V zahraničí působil a získal znalosti na universitách v Německu (Bayreuth, Hamburk), Rakousku (Innsbruck) a Irsku (Cork).</p>",
+    "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy v Praze, obor právo a právní věda roku 2006, členem České advokátní komory od roku 2007, advokátem od roku 2010.</p><p>Ve své praxi působil v advokátní kanceláři zaměřenou na českou a německou klientelu.</p><p>V zahraničí působil a získal znalosti na universitách v Německu (Bayreuth, Hamburk), Rakousku (Innsbruck) a Irsku (Cork).</p><p>Poskytuje právní poradenství v českém, německém a anglickém jazyce.</p>",
     "specializations": [
       "Právo duševního vlastnictví",
       "Právo obchodních korporací a M&A",
@@ -16,11 +16,23 @@
       "Právo nemovitostí"
     ],
     "projects": [
-      "Poradenství při ochraně průmyslového vzoru v oblasti gastronomie, včetně zabránění jeho výmazu a získání peněžního odškodnění za nekalou soutěž",
-      "Zastupování mezinárodního konsorcia ve veřejné zakázce na nákup letadel pro ústavní činitele",
-      "Právní poradenství pro největšího tuzemského dovozce a prodejce v oblasti potravinářství a zemědělství",
-      "Zastupování americké a české chemicko-technologické a farmaceutické společnosti",
-      "Akvizice a právní prověrky projektantských, stavebních a oděvních firem"
+      "Poradenství při ochraně průmyslového vzoru v oblasti gastronomie, včetně zabránění jeho výmazu, iniciace celního zásahu a získání peněžního odškodnění za nekalou soutěž a porušení průmyslových práv (obdobně ohledně ochranné známky v oblasti voda-topení-plyn a patentu v oblasti stavebního materiálu).",
+      "Zastupování mezinárodního konsorcia společností ve veřejné zakázce na nákup letadel pro ústavní činitele, zastupování zahraničního výrobce ve veřejné zakázce na nákup těžké vojenské techniky.",
+      "Právní poradenství pro největšího tuzemského dovozce a prodejce v oblasti potravinářství a zemědělství.",
+      "Zastupování americké a české chemicko-technologické a farmaceutické společnosti s ohledem na vývoj léčebných látek, povolení výroby prekurzorů, ochranu informací a průmyslového vlastnictví atd.",
+      "Právní poradenství v oblasti duševního vlastnictví pro významnou českou výzkumnou instituci a společnost specializující se na transfer technologií v odvětví chemie a biologie, poradenství vynálezcům v oboru dozimetrie, solární energie atp.",
+      "Poradenství a zastupování společníků a akcionářů v řízeních o neplatnost usnesení valné hromady společností působících v oblasti realit, zemědělství či výrobního průmyslu (obdobně v poměrech spolku a společenství vlastníků jednotek).",
+      "Poradenství ve sporech týkajících se sporných hranic pozemků, vymezení společných prostor v domě, jakož i věcných břemen a nájemních vztahů pro developerskou společnost a společenství vlastníků jednotek.",
+      "Zproštění obžaloby klientů obviněných např. z ohrožení řízením automobilu pod vlivem alkoholu, výtržnictví, poškození cizí věci, krádeže, porušování povinností při správě cizího majetku, zpronevěry, podvodu a pojistného podvodu, nebezpečného pronásledování a vyhrožování.",
+      "Akvizice a s tím spojené právní a daňové prověrky projektantské a architektonické firmy, stavební společnosti, oděvní společnosti, výrobních společností na hodinky, turbíny, development, informační technologie atd.",
+      "Prodej podniku švédské společnosti provozující televizní vysílání, dále závodu knihařství, podniku spedice a zasilatelství atp.",
+      "Získání náhrady škody a odškodnění klienta poškozeného na zdraví nemocničním zařízením nebo při stavebních pracích.",
+      "Ochrana osobnostních práv autorů kritických článků týkajících se veřejných zakázek a nepravdivého znaleckého posudku, ochrana dobré pověsti právnické osoby před nepravdivou internetovou kampaní.",
+      "Zastupování nájemce a zprostředkovatele proti nárokům vznesených obchodním centrem, zejm. na vrácení provize.",
+      "Zastupování ve sporu o neúčinnost převodu nemovitého majetku (v insolvenčním řízení a z důvodu krácení věřitele), zajištění vydání předběžných opatření.",
+      "Vypracování pojistné dokumentace pro lichtenštejnskou pojišťovnu, smluv týkajících se cenných papírů pro rakouskou banku.",
+      "Zastupování ve sporu o odškodnění za nezákonné rozhodnutí ministerstva či nepřiměřený policejní zásah s důsledkem ublížení na zdraví.",
+      "Poradenství společnostem v oblasti automotive např. v rámci vývoje elektromobilů či exportu vozidel do Německa."
     ]
   },
   {
@@ -31,7 +43,7 @@
     "email": "krystof.kobeda@equitylegal.cz",
     "phone": "+420 732 230 529",
     "languages": ["CS", "EN"],
-    "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy v Praze (obor právo a právní věda, 2011). Členem České advokátní komory od roku 2011, advokátem od roku 2016.</p><p>V období 2011–2016 působil v mezinárodní advokátní kanceláři. Má rozsáhlé zkušenosti s M&A transakcemi, soudními spory a trestním právem.</p>",
+    "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy v Praze, obor právo a právní věda roku 2011, členem České advokátní komory od roku 2011, advokátem od roku 2016.</p><p>V období 2011–2016 působil v mezinárodní advokátní kanceláři.</p><p>Poskytuje právní poradenství v českém a anglickém jazyce.</p>",
     "specializations": [
       "Fúze a akvizice",
       "Právo nemovitostí",
@@ -40,11 +52,24 @@
       "Zbrojní průmysl"
     ],
     "projects": [
-      "Poradenství při prodeji světoznámého tradičního podniku v oblasti výroby a zpracování oceli",
-      "Zastupování společnosti provozující obchodní centra v soudních a arbitrážních sporech s nájemci",
-      "Poradenství zahraničnímu výrobci zbraňových systémů v jednom z historicky největších tendrů Ministerstva obrany ČR",
-      "Úspěšná obhajoba klientů v kauzách dotačních podvodů se škodou v řádech desítek milionů korun",
-      "Poradenství desítkám klientů při akvizicích a prodejích společností"
+      "Poradenství při prodeji světoznámého a tradičního podniku působícího v oblasti výroby a zpracování oceli.",
+      "Zastupování společnosti provozující obchodní centra v České republice v soudních a arbitrážních sporech s nájemci.",
+      "Poradenství mezinárodní přepravní společnosti při její každodenní obchodní činnosti a její zastupování v soudních sporech a správních řízeních.",
+      "Poradenství významné mezinárodní společnosti působící v oblasti počítačového softwaru a hardwaru při její každodenní obchodní činnosti.",
+      "Poradenství mezinárodní developerské společnosti při akvizici, developmentu a prodeji developerských projektů (obytné, kancelářské a skladovací budovy).",
+      "Poradenství čínskému investorovi při akvizici obchodního centra.",
+      "Zastupování holandského investora působícího v oblasti developmentu nemovitostních projektů v soudních sporech s bývalými obchodními partnery v České republice.",
+      "Poradenství zahraničnímu investorovi při akvizici rozsáhlého portfolia retailových objektů v České republice a velké kancelářské budovy v Praze včetně právní prověrky nabývaných nemovitostí a vyjednávání refinancování.",
+      "Zastupování bývalého fotbalového reprezentanta v soudním sporu s prvoligovým klubem o odměnu za sportovní činnost.",
+      "Dlouhodobé poradenství významné české společnosti podnikající v oblasti stavebnictví, facility managementu a dalších služeb – pracovní právo, smluvní agenda, soudní spory apod.",
+      "Dlouhodobé poradenství významné české společnosti obchodující s vojenským materiálem – příprava, vyjednávání a realizace smluvních vztahů s obchodními partnery, poradenství ve veřejných zakázkách atd.",
+      "Poradenství zahraničnímu výrobci zbraňových systémů v jednom z historicky největších tendrů pořádaných Ministerstvem obrany ČR.",
+      "Poradenství developerovi při realizaci projektu výstavby bytového domu – akvizice projektu (včetně bankovního financování), uzavření smlouvy o dílo s dodavatelem stavby, úspěšné vyřešení sporu s dodavatelem stavby, kompletní právní zajištění prodeje bytů klientům.",
+      "Úspěšná obhajoba řady klientů v trestním řízení – dotační podvody s výší škody v řádech desítek milionů korun, hospodářská trestná činnost, násilná trestná činnost (vražda) apod.",
+      "Poradenství mnoha klientům v oblasti rodinného práva a manželského majetkového práva – rozvody, soudní spory o svěření dětí do péče, výživné, rozdělení společného jmění manželů.",
+      "Poradenství významnému výrobci potravin při restrukturalizaci jeho závodu.",
+      "Poradenství desítkám klientů při akvizicích a prodejích společností / závodů, což zahrnuje právní prověrky (due diligence), přípravu a vyjednávání transakční dokumentace, vyjednávání s financujícími bankami, revizi a vyjednávání úvěrové a zajišťovací dokumentace.",
+      "Zastupování řady klientů v různorodých civilních soudních sporech."
     ]
   },
   {
@@ -55,7 +80,7 @@
     "email": "filip.simak@equitylegal.cz",
     "phone": "+420 724 174 521",
     "languages": ["CS", "EN", "DE"],
-    "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy (Ph.D. v oboru Teoretické právní vědy, zaměření právo životního prostředí a stavební právo, 2019), na University of Oregon School of Law (LL.M. Environmental and Natural Resources Law, 2016) a na PrF MU (Mgr., 2013).</p><p>Studoval na zahraničních univerzitách ve Velké Británii (Oxford), Norsku (Oslo), Německu (Hamburg), Rakousku (Vídeň), USA (Oregon) a Litvě (Vilnius). Člen České advokátní komory od roku 2013 a American Bar Association od roku 2015.</p>",
+    "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy s titulem Ph.D. v oboru Teoretické právní vědy se zaměřením na právo životního prostředí a stavební právo v roce 2019, na University of Oregon School of Law s titulem LL.M. v oboru Environmental and Natural Resources Law v roce 2016 a na Právnické fakultě Masarykovy univerzity s titulem Mgr. v oboru Právo a právní věda v roce 2013.</p><p>Je členem České advokátní komory od roku 2013, American Bar Association od roku 2015 a Oregon Bar Association 2015–2017.</p><p>Ve své praxi působil v mezinárodních advokátních kancelářích v České republice zaměřených na česky, anglicky a německy hovořící klientelu, pracoval v americké advokátní kanceláři a jako externí právní poradce města Springfield v Oregonu, působil také jako konzultant pro právo životního prostředí Evropské unie v turecké Ankaře.</p><p>Studoval na zahraničních univerzitách ve Velké Británii (Oxfordská univerzita), Norsku (Oslo), Německu (Hamburk), Rakousku (Vídeň), USA (Starkville, Mississippi a Eugene, Oregon) a Litvě (Vilnius).</p><p>Poskytuje právní poradenství ve všech oborech se specializací na právo životního prostředí, správní právo, územní plánování a stavební právo v českém, anglickém a německém jazyce. Je aktivní v mezinárodní profesní a akademické spolupráci.</p>",
     "specializations": [
       "Stavební právo a územní plánování",
       "Právo životního prostředí",
@@ -64,11 +89,18 @@
       "Korporátní právo (ČR, Německo, USA, Ukrajina)"
     ],
     "projects": [
-      "Stavební právo – příprava podkladů pro stavby, zastupování v územním a stavebním řízení",
-      "Právo životního prostředí – Environmental Due Diligence, IPPC, zelené investice",
-      "Komplexní právní servis při organizování hudebního festivalu",
-      "Podpora start-upů a neformálních občanských iniciativ",
-      "Zakládání a změny společností v ČR a v zahraničí"
+      "Stavební právo – příprava podkladů pro stavby, zastupování v územním a stavebním řízení, sousedská práva ve vztahu k pozemku a stavbám, development – zelené a nízkoenergetické stavby, alternativní formy bydlení (např. tiny houses).",
+      "Právo životního prostředí – Environmental Due Diligence, IPPC, zelené investice a fondy Evropské unie, obnovitelné zdroje energií, ochrana ovzduší, půdy a vod, rekultivace brownfieldů, ochrana ohrožených druhů živočichů a rostlin, environmentální standardy v územním plánování a stavebnictví.",
+      "Občanské a obchodní právo – vypracování smluv a jejich změn, právní vztahy k nemovitostem, mezinárodní spolupráce a obchod, udržitelná mobilita.",
+      "Litigace – vedení sporů a vyjednávání před soudy i správními orgány.",
+      "Korporátní právo – zakládání a změny společností v České republice a v zahraničí (Německo, USA, Ukrajina), vztahy mezi orgány společnosti a odpovědnost vůči třetím osobám.",
+      "Právo duševního vlastnictví – registrace patentů a ochranných známek, ochrana zapsaných práv.",
+      "Rodinné právo – SJM a úprava majetkových vztahů před a během manželství, rozvodová agenda, výživné pro manžele i děti.",
+      "Insolvenční právo – zastupování klientů ve věci oddlužení včetně osobních bankrotů, zastupování věřitelů, incidenční spory.",
+      "Pracovní právo – pracovněprávní spory, odměňování a pracovní podmínky zaměstnanců, řešení případů jednatelů v pracovním poměru.",
+      "Pojišťovnické právo – zastupování klientů pojišťoven v případech pojistného plnění.",
+      "Spolkové právo – obrana člena spolku před vyloučením, registrace spolku, tvorba stanov a spolková agenda obecně, vztahy spolku a třetích stran.",
+      "Komplexní právní servis při organizování hudebního festivalu, podpora start-upů a neformálních občanských iniciativ."
     ]
   },
   {
@@ -79,7 +111,7 @@
     "email": "kancelar@equitylegal.cz",
     "phone": "",
     "languages": ["CS", "DE"],
-    "bio": "<p>Studoval na Ludwig-Maximilian-Universität v Mnichově (absolvoval 2004) a Karlově univerzitě v Praze (mezinárodní vztahy, 2001–2003).</p><p>Rodilý mluvčí českého a německého jazyka. Složil státní zkoušky jako překladatel a tlumočník německého a českého jazyka. Aktuálně vede tým kanceláře orientovaný na německy mluvící klientelu.</p>",
+    "bio": "<p>Stephan studoval na Ludwig-Maximilian-Universität v Mnichově (absolvoval 2004) a Karlově univerzitě v Praze (studium orientované na mezinárodní vztahy, 2001–2003).</p><p>Aktuálně působí v Praze v týmu kanceláře orientovaném na německy mluvící klientelu a české subjekty v obchodním nebo privátním kontaktu s německými, rakouskými či švýcarskými firmami, úřady a občany.</p><p>Stephan je rodilý mluvčí českého a německého jazyka. Složené má i oficiální státní zkoušky jako překladatel a tlumočník německého a českého jazyka.</p>",
     "specializations": [
       "Česko-německé obchodní vztahy",
       "Překlady a tlumočení (CS/DE)",
@@ -87,10 +119,13 @@
       "Privátní poradenství v česko-německo-rakouských vztazích"
     ],
     "projects": [
-      "Komunikace a správa obchodních vztahů mezi německými a českými firmami (ExxonMobil aj.)",
-      "Privátní poradenství v česko-německo-rakouských vztazích",
-      "Synchronní tlumočení obchodních jednání s právní problematikou",
-      "Business Support Center zahraničních společností v ČR"
+      "Komunikace a správa obchodních vztahů mezi německými a českými firmami, jakož i jejich zahraničními pobočkami, včetně velkých průmyslových podniků (ExxonMobil apod.).",
+      "Privátní poradenství v česko-německo-rakouských vztazích s přesahem do dalších zemí.",
+      "Správa a vymáhání pohledávek věřitelů včetně bankovních a pojišťovacích institucí.",
+      "Dlouholeté zkušenosti s Business Support Center zahraničních společností v ČR.",
+      "Poradenství a support v rámci generální praxe kanceláře – převody nemovitostí, zakládání společností, vymáhání pohledávek, pracovní a rodinná problematika, veřejné zakázky atd.",
+      "Autorsky činný na publikacích týkajících se politického a státního systému ČR, jakož i svobody slova a novinářství v ČR.",
+      "Synchronní tlumočení řady obchodních jednání včetně právní problematiky."
     ]
   },
   {
@@ -109,10 +144,13 @@
       "Veřejné zakázky v Polsku"
     ],
     "projects": [
-      "Zakládání a registrace obchodních společností v Polsku",
-      "Zpracování přípravných a jiných soudních řízení v Polsku",
-      "Vymáhání pohledávek v Polsku",
-      "Zastupování klientů u polských soudů a správních orgánů"
+      "Založení a registrace obchodních společností v Polsku.",
+      "Revize a příprava smluv podle polského práva.",
+      "Zpracování přípravných a jiných soudních řízení, zastupování klientů před správními orgány.",
+      "Pomoc při přípravě zadávací dokumentace polským zadavatelům veřejných zakázek.",
+      "Zastupování klientů u soudů, správních orgánů a rovněž v případech před orgány činnými v trestním řízení v Polsku.",
+      "Vymáhání pohledávek v Polsku.",
+      "Nároky na náhradu škody v soudním řízení, stejně jako zastoupení poškozených ve vztazích s pojišťovnami, zejména dopravní nehody, pracovní úrazy, pojistné smlouvy, lékařské zákroky."
     ]
   },
   {
@@ -123,7 +161,7 @@
     "email": "kancelar@equitylegal.cz",
     "phone": "",
     "languages": ["UA", "EN", "DE", "RU", "PL"],
-    "bio": "<p>Promoval s titulem LL.M. na Právnické fakultě Univerzity v Arkansasu (USA) a Univerzitě národního práva Jaroslava Moudrého na Ukrajině. Promoval s titulem M.A. v oboru překladatelství na The Open University na Ukrajině.</p>",
+    "bio": "<p>Promoval s titulem LL.M. na Právnické fakultě Univerzity v Arkansasu ve Spojených státech amerických a Univerzitě národního práva Jaroslava Moudrého (Natsional'nyi yurydychnyi universytet imeni Yaroslava Mudroho) na Ukrajině.</p><p>Promoval s titulem M.A. v oboru překladatelství na The Open University na Ukrajině.</p><p>Poskytuje právní poradenství v anglickém, německém, ruském, ukrajinském a polském jazyce.</p>",
     "specializations": [
       "Ukrajinské obchodní právo",
       "Imigrační právo na Ukrajině",
@@ -131,10 +169,14 @@
       "IT právo a start-upy"
     ],
     "projects": [
-      "Poradenství při zakládání společností na Ukrajině",
-      "Due Diligence dle ukrajinského práva",
-      "Právní podpora při investování na Ukrajině",
-      "Poradenství pro IT společnosti a startupy na Ukrajině"
+      "Poradenství při zakládání společností (dceřiných firem, poboček) na Ukrajině.",
+      "Due Diligence dle ukrajinského práva, analýza právních rizik obchodních partnerů na Ukrajině.",
+      "Právní podpora v záležitostech imigračního práva na Ukrajině, vyřizování pracovních povolení a povolení k pobytu na Ukrajině.",
+      "Právní podpora při investování na Ukrajině (akvizice obchodních společností a nemovitostí).",
+      "Komplexní služby týkající se licencí a povolení pro podnikání na Ukrajině.",
+      "Zastupování klientů před orgány veřejné správy a dalšími subjekty na Ukrajině.",
+      "Poradenství ve věcech obchodního práva, práva společností, pracovního práva a daňového práva na Ukrajině.",
+      "Právní podpora pro IT společnosti a startupy na Ukrajině."
     ]
   },
   {
@@ -145,7 +187,7 @@
     "email": "kancelar@equitylegal.cz",
     "phone": "",
     "languages": ["CS"],
-    "bio": "<p>Absolvent právnické fakulty Univerzity Karlovy v Praze. Specialista na právo neziskových organizací, finanční řízení, účetnictví a daně. Lektor a konzultant pro Nadaci Neziskovky.cz a Asociaci veřejně prospěšných organizací ČR.</p>",
+    "bio": "<p>Absolvent právnické fakulty Univerzity Karlovy v Praze. Specialista na právo neziskových organizací, problematiku finančního řízení, účetnictví a daní.</p>",
     "specializations": [
       "Právo neziskových organizací",
       "Nadace a trusty",
@@ -153,10 +195,12 @@
       "Holdingové struktury"
     ],
     "projects": [
-      "Zakládání trustových a off-shorových struktur, spolků, nadací",
-      "Tvorba nové legislativy v oblasti neziskových organizací",
-      "Stálé poradenství prvoligovému fotbalovému klubu",
-      "Finanční, daňové a právní poradenství"
+      "Zakládání trustových a off-shorových struktur, spolků, nadací, včetně jejich přeměn.",
+      "Zakládání, fúze a přeměny společností, včetně zakládání holdingových struktur.",
+      "Finanční, daňové a právní poradenství.",
+      "Právník, lektor a konzultant pro Nadaci Neziskovky.cz a Asociaci veřejně prospěšných organizací ČR.",
+      "Tvorba nové legislativy v oblasti neziskových organizací.",
+      "Stálé poradenství prvoligovému fotbalovému klubu."
     ]
   },
   {
@@ -167,7 +211,7 @@
     "email": "tana.olivova@equitylegal.cz",
     "phone": "+420 603 516 887",
     "languages": ["CS"],
-    "bio": "<p>Promovala na Právnické fakultě Univerzity Karlovy v Praze (2007). Členkou České advokátní komory od roku 2007, advokátkou od roku 2011. Studovala na zahraniční univerzitě v Nijmegenu (Nizozemí).</p>",
+    "bio": "<p>Promovala na Právnické fakultě Univerzity Karlovy v Praze, obor právo a právní věda roku 2007, členkou České advokátní komory od roku 2007, advokátkou od roku 2011.</p><p>Studovala na zahraniční univerzitě v Nijmegenu (Nizozemí).</p><p>Poskytuje právní poradenství v českém jazyce.</p>",
     "specializations": [
       "Právo nemovitostí",
       "Rodinné právo",
@@ -176,10 +220,15 @@
       "Duševní vlastnictví"
     ],
     "projects": [
-      "Vypracování smluvní dokumentace k nemovitostním a rezidenčním projektům",
-      "Zastupování klientů ve sporech o neoprávněný odběr energií",
-      "Poradenství a zastupování v insolvenčních řízeních",
-      "Poradenství v rozsáhlých kauzách rodinného práva – boje o majetek zahrnující nemovitosti, podíly ve společnostech"
+      "Vypracování smluvní dokumentace k nemovitostním, rezidenčním i obchodním projektům, jakož komplexní právní péče o právní vztahy klientů k jejich nemovitostem.",
+      "Zakládání a změny společností, zejm. start-upů, včetně souvisejícího poradenství začínajícím podnikatelům, vytváření holdingových struktur a skupin společností.",
+      "Zastupování klientů v případech řešení problematických a konfliktních vztahů mezi orgány společnosti, akcionáři, včetně řešení žalob na náhradu škod z odpovědnosti jednatelů a členů představenstva vůči třetím osobám.",
+      "Vedení sporů a vyjednávání před soudy i správními orgány, zastupování ve sporech o neoprávněný odběr energií.",
+      "Poradenství a zastupování při vymáhání pohledávek v řádu desítek až stovek milionů korun, včetně zastupování věřitelů v insolvenčním řízení a přidružených incidenčních sporech.",
+      "Poradenství a zastupování v insolvenčním řízení v rámci oddlužení, a to i podnikatelských subjektů.",
+      "Poradenství factoringové společnosti při její každodenní obchodní činnosti a její zastupování v soudních sporech.",
+      "Poradenství v oblasti ochrany práv duševního vlastnictví, v oblasti práva veřejných zakázek.",
+      "Poradenství v rozsáhlých kauzách v oblasti rodinného práva – zejm. bojů o majetek bývalých manželů zahrnující nemovitosti, podíly ve společnostech, podniky fyzických osob, ochranné známky, autorská díla atp., včetně rozvodové agendy a souvisejícího poradenství v oblasti péče a výživy dětí, jakož i dědických řízení."
     ]
   },
   {
@@ -197,8 +246,8 @@
       "Daňové poradenství"
     ],
     "projects": [
-      "Vedení účetnictví fyzických a právnických osob",
-      "Insolvenční řízení – vedení kompletní agendy oddlužení i konkursů pro insolvenční správce"
+      "Vedení účetnictví fyzických a právnických osob.",
+      "Insolvenční řízení – vedení kompletní agendy oddlužení i konkursů pro insolvenční správce."
     ]
   }
 ]

@@ -5,20 +5,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Dark / Light mode ── */
-  const body    = document.body;
+  const root     = document.documentElement;
   const themeBtn = document.getElementById('themeToggle');
-  const saved   = localStorage.getItem('el-theme');
-  const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved    = localStorage.getItem('el-theme');
+  const sysDark  = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   function setTheme(dark) {
-    body.dataset.theme = dark ? 'dark' : 'light';
+    root.setAttribute('data-theme', dark ? 'dark' : 'light');
     if (themeBtn) themeBtn.textContent = dark ? '☀' : '☾';
     localStorage.setItem('el-theme', dark ? 'dark' : 'light');
   }
 
+  // Synchronise button icon with theme already applied by inline <head> script
   setTheme(saved ? saved === 'dark' : sysDark);
   if (themeBtn) themeBtn.addEventListener('click', () => {
-    setTheme(body.dataset.theme !== 'dark');
+    setTheme(root.getAttribute('data-theme') !== 'dark');
   });
 
   /* ── Sticky nav ── */
@@ -33,6 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
   burger?.addEventListener('click', () => {
     const open = mobileNav.classList.toggle('open');
     burger.setAttribute('aria-expanded', open);
+  });
+  mobileNav?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      burger?.setAttribute('aria-expanded', 'false');
+    });
   });
 
   /* ── Active nav link ── */

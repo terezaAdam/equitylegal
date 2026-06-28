@@ -6,6 +6,7 @@ $publications = json_decode(file_get_contents(__DIR__ . '/data/publications.json
 
 $books    = array_filter($publications, fn($p) => $p['type'] === 'book');
 $articles = array_filter($publications, fn($p) => $p['type'] === 'article');
+usort($articles, fn($a, $b) => strcmp($b['date'], $a['date']));
 
 include 'includes/header.php';
 ?>
