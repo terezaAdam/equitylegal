@@ -16,10 +16,41 @@ document.addEventListener('DOMContentLoaded', () => {
     try { localStorage.setItem('el-theme', val); } catch(e) {}
   }
 
+  const DARK_VARS = {
+    '--bg': '#0C1320', '--bg-alt': '#0f1928', '--surface': '#1a2840',
+    '--text': '#E6E6E4', '--text-muted': '#8a8a88', '--border': '#253045',
+    '--shadow': '0 2px 20px rgba(0,0,0,.30)',
+    '--shadow-lg': '0 8px 40px rgba(0,0,0,.40)',
+  };
+  const LIGHT_VARS = {
+    '--bg': '#F9F9F7', '--bg-alt': '#f0efed', '--surface': '#ffffff',
+    '--text': '#222222', '--text-muted': '#666666', '--border': '#e0dedd',
+    '--shadow': '0 2px 20px rgba(30,41,65,.08)',
+    '--shadow-lg': '0 8px 40px rgba(30,41,65,.14)',
+  };
+
   function setTheme(dark) {
     const val = dark ? 'dark' : 'light';
     root.setAttribute('data-theme', val);
     document.body.setAttribute('data-theme', val);
+
+    // CSS proměnné přímo jako inline styly — funguje na každém hostingu
+    Object.entries(dark ? DARK_VARS : LIGHT_VARS)
+      .forEach(([p, v]) => root.style.setProperty(p, v));
+
+    // Nav – přímá změna stylu
+    const navEl = document.querySelector('.nav');
+    if (navEl) {
+      navEl.style.background = dark ? '#1E2941' : '#fff';
+      navEl.style.borderBottomColor = dark ? 'rgba(255,255,255,.08)' : '#e0dedd';
+    }
+    const mobileNavEl = document.querySelector('.nav__mobile');
+    if (mobileNavEl) mobileNavEl.style.background = dark ? '#1E2941' : '#fff';
+
+    // Logo – filtr pro bílou barvu v dark mode
+    const logoImg = document.querySelector('.nav__logo-img');
+    if (logoImg) logoImg.style.filter = dark ? 'brightness(0) invert(1)' : 'none';
+
     if (themeBtn) themeBtn.textContent = dark ? '☀' : '☾';
     themeSave(val);
   }
