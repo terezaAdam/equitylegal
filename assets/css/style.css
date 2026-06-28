@@ -1478,40 +1478,29 @@ body { padding-top: var(--nh); }
   .services-mobile-tabs {
     display: block;
     margin-bottom: 2rem;
-    position: sticky;
-    top: var(--nh);
-    background: var(--bg);
-    z-index: 10;
-    padding: .75rem 0;
-    border-bottom: 1px solid var(--border);
   }
   .services-mobile-tabs__scroll {
     display: flex;
     gap: .5rem;
-    overflow-x: auto;
-    padding: 0 1rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    flex-wrap: wrap;
   }
-  .services-mobile-tabs__scroll::-webkit-scrollbar { display: none; }
   .smt-btn {
-    flex-shrink: 0;
     font-family: var(--font-h);
     font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: .04em;
-    padding: .4rem .9rem;
-    border-radius: 999px;
-    border: 1.5px solid var(--border);
-    background: var(--surface);
-    color: var(--text-muted);
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: .55rem 1.25rem;
+    border-radius: var(--r);
+    border: 2px solid var(--navy);
+    background: transparent;
+    color: var(--navy);
     cursor: pointer;
     transition: all var(--tr);
-    white-space: nowrap;
   }
-  .smt-btn:hover {
-    border-color: var(--burgundy);
-    color: var(--burgundy);
+  [data-theme="dark"] .smt-btn {
+    border-color: var(--border);
+    color: var(--text);
   }
   .smt-btn.active {
     background: var(--burgundy);
