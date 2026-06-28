@@ -109,6 +109,45 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+  /* ── Services mobile tabs ── */
+  const mobileTabs = document.querySelectorAll('.smt-btn');
+  if (mobileTabs.length) {
+    const isMobile = () => window.innerWidth <= 768;
+
+    function activateServiceSection(targetId) {
+      if (!isMobile()) return;
+      document.querySelectorAll('.service-section').forEach(s => s.classList.remove('active'));
+      mobileTabs.forEach(b => b.classList.remove('active'));
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) targetSection.classList.add('active');
+      const targetBtn = document.querySelector(`.smt-btn[data-target="${targetId}"]`);
+      if (targetBtn) {
+        targetBtn.classList.add('active');
+        targetBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+
+    function initMobileTabs() {
+      if (!isMobile()) {
+        // Desktop: ensure all sections visible (remove any leftover active classes)
+        document.querySelectorAll('.service-section').forEach(s => s.classList.remove('active'));
+        return;
+      }
+      const hash = location.hash.replace('#', '');
+      const initialTarget = (hash && document.getElementById(hash))
+        ? hash
+        : mobileTabs[0].dataset.target;
+      activateServiceSection(initialTarget);
+    }
+
+    initMobileTabs();
+    window.addEventListener('resize', initMobileTabs, { passive: true });
+
+    mobileTabs.forEach(btn => {
+      btn.addEventListener('click', () => activateServiceSection(btn.dataset.target));
+    });
+  }
+
   /* ── Services sidebar active ── */
   const serviceSections = document.querySelectorAll('.service-section[id]');
   const sidebarLinks    = document.querySelectorAll('.services-nav a');

@@ -16,6 +16,26 @@ include 'includes/header.php';
 
 <section class="section">
   <div class="container">
+
+    <!-- Mobile tab navigation (only on mobile) -->
+    <div class="services-mobile-tabs">
+      <div class="services-mobile-tabs__scroll">
+        <button class="smt-btn active" data-target="pravo-obchodnich-korporaci-a-obchodni-pravo">Korporátní právo</button>
+        <button class="smt-btn" data-target="pravo-nemovitosti-a-stavebni-pravo">Nemovitosti</button>
+        <button class="smt-btn" data-target="trestni-pravo">Trestní právo</button>
+        <button class="smt-btn" data-target="pracovni-pravo">Pracovní právo</button>
+        <button class="smt-btn" data-target="zbrojni-prumysl-obrana-a-bezpecnost">Obranný průmysl</button>
+        <button class="smt-btn" data-target="verejne-zakazky">Veřejné zakázky</button>
+        <button class="smt-btn" data-target="pravo-dusevniho-vlastnictvi">Duševní vlastnictví</button>
+        <button class="smt-btn" data-target="pravo-informacnich-technologii">IT právo</button>
+        <button class="smt-btn" data-target="bankovnictvi-a-financovani">Bankovnictví</button>
+        <button class="smt-btn" data-target="danove-a-celni-pravo">Daňové právo</button>
+        <button class="smt-btn" data-target="vymahani-a-sprava-pohledavek">Pohledávky</button>
+        <button class="smt-btn" data-target="rodinne-pravo">Rodinné právo</button>
+        <button class="smt-btn" data-target="insolvencni-pravo">Insolvence</button>
+      </div>
+    </div>
+
     <div class="services-layout">
 
       <!-- Sidebar nav -->
