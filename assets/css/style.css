@@ -1346,8 +1346,8 @@ body { padding-top: var(--nh); }
 }
 [data-theme="dark"] .process-step__title { color: var(--text); }
 [data-theme="dark"] .process-step {
-  background: rgba(255,255,255,.04);
-  border-color: rgba(255,255,255,.1);
+  background: var(--surface);
+  border-color: var(--border);
 }
 .process-step__desc {
   font-size: .88rem;
