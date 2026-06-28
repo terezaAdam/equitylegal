@@ -35,7 +35,7 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
   <nav class="nav" role="navigation" aria-label="Hlavní menu">
     <div class="nav__inner">
       <a href="/index.php" class="nav__logo" aria-label="EQUITY LEGAL – úvodní stránka">
-        <img src="/assets/img/logo-transparent.png" alt="EQUITY LEGAL – advokátní kancelář" class="nav__logo-img">
+        <img src="/assets/img/logo-transparent.png" alt="EQUITY LEGAL – advokátní kancelář" class="nav__logo-img" style="height:46px;max-height:46px;width:auto;display:block;">
       </a>
 
       <ul class="nav__links" role="list">

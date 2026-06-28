@@ -137,10 +137,10 @@ p:last-child { margin-bottom: 0; }
   flex-shrink: 0;
 }
 .nav__logo-img {
-  height: 46px;
-  max-height: 46px;
-  width: auto;
-  max-width: none;
+  height: 46px !important;
+  max-height: 46px !important;
+  width: auto !important;
+  max-width: none !important;
   display: block;
 }
 .nav__links {
