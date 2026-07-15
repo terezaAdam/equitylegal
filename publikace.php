@@ -6,6 +6,7 @@ $publications = json_decode(file_get_contents(__DIR__ . '/data/publications.json
 
 $books    = array_filter($publications, fn($p) => $p['type'] === 'book');
 $articles = array_filter($publications, fn($p) => $p['type'] === 'article');
+usort($books, fn($a, $b) => strcmp($b['date'], $a['date']));
 usort($articles, fn($a, $b) => strcmp($b['date'], $a['date']));
 
 include 'includes/header.php';
@@ -33,7 +34,7 @@ include 'includes/header.php';
     <div id="panel-books" class="pub-panel active">
       <div class="publications-list">
         <?php foreach ($books as $p): ?>
-          <div class="pub-item fade-in">
+          <div class="pub-item pub-item--book fade-in">
             <div>
               <div class="pub-item__type">Knižní publikace</div>
               <div class="pub-item__title"><?= htmlspecialchars($p['title']) ?></div>
@@ -43,13 +44,13 @@ include 'includes/header.php';
                   <?= htmlspecialchars(implode(', ', $p['authors'])) ?>
                 </div>
               <?php endif; ?>
-              <?php if (!empty($p['link'])): ?>
-                <div style="margin-top:.75rem;">
-                  <a href="<?= htmlspecialchars($p['link']) ?>" class="btn btn--sm btn--outline" target="_blank" rel="noopener">Koupit / číst →</a>
-                </div>
-              <?php endif; ?>
             </div>
-            <div class="pub-item__date"><?= date('Y', strtotime($p['date'])) ?></div>
+            <div class="pub-item__side">
+              <?php if (!empty($p['image'])): ?>
+                <img class="pub-item__thumb" src="<?= htmlspecialchars($p['image']) ?>" alt="Obálka: <?= htmlspecialchars($p['title']) ?>" loading="lazy" data-lightbox="<?= htmlspecialchars($p['image']) ?>" data-title="<?= htmlspecialchars($p['title']) ?>" role="button" tabindex="0" aria-label="Zvětšit obálku: <?= htmlspecialchars($p['title']) ?>">
+              <?php endif; ?>
+              <div class="pub-item__date"><?= date('Y', strtotime($p['date'])) ?></div>
+            </div>
           </div>
         <?php endforeach; ?>
       </div>
@@ -83,6 +84,41 @@ include 'includes/header.php';
 
   </div>
 </section>
+
+<!-- ── Cover lightbox ── -->
+<div class="img-lightbox" id="imgLightbox" role="dialog" aria-modal="true" aria-label="Zvětšená obálka">
+  <button class="img-lightbox__close" id="imgLightboxClose" aria-label="Zavřít">×</button>
+  <img id="imgLightboxImg" src="" alt="">
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const lightbox    = document.getElementById('imgLightbox');
+  const lightboxImg  = document.getElementById('imgLightboxImg');
+  const lightboxClose = document.getElementById('imgLightboxClose');
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.pub-item__thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => openLightbox(thumb.dataset.lightbox, thumb.dataset.title));
+    thumb.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(thumb.dataset.lightbox, thumb.dataset.title); }
+    });
+  });
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+});
+</script>
 
 <section class="cta-banner">
   <div class="container">

@@ -3,6 +3,8 @@ $pageTitle = 'Náš tým – EQUITY LEGAL';
 $pageDesc  = 'Tým advokátní kanceláře EQUITY LEGAL: zkušení advokáti s mezinárodní praxí poskytující poradenství v češtině, angličtině, němčině a dalších jazycích.';
 
 $team = json_decode(file_get_contents(__DIR__ . '/data/team.json'), true) ?? [];
+$coreTeam     = array_filter($team, fn($m) => empty($m['external']));
+$externalTeam = array_filter($team, fn($m) => !empty($m['external']));
 
 // Build JS team data for modal
 $teamJs = [];
@@ -36,7 +38,7 @@ include 'includes/header.php';
 <section class="section">
   <div class="container">
     <div class="team-grid">
-      <?php foreach ($team as $m):
+      <?php foreach ($coreTeam as $m):
         $initials = '';
         $nameParts = preg_replace('/[^a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ\s]/', '', $m['name']);
         $nameParts = array_filter(explode(' ', $nameParts));
@@ -67,6 +69,40 @@ include 'includes/header.php';
     </div>
   </div>
 </section>
+
+<?php if (!empty($externalTeam)): ?>
+<section class="section section--alt">
+  <div class="container">
+    <p class="section-label">Spolupráce</p>
+    <h2>Externí spolupracující osoby</h2>
+    <p class="external-intro">Na vybraných zahraničních agendách spolupracujeme s prověřenými externími specialisty.</p>
+    <div class="team-grid team-grid--compact">
+      <?php foreach ($externalTeam as $m):
+        $initials = '';
+        $nameParts = preg_replace('/[^a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ\s]/', '', $m['name']);
+        $nameParts = array_filter(explode(' ', $nameParts));
+        $nameParts = array_slice($nameParts, 0, 2);
+        $initials = implode('', array_map(fn($p) => mb_strtoupper(mb_substr($p, 0, 1)), $nameParts));
+      ?>
+        <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
+          <div class="team-card__avatar">
+            <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
+          </div>
+          <div class="team-card__body">
+            <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
+            <div class="team-card__title"><?= htmlspecialchars($m['position']) ?></div>
+            <div class="team-card__langs">
+              <?php foreach (($m['languages'] ?? []) as $lang): ?>
+                <span class="lang-tag"><?= htmlspecialchars($lang) ?></span>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 
 <!-- ── Team Modal ── -->
 <div class="modal-overlay" id="teamModal" role="dialog" aria-modal="true" aria-label="Detail člena týmu">
@@ -132,7 +168,7 @@ include 'includes/header.php';
 <section class="cta-banner">
   <div class="container">
     <h2>Chcete s námi spolupracovat?</h2>
-    <p>Kontaktujte konkrétního advokáta nebo nás napište na kancelář@equitylegal.cz.</p>
+    <p>Kontaktujte konkrétního advokáta nebo nám napište na kancelář@equitylegal.cz.</p>
     <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
   </div>
 </section>

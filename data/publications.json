@@ -6,8 +6,11 @@
     "description": "Kniha představuje civilní právo v nové, v českých právních poměrech ojedinělé, podobě. Autorský kolektiv zde přináší výklad institutů a problematiky civilního řízení v kontextu s nejvýznamnějšími soudními rozhodnutími. Casebook je rozdělen do čtyř částí – nalézací sporné řízení, řízení exekuční, řízení dle zákona o zvláštních řízeních soudních a řízení ve věcech, o nichž bylo rozhodnuto jiným orgánem. Každá z jednotlivých kapitol se věnuje výkladu daného tématu, který je doplněn soudními rozhodnutí a diskuzí nad konkrétními navazujícími otázkami.",
     "date": "2018-02-02",
     "link": "",
-    "image": "https://www.equitylegal.cz/assets/images/content/civilni-proces-casebook.jpg.jpg",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D.", "Mgr. Kryštof Kobeda"]
+    "image": "/assets/img/publications/civilni-proces-casebook.jpg",
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D.",
+      "Mgr. Kryštof Kobeda"
+    ]
   },
   {
     "id": 2,
@@ -16,8 +19,10 @@
     "description": "Druhé vydání velmi úspěšného komentáře reaguje na změny občanského soudního řádu, k nimž došlo v mezidobí od prvního vydání z roku 2013. Novinky se týkají například výkonu rozhodnutí prodejem nemovitých věcí, předpokladů přípustnosti dovolání, režimu exekučního postihu majetku nacházejícího se ve společném jmění manželů a majetku manžela povinného. Komentář zohledňuje též vývoj judikatury – například přelomová rozhodnutí Ústavního soudu, která nově vykládají podstatu poučovací povinnosti soudu o hrozícím neúspěchu ve sporu.",
     "date": "2017-11-30",
     "link": "http://www.beck.cz/obcansky-soudni-rad-komentar-2-vydani",
-    "image": "https://www.equitylegal.cz/assets/images/content/obcansky-soudni-rad-kometar-2-vydani.jpg",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "image": "/assets/img/publications/os-komentar-2vydani.jpg",
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 3,
@@ -26,8 +31,10 @@
     "description": "Publikace Víta Hrnčiříka nabízí systematický pohled na předběžná opatření podle OSŘ a ZŘS. Je jedinou českou monografií zpracovávající toto živě diskutované a vysoce prakticky relevantní téma. Řada problémů spojených s předběžnými opatřeními je kontroverzní na společenské i právní úrovni. Práce se zabývá základními otázkami práva předběžných opatření, analyzuje je a přichází s řešením jednotlivých aplikačních a praktických problémů. Inspiruje se jak v historii, tak ve srovnatelných právních řádech (zejména Rakouska a Německa). Jde především o příručku pro právní a soudní praxi.",
     "date": "2016-06-01",
     "link": "",
-    "image": "https://www.equitylegal.cz/assets/images/content/predbezna-opatreni-v-civilnim-rizeni.jpg",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "image": "/assets/img/publications/predbezna-opatreni-v-civilnim-rizeni.jpg",
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 4,
@@ -36,8 +43,10 @@
     "description": "Komentář je praktickým textem zabývajícím se konkrétní aplikací procesních předpisů a postupem soudů. Vít Hrnčiřík je autorem části týkající se rozsudků a usnesení, směnečného platebního rozkazu, platebního rozkazu, evropského a elektronického platebního rozkazu, rozsudku pro uznání a rozsudku pro zmeškání.",
     "date": "2013-09-01",
     "link": "",
-    "image": "https://www.equitylegal.cz/assets/images/content/obcansky-soudni-rad-komentar.jpg",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "image": "/assets/img/publications/os-komentar-1vydani.jpg",
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 5,
@@ -46,7 +55,9 @@
     "description": "Odborný příspěvek publikovaný v časopise Soudní rozhledy, č. 4, ročník 21.",
     "date": "2015-04-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 6,
@@ -55,7 +66,9 @@
     "description": "Odborný příspěvek publikovaný v časopise Soudní rozhledy č. 7–8, ročník 20.",
     "date": "2014-08-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 7,
@@ -64,7 +77,9 @@
     "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy, 2014, č. 12.",
     "date": "2014-12-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 8,
@@ -73,7 +88,9 @@
     "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy, č. 21, ročník 21.",
     "date": "2013-11-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 9,
@@ -82,7 +99,9 @@
     "description": "Odborný příspěvek publikovaný v časopise Právní rádce, 2010, č. 12.",
     "date": "2010-12-01",
     "link": "http://PRAVNIRADCE.IHNED.CZ/c1-48644740-vyzva-k-zaplaceni-aneb-cim-vsim-je-veritel-opravnen-hrozit",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 10,
@@ -91,7 +110,9 @@
     "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy, 2010, č. 10.",
     "date": "2010-10-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 11,
@@ -100,7 +121,9 @@
     "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy, 2010, č. 1.",
     "date": "2010-01-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 12,
@@ -109,7 +132,9 @@
     "description": "Odborný příspěvek publikovaný v časopise Právní rozhledy 2009, č. 9.",
     "date": "2009-09-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 13,
@@ -118,7 +143,9 @@
     "description": "Odborný příspěvek publikovaný v Common law review 2006, Issue Focus: Crime and Punishment.",
     "date": "2006-01-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
   },
   {
     "id": 14,
@@ -127,6 +154,56 @@
     "description": "Odborný příspěvek publikovaný v 32 J. Envtl. L. & Litig. 247–270 (2017).",
     "date": "2017-01-01",
     "link": "",
-    "authors": ["JUDr. Vít Hrnčiřík, LL.M., Ph.D."]
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
+  },
+  {
+    "id": 15,
+    "type": "book",
+    "title": "Občanský soudní řád – komentář, 4. vydání",
+    "description": "Civilní proces se neustále vyvíjí a držet krok s neustálými novelami je pro právní praxi klíčové. Proto po čtyřech letech přichází kompletně revidované a aktualizované vydání tohoto zásadního komentáře občanského soudního řádu z nakladatelství C. H. Beck. Komentář reflektuje veškeré legislativní změny a judikaturu za poslední čtyři roky. Na knize pracoval tým zkušených soudců, akademiků a advokátů, kteří patří k naprosté špičce v oblasti civilního práva procesního včetně JUDr. Víta Hrnčiříka, Ph.D., LL.M., advokáta a jednatele společnosti Equity Legal. Pro toto vydání komplexně zpracoval část věnující se rozsudkům, usnesením, platebním rozkazům, evropskému a směnečnému platebnímu rozkazu (§ 152 až 175).",
+    "date": "2026-01-01",
+    "link": "",
+    "image": "/assets/img/publications/os-komentar-4vydani.jpg",
+    "authors": [
+      "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
+    ]
+  },
+  {
+    "id": 16,
+    "type": "book",
+    "title": "Přísedící a laický prvek v justici",
+    "description": "Monografie se zabývá otázkami, zda je laický prvek v justici stále demokratizujícím elementem, jestli jsou v případě přísedících dostatečně naplněny ústavní předpoklady nezávislého, nestranného a zákonného soudce, jestli má převážit spíše legitimita demokratická či odborná, a konečně, zda má být laický prvek v českém soudnictví zachován.",
+    "date": "2020-01-01",
+    "link": "",
+    "image": "/assets/img/publications/prisedici-a-laicky-prvek-v-justici.jpg",
+    "authors": [
+      "JUDr. Ing. Vladimír Lajsek, Ph.D., MBA"
+    ]
+  },
+  {
+    "id": 17,
+    "type": "book",
+    "title": "Veřejnoprávní smlouvy koordinační",
+    "description": "Publikace se zabývá veřejnoprávními smlouvami koordinačními v českém právním řádu. Jejím cílem je pokus o systematické roztřídění těchto smluv a zhodnocení jejich úpravy jak hmotněprávní, tak i procesní. To vše je činěno při současném zohlednění tuzemské i zahraniční literatury a rozhodovací praxe Nejvyššího správního soudu.",
+    "date": "2018-01-01",
+    "link": "",
+    "image": "/assets/img/publications/verejnopravni-smlouvy-koordinacni.jpg",
+    "authors": [
+      "JUDr. Vojtěch Příkopa, Ph.D."
+    ]
+  },
+  {
+    "id": 18,
+    "type": "book",
+    "title": "Restituce podle zákona o půdě",
+    "description": "Kniha se zabývá problematikou soudního uspokojování restitučních nároků převodem jiných zemědělských pozemků ve vlastnictví státu. Judikatura postupně vytvořila pro tuzemské právní prostředí zcela ojedinělou a svébytnou oblast právních pravidel sloužících k tomu, aby vůbec mohl být naplněn jeden z účelů zákona o půdě, tedy zmírnění některých majetkových křivd spočívajících v porušování obecně uznávaných lidských práv a svobod ze strany státu za minulého režimu. Právě analýze této rozhodovací soudní praxe je věnována převážná část této publikace.",
+    "date": "2021-01-01",
+    "link": "",
+    "image": "/assets/img/publications/restituce-podle-zakona-o-pude.jpg",
+    "authors": [
+      "JUDr. Vojtěch Příkopa, Ph.D."
+    ]
   }
 ]

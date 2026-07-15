@@ -17,17 +17,6 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
   <meta property="og:type"        content="website">
   <meta property="og:image"       content="/assets/img/og-image.jpg">
   <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-  <script>
-    (function(){
-      try {
-        var s = localStorage.getItem('el-theme');
-        var dark = s ? s === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-      } catch(e) {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
-    })();
-  </script>
   <link rel="stylesheet" href="/assets/css/style.css?v=<?= filemtime(__DIR__ . '/../assets/css/style.css') ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +40,6 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
       </ul>
 
       <div class="nav__controls">
-        <button class="nav__theme-btn" id="themeToggle" aria-label="Přepnout tmavý/světlý režim" title="Přepnout motiv">☾</button>
         <button class="nav__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
