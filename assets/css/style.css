@@ -131,7 +131,7 @@ p:last-child { margin-bottom: 0; }
 }
 .nav__link {
   font-family: var(--font-h);
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 600;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -1382,8 +1382,6 @@ body { padding-top: var(--nh); }
   margin: 0;
 }
 .process-step__link {
-  display: inline-block;
-  margin-top: .75rem;
   font-size: .82rem;
   font-family: var(--font-h);
   font-weight: 600;
