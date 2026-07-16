@@ -47,7 +47,7 @@ include 'includes/header.php';
       <div class="breadcrumb" style="margin-bottom:.75rem;">
         <a href="/pripady.php">Blog</a>
         <span class="breadcrumb__sep">/</span>
-        <span><?= htmlspecialchars($article['category']) ?></span>
+        <a href="/pripady.php?kategorie=<?= urlencode($article['category']) ?>"><?= htmlspecialchars($article['category']) ?></a>
       </div>
       <h1 class="page-hero__title"><?= htmlspecialchars($article['title']) ?></h1>
       <div class="page-hero__desc">
@@ -73,7 +73,7 @@ include 'includes/header.php';
         </div>
         <?= $article['content'] ?>
         <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
-          <a href="/pripady.php" class="btn btn--outline">← Zpět na všechny případy</a>
+          <a href="/pripady.php" class="btn btn--outline">← Zpět na všechny články</a>
         </div>
       </article>
       <aside class="article-sidebar">
@@ -85,7 +85,16 @@ include 'includes/header.php';
         <div class="article-sidebar__card">
           <div class="article-sidebar__title">Související služby</div>
           <ul style="display:flex;flex-direction:column;gap:.5rem;">
-            <li><a href="/sluzby.php" style="font-size:.88rem;">Právní služby</a></li>
+            <?php
+            $allServices = json_decode(file_get_contents(__DIR__ . '/data/services.json'), true) ?? [];
+            $serviceLabels = array_column($allServices, 'label', 'id');
+            $selectedServices = $article['services'] ?? [];
+            if (empty($selectedServices)): ?>
+              <li><a href="/sluzby.php" style="font-size:.88rem;">Právní služby</a></li>
+            <?php else: foreach ($selectedServices as $sid):
+              if (empty($serviceLabels[$sid])) continue; ?>
+              <li><a href="/sluzby.php#<?= htmlspecialchars($sid) ?>" style="font-size:.88rem;"><?= htmlspecialchars($serviceLabels[$sid]) ?></a></li>
+            <?php endforeach; endif; ?>
           </ul>
         </div>
       </aside>

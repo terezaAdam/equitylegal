@@ -8,7 +8,8 @@
         "category": "Aktuality",
         "date": "2026-06-27",
         "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop&auto=format"
+        "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop&auto=format",
+        "services": []
     },
     {
         "id": 8,
@@ -19,7 +20,8 @@
         "category": "Řešené případy",
         "date": "2026-06-27",
         "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop&auto=format"
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop&auto=format",
+        "services": ["pravo-obchodnich-korporaci-a-obchodni-pravo", "bankovnictvi-a-financovani"]
     },
     {
         "id": 9,
@@ -30,7 +32,8 @@
         "category": "Řešené případy",
         "date": "2026-06-27",
         "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=500&fit=crop&auto=format"
+        "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=500&fit=crop&auto=format",
+        "services": ["insolvencni-pravo", "pravo-obchodnich-korporaci-a-obchodni-pravo"]
     },
     {
         "id": 10,
@@ -41,7 +44,8 @@
         "category": "Řešené případy",
         "date": "2026-06-27",
         "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=500&fit=crop&auto=format"
+        "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=500&fit=crop&auto=format",
+        "services": ["trestni-pravo", "vymahani-a-sprava-pohledavek"]
     },
     {
         "id": 11,
@@ -52,7 +56,8 @@
         "category": "Řešené případy",
         "date": "2026-06-27",
         "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format"
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format",
+        "services": ["pravo-dusevniho-vlastnictvi", "pravo-informacnich-technologii"]
     },
     {
         "id": 12,
@@ -63,7 +68,8 @@
         "category": "Řešené případy",
         "date": "2026-06-27",
         "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&auto=format"
+        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&auto=format",
+        "services": ["pravo-obchodnich-korporaci-a-obchodni-pravo", "pravo-nemovitosti-a-stavebni-pravo"]
     },
     {
         "id": 7,
@@ -74,6 +80,7 @@
         "category": "Aktuality",
         "date": "2026-06-27",
         "author": "JUDr. Vít Hrnčiřík, LL.M., Ph.D.",
-        "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop&auto=format"
+        "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop&auto=format",
+        "services": ["pravo-informacnich-technologii"]
     }
 ]

@@ -4,6 +4,7 @@ require_once __DIR__ . '/includes/layout.php';
 requireAuth();
 
 $articles = readJson('articles.json');
+$allServices = readJson('services.json');
 
 // ── DELETE ──
 if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
@@ -25,8 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $category = trim($_POST['category'] ?? '');
   $date     = trim($_POST['date']     ?? date('Y-m-d'));
   $author   = trim($_POST['author']   ?? '');
+  $services = array_values((array)($_POST['services'] ?? []));
 
-  $record = compact('title', 'slug', 'excerpt', 'content', 'category', 'date', 'author');
+  $record = compact('title', 'slug', 'excerpt', 'content', 'category', 'date', 'author', 'services');
 
   if ($id !== null) {
     // Update
@@ -102,6 +104,19 @@ adminHeader('Blog / Články', 'articles');
       <div class="form-group">
         <label>Autor</label>
         <input type="text" name="author" value="<?= htmlspecialchars($editing['author'] ?? '') ?>" placeholder="Jméno autora">
+      </div>
+      <div class="form-group form-full">
+        <label>Související služby</label>
+        <div class="form-hint">Zobrazí se jako prolinky v postranním panelu u článku. Nevyberete-li nic, zobrazí se obecný odkaz na Právní služby.</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.5rem 1rem;">
+          <?php $editingServices = $editing['services'] ?? []; ?>
+          <?php foreach ($allServices as $svc): ?>
+            <label style="display:flex;align-items:center;gap:.35rem;font-weight:400;font-size:.85rem;">
+              <input type="checkbox" name="services[]" value="<?= htmlspecialchars($svc['id']) ?>" <?= in_array($svc['id'], $editingServices, true) ? 'checked' : '' ?>>
+              <?= htmlspecialchars($svc['label']) ?>
+            </label>
+          <?php endforeach; ?>
+        </div>
       </div>
       <div class="form-group form-full">
         <label>Perex (krátký popis)</label>

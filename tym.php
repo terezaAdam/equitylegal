@@ -37,7 +37,7 @@ include 'includes/header.php';
 
 <section class="section">
   <div class="container">
-    <div class="team-grid">
+    <div class="team-grid team-grid--compact">
       <?php foreach ($coreTeam as $m):
         $initials = '';
         $nameParts = preg_replace('/[^a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ\s]/', '', $m['name']);
@@ -45,15 +45,9 @@ include 'includes/header.php';
         $nameParts = array_slice($nameParts, 0, 2);
         $initials = implode('', array_map(fn($p) => mb_strtoupper(mb_substr($p, 0, 1)), $nameParts));
       ?>
-        <div class="team-card fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
-          <div class="team-card__photo">
-            <?php if (!empty($m['photo'])): ?>
-              <img src="<?= htmlspecialchars($m['photo']) ?>" alt="Fotografie <?= htmlspecialchars($m['name']) ?>" loading="lazy">
-            <?php else: ?>
-              <div class="team-card__photo-placeholder">
-                <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
-              </div>
-            <?php endif; ?>
+        <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
+          <div class="team-card__avatar">
+            <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
           </div>
           <div class="team-card__body">
             <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
