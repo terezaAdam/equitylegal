@@ -13,7 +13,7 @@ adminHeader('Dashboard', 'dashboard');
 <div class="stats-grid">
   <div class="stat-card">
     <div class="stat-card__num"><?= count($articles) ?></div>
-    <div class="stat-card__label">Řešené případy / články</div>
+    <div class="stat-card__label">Blog / články</div>
   </div>
   <div class="stat-card">
     <div class="stat-card__num"><?= count($team) ?></div>
@@ -34,7 +34,7 @@ adminHeader('Dashboard', 'dashboard');
   <!-- Recent articles -->
   <div class="card">
     <div class="card__title">
-      Poslední případy / články
+      Poslední příspěvky
       <a href="/admin/articles.php" class="btn btn--sm btn--outline">Spravovat</a>
     </div>
     <div class="table-wrap">

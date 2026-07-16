@@ -35,21 +35,23 @@ include 'includes/header.php';
       <div class="publications-list">
         <?php foreach ($books as $p): ?>
           <div class="pub-item pub-item--book fade-in">
-            <div>
+            <div class="pub-item__header">
               <div class="pub-item__type">Knižní publikace</div>
-              <div class="pub-item__title"><?= htmlspecialchars($p['title']) ?></div>
-              <p class="pub-item__desc"><?= htmlspecialchars($p['description']) ?></p>
-              <?php if (!empty($p['authors'])): ?>
-                <div style="margin-top:.5rem;font-size:.8rem;color:var(--text-muted);font-family:var(--font-h);">
-                  <?= htmlspecialchars(implode(', ', $p['authors'])) ?>
-                </div>
-              <?php endif; ?>
+              <div class="pub-item__date"><?= date('Y', strtotime($p['date'])) ?></div>
             </div>
-            <div class="pub-item__side">
+            <div class="pub-item__title"><?= htmlspecialchars($p['title']) ?></div>
+            <div class="pub-item__row">
               <?php if (!empty($p['image'])): ?>
                 <img class="pub-item__thumb" src="<?= htmlspecialchars($p['image']) ?>" alt="Obálka: <?= htmlspecialchars($p['title']) ?>" loading="lazy" data-lightbox="<?= htmlspecialchars($p['image']) ?>" data-title="<?= htmlspecialchars($p['title']) ?>" role="button" tabindex="0" aria-label="Zvětšit obálku: <?= htmlspecialchars($p['title']) ?>">
               <?php endif; ?>
-              <div class="pub-item__date"><?= date('Y', strtotime($p['date'])) ?></div>
+              <div class="pub-item__content">
+                <p class="pub-item__desc"><?= htmlspecialchars($p['description']) ?></p>
+                <?php if (!empty($p['authors'])): ?>
+                  <div class="pub-item__authors">
+                    <?= htmlspecialchars(implode(', ', $p['authors'])) ?>
+                  </div>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
         <?php endforeach; ?>

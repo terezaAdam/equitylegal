@@ -33,7 +33,7 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
 
       <ul class="nav__links" role="list">
         <li><a href="/sluzby.php"   class="nav__link">Právní služby</a></li>
-        <li><a href="/pripady.php"  class="nav__link">Řešené případy</a></li>
+        <li><a href="/pripady.php"  class="nav__link">Blog</a></li>
         <li><a href="/tym.php"      class="nav__link">Náš tým</a></li>
         <li><a href="/publikace.php" class="nav__link">Publikace</a></li>
         <li><a href="/kontakty.php" class="nav__link">Kontakty</a></li>
@@ -50,7 +50,7 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
   <!-- Mobile nav -->
   <div class="nav__mobile" id="mobileNav" role="list">
     <a href="/sluzby.php"    class="nav__link" role="listitem">Právní služby</a>
-    <a href="/pripady.php"   class="nav__link" role="listitem">Řešené případy</a>
+    <a href="/pripady.php"   class="nav__link" role="listitem">Blog</a>
     <a href="/tym.php"       class="nav__link" role="listitem">Náš tým</a>
     <a href="/publikace.php" class="nav__link" role="listitem">Publikace</a>
     <a href="/kontakty.php"  class="nav__link" role="listitem">Kontakty</a>

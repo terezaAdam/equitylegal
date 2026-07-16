@@ -1,6 +1,6 @@
 <?php
-$pageTitle = 'Řešené případy – EQUITY LEGAL';
-$pageDesc  = 'Případové studie a odborné články z praxe advokátní kanceláře EQUITY LEGAL: obchodní právo, trestní právo, nemovitosti a další.';
+$pageTitle = 'Blog – EQUITY LEGAL';
+$pageDesc  = 'Blog advokátní kanceláře EQUITY LEGAL: řešené případy z praxe i zajímavosti z právního oboru a dění v kanceláři.';
 
 // Load articles from JSON
 $articles = array_filter(
@@ -42,10 +42,10 @@ include 'includes/header.php';
 
 <section class="page-hero">
   <div class="container">
-    <p class="page-hero__label">Blog & Případové studie</p>
+    <p class="page-hero__label">Aktuality a řešené případy</p>
     <?php if ($article): ?>
       <div class="breadcrumb" style="margin-bottom:.75rem;">
-        <a href="/pripady.php">Řešené případy</a>
+        <a href="/pripady.php">Blog</a>
         <span class="breadcrumb__sep">/</span>
         <span><?= htmlspecialchars($article['category']) ?></span>
       </div>
@@ -54,9 +54,9 @@ include 'includes/header.php';
         <p><?= htmlspecialchars($article['excerpt']) ?></p>
       </div>
     <?php else: ?>
-      <h1 class="page-hero__title">Řešené případy</h1>
+      <h1 class="page-hero__title">Blog</h1>
       <div class="page-hero__desc">
-        <p>Odborné komentáře, případové studie a novinky z naší právní praxe. Sledujte aktuální dění v oblasti práva.</p>
+        <p>Řešené případy z naší praxe i zajímavosti z právního oboru a dění v kanceláři EQUITY LEGAL.</p>
       </div>
     <?php endif; ?>
   </div>
@@ -85,44 +85,7 @@ include 'includes/header.php';
         <div class="article-sidebar__card">
           <div class="article-sidebar__title">Související služby</div>
           <ul style="display:flex;flex-direction:column;gap:.5rem;">
-            <?php
-            $serviceMap = [
-              'M&A & Transakce'       => [
-                'Fúze a akvizice'              => '/sluzby.php#fuze-a-akviziyce',
-                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
-                'Bankovnictví a financování'   => '/sluzby.php#bankovnictvi-a-financovani',
-              ],
-              'Restrukturalizace'     => [
-                'Insolvenční právo'            => '/sluzby.php#insolvencni-pravo',
-                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
-                'Daňové a celní právo'         => '/sluzby.php#danove-a-celni-pravo',
-              ],
-              'Sporná agenda'         => [
-                'Zastupování před soudy'       => '/sluzby.php#zastupovani-pred-soudy',
-                'Trestní právo'                => '/sluzby.php#trestni-pravo',
-                'Vymáhání pohledávek'          => '/sluzby.php#vymahani-a-sprava-pohledavek',
-              ],
-              'Duševní vlastnictví'   => [
-                'Duševní vlastnictví'          => '/sluzby.php#pravo-dusevniho-vlastnictvi',
-                'Informační technologie'       => '/sluzby.php#pravo-informacnich-technologii',
-                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
-              ],
-              'Korporátní právo'      => [
-                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
-                'Nemovitosti a stavební právo' => '/sluzby.php#pravo-nemovitosti-a-stavebni-pravo',
-                'Vymáhání pohledávek'          => '/sluzby.php#vymahani-a-sprava-pohledavek',
-              ],
-              'Technologie & právo'   => [
-                'Informační technologie'       => '/sluzby.php#pravo-informacnich-technologii',
-                'Duševní vlastnictví'          => '/sluzby.php#pravo-dusevniho-vlastnictvi',
-                'Právo obchodních korporací'   => '/sluzby.php#pravo-obchodnich-korporaci-a-obchodni-pravo',
-              ],
-            ];
-            $cat = $article['category'] ?? '';
-            $services = $serviceMap[$cat] ?? ['Právní služby' => '/sluzby.php'];
-            foreach ($services as $label => $href): ?>
-              <li><a href="<?= $href ?>" style="font-size:.88rem;"><?= htmlspecialchars($label) ?></a></li>
-            <?php endforeach; ?>
+            <li><a href="/sluzby.php" style="font-size:.88rem;">Právní služby</a></li>
           </ul>
         </div>
       </aside>

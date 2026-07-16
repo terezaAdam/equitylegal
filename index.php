@@ -35,34 +35,34 @@ include 'includes/header.php';
 
       <div class="value-card fade-in">
         <div class="value-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div class="value-card__title">Byznysové myšlení místo pouhého „paragrafování“</div>
+        <p>Většina advokátních kanceláří vám řekne, co v zákoně stojí a proč něco nejde. EQUITY LEGAL naopak přemýšlí jako partner ve vašem podnikání. Právní rizika nepřehlíží, ale dokáže je kvantifikovat a zasadit do reálného ekonomického kontextu. Klient nedostane pětistránkové teoretické memorandum plné odkazů na judikaturu, ale jasné strategické doporučení, které mu pomůže vydělat nebo ochránit peníze.</p>
+      </div>
+
+      <div class="value-card fade-in">
+        <div class="value-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="value-card__title">Bezvýhradná loajalita – neopouštíme vás v těžkých časech</div>
+        <p>Pro řadu kanceláří je klient jen dalším spisem v pořadí. V EQUITY LEGAL si zakládáme na tom, že partnerství myslíme vážně. Skutečná loajalita se nepozná, když se obchodu daří, ale když přijde krize, složitý spor nebo nečekané byznysové otřesy. Své klienty neopouštíme v těžkých časech; naopak v krizových situacích stojíme pevně po jejich boku, přebíráme tlak a hledáme cestu ven, ať už je situace jakkoliv komplikovaná.</p>
+      </div>
+
+      <div class="value-card fade-in">
+        <div class="value-card__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <div class="value-card__title">Odbornost</div>
-        <p>Více jak 15 let zkušeností v ryze českých i mezinárodních advokátních kancelářích. Znalosti práva na nejvyšší úrovni.</p>
+        <div class="value-card__title">Kombinace korporátního know-how a flexibility butikové kanceláře</div>
+        <p>Tým EQUITY LEGAL tvoří lidé, kteří prošli velkou mezinárodní či největší domácí advokacií a transakcemi za stovky milionů. Klient tak získává špičkovou expertízu a procesní standardy srovnatelné s „big law" firmami. Zároveň ale kancelář netrpí jejich neduhem – těžkopádností. Klient neplatí za obří aparát, nečeká dny na schválení banálního úkonu a má přímý, flexibilní přístup ke zkušeným partnerům, nikoliv k anonymním koncipientům.</p>
       </div>
 
       <div class="value-card fade-in">
         <div class="value-card__icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
         </div>
-        <div class="value-card__title">Individuální přístup</div>
-        <p>Každý případ je jedinečný. Právní řešení přizpůsobujeme konkrétním potřebám a cílům každého klienta.</p>
-      </div>
-
-      <div class="value-card fade-in">
-        <div class="value-card__icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="value-card__title">Mezinárodní síť</div>
-        <p>Zahraniční spolupráce a poradenství v anglickém, německém, polském, rumunském, ukrajinském a dalších jazycích.</p>
-      </div>
-
-      <div class="value-card fade-in">
-        <div class="value-card__icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <div class="value-card__title">Kreativní řešení</div>
-        <p>Zkoumáme právní problémy ze všech perspektiv a přicházíme s cílenými řešeními šitými na míru.</p>
+        <div class="value-card__title">Právo s lidskou tváří a srozumitelná komunikace</div>
+        <p>Jednou z největších bariér mezi advokátem a klientem bývá právnická hantýrka. EQUITY LEGAL sází na absolutní přímočarost a srozumitelnost. Komunikuje otevřeně, lidsky a k věci – ať už jde o složité akvizice, IT kontrakty nebo krizové spory. Klient vždy přesně ví, v jaké fázi se jeho věc nachází, jaká jsou reálná rizika a kolik ho to bude stát. Žádná skrytá překvapení ve fakturách.</p>
       </div>
 
     </div>
@@ -115,8 +115,12 @@ include 'includes/header.php';
         <p class="section-label">O nás</p>
         <h2 class="section-title" id="about-heading">Právní kancelář, která hledá řešení</h2>
         <div class="divider"></div>
-        <p>EQUITY LEGAL si zakládá na nejlepším právním poradenství a zastupování klientů. Zatímco EQUITY vyjadřuje schopnost nalézt a dodat nejlepší řešení obtížných právních případů, LEGAL spojuje prvotřídní znalosti práva a odborné dovednosti.</p>
-        <p>Naše kancelář nabízí poradenství na dlouhodobé bázi s detailní znalostí konkrétní problematiky a na míru obchodním a jiným zájmům klientů. Sídlíme na Praze 3 – Vinohrady s bezplatným parkováním pro klienty.</p>
+        <p>EQUITY LEGAL poskytuje právní poradenství a zastupování klientů s důrazem na odbornost a praktické výsledky. Název EQUITY vyjadřuje naši schopnost hledat spravedlivá a efektivní řešení i ve složitých právních situacích. LEGAL představuje hlubokou znalost práva, preciznost a odborné dovednosti, o které se naši klienti mohou opřít.</p>
+
+<p>Aktivně pracujeme s moderními technologiemi a orientujeme se v oblasti ICT práva, startupů, ochrany dat i duševního vlastnictví. Díky tomu dokážeme poskytovat efektivní a aktuální právní řešení.
+Jsme partnerem pro růst i oporou v náročných situacích.</p>
+
+  <p>Naši kancelář najdete v Praze 3 na Vinohradech. Klientům je k dispozici bezplatné parkování.</p>
         <div class="about__stats">
           <div>
             <div class="about__stat-num">15+</div>

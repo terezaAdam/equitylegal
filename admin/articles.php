@@ -60,9 +60,9 @@ if (isset($_GET['edit'])) {
 }
 $isNew = isset($_GET['new']);
 
-$categories = ['Stavební právo','Trestní právo','Nemovitosti','Veřejné zakázky','Rodinné právo','IT právo','Pracovní právo','Obchodní právo','Insolvence','Jiné'];
+$categories = ['Řešené případy', 'Aktuality'];
 
-adminHeader('Řešené případy / Články', 'articles');
+adminHeader('Blog / Články', 'articles');
 ?>
 
 <?php if ($editing || $isNew): ?>

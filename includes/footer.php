@@ -13,7 +13,7 @@
         <div class="footer__col-title">Navigace</div>
         <ul class="footer__links">
           <li><a href="/sluzby.php">Právní služby</a></li>
-          <li><a href="/pripady.php">Řešené případy</a></li>
+          <li><a href="/pripady.php">Blog</a></li>
           <li><a href="/tym.php">Náš tým</a></li>
           <li><a href="/publikace.php">Publikace</a></li>
           <li><a href="/kontakty.php">Kontakty</a></li>
