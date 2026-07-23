@@ -1,86 +1,144 @@
 [
-    {
-        "id": 13,
-        "slug": "slovnik-advokata",
-        "title": "Průvodce advokátním žargonem: Rozumějte svému právníkovi",
-        "excerpt": "Vstoupit do světa paragrafů občas znamená ocitnout se v jiném jazykovém vesmíru. Připravili jsme stručný slovník pojmů, se kterými se v advokátních kuloárech setkáte nejčastěji.",
-        "content": "<p>Vstoupit do světa paragrafů občas znamená ocitnout se v jiném jazykovém vesmíru. Aby pro vás byla komunikace s naší kanceláří co nejpříjemnější, připravili jsme tento stručný slovník pojmů, se kterými se v advokátních kuloárech setkáte nejčastěji.</p><dl class=\"glossary\"><dt>Litispendence</dt><dd>Stav, kdy v téže věci již probíhá jiné soudní řízení. Prakticky to znamená, že „dvakrát do stejné řeky\" u soudu nevstoupíte, protože soud by ten druhý návrh odmítl.</dd><dt>Meritorní rozhodnutí</dt><dd>Rozhodnutí, které řeší samotnou podstatu věci (jádro pudla), nikoliv jen procesní detaily kolem.</dd><dt>Procesní proces</dt><dd>Úkony, které se netýkají přímo nároku, ale pravidel „hry\" u soudu – například lhůty, zastupování nebo doručování.</dd><dt>Repliky a dupliky</dt><dd>Ping-pong písemných vyjádření. Žalobce pošle repliku na vyjádření žalovaného, ten může odpovědět duplikou.</dd><dt>Judikát</dt><dd>Dřívější rozhodnutí soudu (často Nejvyššího nebo Ústavního), které slouží jako vodítko pro podobné případy v budoucnu.</dd><dt>Břemeno</dt><dd>Povinnost strany doložit svá tvrzení důkazy. V advokátní hantýrce se často řeší, kdo „nese důkazní břemeno\".</dd><dt>Zmeškání (Kontumace)</dt><dd>Situace, kdy se jedna strana nedostaví k soudu bez omluvy, což může vést k prohře „kontumačním rozsudkem\".</dd><dt>Právní moc vs. Vykonatelnost</dt><dd>Právní moc znamená, že rozhodnutí je konečné a nelze ho napadnout běžným odvoláním. Vykonatelnost je moment, kdy už můžete zaklepat na dveře exekutora.</dd><dt>Petit</dt><dd>To nejdůležitější na konci každého podání – přesná formulace toho, co po soudu vlastně žádáte, aby napsal do rozsudku.</dd><dt>Substituce</dt><dd>Když advokát pověří jiného advokáta nebo koncipienta, aby ho zastoupil (např. u jednání), kde sám nemůže být.</dd></dl><p>Tento slovník je živým organismem. Pokud narazíte na termín, který vám vrtá hlavou, neváhejte se nás zeptat – jsme tu od toho, abychom právo překládali do lidské řeči.</p>",
-        "category": "Aktuality",
-        "date": "2026-06-27",
-        "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop&auto=format",
-        "services": []
-    },
-    {
-        "id": 8,
-        "slug": "v-hledacku-investoru-strategicke-vedeni-techfirmy",
-        "title": "V hledáčku investorů: Strategické vedení technologické firmy procesem nabídek na odkup",
-        "excerpt": "Když softwarová firma vyvine produkt, který mění pravidla hry, stane se z ní žádané zboží. Jak v EQUITY LEGAL pomáháme zakladatelům zorientovat se v záplavě nabídek a chránit jejich zájmy při vyjednávání s dravými investory?",
-        "content": "<p>Když softwarová firma vyvine produkt, který zásadně mění pravidla hry na trhu, stane se z ní žádané zboží. V EQUITY LEGAL aktuálně zastupujeme klienta — zakladatele mimořádně úspěšné české technologické společnosti vyvíjející software — o kterou projevuje intenzivní zájem řada strategických kupců a investorů, a to převážně ze zahraničí. Naším úkolem v této dynamické fázi není pouze právní servis, ale především role strategického partnera při vyjednávání.</p><p>Když o vaši firmu stojí každý, paradoxně se tím zvyšuje riziko chybného kroku. Nabídky se liší nejen v kupní ceně, ale i v transakčních strukturách, zárukách a budoucích podmínkách pro zakladatele. Pomáháme klientovi zorientovat se v záplavě indikativních nabídek (LOI) a provádíme jejich tvrdou právní a byznysovou analýzu. Efektivně odhalujeme, které nabídky jsou pro budoucnost projektu i samotné zakladatele skutečně validní a bezpečné, a které naopak obsahují skrytá rizika či nereálné podmínky.</p><p>Vést jednání s dravými investičními fondy a nadnárodními korporacemi vyžaduje pevnou pozici. Pro našeho klienta zajišťujeme, aby si v rozhovorech udržel kontrolu, chránil své klíčové know-how a z vyjednávání vytěžil maximum, aniž by ohrozil běžný chod firmy.</p><p>V EQUITY LEGAL dokazujeme, že v oblasti technologického M&amp;A umíme víc než jen psát smlouvy. Jsme štítem a strategickým filtrem, který ambiciózním zakladatelům pomáhá činit správná rozhodnutí v momentech, kdy se láme chleba.</p>",
-        "category": "Řešené případy",
-        "date": "2026-06-27",
-        "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop&auto=format",
-        "services": ["pravo-obchodnich-korporaci-a-obchodni-pravo", "bankovnictvi-a-financovani"]
-    },
-    {
-        "id": 9,
-        "slug": "restrukturalizace-s-rytmem-hudebni-festival",
-        "title": "Restrukturalizace s rytmem: Zachránili jsme tradiční český hudební festival",
-        "excerpt": "Za každou právní restrukturalizací stojí konkrétní příběh. V EQUITY LEGAL jsme poskytli komplexní poradenství při záchraně jednoho z nejznámějších hudebních festivalů v České republice.",
-        "content": "<p>Když se řekne právní restrukturalizace, většina lidí si představí strohá čísla, korporátní schůze a hromady smluv. V EQUITY LEGAL ale víme, že za každou společností stojí konkrétní příběh, emoce a často i kus české kultury. Úspěšně jsme poskytli komplexní právní poradenství při restrukturalizaci společnosti, která pořádá jeden z nejznámějších a nejtradičnějších hudebních festivalů v České republice.</p><p>Kulturní a eventový segment s sebou nese specifická rizika, od závislosti na sezónnosti až po složité smluvní vztahy s partnery, dodavateli a účinkujícími. Naším úkolem bylo stabilizovat vnitřní struktury pořadatelské agentury, nastavit nový, bezpečnější právní rámec pro budoucí ročníky a efektivně ošetřit veškeré závazky.</p><p>Díky detailní znalosti obchodního práva a kreativnímu přístupu se nám podařilo najít řešení, které nejenže ochránilo samotný byznys klienta, ale především zajistilo, že oblíbená kulturní tradice může bez ohrožení pokračovat dál. Propojili jsme naše zkušenosti z korporátního práva se specifiky zábavního průmyslu a ukázali, že i v krizových situacích dokážeme klientům dodat jistotu a jasný směr.</p><p>Ať už řešíte restrukturalizaci výrobního podniku, startupu nebo kulturní ikony, v EQUITY LEGAL zkoumáme problémy ze všech perspektiv. Pomůžeme i vašemu podnikání chytit ten správný rytmus.</p>",
-        "category": "Řešené případy",
-        "date": "2026-06-27",
-        "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=500&fit=crop&auto=format",
-        "services": ["insolvencni-pravo", "pravo-obchodnich-korporaci-a-obchodni-pravo"]
-    },
-    {
-        "id": 10,
-        "slug": "pravo-v-neprozkoumanych-vodach-derivativni-zaloba",
-        "title": "Právo v neprozkoumaných vodách: Obhajoba členů orgánů bytového družstva u derivativní žaloby",
-        "excerpt": "Derivativní žaloby nejsou v české soudní praxi dostatečně projudikovány. V EQUITY LEGAL zastupujeme klienty v případu, který přímo spoluvytváří budoucí výklad práva.",
-        "content": "<p>Odpovědnost členů statutárních orgánů je v českém právu trvalým a složitým tématem. V EQUITY LEGAL jsme řešili komplexní právní zastoupení bývalých členů orgánů bytového družstva, kteří čelí obvinění, že měli prodat nemovitý majetek družstva za údajně nižší než tržní cenu. Tento případ je pro nás profesní výzvou, neboť se odehrává současně ve dvou rovinách — v civilní (kde je uplatňována náhrada škody) i v trestněprávní.</p><p>Unikátnost celého sporu spočívá v tom, že žaloba byla podána jako tzv. derivativní žaloba (akcionářská či družstevní žaloba podávaná členem jménem korporace). Tato problematika není v současné české soudní praxi dostatečně projudikovaná. V podstatě tak narážíme na celou řadu zásadních právních otázek, které dosud nemají v rozhodovací praxi soudů jednoznačnou odpověď.</p><p>Naše role v tomto případu přesahuje běžné zastupování. Tím, že formujeme argumentaci v doposud neustálených právních oblastech, přímo spoluvytváříme budoucí výklad práva. Vyřešení těchto otázek bude mít totiž klíčový význam pro to, jak budou české soudy k derivativním žalobám a odpovědnosti volených orgánů v bytových družstvech přistupovat v budoucnu.</p><p>Tento případ potvrzuje, že se v EQUITY LEGAL nebojíme vstoupit do neprobádaných vod. Tam, kde chybí jasná judikatura, nasazujeme precizní analytické myšlení, hlubokou znalost korporátního i trestního práva a odvahu přicházet s argumenty, které posouvají hranice právní praxe.</p>",
-        "category": "Řešené případy",
-        "date": "2026-06-27",
-        "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=500&fit=crop&auto=format",
-        "services": ["trestni-pravo", "vymahani-a-sprava-pohledavek"]
-    },
-    {
-        "id": 11,
-        "slug": "bitva-o-digitalni-identitu-ip-prava",
-        "title": "Bitva o digitální identitu: Komplexní spor o IP práva s přesahem",
-        "excerpt": "Právo duševního vlastnictví dnes zahrnuje i EAN kódy a Amazon ASIN identifikátory. V EQUITY LEGAL jsme úspěšně zvládli přeshraniční spor, kde se křížilo mezinárodní IP právo s algoritmy globálních platforem.",
-        "content": "<p>Právo duševního vlastnictví v 21. století už dávno nepředstavuje jen registraci loga. Dnes se odehrává v globálním digitálním prostoru a na mezinárodních distribučních platformách. V EQUITY LEGAL jsme úspěšně vstoupili do rozsáhlého přeshraničního sporu mezi výrobcem a distributorem, který se týkal kompletního balíku IP práv s klíčovým dopadem na zahraniční trhy.</p><p>Tento případ byl mimořádně specifický svou komplexností. Nešlo pouze o tradiční instituty, jako jsou ochranné známky, označení původu či licenční smlouvy. Spor se přelil přímo do digitální infrastruktury prodeje — předmětem právní bitvy se staly také EAN kódy a produktové identifikátory ASIN (Amazon Standard Identification Number), které jsou pro fungování moderního e-commerce zcela kritické.</p><p>Zajištění ochrany práv našeho klienta vyžadovalo nejen hlubokou znalost mezinárodního práva duševního vlastnictví, ale také detailní pochopení vnitřních mechanismů a algoritmů globálních platforem, a specifických distribučních kanálů včetně distribučních sítí v zahraničí. Blokace nebo neoprávněné převzetí těchto digitálních identit totiž pro firmu znamená okamžité zastavení prodejů a fatální ztráty.</p><p>Díky rychlé reakci a detailní znalosti digitálního trhu jsme dokázali efektivně hájit zájmy klienta v prostředí, kde se setkává české a zahraniční právo s přísnými obchodními podmínkami technologických gigantů. V EQUITY LEGAL ukazujeme, že modernímu byznysu rozumíme do posledního produktového kódu.</p>",
-        "category": "Řešené případy",
-        "date": "2026-06-27",
-        "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format",
-        "services": ["pravo-dusevniho-vlastnictvi", "pravo-informacnich-technologii"]
-    },
-    {
-        "id": 12,
-        "slug": "partner-pro-ty-nejvetsi-inhouse-agenda-druzstvo",
-        "title": "Partner pro ty největší: Převzali jsme kompletní in-house agendu předního bytového družstva",
-        "excerpt": "Velká bytová družstva fungují jako korporace spravující majetek v hodnotě miliard korun. V EQUITY LEGAL jsme převzali kompletní právní zastupování jednoho z největších bytových družstev v České republice.",
-        "content": "<p>Velká bytová družstva dnes fungují jako významné korporace. Spravují majetek v hodnotě miliard korun, zajišťují domov pro tisíce rodin a denně čelí stovkám právních a provozních výzev. V EQUITY LEGAL jsme hrdí na to, že jsme převzali komplexní právní zastupování jednoho z největších bytových družstev v České republice.</p><p>Pro tohoto klienta zajišťujeme kompletní in-house agendu. To znamená, že nejsme jen externím poradcem pro ad hoc případy, ale fungujeme jako interní právní mozek celé organizace. Naše práce pokrývá vše od běžného provozu — jako je správa nájemních a družstevních vztahů, vymáhání pohledávek a agenda spojená s převody družstevních podílů — až po strategické projekty, vyjednávání s dodavateli, stavební právo a korporátní správu (governance) družstva.</p><p>Tento typ spolupráce vyžaduje absolutní důvěru, perfektní organizaci práce a schopnost reagovat v reálném čase. Díky našemu nasazení získalo družstvo silné právní zázemí, které přináší stabilitu jak jeho vedení, tak samotným členům.</p><p>Převzetí takto rozsáhlé agendy je pro EQUITY LEGAL potvrzením, že máme kapacitu, odbornost a procesní nastavení pro správu právních záležitostí těch největších hráčů na trhu. Dokážeme se plně integrovat do chodu vaší společnosti a transformovat složité právní výzvy v jasná a bezpečná řešení.</p>",
-        "category": "Řešené případy",
-        "date": "2026-06-27",
-        "author": "EQUITY LEGAL",
-        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&auto=format",
-        "services": ["pravo-obchodnich-korporaci-a-obchodni-pravo", "pravo-nemovitosti-a-stavebni-pravo"]
-    },
-    {
-        "id": 7,
-        "slug": "pokrok-nezastavit-ai-advokacie",
-        "title": "Pokrok nezastavíš: Proč v advokacii nečekáme na „až pak“?",
-        "excerpt": "Kdy přestaneme říkat, že AI je hudba budoucnosti? My v EQUITY LEGAL jsme si odpověděli jasně – teď. Přečtěte si, proč aktivně spoluvytváříme trendy, místo abychom jen čekali, až se stanou standardem.",
-        "content": "<p>Pamatujete si na dobu, kdy se smluvní vzory hledaly v tištěných šanonech a vrcholem digitalizace byl fax? Dnes nám to přijde úsměvné. A přesně tak se za pár let budeme dívat na dobu, kdy se rešerše dělaly bez asistence umělé inteligence.</p><p>Pokrok zkrátka nezastavíš. V <strong>EQUITY LEGAL</strong> věříme, že v právu vyhrávají ti, kteří trendy nenásledují až ve chvíli, kdy jsou standardem, ale aktivně je spoluvytvářejí už nyní.</p><p>V našem videu se kromě jiného dozvíte i to, jak naskočit na vlnu AI a neustrnout na vavřínech:</p><div class=\"video-embed\"><iframe src=\"https://www.youtube.com/embed/UHdkoCDdZg8\" title=\"Pokrok nezastavíš – EQUITY LEGAL\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div><p><strong>Právo v pohybu:</strong> Proč se tradiční advokacie mění rychleji než kdy dříve a co to znamená pro každodenní byznys.</p><p><strong>Od psacího stroje k promptování:</strong> Jak adopce AI mění DNA naší kanceláře – od zrychlení procesů až po doručování lepších výsledků klientům.</p><p><strong>Flexibilita jako hlavní zbraň:</strong> Proč je schopnost učit se novým technologickým nástrojům dnes pro právníka stejně důležitá jako znalost zákonů.</p><p>Svět se točí dál a digitalizace nikoho prosit nebude. Buď budeme udávat tempo, nebo nám ujede vlak. My v EQUITY LEGAL jsme si vybrali to první.</p>",
-        "category": "Aktuality",
-        "date": "2026-06-27",
-        "author": "JUDr. Vít Hrnčiřík, LL.M., Ph.D.",
-        "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop&auto=format",
-        "services": ["pravo-informacnich-technologii"]
-    }
+  {
+    "id": 16,
+    "slug": "uspech-v-soutezi-pravnicka-firma-roku-2025",
+    "title": "Úspěch v soutěži Právnická firma roku 2025: Potvrzení naší odbornosti i závazek do budoucna",
+    "excerpt": "EQUITY LEGAL potvrdila své pevné místo mezi předními advokátními kancelářemi v ČR a v soutěži Právnická firma roku 2025 získala ocenění Doporučovaná kancelář hned v pěti oblastech praxe.",
+    "content": "<p>Secesní sály pražského Obecního domu hostily v polovině listopadu již 18. ročník prestižního galavečera <strong>Právnická firma roku 2025</strong>. Tato událost, pořádaná společností EPRAVO.CZ pod záštitou Ministerstva spravedlnosti ČR a za podpory České advokátní komory, patří k nejvýznamnějším událostem české právní oblasti.</p><p>Jsme velmi hrdí na to, že EQUITY LEGAL u toho nechyběla a opět potvrdila své pevné místo mezi předními advokátními kancelářemi v České republice.</p><h3>Naše umístění v ročníku 2025</h3><p>V silné konkurenci špičkových českých i mezinárodních kanceláří se EQUITY LEGAL podařilo získat ocenění v klíčových oblastech naší praxe:</p><ul><li>Veřejné zakázky – Doporučovaná kancelář</li><li>Daňové právo – Doporučovaná kancelář</li><li>Logistika a dopravní stavby – Doporučovaná kancelář</li><li>Právo životního prostředí – Doporučovaná kancelář</li><li>Správa majetku – Doporučovaná kancelář</li></ul><p>Tato ocenění jsou pro nás důkazem, že směr, kterým se vydáváme – tedy důraz na špičkovou odbornost, rychlost, technologické inovace a především lidský přístup – má smysl a přináší reálné výsledky.</p><h3>Děkujeme našim klientům a týmu</h3><p>Žádný z těchto úspěchů by nebyl možný bez dvou klíčových pilířů:</p><p><strong>Důvěra našich klientů:</strong> Děkujeme všem partnerům a klientům, kteří nám svěřují své zásadní projekty, právní výzvy i dlouhodobou správu svých záležitostí. Vaše důvěra je pro nás tou největší motivací.</p><p><strong>Nasazení našeho týmu:</strong> Velké díky patří celému týmu EQUITY LEGAL. Výsledky v žebříčku Právnická firma roku jsou odrazem každodenní tvrdé práce, odbornosti a kolektivního nasazení všech našich advokátů, koncipientů i administrativní podpory.</p><h3>S pohledem do budoucna</h3><p>Jak na galavečeru zmínil Miroslav Chochola, předseda představenstva EPRAVO.CZ, soutěž se za 18 let své existence stala respektovaným měřítkem kvality v českém právním prostředí. Umístění v tomto žebříčku pro nás není pouze důvodem k oslavě, ale především závazkem do budoucna.</p><p>I v nadcházejícím roce budeme pokračovat v rozvoji našich služeb, posilování odborných týmů a poskytování právního poradenství té nejvyšší úrovně.</p><p><strong>Děkujeme, že jste u toho s námi!</strong><br>Tým EQUITY LEGAL</p>",
+    "category": "Aktuality",
+    "date": "2026-07-23",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=800&h=500&fit=crop&auto=format",
+    "services": [
+      "verejne-zakazky",
+      "danove-a-celni-pravo"
+    ]
+  },
+  {
+    "id": 15,
+    "slug": "cesta-vasi-zakazky-co-se-deje-po-odeslani-poptavky",
+    "title": "Cesta vaší zakázky: Co se děje po odeslání poptávky?",
+    "excerpt": "Co se stane s vaší poptávkou po kliknutí na „Odeslat“? Přehled devíti kroků od úvodního posouzení a prověření střetu zájmů přes cenovou nabídku až po zahájení práce na vašem případu.",
+    "content": "<p>Zakládáme si na transparentnosti a efektivitě. Abychom vám ušetřili čas i nejistotu, připravili jsme přehled kroků, které v <strong>EQUITY LEGAL</strong> následují po kliknutí na tlačítko „Odeslat“.</p><h3>1. Přijetí a úvodní posouzení</h3><p>Jakmile vaše poptávka dorazí, prověříme ji z hlediska odborné specializace i časových kapacit našich kolegů.</p><h3>2. Prověření střetu zájmů</h3><p>Předtím, než se do věci ponoříme hlouběji, musíme ze zákona i etiky ověřit, zda v dané věci náhodou nezastupujeme protistranu.</p><h3>3. Doplňující dotazy</h3><p>Pokud jsou informace v poptávce neúplné, spojíme se s vámi (obvykle e-mailem nebo telefonicky), abychom si ujasnili klíčové detaily.</p><h3>4. Návrh řešení a cenová nabídka</h3><p>Na základě získaných informací vám zašleme konkrétní návrh postupu a transparentní odhad nákladů (hodinovou sazbu či fixní odměnu).</p><h3>5. Osobní nebo online konzultace</h3><p>U složitějších případů navrhneme společné setkání, kde probereme strategii a vaše očekávání do nejmenších podrobností.</p><h3>6. Uzavření smlouvy o právní pomoci</h3><p>Jakmile si odsouhlasíme podmínky, formalizujeme naši spolupráci podpisem smlouvy, která jasně definuje naše povinnosti a vaše práva.</p><h3>7. Udělení plné moci</h3><p>Pro zastupování před soudy, úřady či třetími stranami od vás obdržíme plnou moc, která nám umožní jednat vaším jménem.</p><h3>8. Zahájení práce na případu</h3><p>Po splnění administrativních náležitostí přebírá váš spis konkrétní advokát a začínáme pracovat na dosažení stanoveného cíle.</p><h3>9. Průběžná informovanost</h3><p>O každém důležitém kroku v rámci vaší věci vás budeme pravidelně informovat – u nás nebudete muset hádat, v jaké fázi se váš případ nachází.</p>",
+    "category": "Aktuality",
+    "date": "2026-07-23",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1423592707957-3b212afa6733?w=800&h=500&fit=crop&auto=format",
+    "services": []
+  },
+  {
+    "id": 14,
+    "slug": "hodnoty-nasich-sluzeb",
+    "title": "Hodnoty našich služeb",
+    "excerpt": "Co nás odlišuje od běžné advokátní kanceláře? Byznysové myšlení, bezvýhradná loajalita v těžkých časech, kombinace korporátního know-how s flexibilitou i technologický přesah – to jsou hodnoty, na kterých stavíme.",
+    "content": "<p>Většina advokátních kanceláří vám řekne, co v zákoně stojí a proč něco nejde. My v <strong>EQUITY LEGAL</strong> přemýšlíme jinak – jako partner ve vašem podnikání. Naše hodnoty nejsou proklamace na webu, ale principy, podle kterých skutečně pracujeme.</p><h3>1. Byznysové myšlení místo pouhého „paragrafování“</h3><p>Právní rizika nepřehlížíme, ale dokážeme je kvantifikovat a zasadit do reálného ekonomického kontextu. Klient od nás nedostane pětistránkové teoretické memorandum plné odkazů na judikaturu, ale jasné strategické doporučení, které mu pomůže vydělat nebo ochránit peníze.</p><h3>2. Bezvýhradná loajalita – neopouštíme vás v těžkých časech</h3><p>Pro řadu kanceláří je klient jen dalším spisem v pořadí. V EQUITY LEGAL si zakládáme na tom, že partnerství myslíme vážně. Skutečná loajalita se nepozná, když se obchodu daří, ale když přijde krize, složitý spor nebo nečekané byznysové otřesy. Své klienty neopouštíme v těžkých časech – naopak v krizových situacích stojíme pevně po jejich boku, přebíráme tlak a hledáme cestu ven, ať už je situace jakkoliv komplikovaná.</p><h3>3. Kombinace korporátního know-how a flexibility střední kanceláře</h3><p>Tým EQUITY LEGAL tvoří lidé, kteří prošli velkou mezinárodní či největší domácí advokacií a transakcemi za miliardy. Klient tak získává špičkovou expertízu a procesní standardy srovnatelné s „big law“ firmami. Zároveň ale kancelář netrpí jejich neduhem – těžkopádností. Neplatíte za obří aparát, nečekáte dny na schválení banálního úkonu a máte přímý, flexibilní přístup ke zkušeným partnerům, nikoliv k anonymním koncipientům.</p><h3>4. Právo s lidskou tváří a srozumitelná komunikace</h3><p>Jednou z největších bariér mezi advokátem a klientem bývá právnická hantýrka. Sázíme na absolutní přímočarost a srozumitelnost. Komunikujeme otevřeně, lidsky a k věci – ať už jde o složité akvizice, IT kontrakty nebo krizové spory. Vždy přesně víte, v jaké fázi se vaše věc nachází, jaká jsou reálná rizika a kolik vás to bude stát. Žádná skrytá překvapení ve fakturách.</p><h3>5. Aktivní inovace a technologický přesah</h3><p>Svět byznysu se mění raketovým tempem (AI, digitalizace, e-commerce) a my tyto trendy nejen pasivně sledujeme, ale sami jimi žijeme. Díky technologickému a inovačnímu mindsetu dokážeme efektivně odbavovat agendu spojenou s ICT právem, startupy, ochranou dat či duševním vlastnictvím. Moderní nástroje navíc využíváme interně, což zrychluje a zlevňuje celou správu klientských agend.</p><p><strong>Shrnutí jedním dechem:</strong> Zatímco běžná advokátní kancelář funguje jako „hasič problémů“, EQUITY LEGAL funguje jako architekt bezpečného růstu a spolehlivý štít v krizích. Spojujeme precizní právo, ekonomický nadhled a neochvějnou loajalitu, která dává klientům jistotu, že na žádný problém nezůstanou sami.</p>",
+    "category": "Aktuality",
+    "date": "2026-07-23",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=500&fit=crop&auto=format",
+    "services": [
+      "pravo-informacnich-technologii"
+    ]
+  },
+  {
+    "id": 13,
+    "slug": "slovnik-advokata",
+    "title": "Průvodce advokátním žargonem: Rozumějte svému právníkovi",
+    "excerpt": "Vstoupit do světa paragrafů občas znamená ocitnout se v jiném jazykovém vesmíru. Připravili jsme stručný slovník pojmů, se kterými se v advokátních kuloárech setkáte nejčastěji.",
+    "content": "<p>Vstoupit do světa paragrafů občas znamená ocitnout se v jiném jazykovém vesmíru. Aby pro vás byla komunikace s naší kanceláří co nejpříjemnější, připravili jsme tento stručný slovník pojmů, se kterými se v advokátních kuloárech setkáte nejčastěji.</p><dl class=\"glossary\"><dt>Litispendence</dt><dd>Stav, kdy v téže věci již probíhá jiné soudní řízení. Prakticky to znamená, že „dvakrát do stejné řeky\" u soudu nevstoupíte, protože soud by ten druhý návrh odmítl.</dd><dt>Meritorní rozhodnutí</dt><dd>Rozhodnutí, které řeší samotnou podstatu věci (jádro pudla), nikoliv jen procesní detaily kolem.</dd><dt>Procesní proces</dt><dd>Úkony, které se netýkají přímo nároku, ale pravidel „hry\" u soudu – například lhůty, zastupování nebo doručování.</dd><dt>Repliky a dupliky</dt><dd>Ping-pong písemných vyjádření. Žalobce pošle repliku na vyjádření žalovaného, ten může odpovědět duplikou.</dd><dt>Judikát</dt><dd>Dřívější rozhodnutí soudu (často Nejvyššího nebo Ústavního), které slouží jako vodítko pro podobné případy v budoucnu.</dd><dt>Břemeno</dt><dd>Povinnost strany doložit svá tvrzení důkazy. V advokátní hantýrce se často řeší, kdo „nese důkazní břemeno\".</dd><dt>Zmeškání (Kontumace)</dt><dd>Situace, kdy se jedna strana nedostaví k soudu bez omluvy, což může vést k prohře „kontumačním rozsudkem\".</dd><dt>Právní moc vs. Vykonatelnost</dt><dd>Právní moc znamená, že rozhodnutí je konečné a nelze ho napadnout běžným odvoláním. Vykonatelnost je moment, kdy už můžete zaklepat na dveře exekutora.</dd><dt>Petit</dt><dd>To nejdůležitější na konci každého podání – přesná formulace toho, co po soudu vlastně žádáte, aby napsal do rozsudku.</dd><dt>Substituce</dt><dd>Když advokát pověří jiného advokáta nebo koncipienta, aby ho zastoupil (např. u jednání), kde sám nemůže být.</dd></dl><p>Tento slovník je živým organismem. Pokud narazíte na termín, který vám vrtá hlavou, neváhejte se nás zeptat – jsme tu od toho, abychom právo překládali do lidské řeči.</p>",
+    "category": "Aktuality",
+    "date": "2026-06-27",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=500&fit=crop&auto=format",
+    "services": []
+  },
+  {
+    "id": 8,
+    "slug": "v-hledacku-investoru-strategicke-vedeni-techfirmy",
+    "title": "V hledáčku investorů: Strategické vedení technologické firmy procesem nabídek na odkup",
+    "excerpt": "Když softwarová firma vyvine produkt, který mění pravidla hry, stane se z ní žádané zboží. Jak v EQUITY LEGAL pomáháme zakladatelům zorientovat se v záplavě nabídek a chránit jejich zájmy při vyjednávání s dravými investory?",
+    "content": "<p>Když softwarová firma vyvine produkt, který zásadně mění pravidla hry na trhu, stane se z ní žádané zboží. V EQUITY LEGAL aktuálně zastupujeme klienta — zakladatele mimořádně úspěšné české technologické společnosti vyvíjející software — o kterou projevuje intenzivní zájem řada strategických kupců a investorů, a to převážně ze zahraničí. Naším úkolem v této dynamické fázi není pouze právní servis, ale především role strategického partnera při vyjednávání.</p><p>Když o vaši firmu stojí každý, paradoxně se tím zvyšuje riziko chybného kroku. Nabídky se liší nejen v kupní ceně, ale i v transakčních strukturách, zárukách a budoucích podmínkách pro zakladatele. Pomáháme klientovi zorientovat se v záplavě indikativních nabídek (LOI) a provádíme jejich tvrdou právní a byznysovou analýzu. Efektivně odhalujeme, které nabídky jsou pro budoucnost projektu i samotné zakladatele skutečně validní a bezpečné, a které naopak obsahují skrytá rizika či nereálné podmínky.</p><p>Vést jednání s dravými investičními fondy a nadnárodními korporacemi vyžaduje pevnou pozici. Pro našeho klienta zajišťujeme, aby si v rozhovorech udržel kontrolu, chránil své klíčové know-how a z vyjednávání vytěžil maximum, aniž by ohrozil běžný chod firmy.</p><p>V EQUITY LEGAL dokazujeme, že v oblasti technologického M&amp;A umíme víc než jen psát smlouvy. Jsme štítem a strategickým filtrem, který ambiciózním zakladatelům pomáhá činit správná rozhodnutí v momentech, kdy se láme chleba.</p>",
+    "category": "Řešené případy",
+    "date": "2026-06-27",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop&auto=format",
+    "services": [
+      "pravo-obchodnich-korporaci-a-obchodni-pravo",
+      "bankovnictvi-a-financovani"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "restrukturalizace-s-rytmem-hudebni-festival",
+    "title": "Restrukturalizace s rytmem: Zachránili jsme tradiční český hudební festival",
+    "excerpt": "Za každou právní restrukturalizací stojí konkrétní příběh. V EQUITY LEGAL jsme poskytli komplexní poradenství při záchraně jednoho z nejznámějších hudebních festivalů v České republice.",
+    "content": "<p>Když se řekne právní restrukturalizace, většina lidí si představí strohá čísla, korporátní schůze a hromady smluv. V EQUITY LEGAL ale víme, že za každou společností stojí konkrétní příběh, emoce a často i kus české kultury. Úspěšně jsme poskytli komplexní právní poradenství při restrukturalizaci společnosti, která pořádá jeden z nejznámějších a nejtradičnějších hudebních festivalů v České republice.</p><p>Kulturní a eventový segment s sebou nese specifická rizika, od závislosti na sezónnosti až po složité smluvní vztahy s partnery, dodavateli a účinkujícími. Naším úkolem bylo stabilizovat vnitřní struktury pořadatelské agentury, nastavit nový, bezpečnější právní rámec pro budoucí ročníky a efektivně ošetřit veškeré závazky.</p><p>Díky detailní znalosti obchodního práva a kreativnímu přístupu se nám podařilo najít řešení, které nejenže ochránilo samotný byznys klienta, ale především zajistilo, že oblíbená kulturní tradice může bez ohrožení pokračovat dál. Propojili jsme naše zkušenosti z korporátního práva se specifiky zábavního průmyslu a ukázali, že i v krizových situacích dokážeme klientům dodat jistotu a jasný směr.</p><p>Ať už řešíte restrukturalizaci výrobního podniku, startupu nebo kulturní ikony, v EQUITY LEGAL zkoumáme problémy ze všech perspektiv. Pomůžeme i vašemu podnikání chytit ten správný rytmus.</p>",
+    "category": "Řešené případy",
+    "date": "2026-06-27",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=500&fit=crop&auto=format",
+    "services": [
+      "insolvencni-pravo",
+      "pravo-obchodnich-korporaci-a-obchodni-pravo"
+    ]
+  },
+  {
+    "id": 10,
+    "slug": "pravo-v-neprozkoumanych-vodach-derivativni-zaloba",
+    "title": "Právo v neprozkoumaných vodách: Obhajoba členů orgánů bytového družstva u derivativní žaloby",
+    "excerpt": "Derivativní žaloby nejsou v české soudní praxi dostatečně projudikovány. V EQUITY LEGAL zastupujeme klienty v případu, který přímo spoluvytváří budoucí výklad práva.",
+    "content": "<p>Odpovědnost členů statutárních orgánů je v českém právu trvalým a složitým tématem. V EQUITY LEGAL jsme řešili komplexní právní zastoupení bývalých členů orgánů bytového družstva, kteří čelí obvinění, že měli prodat nemovitý majetek družstva za údajně nižší než tržní cenu. Tento případ je pro nás profesní výzvou, neboť se odehrává současně ve dvou rovinách — v civilní (kde je uplatňována náhrada škody) i v trestněprávní.</p><p>Unikátnost celého sporu spočívá v tom, že žaloba byla podána jako tzv. derivativní žaloba (akcionářská či družstevní žaloba podávaná členem jménem korporace). Tato problematika není v současné české soudní praxi dostatečně projudikovaná. V podstatě tak narážíme na celou řadu zásadních právních otázek, které dosud nemají v rozhodovací praxi soudů jednoznačnou odpověď.</p><p>Naše role v tomto případu přesahuje běžné zastupování. Tím, že formujeme argumentaci v doposud neustálených právních oblastech, přímo spoluvytváříme budoucí výklad práva. Vyřešení těchto otázek bude mít totiž klíčový význam pro to, jak budou české soudy k derivativním žalobám a odpovědnosti volených orgánů v bytových družstvech přistupovat v budoucnu.</p><p>Tento případ potvrzuje, že se v EQUITY LEGAL nebojíme vstoupit do neprobádaných vod. Tam, kde chybí jasná judikatura, nasazujeme precizní analytické myšlení, hlubokou znalost korporátního i trestního práva a odvahu přicházet s argumenty, které posouvají hranice právní praxe.</p>",
+    "category": "Řešené případy",
+    "date": "2026-06-27",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=500&fit=crop&auto=format",
+    "services": [
+      "trestni-pravo",
+      "vymahani-a-sprava-pohledavek"
+    ]
+  },
+  {
+    "id": 11,
+    "slug": "bitva-o-digitalni-identitu-ip-prava",
+    "title": "Bitva o digitální identitu: Komplexní spor o IP práva s přesahem",
+    "excerpt": "Právo duševního vlastnictví dnes zahrnuje i EAN kódy a Amazon ASIN identifikátory. V EQUITY LEGAL jsme úspěšně zvládli přeshraniční spor, kde se křížilo mezinárodní IP právo s algoritmy globálních platforem.",
+    "content": "<p>Právo duševního vlastnictví v 21. století už dávno nepředstavuje jen registraci loga. Dnes se odehrává v globálním digitálním prostoru a na mezinárodních distribučních platformách. V EQUITY LEGAL jsme úspěšně vstoupili do rozsáhlého přeshraničního sporu mezi výrobcem a distributorem, který se týkal kompletního balíku IP práv s klíčovým dopadem na zahraniční trhy.</p><p>Tento případ byl mimořádně specifický svou komplexností. Nešlo pouze o tradiční instituty, jako jsou ochranné známky, označení původu či licenční smlouvy. Spor se přelil přímo do digitální infrastruktury prodeje — předmětem právní bitvy se staly také EAN kódy a produktové identifikátory ASIN (Amazon Standard Identification Number), které jsou pro fungování moderního e-commerce zcela kritické.</p><p>Zajištění ochrany práv našeho klienta vyžadovalo nejen hlubokou znalost mezinárodního práva duševního vlastnictví, ale také detailní pochopení vnitřních mechanismů a algoritmů globálních platforem, a specifických distribučních kanálů včetně distribučních sítí v zahraničí. Blokace nebo neoprávněné převzetí těchto digitálních identit totiž pro firmu znamená okamžité zastavení prodejů a fatální ztráty.</p><p>Díky rychlé reakci a detailní znalosti digitálního trhu jsme dokázali efektivně hájit zájmy klienta v prostředí, kde se setkává české a zahraniční právo s přísnými obchodními podmínkami technologických gigantů. V EQUITY LEGAL ukazujeme, že modernímu byznysu rozumíme do posledního produktového kódu.</p>",
+    "category": "Řešené případy",
+    "date": "2026-06-27",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format",
+    "services": [
+      "pravo-dusevniho-vlastnictvi",
+      "pravo-informacnich-technologii"
+    ]
+  },
+  {
+    "id": 12,
+    "slug": "partner-pro-ty-nejvetsi-inhouse-agenda-druzstvo",
+    "title": "Partner pro ty největší: Převzali jsme kompletní in-house agendu předního bytového družstva",
+    "excerpt": "Velká bytová družstva fungují jako korporace spravující majetek v hodnotě miliard korun. V EQUITY LEGAL jsme převzali kompletní právní zastupování jednoho z největších bytových družstev v České republice.",
+    "content": "<p>Velká bytová družstva dnes fungují jako významné korporace. Spravují majetek v hodnotě miliard korun, zajišťují domov pro tisíce rodin a denně čelí stovkám právních a provozních výzev. V EQUITY LEGAL jsme hrdí na to, že jsme převzali komplexní právní zastupování jednoho z největších bytových družstev v České republice.</p><p>Pro tohoto klienta zajišťujeme kompletní in-house agendu. To znamená, že nejsme jen externím poradcem pro ad hoc případy, ale fungujeme jako interní právní mozek celé organizace. Naše práce pokrývá vše od běžného provozu — jako je správa nájemních a družstevních vztahů, vymáhání pohledávek a agenda spojená s převody družstevních podílů — až po strategické projekty, vyjednávání s dodavateli, stavební právo a korporátní správu (governance) družstva.</p><p>Tento typ spolupráce vyžaduje absolutní důvěru, perfektní organizaci práce a schopnost reagovat v reálném čase. Díky našemu nasazení získalo družstvo silné právní zázemí, které přináší stabilitu jak jeho vedení, tak samotným členům.</p><p>Převzetí takto rozsáhlé agendy je pro EQUITY LEGAL potvrzením, že máme kapacitu, odbornost a procesní nastavení pro správu právních záležitostí těch největších hráčů na trhu. Dokážeme se plně integrovat do chodu vaší společnosti a transformovat složité právní výzvy v jasná a bezpečná řešení.</p>",
+    "category": "Řešené případy",
+    "date": "2026-06-27",
+    "author": "EQUITY LEGAL",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&auto=format",
+    "services": [
+      "pravo-obchodnich-korporaci-a-obchodni-pravo",
+      "pravo-nemovitosti-a-stavebni-pravo"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "pokrok-nezastavit-ai-advokacie",
+    "title": "Pokrok nezastavíš: Proč v advokacii nečekáme na „až pak“?",
+    "excerpt": "Kdy přestaneme říkat, že AI je hudba budoucnosti? My v EQUITY LEGAL jsme si odpověděli jasně – teď. Přečtěte si, proč aktivně spoluvytváříme trendy, místo abychom jen čekali, až se stanou standardem.",
+    "content": "<p>Pamatujete si na dobu, kdy se smluvní vzory hledaly v tištěných šanonech a vrcholem digitalizace byl fax? Dnes nám to přijde úsměvné. A přesně tak se za pár let budeme dívat na dobu, kdy se rešerše dělaly bez asistence umělé inteligence.</p><p>Pokrok zkrátka nezastavíš. V <strong>EQUITY LEGAL</strong> věříme, že v právu vyhrávají ti, kteří trendy nenásledují až ve chvíli, kdy jsou standardem, ale aktivně je spoluvytvářejí už nyní.</p><p>V našem videu se kromě jiného dozvíte i to, jak naskočit na vlnu AI a neustrnout na vavřínech:</p><div class=\"video-embed\"><iframe src=\"https://www.youtube.com/embed/UHdkoCDdZg8\" title=\"Pokrok nezastavíš – EQUITY LEGAL\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div><p><strong>Právo v pohybu:</strong> Proč se tradiční advokacie mění rychleji než kdy dříve a co to znamená pro každodenní byznys.</p><p><strong>Od psacího stroje k promptování:</strong> Jak adopce AI mění DNA naší kanceláře – od zrychlení procesů až po doručování lepších výsledků klientům.</p><p><strong>Flexibilita jako hlavní zbraň:</strong> Proč je schopnost učit se novým technologickým nástrojům dnes pro právníka stejně důležitá jako znalost zákonů.</p><p>Svět se točí dál a digitalizace nikoho prosit nebude. Buď budeme udávat tempo, nebo nám ujede vlak. My v EQUITY LEGAL jsme si vybrali to první.</p>",
+    "category": "Aktuality",
+    "date": "2026-06-27",
+    "author": "JUDr. Vít Hrnčiřík, LL.M., Ph.D.",
+    "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop&auto=format",
+    "services": [
+      "pravo-informacnich-technologii"
+    ]
+  }
 ]

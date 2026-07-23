@@ -6,6 +6,18 @@
       "runtimeExecutable": "php",
       "runtimeArgs": ["-S", "localhost:8000"],
       "port": 8000
+    },
+    {
+      "name": "tereza-adamkova-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/eleanor/Desktop/terezaadamkova/tereza-ad-mkov-cinematic-studio", "run", "dev"],
+      "port": 8080
+    },
+    {
+      "name": "ai-video-creator",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd '/Users/eleanor/Desktop/AI video creator' && exec python3 -m http.server 8934"],
+      "port": 8934
     }
   ]
 }

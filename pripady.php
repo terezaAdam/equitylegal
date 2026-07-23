@@ -79,7 +79,7 @@ include 'includes/header.php';
       <aside class="article-sidebar">
         <div class="article-sidebar__card">
           <div class="article-sidebar__title">Potřebujete pomoc?</div>
-          <p style="font-size:.88rem;">Máte podobnou situaci? Naši advokáti jsou připraveni vám pomoci.</p>
+          <p style="font-size:.88rem;">Naši advokáti jsou připraveni vám pomoci.</p>
           <a href="/kontakty.php" class="btn btn--primary btn--sm" style="margin-top:1rem;">Poslat poptávku</a>
         </div>
         <div class="article-sidebar__card">

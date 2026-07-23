@@ -38,31 +38,31 @@ include 'includes/header.php';
           <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         </div>
         <div class="value-card__title">Byznysové myšlení místo pouhého „paragrafování“</div>
-        <p>Většina advokátních kanceláří vám řekne, co v zákoně stojí a proč něco nejde. EQUITY LEGAL naopak přemýšlí jako partner ve vašem podnikání. Právní rizika nepřehlíží, ale dokáže je kvantifikovat a zasadit do reálného ekonomického kontextu. Klient nedostane pětistránkové teoretické memorandum plné odkazů na judikaturu, ale jasné strategické doporučení, které mu pomůže vydělat nebo ochránit peníze.</p>
+        <p>Většina advokátních kanceláří vám řekne, co v zákoně stojí a proč něco nejde. EQUITY LEGAL naopak přemýšlí jako partner ve vašem podnikání.</p>
       </div>
 
       <div class="value-card fade-in">
         <div class="value-card__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <div class="value-card__title">Bezvýhradná loajalita – neopouštíme vás v těžkých časech</div>
-        <p>Pro řadu kanceláří je klient jen dalším spisem v pořadí. V EQUITY LEGAL si zakládáme na tom, že partnerství myslíme vážně. Skutečná loajalita se nepozná, když se obchodu daří, ale když přijde krize, složitý spor nebo nečekané byznysové otřesy. Své klienty neopouštíme v těžkých časech; naopak v krizových situacích stojíme pevně po jejich boku, přebíráme tlak a hledáme cestu ven, ať už je situace jakkoliv komplikovaná.</p>
+        <div class="value-card__title">Neopouštíme vás v těžkých časech</div>
+        <p>Pro řadu kanceláří je klient jen dalším spisem v pořadí. V EQUITY LEGAL si zakládáme na tom, že partnerství myslíme vážně. Své klienty neopouštíme v těžkých časech.</p>
       </div>
 
       <div class="value-card fade-in">
         <div class="value-card__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         </div>
-        <div class="value-card__title">Kombinace korporátního know-how a flexibility butikové kanceláře</div>
-        <p>Tým EQUITY LEGAL tvoří lidé, kteří prošli velkou mezinárodní či největší domácí advokacií a transakcemi za stovky milionů. Klient tak získává špičkovou expertízu a procesní standardy srovnatelné s „big law" firmami. Zároveň ale kancelář netrpí jejich neduhem – těžkopádností. Klient neplatí za obří aparát, nečeká dny na schválení banálního úkonu a má přímý, flexibilní přístup ke zkušeným partnerům, nikoliv k anonymním koncipientům.</p>
+        <div class="value-card__title">Kombinace korporátního know-how a flexibility střední kanceláře</div>
+        <p>Tým EQUITY LEGAL tvoří lidé, kteří prošli velkou mezinárodní či největší domácí advokacií a transakcemi za miliardy.</p>
       </div>
 
       <div class="value-card fade-in">
         <div class="value-card__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
         </div>
-        <div class="value-card__title">Právo s lidskou tváří a srozumitelná komunikace</div>
-        <p>Jednou z největších bariér mezi advokátem a klientem bývá právnická hantýrka. EQUITY LEGAL sází na absolutní přímočarost a srozumitelnost. Komunikuje otevřeně, lidsky a k věci – ať už jde o složité akvizice, IT kontrakty nebo krizové spory. Klient vždy přesně ví, v jaké fázi se jeho věc nachází, jaká jsou reálná rizika a kolik ho to bude stát. Žádná skrytá překvapení ve fakturách.</p>
+        <div class="value-card__title">Právo s lidskou tváří</div>
+        <p>Jednou z největších bariér mezi advokátem a klientem bývá právnická hantýrka. EQUITY LEGAL sází na absolutní přímočarost a srozumitelnost.</p>
       </div>
 
     </div>
@@ -120,7 +120,7 @@ include 'includes/header.php';
 <p>Aktivně pracujeme s moderními technologiemi a orientujeme se v oblasti ICT práva, startupů, ochrany dat i duševního vlastnictví. Díky tomu dokážeme poskytovat efektivní a aktuální právní řešení.
 Jsme partnerem pro růst i oporou v náročných situacích.</p>
 
-  <p>Naši kancelář najdete v Praze 3 na Vinohradech. Klientům je k dispozici bezplatné parkování.</p>
+  <p>Naši kancelář najdete v Praze 3 na Vinohradech.</p>
         <div class="about__stats">
           <div>
             <div class="about__stat-num">15+</div>
@@ -139,7 +139,7 @@ Jsme partnerem pro růst i oporou v náročných situacích.</p>
             <div class="about__stat-label">individuální přístup</div>
           </div>
         </div>
-        <div style="margin-top:2.5rem;">
+        <div style="margin-top:2.5rem;margin-bottom:2.5rem;">
           <a href="/tym.php" class="btn btn--primary">Poznejte náš tým</a>
         </div>
       </div>
@@ -151,47 +151,54 @@ Jsme partnerem pro růst i oporou v náročných situacích.</p>
   </div>
 </section>
 
-<!-- ── Proces poptávky ── -->
-<section class="section" aria-labelledby="process-heading">
+<!-- ── Aktuality ── -->
+<section class="section" aria-labelledby="news-heading">
   <div class="container">
-    <p class="section-label">Jak to funguje</p>
-    <h2 class="section-title" id="process-heading">Cesta vaší zakázky</h2>
+    <p class="section-label">Co je nového</p>
+    <h2 class="section-title" id="news-heading">Z aktualit</h2>
     <div class="divider"></div>
-    <p style="max-width:640px;margin:0 auto 3rem;text-align:center;color:var(--text-muted);">Zakládáme si na transparentnosti a efektivitě. Přinášíme přehled kroků, které následují po odeslání poptávky.</p>
-    <div class="process-grid">
-
+    <div class="articles-grid">
       <?php
-      $steps = [
-        ['Posouzení a prověření',
-         'Vaši poptávku prověříme z hlediska naší odborné specializace a kapacit. Zároveň ze zákona ověříme případný střet zájmů. Pokud nám chybí detaily, ozveme se e-mailem nebo telefonicky.'],
-        ['Návrh řešení a konzultace',
-         'Zašleme konkrétní návrh postupu a transparentní odhad nákladů — hodinovou sazbu nebo fixní odměnu. U složitějších případů navrhneme osobní či online setkání, kde probereme strategii a vaše očekávání do hloubky. Nejasné pojmy vysvětluje náš <a href="/pripady.php?clanek=slovnik-advokata" class="process-step__link">Slovník advokáta</a>.'],
-        ['Smlouva a plná moc',
-         'Po odsouhlasení podmínek podepíšeme smlouvu o právní pomoci, která jasně definuje naše povinnosti a vaše práva. Pro zastupování před soudy, úřady či třetími stranami od vás obdržíme plnou moc.'],
-        ['Zahájení a průběžná informovanost',
-         'Váš spis přebírá konkrétní advokát a okamžitě začínáme pracovat na dosažení vašeho cíle. O každém důležitém kroku vás budeme pravidelně informovat — nikdy nebudete tápat, v jaké fázi se váš případ nachází.'],
-      ];
-      foreach ($steps as $i => $step): ?>
-        <div class="process-step fade-in">
-          <div class="process-step__num"><?= $i + 1 ?></div>
-          <div class="process-step__title"><?= htmlspecialchars($step[0]) ?></div>
-          <p class="process-step__desc"><?= $step[1] ?></p>
-        </div>
+      function firstSentence(string $html): string {
+        $text = trim(preg_replace('/\s+/u', ' ', strip_tags($html)));
+        if (preg_match('/^.*?[.!?](?=\s|$)/u', $text, $m)) return trim($m[0]);
+        return $text;
+      }
+      $newsArticles = json_decode(file_get_contents(__DIR__ . '/data/articles.json'), true) ?? [];
+      $newsArticles = array_filter($newsArticles, fn($a) => empty($a['hidden']) && ($a['category'] ?? '') === 'Aktuality');
+      usort($newsArticles, fn($a, $b) => strcmp($b['date'] ?? '', $a['date'] ?? ''));
+      $newsArticles = array_slice($newsArticles, 0, 3);
+      foreach ($newsArticles as $a): ?>
+        <article class="article-card fade-in">
+          <div class="article-card__image">
+            <?php if (!empty($a['image'])): ?>
+              <img src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['title']) ?>" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <?php else: ?>
+              <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--navy) 0%,#263452 100%);display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="1" style="width:64px;height:64px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+            <?php endif; ?>
+            <span class="article-card__cat"><?= htmlspecialchars($a['category']) ?></span>
+          </div>
+          <div class="article-card__body">
+            <h2 class="article-card__title"><?= htmlspecialchars($a['title']) ?></h2>
+            <p class="article-card__excerpt"><?= htmlspecialchars(firstSentence($a['content'] ?? $a['excerpt'])) ?></p>
+            <a href="/clanek.php?slug=<?= urlencode($a['slug']) ?>" class="article-card__link">Číst celý článek</a>
+          </div>
+        </article>
       <?php endforeach; ?>
-
     </div>
-    <div style="text-align:center;margin-top:3rem;">
-      <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="/pripady.php" class="btn btn--outline">Všechny články</a>
     </div>
   </div>
 </section>
-
 
 <!-- ── CTA Banner ── -->
 <section class="cta-banner" aria-label="Kontaktujte nás">
   <div class="container">
     <h2>Potřebujete právní pomoc?</h2>
-    <p>Kontaktujte nás pro nezávaznou konzultaci. Odpovíme do 24 hodin.</p>
+    <p>Kontaktujte nás pro konzultaci.</p>
     <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
   </div>
 </section>

@@ -87,7 +87,6 @@ include 'includes/header.php';
       <div>
         <div class="contact-form">
           <h2 style="font-size:1.3rem;margin-bottom:.5rem;">Napište nám</h2>
-          <p style="margin-bottom:1.75rem;">Odpovíme do 24 hodin.</p>
 
           <div class="form-success" id="formSuccess">
             ✓ Váš dotaz byl odeslán. Ozveme se vám co nejdříve.

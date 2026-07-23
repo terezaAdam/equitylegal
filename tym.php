@@ -6,6 +6,23 @@ $team = json_decode(file_get_contents(__DIR__ . '/data/team.json'), true) ?? [];
 $coreTeam     = array_filter($team, fn($m) => empty($m['external']));
 $externalTeam = array_filter($team, fn($m) => !empty($m['external']));
 
+$leaderIds = ['vit-hrncirik', 'krystof-kobeda'];
+$leaders   = array_filter($coreTeam, fn($m) => in_array($m['id'], $leaderIds, true));
+usort($leaders, fn($a, $b) => array_search($a['id'], $leaderIds) <=> array_search($b['id'], $leaderIds));
+
+$titleWords = ['JUDr', 'Mgr', 'Ing', 'MUDr', 'MBA', 'Ph.D', 'LL.M', 'PhDr', 'Bc'];
+function teamSurname(string $name, array $titleWords): string {
+  $base = trim(explode(',', $name)[0]);
+  $words = array_filter(explode(' ', $base), function ($w) use ($titleWords) {
+    $clean = rtrim($w, '.');
+    return $clean !== '' && !in_array($clean, $titleWords, true);
+  });
+  return $words ? array_values($words)[count($words) - 1] : $name;
+}
+
+$restTeam  = array_filter($coreTeam, fn($m) => !in_array($m['id'], $leaderIds, true));
+usort($restTeam, fn($a, $b) => strcoll(teamSurname($a['name'], $titleWords), teamSurname($b['name'], $titleWords)));
+
 // Build JS team data for modal
 $teamJs = [];
 foreach ($team as $m) {
@@ -30,15 +47,40 @@ include 'includes/header.php';
     <p class="page-hero__label">Lidé kanceláře</p>
     <h1 class="page-hero__title">Náš tým</h1>
     <div class="page-hero__desc">
-      <p>Tým EQUITY LEGAL tvoří zkušení advokáti a specialisté s českou i mezinárodní praxí. Společně poskytujeme poradenství v 9 jazycích a ve 13 oblastech práva.</p>
+      <p>Tým EQUITY LEGAL tvoří zkušení advokáti a specialisté s českou i mezinárodní praxí.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="team-grid team-grid--compact">
-      <?php foreach ($coreTeam as $m):
+    <div class="team-grid team-grid--compact team-grid--leaders">
+      <?php foreach ($leaders as $m):
+        $initials = '';
+        $nameParts = preg_replace('/[^a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ\s]/', '', $m['name']);
+        $nameParts = array_filter(explode(' ', $nameParts));
+        $nameParts = array_slice($nameParts, 0, 2);
+        $initials = implode('', array_map(fn($p) => mb_strtoupper(mb_substr($p, 0, 1)), $nameParts));
+      ?>
+        <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
+          <div class="team-card__avatar">
+            <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
+          </div>
+          <div class="team-card__body">
+            <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
+            <div class="team-card__title"><?= htmlspecialchars($m['position']) ?></div>
+            <div class="team-card__langs">
+              <?php foreach (($m['languages'] ?? []) as $lang): ?>
+                <span class="lang-tag"><?= htmlspecialchars($lang) ?></span>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+
+    <div class="team-grid team-grid--compact" style="margin-top:1rem;">
+      <?php foreach ($restTeam as $m):
         $initials = '';
         $nameParts = preg_replace('/[^a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ\s]/', '', $m['name']);
         $nameParts = array_filter(explode(' ', $nameParts));
