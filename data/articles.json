@@ -8,11 +8,11 @@
     "category": "Aktuality",
     "date": "2026-07-23",
     "author": "EQUITY LEGAL",
-    "image": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=800&h=500&fit=crop&auto=format",
+    "image": "/assets/img/articles/pravnicka-firma-roku-2025-logo.png",
     "services": [
-      "verejne-zakazky",
-      "danove-a-celni-pravo"
-    ]
+      "zastupovani-pred-urady-a-spravni-pravo"
+    ],
+    "imagePosition": "center 25%"
   },
   {
     "id": 15,
@@ -37,7 +37,7 @@
     "author": "EQUITY LEGAL",
     "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=500&fit=crop&auto=format",
     "services": [
-      "pravo-informacnich-technologii"
+      "dusevni-vlastnictvi-a-it-pravo"
     ]
   },
   {
@@ -63,8 +63,7 @@
     "author": "EQUITY LEGAL",
     "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop&auto=format",
     "services": [
-      "pravo-obchodnich-korporaci-a-obchodni-pravo",
-      "bankovnictvi-a-financovani"
+      "obchodni-pravo-a-korporatni-agenda"
     ]
   },
   {
@@ -79,7 +78,7 @@
     "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=500&fit=crop&auto=format",
     "services": [
       "insolvencni-pravo",
-      "pravo-obchodnich-korporaci-a-obchodni-pravo"
+      "obchodni-pravo-a-korporatni-agenda"
     ]
   },
   {
@@ -108,8 +107,7 @@
     "author": "EQUITY LEGAL",
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format",
     "services": [
-      "pravo-dusevniho-vlastnictvi",
-      "pravo-informacnich-technologii"
+      "dusevni-vlastnictvi-a-it-pravo"
     ]
   },
   {
@@ -123,7 +121,7 @@
     "author": "EQUITY LEGAL",
     "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&auto=format",
     "services": [
-      "pravo-obchodnich-korporaci-a-obchodni-pravo",
+      "obchodni-pravo-a-korporatni-agenda",
       "pravo-nemovitosti-a-stavebni-pravo"
     ]
   },
@@ -138,7 +136,7 @@
     "author": "JUDr. Vít Hrnčiřík, LL.M., Ph.D.",
     "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&h=500&fit=crop&auto=format",
     "services": [
-      "pravo-informacnich-technologii"
+      "dusevni-vlastnictvi-a-it-pravo"
     ]
   }
 ]

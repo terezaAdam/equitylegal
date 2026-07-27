@@ -1,15 +1,15 @@
 [
-  { "id": "pravo-obchodnich-korporaci-a-obchodni-pravo", "label": "Právo obchodních korporací a obchodní právo" },
-  { "id": "pravo-nemovitosti-a-stavebni-pravo", "label": "Právo nemovitostí a stavební právo" },
-  { "id": "trestni-pravo", "label": "Trestní právo" },
+  { "id": "obchodni-pravo-a-korporatni-agenda", "label": "Obchodní právo a korporátní agenda" },
   { "id": "pracovni-pravo", "label": "Pracovní právo" },
-  { "id": "zbrojni-prumysl-obrana-a-bezpecnost", "label": "Zbrojní průmysl, obrana a bezpečnost" },
-  { "id": "verejne-zakazky", "label": "Veřejné zakázky" },
-  { "id": "pravo-dusevniho-vlastnictvi", "label": "Právo duševního vlastnictví" },
-  { "id": "pravo-informacnich-technologii", "label": "Právo informačních technologií" },
-  { "id": "bankovnictvi-a-financovani", "label": "Bankovnictví a financování" },
-  { "id": "danove-a-celni-pravo", "label": "Daňové a celní právo" },
-  { "id": "vymahani-a-sprava-pohledavek", "label": "Vymáhání a správa pohledávek" },
-  { "id": "rodinne-pravo", "label": "Rodinné právo" },
-  { "id": "insolvencni-pravo", "label": "Insolvenční právo" }
+  { "id": "pravo-nemovitosti-a-stavebni-pravo", "label": "Nemovitosti a stavební právo" },
+  { "id": "sporna-agenda-a-rozhodci-rizeni", "label": "Sporná agenda a rozhodčí řízení" },
+  { "id": "trestni-pravo", "label": "Trestní právo a obhajoba" },
+  { "id": "rodinne-pravo", "label": "Rodinné právo a majetkové vztahy" },
+  { "id": "obcanske-pravo-a-smluvni-agenda", "label": "Občanské právo a smluvní agenda" },
+  { "id": "ma-a-reorganizace", "label": "M&A a reorganizace" },
+  { "id": "vymahani-a-sprava-pohledavek", "label": "Vymáhání pohledávek a exekuce" },
+  { "id": "insolvencni-pravo", "label": "Insolvenční právo a restrukturalizace" },
+  { "id": "dusevni-vlastnictvi-a-it-pravo", "label": "Duševní vlastnictví a IT právo" },
+  { "id": "ochrana-osobnich-udaju-gdpr-a-compliance", "label": "Ochrana osobních údajů (GDPR) a compliance" },
+  { "id": "zastupovani-pred-urady-a-spravni-pravo", "label": "Zastupování před úřady a správní právo" }
 ]

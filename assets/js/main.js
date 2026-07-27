@@ -218,4 +218,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* ── Reviews carousel ── */
+  document.querySelectorAll('[data-reviews-carousel]').forEach((carousel) => {
+    const track  = carousel.querySelector('.reviews-carousel__track');
+    const slides = [...track.children];
+    const dotsEl = carousel.querySelector('[data-reviews-dots]');
+    const prevBtn = carousel.querySelector('[data-reviews-prev]');
+    const nextBtn = carousel.querySelector('[data-reviews-next]');
+    if (!slides.length) return;
+
+    let index = 0;
+    let timer = null;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Recenze ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(dot);
+    });
+    const dots = [...dotsEl.children];
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      render();
+      restart();
+    }
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+    function restart() {
+      clearInterval(timer);
+      timer = setInterval(next, 6000);
+    }
+
+    nextBtn?.addEventListener('click', next);
+    prevBtn?.addEventListener('click', prev);
+    render();
+    restart();
+  });
+
 });

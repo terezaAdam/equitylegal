@@ -13,7 +13,7 @@ include 'includes/header.php';
   <div class="hero__content-side">
     <p class="hero__label">Advokátní kancelář · Praha</p>
     <h1 class="hero__title">
-      Naše poslání<br>je <em>váš úspěch</em>
+      Naše poslání je <em>váš úspěch</em>
     </h1>
     <div class="hero__desc">
       <p>EQUITY LEGAL kombinuje hlubokou znalost práva s kreativním přístupem k řešení složitých právních případů. Poskytujeme poradenství v češtině, angličtině, němčině a dalších jazycích.</p>
@@ -79,18 +79,19 @@ include 'includes/header.php';
 
       <?php
       $services = [
-        ['Právo obchodních korporací', 'Zakládání a likvidace společností, fúze, akvizice, due diligence, compliance a corporate governance.', '#pravo-obchodnich-korporaci-a-obchodni-pravo'],
-        ['Nemovitosti a stavební právo', 'Převody nemovitostí, advokátní úschova, stavební řízení, bytová práva, development.', '#pravo-nemovitosti-a-stavebni-pravo'],
-        ['Trestní právo', 'Obhajoba ve všech fázích trestního řízení, white-collar crime, dopravní delikty.', '#trestni-pravo'],
-        ['Pracovní právo', 'Pracovní smlouvy, spory zaměstnanec–zaměstnavatel, GDPR, BOZP, hromadné propouštění.', '#pracovni-pravo'],
-        ['Zbrojní průmysl & Bezpečnost', 'Poradenství subjektům v oblasti obrany a bezpečnostního průmyslu, veřejné zakázky na vojenský materiál.', '#zbrojni-prumysl-obrana-a-bezpecnost'],
-        ['Veřejné zakázky', 'Zadávání zakázek, kontrola nabídek, zastupování před ÚOHS, ochrana před porušováním pravidel.', '#verejne-zakazky'],
-        ['Duševní vlastnictví', 'Ochranné známky, patenty, autorská práva, licenční smlouvy, doménové spory.', '#pravo-dusevniho-vlastnictvi'],
-        ['Informační technologie', 'Software, e-commerce, outsourcing, ochrana osobních údajů, IT spory.', '#pravo-informacnich-technologii'],
-        ['Bankovnictví a financování', 'Úvěrové smlouvy, akvizice, pojišťovací právo, hypotéky, finanční restrukturalizace.', '#bankovnictvi-a-financovani'],
-        ['Daňové a celní právo', 'Zastupování před finančními úřady, daňové audity, spory se správcem daně.', '#danove-a-celni-pravo'],
-        ['Vymáhání pohledávek', 'Mimosoudní i soudní vymáhání, insolvence, exekuce, zahraniční pohledávky.', '#vymahani-a-sprava-pohledavek'],
-        ['Rodinné právo', 'Rozvody, péče o děti, výživné, majetkové právo manželů, mezinárodní rodinné spory.', '#rodinne-pravo'],
+        ['Obchodní právo a korporátní agenda', 'Zakládání, správa a rozvoj podnikání bez právních rizik a zbytečné administrativy.', '#obchodni-pravo-a-korporatni-agenda'],
+        ['Pracovní právo', 'Ochrana práv a zájmů zaměstnavatelů i zaměstnanců při každodenních i krizových situacích.', '#pracovni-pravo'],
+        ['Nemovitosti a stavební právo', 'Bezpečné investice, prodeje i vývoj nemovitostí s kompletním právním servisem.', '#pravo-nemovitosti-a-stavebni-pravo'],
+        ['Sporná agenda a rozhodčí řízení', 'Zastoupení před soudy, rozhodci i úřady s cílením na efektivní a rychlé řešení.', '#sporna-agenda-a-rozhodci-rizeni'],
+        ['Trestní právo a obhajoba', 'Důsledná obhajoba osob a zastupování právnických osob v trestním řízení.', '#trestni-pravo'],
+        ['Rodinné právo a majetkové vztahy', 'Citlivé a profesionální řešení rodinných záležitostí s důrazem na zájem dětí.', '#rodinne-pravo'],
+        ['Občanské právo a smluvní agenda', 'Příprava a revize smluv pro jistotu ve vašich každodenních právních vztazích.', '#obcanske-pravo-a-smluvni-agenda'],
+        ['M&A a reorganizace', 'Právní podpora při prodeji, nákupu nebo strukturálních změnách firem.', '#ma-a-reorganizace'],
+        ['Vymáhání pohledávek a exekuce', 'Rychlá a efektivní správa i vymáhání vašich finančních nároků.', '#vymahani-a-sprava-pohledavek'],
+        ['Insolvenční právo a restrukturalizace', 'Řešení úpadku, oddlužení a ochrana práv věřitelů i dlužníků.', '#insolvencni-pravo'],
+        ['Duševní vlastnictví a IT právo', 'Právní ochrana vašich nápadů, softwaru, značek a digitálního podnikání.', '#dusevni-vlastnictvi-a-it-pravo'],
+        ['Ochrana osobních údajů (GDPR) a compliance', 'Nastavení interních procesů pro soulad s legislativou a minimalizaci pokut.', '#ochrana-osobnich-udaju-gdpr-a-compliance'],
+        ['Zastupování před úřady a správní právo', 'Právní pomoc při jednání s orgány státní správy a samosprávy.', '#zastupovani-pred-urady-a-spravni-pravo'],
       ];
       foreach (array_slice($services, 0, 6) as $s): ?>
         <div class="service-card fade-in">
@@ -104,6 +105,43 @@ include 'includes/header.php';
     <div style="text-align:center;margin-top:3rem;">
       <a href="/sluzby.php" class="btn btn--outline">Všechny právní služby</a>
     </div>
+  </div>
+</section>
+
+<!-- ── Recenze klientů ── -->
+<section class="section" aria-labelledby="reviews-heading">
+  <div class="container">
+    <p class="section-label">Co říkají klienti</p>
+    <h2 class="section-title" id="reviews-heading">Recenze klientů</h2>
+    <div class="divider"></div>
+
+    <?php
+    $reviews = [
+      ['Lukáš Topinka', 'Společnost Equity Legal jsem požádal o pomoc při řešení problému s koupí nemovitosti. Spolupráce byla perfektní a velmi profesionální. Mohu jedině doporučit!'],
+      ['Maxim Vrána', 'Potřeboval jsem profi poradenství a zastupování při řešení nemovitosti a musím říct, že jsem byl maximálně spokojen. Rychlé, efektivní, super komunikace. Proste děkuji 👍'],
+      ['Pervushyn Andrij', 'S potěšením doporučuji Equity Legal a děkuji jejich týmu za úspěšné vyřešení mé záležitosti s mým bývalým zaměstnavatelem.'],
+    ];
+    ?>
+
+    <div class="reviews-carousel" data-reviews-carousel>
+      <div class="reviews-carousel__track">
+        <?php foreach ($reviews as $r): ?>
+          <div class="review-card__slide">
+            <div class="review-card">
+              <div class="review-card__stars" aria-label="Hodnocení 5 z 5 hvězdiček">★★★★★</div>
+              <p class="review-card__text">„<?= htmlspecialchars($r[1]) ?>“</p>
+              <div class="review-card__author"><?= htmlspecialchars($r[0]) ?></div>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+      <div class="reviews-carousel__controls">
+        <button type="button" class="reviews-carousel__btn" data-reviews-prev aria-label="Předchozí recenze">←</button>
+        <div class="reviews-carousel__dots" data-reviews-dots></div>
+        <button type="button" class="reviews-carousel__btn" data-reviews-next aria-label="Další recenze">→</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -172,7 +210,7 @@ Jsme partnerem pro růst i oporou v náročných situacích.</p>
         <article class="article-card fade-in">
           <div class="article-card__image">
             <?php if (!empty($a['image'])): ?>
-              <img src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['title']) ?>" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <img src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['title']) ?>" style="width:100%;height:100%;object-fit:cover;object-position:<?= htmlspecialchars($a['imagePosition'] ?? 'center') ?>;display:block;">
             <?php else: ?>
               <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--navy) 0%,#263452 100%);display:flex;align-items:center;justify-content:center;">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="1" style="width:64px;height:64px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
