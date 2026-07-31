@@ -20,8 +20,18 @@ function teamSurname(string $name, array $titleWords): string {
   return $words ? array_values($words)[count($words) - 1] : $name;
 }
 
+function teamRoleRank(string $position): int {
+  if (stripos($position, 'koncipient') !== false) return 1;
+  if (stripos($position, 'advokát') !== false) return 0;
+  return 2;
+}
+
 $restTeam  = array_filter($coreTeam, fn($m) => !in_array($m['id'], $leaderIds, true));
-usort($restTeam, fn($a, $b) => strcoll(teamSurname($a['name'], $titleWords), teamSurname($b['name'], $titleWords)));
+usort($restTeam, function ($a, $b) use ($titleWords) {
+  $roleCmp = teamRoleRank($a['position']) <=> teamRoleRank($b['position']);
+  if ($roleCmp !== 0) return $roleCmp;
+  return strcoll(teamSurname($a['name'], $titleWords), teamSurname($b['name'], $titleWords));
+});
 
 // Build JS team data for modal
 $teamJs = [];

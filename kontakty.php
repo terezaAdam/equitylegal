@@ -1,15 +1,14 @@
 <?php
 $pageTitle = 'Kontakty – EQUITY LEGAL';
-$pageDesc  = 'Kontaktujte advokátní kancelář EQUITY LEGAL. Adresa: Chrudimská 1418/2, Praha 3 – Vinohrady. Bezplatné parkování pro klienty.';
+$pageDesc  = 'Kontaktujte advokátní kancelář EQUITY LEGAL. Adresa: Chrudimská 1418/2, Praha 3 – Vinohrady.';
 include 'includes/header.php';
 ?>
 
 <section class="page-hero">
   <div class="container">
     <p class="page-hero__label">Spojte se s námi</p>
-    <h1 class="page-hero__title">Kontakty</h1>
     <div class="page-hero__desc">
-      <p>Rádi odpovíme na vaše dotazy a připravíme nezávaznou konzultaci. Kontaktujte nás telefonicky, e-mailem nebo prostřednictvím formuláře.</p>
+      <p>Rádi odpovíme na vaše dotazy a připravíme konzultaci. Kontaktujte nás telefonicky, e-mailem nebo prostřednictvím formuláře.</p>
     </div>
   </div>
 </section>
@@ -35,7 +34,6 @@ include 'includes/header.php';
               130 00 Praha 3, Vinohrady<br>
               Česká republika
             </address>
-            <p style="font-size:.82rem;margin-top:.5rem;">Bezplatné parkování pro klienty na soukromém zabezpečeném parkovišti přímo u budovy.</p>
           </div>
         </div>
 
@@ -46,9 +44,7 @@ include 'includes/header.php';
           <div>
             <div class="contact-info__label">Telefon</div>
             <div class="contact-info__value">
-              <a href="tel:+420734551413">+420 734 551 413</a> <span style="font-size:.8rem;color:var(--text-muted);">(JUDr. Vít Hrnčiřík)</span><br>
-              <a href="tel:+420732230529">+420 732 230 529</a> <span style="font-size:.8rem;color:var(--text-muted);">(Mgr. Kryštof Kobeda)</span><br>
-              <a href="tel:+420603516887">+420 603 516 887</a> <span style="font-size:.8rem;color:var(--text-muted);">(Mgr. Táňa Olivová)</span>
+              <a href="tel:+420799901699">+420 799 901 699</a>
             </div>
           </div>
         </div>
@@ -60,10 +56,18 @@ include 'includes/header.php';
           <div>
             <div class="contact-info__label">E-mail</div>
             <div class="contact-info__value">
-              <a href="mailto:kancelar@equitylegal.cz">kancelar@equitylegal.cz</a><br>
-              <a href="mailto:vit.hrncirik@equitylegal.cz">vit.hrncirik@equitylegal.cz</a><br>
-              <a href="mailto:krystof.kobeda@equitylegal.cz">krystof.kobeda@equitylegal.cz</a>
+              <a href="mailto:kancelar@equitylegal.cz">kancelar@equitylegal.cz</a>
             </div>
+          </div>
+        </div>
+
+        <div class="contact-info__item">
+          <div class="contact-info__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
+          <div>
+            <div class="contact-info__label">ID datové schránky</div>
+            <div class="contact-info__value">2fr4sth</div>
           </div>
         </div>
 
