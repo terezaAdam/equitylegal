@@ -208,7 +208,7 @@ Jsme partnerem pro růst i oporou v náročných situacích.</p>
       $newsArticles = array_slice($newsArticles, 0, 3);
       foreach ($newsArticles as $a): ?>
         <article class="article-card fade-in">
-          <div class="article-card__image"<?= ($a['imageFit'] ?? 'cover') === 'contain' ? ' style="background:var(--navy);"' : '' ?>>
+          <div class="article-card__image"<?= ($a['imageFit'] ?? 'cover') === 'contain' ? ' style="background:#fff;"' : '' ?>>
             <?php if (!empty($a['image'])): ?>
               <img src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['title']) ?>" style="width:100%;height:100%;object-fit:<?= htmlspecialchars($a['imageFit'] ?? 'cover') ?>;object-position:<?= htmlspecialchars($a['imagePosition'] ?? 'center') ?>;display:block;">
             <?php else: ?>

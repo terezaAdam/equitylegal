@@ -42,7 +42,19 @@ include 'includes/header.php';
           <span style="font-family:var(--font-h);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--burgundy);padding:.25rem .75rem;border-radius:var(--r);"><?= htmlspecialchars($article['category']) ?></span>
           <span style="font-size:.85rem;color:var(--text-muted);"><?= date('j. n. Y', strtotime($article['date'])) ?> · <?= htmlspecialchars($article['author']) ?></span>
         </div>
-        <?= $article['content'] ?>
+        <?php
+        $content = $article['content'];
+        if (!empty($article['image'])) {
+          $imgHtml = '<img src="' . htmlspecialchars($article['image']) . '" alt="' . htmlspecialchars($article['title']) . '" style="max-width:280px;width:100%;height:auto;display:block;margin:1.5rem auto;object-fit:' . htmlspecialchars($article['imageFit'] ?? 'cover') . ';">';
+          $pos = strpos($content, '</p>');
+          if ($pos !== false) {
+            $content = substr_replace($content, '</p>' . $imgHtml, $pos, 4);
+          } else {
+            $content = $imgHtml . $content;
+          }
+        }
+        echo $content;
+        ?>
         <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
           <a href="/pripady.php" class="btn btn--outline">← Zpět na všechny články</a>
         </div>
