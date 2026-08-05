@@ -1,0 +1,25 @@
+{
+    "home": {
+        "hero_label": "Advokátní kancelář · Praha",
+        "hero_title": "Naše poslání je <em>váš úspěch</em>",
+        "hero_desc": "EQUITY LEGAL kombinuje hlubokou znalost práva s kreativním přístupem k řešení složitých právních případů. Poskytujeme poradenství v češtině, angličtině, němčině a dalších jazycích.",
+        "hero_image": "assets/img/hero-bg.jpg",
+        "about_title": "Právní kancelář, která hledá řešení",
+        "about_text1": "EQUITY LEGAL poskytuje právní poradenství a zastupování klientů s důrazem na odbornost a praktické výsledky. Název EQUITY vyjadřuje naši schopnost hledat spravedlivá a efektivní řešení i ve složitých právních situacích. LEGAL představuje hlubokou znalost práva, preciznost a odborné dovednosti, o které se naši klienti mohou opřít.",
+        "about_text2": "Aktivně pracujeme s moderními technologiemi a orientujeme se v oblasti ICT práva, startupů, ochrany dat i duševního vlastnictví. Díky tomu dokážeme poskytovat efektivní a aktuální právní řešení. Jsme partnerem pro růst i oporou v náročných situacích.",
+        "about_text3": "Naši kancelář najdete v Praze 3 na Vinohradech.",
+        "about_image": "assets/img/office.jpg",
+        "cta_title": "Potřebujete právní pomoc?",
+        "cta_text": "Kontaktujte nás pro konzultaci."
+    },
+    "sluzby": {
+        "hero_label": "Co nabízíme",
+        "hero_title": "Právní služby",
+        "hero_desc": "Poskytujeme komplexní právní poradenství a zastupování v 13 specializovaných oblastech práva. Každé řešení přizpůsobujeme individuálním potřebám klienta."
+    },
+    "tym": {
+        "hero_label": "Lidé kanceláře",
+        "hero_title": "Náš tým",
+        "hero_desc": "Tým EQUITY LEGAL tvoří zkušení advokáti a specialisté s českou i mezinárodní praxí."
+    }
+}

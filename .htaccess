@@ -40,11 +40,24 @@ AddDefaultCharset UTF-8
   # Block direct access to admin/includes/
   RewriteRule ^admin/includes/ - [F,L]
 
+  # Friendly admin URLs
+  RewriteRule ^prihlaseni/?$ admin/login.php [L]
+  RewriteRule ^administrace/?$ admin/index.php [L]
+  RewriteRule ^administrace/([a-zA-Z0-9_-]+)/?$ admin/$1.php [L,QSA]
+
   # Optional: clean URLs (remove .php)
   # RewriteCond %{REQUEST_FILENAME} !-f
   # RewriteCond %{REQUEST_FILENAME} !-d
   # RewriteRule ^([^\.]+)$ $1.php [NC,L]
 </IfModule>
+
+# ── Block PHP execution inside uploads folders ──
+<IfModule mod_rewrite.c>
+  RewriteRule ^assets/uploads/.*\.(php|php\d|phtml|phar)$ - [F,L]
+</IfModule>
+<Files "*.log">
+  Require all denied
+</Files>
 
 # ── Default document ──
 DirectoryIndex index.php index.html

@@ -17,6 +17,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
 
 // ── SAVE ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  requireCsrf();
   $id      = isset($_POST['id']) && $_POST['id'] !== '' ? (int)$_POST['id'] : null;
   $type    = in_array($_POST['type'] ?? '', ['book','article']) ? $_POST['type'] : 'article';
   $title   = trim($_POST['title']       ?? '');
@@ -62,6 +63,7 @@ adminHeader('Publikace', 'publications');
 <div class="card">
   <div class="card__title"><?= $editing ? 'Upravit publikaci' : 'Nová publikace' ?></div>
   <form method="POST">
+    <?= csrfField() ?>
     <?php if ($editing): ?><input type="hidden" name="id" value="<?= $editing['id'] ?>"><?php endif; ?>
 
     <div class="form-grid">

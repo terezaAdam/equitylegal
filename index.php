@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/data.php';
+$p = elPage('home');
 $pageTitle = 'Advokátní kancelář EQUITY LEGAL – Vaše právo, náš závazek';
 $pageDesc  = 'EQUITY LEGAL – prémiové právní poradenství s více jak 15letou zkušeností. Obchodní právo, nemovitosti, trestní právo, mezinárodní právo. Praha, Vinohrady.';
 include 'includes/header.php';
@@ -7,16 +9,16 @@ include 'includes/header.php';
 <!-- ── Hero ── -->
 <section class="hero" aria-label="Úvod">
   <div class="hero__image-side">
-    <img src="assets/img/hero-bg.jpg" alt="Advokátní kancelář EQUITY LEGAL" loading="eager">
+    <img src="/<?= htmlspecialchars(ltrim($p['hero_image'], '/')) ?>" alt="Advokátní kancelář EQUITY LEGAL" loading="eager">
     <div class="hero__overlay"></div>
   </div>
   <div class="hero__content-side">
-    <p class="hero__label">Advokátní kancelář · Praha</p>
+    <p class="hero__label"><?= htmlspecialchars($p['hero_label']) ?></p>
     <h1 class="hero__title">
-      Naše poslání je <em>váš úspěch</em>
+      <?= strip_tags($p['hero_title'], '<em><strong>') ?>
     </h1>
     <div class="hero__desc">
-      <p>EQUITY LEGAL kombinuje hlubokou znalost práva s kreativním přístupem k řešení složitých právních případů. Poskytujeme poradenství v češtině, angličtině, němčině a dalších jazycích.</p>
+      <p><?= htmlspecialchars($p['hero_desc']) ?></p>
     </div>
     <div class="hero__cta">
       <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
@@ -151,14 +153,13 @@ include 'includes/header.php';
     <div class="about__grid">
       <div>
         <p class="section-label">O nás</p>
-        <h2 class="section-title" id="about-heading">Právní kancelář, která hledá řešení</h2>
+        <h2 class="section-title" id="about-heading"><?= htmlspecialchars($p['about_title']) ?></h2>
         <div class="divider"></div>
-        <p>EQUITY LEGAL poskytuje právní poradenství a zastupování klientů s důrazem na odbornost a praktické výsledky. Název EQUITY vyjadřuje naši schopnost hledat spravedlivá a efektivní řešení i ve složitých právních situacích. LEGAL představuje hlubokou znalost práva, preciznost a odborné dovednosti, o které se naši klienti mohou opřít.</p>
+        <p><?= htmlspecialchars($p['about_text1']) ?></p>
 
-<p>Aktivně pracujeme s moderními technologiemi a orientujeme se v oblasti ICT práva, startupů, ochrany dat i duševního vlastnictví. Díky tomu dokážeme poskytovat efektivní a aktuální právní řešení.
-Jsme partnerem pro růst i oporou v náročných situacích.</p>
+<p><?= htmlspecialchars($p['about_text2']) ?></p>
 
-  <p>Naši kancelář najdete v Praze 3 na Vinohradech.</p>
+  <p><?= htmlspecialchars($p['about_text3']) ?></p>
         <div class="about__stats">
           <div>
             <div class="about__stat-num">15+</div>
@@ -182,7 +183,7 @@ Jsme partnerem pro růst i oporou v náročných situacích.</p>
         </div>
       </div>
       <div class="about__image fade-in">
-        <img src="assets/img/office.jpg" alt="Kancelář EQUITY LEGAL">
+        <img src="/<?= htmlspecialchars(ltrim($p['about_image'], '/')) ?>" alt="Kancelář EQUITY LEGAL">
         <div class="about__accent"></div>
       </div>
     </div>
@@ -235,8 +236,8 @@ Jsme partnerem pro růst i oporou v náročných situacích.</p>
 <!-- ── CTA Banner ── -->
 <section class="cta-banner" aria-label="Kontaktujte nás">
   <div class="container">
-    <h2>Potřebujete právní pomoc?</h2>
-    <p>Kontaktujte nás pro konzultaci.</p>
+    <h2><?= htmlspecialchars($p['cta_title']) ?></h2>
+    <p><?= htmlspecialchars($p['cta_text']) ?></p>
     <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
   </div>
 </section>

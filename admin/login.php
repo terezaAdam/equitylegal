@@ -2,18 +2,28 @@
 require_once __DIR__ . '/includes/auth.php';
 
 if (isLoggedIn()) {
-  header('Location: /admin/index.php');
+  header('Location: /administrace');
   exit;
 }
 
 $error = '';
+if (!empty($_GET['timeout'])) {
+  $error = 'Byli jste odhlášeni kvůli neaktivitě. Přihlaste se prosím znovu.';
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $pw = $_POST['password'] ?? '';
-  if (login($pw)) {
-    header('Location: /admin/index.php');
-    exit;
+  if (!csrfVerify()) {
+    $error = 'Neplatný bezpečnostní token. Zkuste to znovu.';
+  } elseif (isLockedOut()) {
+    $error = 'Příliš mnoho neúspěšných pokusů. Zkuste to prosím za ' . ceil(LOGIN_LOCKOUT_SECONDS / 60) . ' minut.';
+  } else {
+    $pw = (string)($_POST['password'] ?? '');
+    if (login($pw)) {
+      header('Location: /administrace');
+      exit;
+    }
+    $error = 'Nesprávné heslo. Zkuste to znovu.';
   }
-  $error = 'Nesprávné heslo. Zkuste to znovu.';
 }
 ?>
 <!DOCTYPE html>
@@ -36,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 
     <form method="POST" novalidate>
+      <?= csrfField() ?>
       <div class="form-group">
         <label for="pw">Heslo</label>
         <input type="password" id="pw" name="password" required autofocus autocomplete="current-password" placeholder="••••••••">

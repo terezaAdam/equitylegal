@@ -17,6 +17,7 @@ if (isset($_GET['delete'])) {
 
 // ── SAVE ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  requireCsrf();
   $origId = trim($_POST['orig_id'] ?? '');
   $id     = trim($_POST['id']      ?? '') ?: slugify($_POST['name'] ?? '');
   $name   = trim($_POST['name']    ?? '');
@@ -78,6 +79,7 @@ adminHeader('Náš tým', 'team');
 <div class="card">
   <div class="card__title"><?= $editing ? 'Upravit člena týmu' : 'Přidat člena týmu' ?></div>
   <form method="POST">
+    <?= csrfField() ?>
     <input type="hidden" name="orig_id" value="<?= htmlspecialchars($editing['id'] ?? '') ?>">
 
     <div class="form-grid">

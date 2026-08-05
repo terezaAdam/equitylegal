@@ -1,1 +1,4 @@
 .claude/settings.local.json
+data/.login_attempts.json
+data/.security.log
+admin/includes/config.php

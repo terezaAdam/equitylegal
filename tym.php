@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/data.php';
+$p = elPage('tym');
 $pageTitle = 'Náš tým – EQUITY LEGAL';
 $pageDesc  = 'Tým advokátní kanceláře EQUITY LEGAL: zkušení advokáti s mezinárodní praxí poskytující poradenství v češtině, angličtině, němčině a dalších jazycích.';
 
@@ -54,10 +56,10 @@ include 'includes/header.php';
 
 <section class="page-hero">
   <div class="container">
-    <p class="page-hero__label">Lidé kanceláře</p>
-    <h1 class="page-hero__title">Náš tým</h1>
+    <p class="page-hero__label"><?= htmlspecialchars($p['hero_label']) ?></p>
+    <h1 class="page-hero__title"><?= htmlspecialchars($p['hero_title']) ?></h1>
     <div class="page-hero__desc">
-      <p>Tým EQUITY LEGAL tvoří zkušení advokáti a specialisté s českou i mezinárodní praxí.</p>
+      <p><?= htmlspecialchars($p['hero_desc']) ?></p>
     </div>
   </div>
 </section>

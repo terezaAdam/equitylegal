@@ -18,6 +18,7 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
 
 // ── SAVE (new or edit) ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  requireCsrf();
   $id       = isset($_POST['id']) && $_POST['id'] !== '' ? (int)$_POST['id'] : null;
   $title    = trim($_POST['title']    ?? '');
   $slug     = trim($_POST['slug']     ?? '') ?: slugify($title);
@@ -75,6 +76,7 @@ adminHeader('Blog / Články', 'articles');
 <div class="card">
   <div class="card__title"><?= $editing ? 'Upravit článek' : 'Nový článek' ?></div>
   <form method="POST">
+    <?= csrfField() ?>
     <?php if ($editing): ?>
       <input type="hidden" name="id" value="<?= $editing['id'] ?>">
     <?php endif; ?>

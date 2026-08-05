@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/includes/data.php';
+$p = elPage('sluzby');
 $pageTitle = 'Právní služby – EQUITY LEGAL';
 $pageDesc  = 'Přehled všech právních služeb advokátní kanceláře EQUITY LEGAL: obchodní právo, pracovní právo, nemovitosti, sporná agenda, trestní právo, rodinné právo a další.';
 include 'includes/header.php';
@@ -6,10 +8,10 @@ include 'includes/header.php';
 
 <section class="page-hero">
   <div class="container">
-    <p class="page-hero__label">Co nabízíme</p>
-    <h1 class="page-hero__title">Právní služby</h1>
+    <p class="page-hero__label"><?= htmlspecialchars($p['hero_label']) ?></p>
+    <h1 class="page-hero__title"><?= htmlspecialchars($p['hero_title']) ?></h1>
     <div class="page-hero__desc">
-      <p>Poskytujeme komplexní právní poradenství a zastupování v 13 specializovaných oblastech práva. Každé řešení přizpůsobujeme individuálním potřebám klienta.</p>
+      <p><?= htmlspecialchars($p['hero_desc']) ?></p>
     </div>
   </div>
 </section>

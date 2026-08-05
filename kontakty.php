@@ -1,6 +1,8 @@
 <?php
+require_once __DIR__ . '/includes/data.php';
+$s = elSettings();
 $pageTitle = 'Kontakty – EQUITY LEGAL';
-$pageDesc  = 'Kontaktujte advokátní kancelář EQUITY LEGAL. Adresa: Chrudimská 1418/2, Praha 3 – Vinohrady.';
+$pageDesc  = 'Kontaktujte advokátní kancelář EQUITY LEGAL. Adresa: ' . $s['address_street'] . ', ' . $s['address_city'] . '.';
 include 'includes/header.php';
 ?>
 
@@ -20,7 +22,7 @@ include 'includes/header.php';
       <!-- Info column -->
       <div>
         <p class="section-label">Kde nás najdete</p>
-        <h2 class="section-title" style="font-size:1.4rem;">EQUITY LEGAL s.r.o.</h2>
+        <h2 class="section-title" style="font-size:1.4rem;"><?= htmlspecialchars($s['company_name']) ?></h2>
         <div class="divider"></div>
 
         <div class="contact-info__item">
@@ -30,9 +32,9 @@ include 'includes/header.php';
           <div>
             <div class="contact-info__label">Adresa</div>
             <address class="contact-info__value">
-              Chrudimská 1418/2<br>
-              130 00 Praha 3, Vinohrady<br>
-              Česká republika
+              <?= htmlspecialchars($s['address_street']) ?><br>
+              <?= htmlspecialchars($s['address_city']) ?><br>
+              <?= htmlspecialchars($s['address_country']) ?>
             </address>
           </div>
         </div>
@@ -44,7 +46,7 @@ include 'includes/header.php';
           <div>
             <div class="contact-info__label">Telefon</div>
             <div class="contact-info__value">
-              <a href="tel:+420799901699">+420 799 901 699</a>
+              <a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $s['phone'])) ?>"><?= htmlspecialchars($s['phone']) ?></a>
             </div>
           </div>
         </div>
@@ -56,7 +58,7 @@ include 'includes/header.php';
           <div>
             <div class="contact-info__label">E-mail</div>
             <div class="contact-info__value">
-              <a href="mailto:kancelar@equitylegal.cz">kancelar@equitylegal.cz</a>
+              <a href="mailto:<?= htmlspecialchars($s['email']) ?>"><?= htmlspecialchars($s['email']) ?></a>
             </div>
           </div>
         </div>
@@ -67,22 +69,30 @@ include 'includes/header.php';
           </div>
           <div>
             <div class="contact-info__label">ID datové schránky</div>
-            <div class="contact-info__value">2fr4sth</div>
+            <div class="contact-info__value"><?= htmlspecialchars($s['databox']) ?></div>
           </div>
         </div>
+
+        <?php if ($s['hours']): ?>
+        <div class="contact-info__item">
+          <div class="contact-info__label">Konzultační doba</div>
+          <div class="contact-info__value"><?= htmlspecialchars($s['hours']) ?></div>
+        </div>
+        <?php endif; ?>
 
         <!-- Billing -->
         <div class="billing-info">
           <h3>Fakturační údaje</h3>
           <dl>
             <dt>Název</dt>
-            <dd>EQUITY LEGAL s.r.o.</dd>
+            <dd><?= htmlspecialchars($s['company_name']) ?></dd>
             <dt>IČO</dt>
-            <dd>03562795</dd>
+            <dd><?= htmlspecialchars($s['ico']) ?></dd>
+            <?php if ($s['dic']): ?><dt>DIČ</dt><dd><?= htmlspecialchars($s['dic']) ?></dd><?php endif; ?>
             <dt>Sídlo</dt>
-            <dd>Chrudimská 1418/2, 130 00 Praha 3</dd>
+            <dd><?= htmlspecialchars($s['address_street']) ?>, <?= htmlspecialchars($s['address_city']) ?></dd>
             <dt>Člen</dt>
-            <dd>Česká advokátní komora</dd>
+            <dd><?= htmlspecialchars($s['bar_membership']) ?></dd>
           </dl>
         </div>
       </div>
