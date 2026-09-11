@@ -45,6 +45,11 @@ AddDefaultCharset UTF-8
   RewriteRule ^administrace/?$ admin/index.php [L]
   RewriteRule ^administrace/([a-zA-Z0-9_-]+)/?$ admin/$1.php [L,QSA]
 
+  # Language mutations: /en/... and /de/... map to the same PHP files at the root.
+  RewriteCond %{REQUEST_URI} !^/(en|de)/(assets|admin|data|download)/
+  RewriteRule ^(en|de)/?$ index.php [L,QSA]
+  RewriteRule ^(en|de)/([a-zA-Z0-9_-]+)\.php$ $2.php [L,QSA]
+
   # Optional: clean URLs (remove .php)
   # RewriteCond %{REQUEST_FILENAME} !-f
   # RewriteCond %{REQUEST_FILENAME} !-d

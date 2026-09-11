@@ -1,6 +1,7 @@
 <?php
-$pageTitle = 'Publikace – EQUITY LEGAL';
-$pageDesc  = 'Odborné publikace, knihy a články advokátní kanceláře EQUITY LEGAL. Právní komentáře, casebooky a odborné texty.';
+require_once __DIR__ . '/includes/i18n.php';
+$pageTitle = tm('pub_title_meta');
+$pageDesc  = tm('pub_desc_meta');
 
 $publications = json_decode(file_get_contents(__DIR__ . '/data/publications.json'), true) ?? [];
 
@@ -14,10 +15,10 @@ include 'includes/header.php';
 
 <section class="page-hero">
   <div class="container">
-    <p class="page-hero__label">Odborné texty</p>
-    <h1 class="page-hero__title">Publikace</h1>
+    <p class="page-hero__label"><?= htmlspecialchars(t('pub_hero_label')) ?></p>
+    <h1 class="page-hero__title"><?= htmlspecialchars(t('pub_title')) ?></h1>
     <div class="page-hero__desc">
-      <p>Advokáti EQUITY LEGAL se aktivně podílejí na tvorbě odborné literatury a publikují v předních právních časopisech.</p>
+      <p><?= htmlspecialchars(t('pub_intro')) ?></p>
     </div>
   </div>
 </section>
@@ -26,8 +27,8 @@ include 'includes/header.php';
   <div class="container">
 
     <div class="publications-tabs">
-      <button class="pub-tab active" data-panel="panel-books">Knižní publikace</button>
-      <button class="pub-tab" data-panel="panel-articles">Odborné články</button>
+      <button class="pub-tab active" data-panel="panel-books"><?= htmlspecialchars(t('pub_tab_books')) ?></button>
+      <button class="pub-tab" data-panel="panel-articles"><?= htmlspecialchars(t('pub_tab_articles')) ?></button>
     </div>
 
     <!-- Books panel -->
@@ -36,16 +37,16 @@ include 'includes/header.php';
         <?php foreach ($books as $p): ?>
           <div class="pub-item pub-item--book fade-in">
             <div class="pub-item__header">
-              <div class="pub-item__type">Knižní publikace</div>
+              <div class="pub-item__type"><?= htmlspecialchars(t('pub_type_book')) ?></div>
               <div class="pub-item__date"><?= date('Y', strtotime($p['date'])) ?></div>
             </div>
-            <div class="pub-item__title"><?= htmlspecialchars($p['title']) ?></div>
+            <div class="pub-item__title"><?= htmlspecialchars(tf($p, 'title')) ?></div>
             <div class="pub-item__row">
               <?php if (!empty($p['image'])): ?>
-                <img class="pub-item__thumb" src="<?= htmlspecialchars($p['image']) ?>" alt="Obálka: <?= htmlspecialchars($p['title']) ?>" loading="lazy" data-lightbox="<?= htmlspecialchars($p['image']) ?>" data-title="<?= htmlspecialchars($p['title']) ?>" role="button" tabindex="0" aria-label="Zvětšit obálku: <?= htmlspecialchars($p['title']) ?>">
+                <img class="pub-item__thumb" src="<?= htmlspecialchars($p['image']) ?>" alt="Obálka: <?= htmlspecialchars(tf($p, 'title')) ?>" loading="lazy" data-lightbox="<?= htmlspecialchars($p['image']) ?>" data-title="<?= htmlspecialchars(tf($p, 'title')) ?>" role="button" tabindex="0" aria-label="Zvětšit obálku: <?= htmlspecialchars(tf($p, 'title')) ?>">
               <?php endif; ?>
               <div class="pub-item__content">
-                <p class="pub-item__desc"><?= htmlspecialchars($p['description']) ?></p>
+                <p class="pub-item__desc"><?= htmlspecialchars(tf($p, 'description')) ?></p>
                 <?php if (!empty($p['authors'])): ?>
                   <div class="pub-item__authors">
                     <?= htmlspecialchars(implode(', ', $p['authors'])) ?>
@@ -64,9 +65,9 @@ include 'includes/header.php';
         <?php foreach ($articles as $p): ?>
           <div class="pub-item fade-in">
             <div>
-              <div class="pub-item__type">Odborný článek</div>
-              <div class="pub-item__title"><?= htmlspecialchars($p['title']) ?></div>
-              <p class="pub-item__desc"><?= htmlspecialchars($p['description']) ?></p>
+              <div class="pub-item__type"><?= htmlspecialchars(t('pub_type_article')) ?></div>
+              <div class="pub-item__title"><?= htmlspecialchars(tf($p, 'title')) ?></div>
+              <p class="pub-item__desc"><?= htmlspecialchars(tf($p, 'description')) ?></p>
               <?php if (!empty($p['authors'])): ?>
                 <div style="margin-top:.5rem;font-size:.8rem;color:var(--text-muted);font-family:var(--font-h);">
                   <?= htmlspecialchars(implode(', ', $p['authors'])) ?>
@@ -74,7 +75,7 @@ include 'includes/header.php';
               <?php endif; ?>
               <?php if (!empty($p['link'])): ?>
                 <div style="margin-top:.75rem;">
-                  <a href="<?= htmlspecialchars($p['link']) ?>" class="btn btn--sm btn--outline" target="_blank" rel="noopener">Stáhnout / číst →</a>
+                  <a href="<?= htmlspecialchars($p['link']) ?>" class="btn btn--sm btn--outline" target="_blank" rel="noopener"><?= htmlspecialchars(t('btn_download_read')) ?></a>
                 </div>
               <?php endif; ?>
             </div>
@@ -89,7 +90,7 @@ include 'includes/header.php';
 
 <!-- ── Cover lightbox ── -->
 <div class="img-lightbox" id="imgLightbox" role="dialog" aria-modal="true" aria-label="Zvětšená obálka">
-  <button class="img-lightbox__close" id="imgLightboxClose" aria-label="Zavřít">×</button>
+  <button class="img-lightbox__close" id="imgLightboxClose" aria-label="<?= htmlspecialchars(t('btn_close')) ?>">×</button>
   <img id="imgLightboxImg" src="" alt="">
 </div>
 
@@ -124,9 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <section class="cta-banner">
   <div class="container">
-    <h2>Chcete vědět více?</h2>
-    <p>Kontaktujte nás pro odbornou konzultaci.</p>
-    <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
+    <h2><?= htmlspecialchars(t('pub_cta_title')) ?></h2>
+    <p><?= htmlspecialchars(t('pub_cta_text')) ?></p>
+    <a href="<?= lu('/kontakty.php') ?>" class="btn btn--primary"><?= htmlspecialchars(t('btn_send_enquiry')) ?></a>
   </div>
 </section>
 

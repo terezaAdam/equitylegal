@@ -22,14 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $id       = isset($_POST['id']) && $_POST['id'] !== '' ? (int)$_POST['id'] : null;
   $title    = trim($_POST['title']    ?? '');
   $slug     = trim($_POST['slug']     ?? '') ?: slugify($title);
-  $excerpt  = trim($_POST['excerpt']  ?? '');
-  $content  = trim($_POST['content']  ?? '');
   $category = trim($_POST['category'] ?? '');
   $date     = trim($_POST['date']     ?? date('Y-m-d'));
   $author   = trim($_POST['author']   ?? '');
   $services = array_values((array)($_POST['services'] ?? []));
 
-  $record = compact('title', 'slug', 'excerpt', 'content', 'category', 'date', 'author', 'services');
+  $record = array_merge(
+    compact('slug', 'category', 'date', 'author', 'services'),
+    langPostScalar('title'),
+    langPostScalar('excerpt'),
+    langPostScalar('content')
+  );
 
   if ($id !== null) {
     // Update
@@ -82,14 +85,10 @@ adminHeader('Blog / Články', 'articles');
     <?php endif; ?>
 
     <div class="form-grid">
-      <div class="form-group form-full">
-        <label>Název článku *</label>
-        <input type="text" name="title" required value="<?= htmlspecialchars($editing['title'] ?? '') ?>" placeholder="Název případu nebo článku">
-      </div>
       <div class="form-group">
         <label>URL slug</label>
         <input type="text" name="slug" value="<?= htmlspecialchars($editing['slug'] ?? '') ?>" placeholder="generuje-se-automaticky">
-        <div class="form-hint">Ponechte prázdné pro automatické generování z názvu.</div>
+        <div class="form-hint">Ponechte prázdné pro automatické generování z názvu. Stejný pro všechny jazykové mutace.</div>
       </div>
       <div class="form-group">
         <label>Kategorie *</label>
@@ -120,15 +119,14 @@ adminHeader('Blog / Články', 'articles');
           <?php endforeach; ?>
         </div>
       </div>
-      <div class="form-group form-full">
-        <label>Perex (krátký popis)</label>
-        <textarea name="excerpt" rows="3" placeholder="Krátký popis článku zobrazovaný v přehledu…"><?= htmlspecialchars($editing['excerpt'] ?? '') ?></textarea>
-      </div>
-      <div class="form-group form-full">
-        <label>Obsah článku</label>
-        <div class="rich-hint">Podporuje HTML tagy: <code>&lt;p&gt;</code> <code>&lt;h2&gt;</code> <code>&lt;h3&gt;</code> <code>&lt;ul&gt;</code> <code>&lt;li&gt;</code> <code>&lt;strong&gt;</code> <code>&lt;em&gt;</code></div>
-        <textarea name="content" rows="20" placeholder="<p>Text článku...</p>"><?= htmlspecialchars($editing['content'] ?? '') ?></textarea>
-      </div>
+    </div>
+
+    <?php langSwitch(); ?>
+
+    <div class="form-grid">
+      <?php langInput('title', 'Název článku *', $editing ?? [], 'Název případu nebo článku'); ?>
+      <?php langTextarea('excerpt', 'Perex (krátký popis)', $editing ?? [], 3, 'Krátký popis článku zobrazovaný v přehledu.'); ?>
+      <?php langTextarea('content', 'Obsah článku', $editing ?? [], 20, 'Podporuje HTML tagy: &lt;p&gt; &lt;h2&gt; &lt;h3&gt; &lt;ul&gt; &lt;li&gt; &lt;strong&gt; &lt;em&gt;'); ?>
     </div>
 
     <div style="display:flex;gap:.75rem;margin-top:.5rem;">

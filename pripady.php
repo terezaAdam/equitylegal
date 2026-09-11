@@ -1,6 +1,7 @@
 <?php
-$pageTitle = 'Blog – EQUITY LEGAL';
-$pageDesc  = 'Blog advokátní kanceláře EQUITY LEGAL: řešené případy z praxe i zajímavosti z právního oboru a dění v kanceláři.';
+require_once __DIR__ . '/includes/i18n.php';
+$pageTitle = tm('blog_title_meta');
+$pageDesc  = tm('blog_desc_meta');
 
 // Load articles from JSON
 $articles = array_filter(
@@ -32,8 +33,8 @@ if ($slug) {
     }
   }
   if ($article) {
-    $pageTitle = $article['title'] . ' – EQUITY LEGAL';
-    $pageDesc  = strip_tags($article['excerpt']);
+    $pageTitle = tf($article, 'title') . ' – EQUITY LEGAL';
+    $pageDesc  = strip_tags(tf($article, 'excerpt'));
   }
 }
 
@@ -42,21 +43,21 @@ include 'includes/header.php';
 
 <section class="page-hero">
   <div class="container">
-    <p class="page-hero__label">Aktuality a řešené případy</p>
+    <p class="page-hero__label"><?= htmlspecialchars(t('blog_hero_label')) ?></p>
     <?php if ($article): ?>
       <div class="breadcrumb" style="margin-bottom:.75rem;">
-        <a href="/pripady.php">Blog</a>
+        <a href="<?= lu('/pripady.php') ?>"><?= htmlspecialchars(t('nav_blog')) ?></a>
         <span class="breadcrumb__sep">/</span>
-        <a href="/pripady.php?kategorie=<?= urlencode($article['category']) ?>"><?= htmlspecialchars($article['category']) ?></a>
+        <a href="<?= lu('/pripady.php') ?>?kategorie=<?= urlencode($article['category']) ?>"><?= htmlspecialchars(catLabel($article['category'])) ?></a>
       </div>
-      <h1 class="page-hero__title"><?= htmlspecialchars($article['title']) ?></h1>
+      <h1 class="page-hero__title"><?= htmlspecialchars(tf($article, 'title')) ?></h1>
       <div class="page-hero__desc">
-        <p><?= htmlspecialchars($article['excerpt']) ?></p>
+        <p><?= htmlspecialchars(tf($article, 'excerpt')) ?></p>
       </div>
     <?php else: ?>
-      <h1 class="page-hero__title">Blog</h1>
+      <h1 class="page-hero__title"><?= htmlspecialchars(t('blog_title')) ?></h1>
       <div class="page-hero__desc">
-        <p>Řešené případy z naší praxe i zajímavosti z právního oboru a dění v kanceláři EQUITY LEGAL.</p>
+        <p><?= htmlspecialchars(t('blog_intro')) ?></p>
       </div>
     <?php endif; ?>
   </div>
@@ -69,31 +70,32 @@ include 'includes/header.php';
     <div class="article-detail">
       <article class="article-content">
         <div style="display:flex;gap:1.5rem;align-items:center;margin-bottom:2rem;flex-wrap:wrap;">
-          <span style="font-family:var(--font-h);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--burgundy);padding:.25rem .75rem;border-radius:var(--r);"><?= htmlspecialchars($article['category']) ?></span>
+          <span style="font-family:var(--font-h);font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--burgundy);padding:.25rem .75rem;border-radius:var(--r);"><?= htmlspecialchars(catLabel($article['category'])) ?></span>
         </div>
-        <?= $article['content'] ?>
+        <?= tf($article, 'content') ?>
         <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
-          <a href="/pripady.php" class="btn btn--outline">← Zpět na všechny články</a>
+          <a href="<?= lu('/pripady.php') ?>" class="btn btn--outline"><?= htmlspecialchars(t('btn_back_articles')) ?></a>
         </div>
       </article>
       <aside class="article-sidebar">
         <div class="article-sidebar__card">
-          <div class="article-sidebar__title">Potřebujete poradit?</div>
-          <p style="font-size:.88rem;">Naši advokáti jsou připraveni vám pomoci.</p>
-          <a href="/kontakty.php" class="btn btn--primary btn--sm" style="margin-top:1rem;">Poslat poptávku</a>
+          <div class="article-sidebar__title"><?= htmlspecialchars(t('article_need_advice_title')) ?></div>
+          <p style="font-size:.88rem;"><?= htmlspecialchars(t('article_need_advice_text')) ?></p>
+          <a href="<?= lu('/kontakty.php') ?>" class="btn btn--primary btn--sm" style="margin-top:1rem;"><?= htmlspecialchars(t('btn_send_enquiry')) ?></a>
         </div>
         <div class="article-sidebar__card">
-          <div class="article-sidebar__title">Související služby</div>
+          <div class="article-sidebar__title"><?= htmlspecialchars(t('article_related_services')) ?></div>
           <ul style="display:flex;flex-direction:column;gap:.5rem;">
             <?php
-            $allServices = json_decode(file_get_contents(__DIR__ . '/data/services.json'), true) ?? [];
-            $serviceLabels = array_column($allServices, 'label', 'id');
+            $allServices = require __DIR__ . '/includes/services-data.php';
             $selectedServices = $article['services'] ?? [];
             if (empty($selectedServices)): ?>
-              <li><a href="/sluzby.php" style="font-size:.88rem;">Právní služby</a></li>
+              <li><a href="<?= lu('/sluzby.php') ?>" style="font-size:.88rem;"><?= htmlspecialchars(t('nav_services')) ?></a></li>
             <?php else: foreach ($selectedServices as $sid):
-              if (empty($serviceLabels[$sid])) continue; ?>
-              <li><a href="/sluzby.php#<?= htmlspecialchars($sid) ?>" style="font-size:.88rem;"><?= htmlspecialchars($serviceLabels[$sid]) ?></a></li>
+              $svc = null;
+              foreach ($allServices as $svcRow) { if ($svcRow['id'] === $sid) { $svc = $svcRow; break; } }
+              if (!$svc) continue; ?>
+              <li><a href="<?= lu('/sluzby.php') ?>#<?= htmlspecialchars($sid) ?>" style="font-size:.88rem;"><?= htmlspecialchars(tf($svc, 'label')) ?></a></li>
             <?php endforeach; endif; ?>
           </ul>
         </div>
@@ -116,9 +118,9 @@ include 'includes/header.php';
     $allCats2 = array_unique(array_column($allArticles, 'category'));
     ?>
     <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:3rem;">
-      <a href="/pripady.php" class="btn btn--sm <?= !$filterCat ? 'btn--primary' : 'btn--outline' ?>">Vše</a>
+      <a href="<?= lu('/pripady.php') ?>" class="btn btn--sm <?= !$filterCat ? 'btn--primary' : 'btn--outline' ?>"><?= htmlspecialchars(t('btn_all')) ?></a>
       <?php foreach ($allCats2 as $cat): ?>
-        <a href="/pripady.php?kategorie=<?= urlencode($cat) ?>" class="btn btn--sm <?= $filterCat === $cat ? 'btn--primary' : 'btn--outline' ?>"><?= htmlspecialchars($cat) ?></a>
+        <a href="<?= lu('/pripady.php') ?>?kategorie=<?= urlencode($cat) ?>" class="btn btn--sm <?= $filterCat === $cat ? 'btn--primary' : 'btn--outline' ?>"><?= htmlspecialchars(catLabel($cat)) ?></a>
       <?php endforeach; ?>
     </div>
 
@@ -129,25 +131,25 @@ include 'includes/header.php';
         <article class="article-card fade-in">
           <div class="article-card__image"<?= ($a['imageFit'] ?? 'cover') === 'contain' ? ' style="background:#fff;"' : '' ?>>
             <?php if (!empty($a['image'])): ?>
-              <img src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['title']) ?>" style="width:100%;height:100%;object-fit:<?= htmlspecialchars($a['imageFit'] ?? 'cover') ?>;object-position:<?= htmlspecialchars($a['imagePosition'] ?? 'center') ?>;display:block;">
+              <img src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars(tf($a, 'title')) ?>" style="width:100%;height:100%;object-fit:<?= htmlspecialchars($a['imageFit'] ?? 'cover') ?>;object-position:<?= htmlspecialchars($a['imagePosition'] ?? 'center') ?>;display:block;">
             <?php else: ?>
               <div style="width:100%;height:100%;background:linear-gradient(135deg,var(--navy) 0%,#263452 100%);display:flex;align-items:center;justify-content:center;">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="1" style="width:64px;height:64px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
               </div>
             <?php endif; ?>
-            <span class="article-card__cat"><?= htmlspecialchars($a['category']) ?></span>
+            <span class="article-card__cat"><?= htmlspecialchars(catLabel($a['category'])) ?></span>
           </div>
           <div class="article-card__body">
-            <h2 class="article-card__title"><?= htmlspecialchars($a['title']) ?></h2>
-            <p class="article-card__excerpt"><?= htmlspecialchars($a['excerpt']) ?></p>
-            <a href="/pripady.php?clanek=<?= urlencode($a['slug']) ?>" class="article-card__link">Číst celý článek</a>
+            <h2 class="article-card__title"><?= htmlspecialchars(tf($a, 'title')) ?></h2>
+            <p class="article-card__excerpt"><?= htmlspecialchars(tf($a, 'excerpt')) ?></p>
+            <a href="<?= lu('/pripady.php') ?>?clanek=<?= urlencode($a['slug']) ?>" class="article-card__link"><?= htmlspecialchars(t('btn_read_article')) ?></a>
           </div>
         </article>
       <?php endforeach; ?>
     </div>
 
     <?php if (empty($displayArticles)): ?>
-      <p style="text-align:center;color:var(--text-muted);padding:3rem 0;">Žádné články v této kategorii.</p>
+      <p style="text-align:center;color:var(--text-muted);padding:3rem 0;"><?= htmlspecialchars(t('blog_empty_cat')) ?></p>
     <?php endif; ?>
 
   </div>
@@ -156,9 +158,9 @@ include 'includes/header.php';
 
 <section class="cta-banner">
   <div class="container">
-    <h2>Máte podobný případ?</h2>
-    <p>Kontaktujte nás pro nezávaznou konzultaci.</p>
-    <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
+    <h2><?= htmlspecialchars(t('article_similar_case_title')) ?></h2>
+    <p><?= htmlspecialchars(t('article_similar_case_text')) ?></p>
+    <a href="<?= lu('/kontakty.php') ?>" class="btn btn--primary"><?= htmlspecialchars(t('btn_send_enquiry')) ?></a>
   </div>
 </section>
 

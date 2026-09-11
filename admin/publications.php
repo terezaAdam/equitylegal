@@ -20,13 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   requireCsrf();
   $id      = isset($_POST['id']) && $_POST['id'] !== '' ? (int)$_POST['id'] : null;
   $type    = in_array($_POST['type'] ?? '', ['book','article']) ? $_POST['type'] : 'article';
-  $title   = trim($_POST['title']       ?? '');
-  $desc    = trim($_POST['description'] ?? '');
   $date    = trim($_POST['date']        ?? date('Y-m-d'));
   $link    = trim($_POST['link']        ?? '');
   $authors = array_filter(array_map('trim', explode("\n", $_POST['authors'] ?? '')));
 
-  $record = compact('type','title','description','date','link') + ['description' => $desc, 'authors' => array_values($authors)];
+  $record = array_merge(
+    ['type' => $type, 'date' => $date, 'link' => $link, 'authors' => array_values($authors)],
+    langPostScalar('title'),
+    langPostScalar('description')
+  );
 
   if ($id !== null) {
     foreach ($pubs as &$p) {
@@ -78,22 +80,22 @@ adminHeader('Publikace', 'publications');
         <label>Datum vydání</label>
         <input type="date" name="date" value="<?= htmlspecialchars($editing['date'] ?? date('Y-m-d')) ?>">
       </div>
-      <div class="form-group form-full">
-        <label>Název *</label>
-        <input type="text" name="title" required value="<?= htmlspecialchars($editing['title'] ?? '') ?>" placeholder="Název publikace">
-      </div>
-      <div class="form-group form-full">
-        <label>Popis</label>
-        <textarea name="description" rows="4"><?= htmlspecialchars($editing['description'] ?? '') ?></textarea>
-      </div>
       <div class="form-group">
         <label>Odkaz (URL nebo cesta)</label>
         <input type="text" name="link" value="<?= htmlspecialchars($editing['link'] ?? '') ?>" placeholder="https://... nebo /download/soubor.pdf">
       </div>
-      <div class="form-group">
+      <div class="form-group form-full">
         <label>Autoři (jeden na řádek)</label>
+        <div class="form-hint">Jména autorů se nepřekládají, jsou stejná pro všechny jazykové mutace.</div>
         <textarea name="authors" rows="4"><?= htmlspecialchars(implode("\n", $editing['authors'] ?? [])) ?></textarea>
       </div>
+    </div>
+
+    <?php langSwitch(); ?>
+
+    <div class="form-grid">
+      <?php langInput('title', 'Název *', $editing ?? [], 'Název publikace'); ?>
+      <?php langTextarea('description', 'Popis', $editing ?? [], 4); ?>
     </div>
 
     <div style="display:flex;gap:.75rem;margin-top:.5rem;">

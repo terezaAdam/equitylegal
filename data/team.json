@@ -3,21 +3,35 @@
     "id": "vit-hrncirik",
     "name": "JUDr. Vít Hrnčiřík, LL.M., Ph.D.",
     "position": "Advokát · Zakládající partner",
+    "position_en": "Solicitor · Founding Partner",
+    "position_de": "Rechtsanwalt · Gründungspartner",
     "photo": "",
     "email": "vit.hrncirik@equitylegal.cz",
     "phone": "+420 734 551 413",
-    "languages": [
-      "CS",
-      "DE",
-      "EN"
-    ],
+    "languages": ["CS", "DE", "EN"],
     "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy v Praze, obor právo a právní věda roku 2006, členem České advokátní komory od roku 2007, advokátem od roku 2010.</p><p>Ve své praxi působil v advokátní kanceláři zaměřenou na českou a německou klientelu.</p><p>V zahraničí působil a získal znalosti na universitách v Německu (Bayreuth, Hamburk), Rakousku (Innsbruck) a Irsku (Cork).</p><p>Poskytuje právní poradenství v českém, německém a anglickém jazyce.</p>",
+    "bio_en": "<p>He graduated from the Faculty of Law at Charles University in Prague, specialising in law and legal science, in 2006; he has been a member of the Czech Bar Association since 2007 and a practising solicitor since 2010.</p><p>In his practice, he worked at a law firm specialising in Czech and German clients.</p><p>He has worked abroad and gained experience at universities in Germany (Bayreuth, Hamburg), Austria (Innsbruck) and Ireland (Cork).</p><p>He provides legal advice in Czech, German and English.</p>",
+    "bio_de": "<p>Er promovierte 2006 an der Juristischen Fakultät der Karlsuniversität in Prag im Fachbereich Recht und Rechtswissenschaft, ist seit 2007 Mitglied der Tschechischen Anwaltskammer und seit 2010 als Rechtsanwalt tätig.</p><p>In seiner beruflichen Laufbahn war er in einer auf tschechische und deutsche Mandanten spezialisierten Anwaltskanzlei tätig.</p><p>Im Ausland war er an Universitäten in Deutschland (Bayreuth, Hamburg), Österreich (Innsbruck) und Irland (Cork) tätig und erwarb dort Kenntnisse.</p><p>Er bietet Rechtsberatung in tschechischer, deutscher und englischer Sprache an.</p>",
     "specializations": [
       "Právo duševního vlastnictví",
       "Právo obchodních korporací a M&A",
       "Veřejné zakázky (zbrojní průmysl)",
       "Trestní právo",
       "Právo nemovitostí"
+    ],
+    "specializations_en": [
+      "Intellectual property law",
+      "Corporate law and M&A",
+      "Public procurement (defence industry)",
+      "Criminal law",
+      "Property law"
+    ],
+    "specializations_de": [
+      "Recht des geistigen Eigentums",
+      "Gesellschaftsrecht und M&A",
+      "Öffentliches Auftragswesen (Rüstungsindustrie)",
+      "Strafrecht",
+      "Immobilienrecht"
     ],
     "projects": [
       "Poradenství při ochraně průmyslového vzoru v oblasti gastronomie, včetně zabránění jeho výmazu, iniciace celního zásahu a získání peněžního odškodnění za nekalou soutěž a porušení průmyslových práv (obdobně ohledně ochranné známky v oblasti voda-topení-plyn a patentu v oblasti stavebního materiálu).",
@@ -37,26 +51,79 @@
       "Vypracování pojistné dokumentace pro lichtenštejnskou pojišťovnu, smluv týkajících se cenných papírů pro rakouskou banku.",
       "Zastupování ve sporu o odškodnění za nezákonné rozhodnutí ministerstva či nepřiměřený policejní zásah s důsledkem ublížení na zdraví.",
       "Poradenství společnostem v oblasti automotive např. v rámci vývoje elektromobilů či exportu vozidel do Německa."
+    ],
+    "projects_en": [
+      "Advice on the protection of an industrial design in the catering sector, including preventing its cancellation, initiating customs intervention and securing financial compensation for unfair competition and infringement of industrial property rights (similarly regarding a trade mark in the water, heating and gas sector and a patent in the building materials sector).",
+      "Representation of an international consortium of companies in a public procurement tender for the purchase of aircraft for constitutional officials; representation of a foreign manufacturer in a public procurement tender for the purchase of heavy military equipment.",
+      "Providing legal advice to the largest domestic importer and distributor in the food and agriculture sector.",
+      "Representing an American and a Czech chemical-technology and pharmaceutical company in relation to the development of therapeutic substances, authorisation for the manufacture of precursors, protection of information and industrial property, etc.",
+      "Legal advice on intellectual property for a leading Czech research institution and a company specialising in technology transfer in the chemical and biological sectors; advice to inventors in the fields of dosimetry, solar energy, etc.",
+      "Advising and representing partners and shareholders in proceedings to declare the invalidity of general meeting resolutions of companies operating in the property, agriculture and manufacturing sectors (and similarly in the context of associations and owners' associations).",
+      "Advising on disputes concerning disputed property boundaries, the demarcation of common areas within a building, as well as easements and tenancy arrangements for property development companies and owners' associations.",
+      "Acquittal of clients charged with offences such as driving under the influence of alcohol, disorderly conduct, damage to property, theft, breach of duty in the management of another's property, embezzlement, fraud and insurance fraud, dangerous pursuit and making threats.",
+      "Acquisitions and the associated legal and tax due diligence for design and architectural firms, construction companies, clothing companies, manufacturers of watches and turbines, property development firms, information technology companies, etc.",
+      "Sale of a Swedish television broadcasting company, as well as a bookbinding plant, a freight forwarding and courier company, etc.",
+      "Securing damages and compensation for a client who suffered injury caused by a hospital or during construction works.",
+      "Protection of the personal rights of authors of critical articles concerning public procurement and a false expert opinion; protection of a legal entity's reputation against a false online campaign.",
+      "Representing tenants and estate agents against claims made by a shopping centre, in particular regarding the repayment of commission.",
+      "Representation in a dispute concerning the invalidity of a transfer of immovable property (in insolvency proceedings and on the grounds of creditor defrauding), securing the issuance of interim measures.",
+      "Drafting of insurance documentation for a Liechtenstein insurance company, and contracts relating to securities for an Austrian bank.",
+      "Representation in a dispute concerning compensation for an unlawful decision by a ministry or disproportionate police intervention resulting in bodily harm.",
+      "Advising companies in the automotive sector, for example in relation to the development of electric vehicles or the export of vehicles to Germany."
+    ],
+    "projects_de": [
+      "Beratung zum Schutz eines Geschmacksmusters im Gastronomiebereich, einschließlich der Verhinderung seiner Löschung, der Einleitung einer Zollbeschlagnahme und der Erlangung einer finanziellen Entschädigung wegen unlauteren Wettbewerbs und Verletzung von gewerblichen Schutzrechten (ähnlich in Bezug auf eine Marke im Bereich Wasser-Heizung-Gas und ein Patent im Bereich Baumaterialien).",
+      "Vertretung eines internationalen Unternehmenskonsortiums bei einer öffentlichen Ausschreibung zum Kauf von Flugzeugen für Staatsvertreter, Vertretung eines ausländischen Herstellers bei einer öffentlichen Ausschreibung zum Kauf von schwerem Militärgerät.",
+      "Rechtsberatung für den größten tschechischen Importeur und Händler im Bereich Lebensmittel und Landwirtschaft.",
+      "Vertretung eines amerikanischen und eines tschechischen Chemie-, Technologie- und Pharmaunternehmens in Bezug auf die Entwicklung von Wirkstoffen, die Genehmigung zur Herstellung von Vorläufersubstanzen, den Schutz von Informationen und gewerblichem Eigentum usw.",
+      "Rechtsberatung im Bereich des geistigen Eigentums für eine bedeutende tschechische Forschungseinrichtung und ein auf Technologietransfer in den Bereichen Chemie und Biologie spezialisiertes Unternehmen; Beratung von Erfindern in den Bereichen Dosimetrie, Solarenergie usw.",
+      "Beratung und Vertretung von Gesellschaftern und Aktionären in Verfahren zur Nichtigkeit von Beschlüssen der Hauptversammlung von Unternehmen, die in den Bereichen Immobilien, Landwirtschaft oder verarbeitende Industrie tätig sind (entsprechend auch in Bezug auf Vereine und Eigentümergemeinschaften).",
+      "Beratung bei Streitigkeiten bezüglich umstrittener Grundstücksgrenzen, der Abgrenzung von Gemeinschaftsräumen in einem Haus sowie Dienstbarkeiten und Mietverhältnissen für Bauträger und Wohnungseigentümergemeinschaften.",
+      "Freispruch von Mandanten, denen beispielsweise das Fahren unter Alkoholeinfluss, Landfriedensbruch, Sachbeschädigung, Diebstahl, Verletzung von Pflichten bei der Verwaltung fremden Vermögens, Unterschlagung, Betrug und Versicherungsbetrug, gefährliche Verfolgung und Drohungen vorgeworfen werden.",
+      "Akquisitionen und damit verbundene rechtliche und steuerliche Prüfungen von Planungs- und Architekturbüros, Bauunternehmen, Bekleidungsunternehmen, Herstellern von Uhren, Turbinen, Immobilienentwicklungsgesellschaften, IT-Unternehmen usw.",
+      "Verkauf eines schwedischen Fernsehunternehmens sowie einer Buchbinderei, eines Speditions- und Versandunternehmens usw.",
+      "Durchsetzung von Schadensersatz und Entschädigung für einen Mandanten, der durch eine Krankenhauseinrichtung oder bei Bauarbeiten gesundheitliche Schäden erlitten hat.",
+      "Schutz der Persönlichkeitsrechte von Autoren kritischer Artikel über öffentliche Ausschreibungen und ein falsches Gutachten sowie Schutz des guten Rufs einer juristischen Person vor einer falschen Internetkampagne.",
+      "Vertretung von Mietern und Maklern gegen Ansprüche eines Einkaufszentrums, insbesondere auf Rückzahlung von Provisionen.",
+      "Vertretung in einem Rechtsstreit über die Unwirksamkeit einer Immobilienübertragung (im Insolvenzverfahren und wegen Gläubigerbenachteiligung), Erwirkung einstweiliger Verfügungen.",
+      "Erstellung von Versicherungsunterlagen für eine liechtensteinische Versicherungsgesellschaft sowie von Verträgen im Zusammenhang mit Wertpapieren für eine österreichische Bank.",
+      "Vertretung in einem Rechtsstreit um Schadenersatz wegen einer rechtswidrigen Entscheidung eines Ministeriums oder eines unverhältnismäßigen Polizeieinsatzes mit der Folge einer Körperverletzung.",
+      "Beratung von Unternehmen aus der Automobilbranche, z. B. im Rahmen der Entwicklung von Elektrofahrzeugen oder des Exports von Fahrzeugen nach Deutschland."
     ]
   },
   {
     "id": "krystof-kobeda",
     "name": "Mgr. Kryštof Kobeda",
     "position": "Advokát · Partner",
+    "position_en": "Solicitor · Partner",
+    "position_de": "Rechtsanwalt · Partner",
     "photo": "",
     "email": "krystof.kobeda@equitylegal.cz",
     "phone": "+420 732 230 529",
-    "languages": [
-      "CS",
-      "EN"
-    ],
+    "languages": ["CS", "EN"],
     "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy v Praze, obor právo a právní věda roku 2011, členem České advokátní komory od roku 2011, advokátem od roku 2016.</p><p>V období 2011–2016 působil v mezinárodní advokátní kanceláři.</p><p>Poskytuje právní poradenství v českém a anglickém jazyce.</p>",
+    "bio_en": "<p>He graduated from the Faculty of Law at Charles University in Prague, specialising in law and legal science, in 2011; he has been a member of the Czech Bar Association since 2011 and a lawyer since 2016.</p><p>Between 2011 and 2016, he worked at an international law firm.</p><p>He provides legal advice in both Czech and English.</p>",
+    "bio_de": "<p>Er promovierte 2011 an der Juristischen Fakultät der Karlsuniversität in Prag im Fachbereich Recht und Rechtswissenschaft, ist seit 2011 Mitglied der Tschechischen Anwaltskammer und seit 2016 als Rechtsanwalt tätig.</p><p>Von 2011 bis 2016 war er in einer internationalen Anwaltskanzlei tätig.</p><p>Er bietet Rechtsberatung in tschechischer und englischer Sprache an.</p>",
     "specializations": [
       "Fúze a akvizice",
       "Právo nemovitostí",
       "Trestní právo (white-collar crime)",
       "Rodinné právo",
       "Zbrojní průmysl"
+    ],
+    "specializations_en": [
+      "Mergers and acquisitions",
+      "Property law",
+      "Criminal law (white-collar crime)",
+      "Family law",
+      "Defence industry"
+    ],
+    "specializations_de": [
+      "Fusionen und Übernahmen",
+      "Immobilienrecht",
+      "Strafrecht (Wirtschaftskriminalität)",
+      "Familienrecht",
+      "Rüstungsindustrie"
     ],
     "projects": [
       "Poradenství při prodeji světoznámého a tradičního podniku působícího v oblasti výroby a zpracování oceli.",
@@ -77,27 +144,81 @@
       "Poradenství významnému výrobci potravin při restrukturalizaci jeho závodu.",
       "Poradenství desítkám klientů při akvizicích a prodejích společností / závodů, což zahrnuje právní prověrky (due diligence), přípravu a vyjednávání transakční dokumentace, vyjednávání s financujícími bankami, revizi a vyjednávání úvěrové a zajišťovací dokumentace.",
       "Zastupování řady klientů v různorodých civilních soudních sporech."
+    ],
+    "projects_en": [
+      "Advising on the sale of a world-renowned and long-established company operating in the steel production and processing sector.",
+      "Representing a company operating shopping centres in the Czech Republic in court and arbitration disputes with tenants.",
+      "Advising an international transport company on its day-to-day business operations and representing it in court proceedings and administrative proceedings.",
+      "Advising a major international company operating in the field of computer software and hardware on its day-to-day business operations.",
+      "Advising an international property development company on the acquisition, development and sale of property development projects (residential, office and warehouse buildings).",
+      "Advising a Chinese investor on the acquisition of a shopping centre.",
+      "Representing a Dutch investor active in the field of property development in legal disputes with former business partners in the Czech Republic.",
+      "Advising a foreign investor on the acquisition of an extensive portfolio of retail properties in the Czech Republic and a large office building in Prague, including legal due diligence on the properties being acquired and negotiations on refinancing.",
+      "Representing a former international footballer in a legal dispute with a top-flight football club regarding remuneration for sporting activities.",
+      "Long-term advisory services to a major Czech company operating in the construction, facility management and other services sectors – employment law, contractual matters, litigation, etc.",
+      "Long-term advisory services to a major Czech company trading in military equipment – preparation, negotiation and implementation of contractual relationships with business partners, advice on public procurement, etc.",
+      "Advice to a foreign manufacturer of weapon systems in one of the largest tenders ever organised by the Czech Ministry of Defence.",
+      "Advising a property developer on the implementation of a residential block construction project – project acquisition (including bank financing), conclusion of a contract for works with the construction contractor, successful resolution of a dispute with the construction contractor, and comprehensive legal arrangements for the sale of flats to clients.",
+      "Successful defence of a number of clients in criminal proceedings – subsidy fraud involving losses amounting to tens of millions of crowns, economic crime, violent crime (murder), etc.",
+      "Advising numerous clients on family law and matrimonial property law – divorces, court proceedings concerning child custody, maintenance, and the division of marital property.",
+      "Advising a major food manufacturer on the restructuring of its plant.",
+      "Advising dozens of clients on the acquisition and sale of companies and plants, including legal due diligence, the preparation and negotiation of transaction documentation, negotiations with financing banks, and the review and negotiation of loan and security documentation.",
+      "Representing a number of clients in a wide range of civil litigation matters."
+    ],
+    "projects_de": [
+      "Beratung beim Verkauf eines weltweit bekannten und traditionsreichen Unternehmens im Bereich der Stahlherstellung und -verarbeitung.",
+      "Vertretung eines Unternehmens, das Einkaufszentren in der Tschechischen Republik betreibt, in Gerichts- und Schiedsverfahren mit Mietern.",
+      "Beratung eines internationalen Transportunternehmens bei dessen täglicher Geschäftstätigkeit und Vertretung in Gerichts- und Verwaltungsverfahren.",
+      "Beratung eines bedeutenden internationalen Unternehmens aus dem Bereich Computer-Software und -Hardware bei dessen täglicher Geschäftstätigkeit.",
+      "Beratung eines internationalen Immobilienentwicklers bei der Akquisition, Entwicklung und dem Verkauf von Immobilienprojekten (Wohn-, Büro- und Lagergebäude).",
+      "Beratung eines chinesischen Investors beim Erwerb eines Einkaufszentrums.",
+      "Vertretung eines niederländischen Investors, der im Bereich der Immobilienentwicklung tätig ist, in Rechtsstreitigkeiten mit ehemaligen Geschäftspartnern in der Tschechischen Republik.",
+      "Beratung eines ausländischen Investors beim Erwerb eines umfangreichen Portfolios an Einzelhandelsimmobilien in der Tschechischen Republik und eines großen Bürogebäudes in Prag, einschließlich der rechtlichen Prüfung der zu erwerbenden Immobilien und der Verhandlung der Refinanzierung.",
+      "Vertretung eines ehemaligen Fußballnationalspielers in einem Rechtsstreit mit einem Erstligaverein über eine Vergütung für sportliche Leistungen.",
+      "Langfristige Beratung eines bedeutenden tschechischen Unternehmens, das in den Bereichen Bauwesen, Facility Management und weiteren Dienstleistungen tätig ist – Arbeitsrecht, Vertragsangelegenheiten, Rechtsstreitigkeiten usw.",
+      "Langjährige Beratung eines bedeutenden tschechischen Unternehmens, das mit Militärgütern handelt – Vorbereitung, Verhandlung und Umsetzung von Vertragsbeziehungen mit Geschäftspartnern, Beratung im Bereich des öffentlichen Auftragswesens usw.",
+      "Beratung eines ausländischen Herstellers von Waffensystemen bei einer der historisch größten Ausschreibungen des tschechischen Verteidigungsministeriums.",
+      "Beratung eines Bauträgers bei der Umsetzung eines Wohnbauprojekts – Projektakquise (einschließlich Bankfinanzierung), Abschluss eines Werkvertrags mit dem Bauunternehmer, erfolgreiche Beilegung eines Rechtsstreits mit dem Bauunternehmer, vollständige rechtliche Abwicklung des Verkaufs der Wohnungen an die Kunden.",
+      "Erfolgreiche Verteidigung zahlreicher Mandanten in Strafverfahren – Subventionsbetrug mit einem Schadensvolumen in Höhe von mehreren zehn Millionen Kronen, Wirtschaftskriminalität, Gewaltverbrechen (Mord) usw.",
+      "Beratung zahlreicher Mandanten im Bereich des Familienrechts und des ehelichen Vermögensrechts – Scheidungen, gerichtliche Streitigkeiten über das Sorgerecht für Kinder, Unterhalt, Aufteilung des ehelichen Gemeinschaftsguts.",
+      "Beratung eines bedeutenden Lebensmittelherstellers bei der Umstrukturierung seines Werks.",
+      "Beratung von Dutzenden Mandanten bei Übernahmen und Verkäufen von Unternehmen/Betrieben, einschließlich rechtlicher Prüfungen (Due Diligence), der Erstellung und Aushandlung von Transaktionsunterlagen, Verhandlungen mit finanzierenden Banken sowie der Prüfung und Aushandlung von Kredit- und Sicherungsunterlagen.",
+      "Vertretung zahlreicher Mandanten in vielfältigen zivilrechtlichen Rechtsstreitigkeiten."
     ]
   },
   {
     "id": "filip-simak",
     "name": "Mgr. Filip Šimák, Ph.D., LL.M.",
     "position": "Advokát",
+    "position_en": "Solicitor",
+    "position_de": "Rechtsanwalt",
     "photo": "",
     "email": "filip.simak@equitylegal.cz",
     "phone": "+420 724 174 521",
-    "languages": [
-      "CS",
-      "EN",
-      "DE"
-    ],
+    "languages": ["CS", "EN", "DE"],
     "bio": "<p>Promoval na Právnické fakultě Univerzity Karlovy s titulem Ph.D. v oboru Teoretické právní vědy se zaměřením na právo životního prostředí a stavební právo v roce 2019, na University of Oregon School of Law s titulem LL.M. v oboru Environmental and Natural Resources Law v roce 2016 a na Právnické fakultě Masarykovy univerzity s titulem Mgr. v oboru Právo a právní věda v roce 2013.</p><p>Je členem České advokátní komory od roku 2013, American Bar Association od roku 2015 a Oregon Bar Association 2015–2017.</p><p>Ve své praxi působil v mezinárodních advokátních kancelářích v České republice zaměřených na česky, anglicky a německy hovořící klientelu, pracoval v americké advokátní kanceláři a jako externí právní poradce města Springfield v Oregonu, působil také jako konzultant pro právo životního prostředí Evropské unie v turecké Ankaře.</p><p>Studoval na zahraničních univerzitách ve Velké Británii (Oxfordská univerzita), Norsku (Oslo), Německu (Hamburk), Rakousku (Vídeň), USA (Starkville, Mississippi a Eugene, Oregon) a Litvě (Vilnius).</p><p>Poskytuje právní poradenství ve všech oborech se specializací na právo životního prostředí, správní právo, územní plánování a stavební právo v českém, anglickém a německém jazyce. Je aktivní v mezinárodní profesní a akademické spolupráci.</p>",
+    "bio_en": "<p>He obtained his Ph.D. in Theoretical Legal Sciences, specialising in environmental law and construction law, from the Faculty of Law at Charles University in 2019, his LL.M. in Environmental and Natural Resources Law in 2016, and from the Faculty of Law at Masaryk University with a Mgr. degree in Law and Legal Science in 2013.</p><p>He has been a member of the Czech Bar Association since 2013, the American Bar Association since 2015, and the Oregon Bar Association from 2015 to 2017.</p><p>During his career, he has worked at international law firms in the Czech Republic serving Czech, English and German-speaking clients; he has worked at an American law firm and as an external legal adviser to the city of Springfield in Oregon; and he has also served as a consultant on European Union environmental law in Ankara, Turkey.</p><p>He studied at universities abroad in the United Kingdom (the University of Oxford), Norway (Oslo), Germany (Hamburg), Austria (Vienna), the USA (Starkville, Mississippi, and Eugene, Oregon) and Lithuania (Vilnius).</p><p>He provides legal advice across all areas of law, specialising in environmental law, administrative law, town and country planning, and construction law in Czech, English and German. He is actively involved in international professional and academic collaboration.</p>",
+    "bio_de": "<p>Er promovierte 2019 an der Juristischen Fakultät der Karlsuniversität mit dem Titel Ph.D. im Fachgebiet Theoretische Rechtswissenschaften mit den Schwerpunkten Umweltrecht und Baurecht, erwarb 2016 an der University of Oregon School of Law den Titel LL.M. im Fachbereich Umwelt- und Ressourcenrecht und schloss 2013 an der Juristischen Fakultät der Masaryk-Universität mit dem Titel Mgr. im Fachbereich Recht und Rechtswissenschaft ab.</p><p>Er ist seit 2013 Mitglied der Tschechischen Anwaltskammer, seit 2015 Mitglied der American Bar Association und war von 2015 bis 2017 Mitglied der Oregon Bar Association.</p><p>Im Rahmen seiner beruflichen Tätigkeit war er in internationalen Anwaltskanzleien in der Tschechischen Republik tätig, die sich auf tschechisch-, englisch- und deutschsprachige Mandanten spezialisierten; er arbeitete in einer US-amerikanischen Anwaltskanzlei und als externer Rechtsberater der Stadt Springfield in Oregon sowie als Berater für EU-Umweltrecht in Ankara, Türkei.</p><p>Er studierte an ausländischen Universitäten in Großbritannien (Universität Oxford), Norwegen (Oslo), Deutschland (Hamburg), Österreich (Wien), den USA (Starkville, Mississippi, und Eugene, Oregon) sowie in Litauen (Vilnius).</p><p>Er bietet Rechtsberatung in allen Rechtsgebieten mit den Schwerpunkten Umweltrecht, Verwaltungsrecht, Raumordnungsrecht und Baurecht in tschechischer, englischer und deutscher Sprache an. Er ist aktiv an der internationalen beruflichen und akademischen Zusammenarbeit beteiligt.</p>",
     "specializations": [
       "Stavební právo a územní plánování",
       "Právo životního prostředí",
       "Rodinné právo",
       "Insolvenční právo",
       "Korporátní právo (ČR, Německo, USA, Ukrajina)"
+    ],
+    "specializations_en": [
+      "Construction law and town and country planning",
+      "Environmental law",
+      "Family law",
+      "Insolvency law",
+      "Corporate law (Czech Republic, Germany, USA, Ukraine)"
+    ],
+    "specializations_de": [
+      "Bau- und Raumordnungsrecht",
+      "Umweltrecht",
+      "Familienrecht",
+      "Insolvenzrecht",
+      "Gesellschaftsrecht (Tschechische Republik, Deutschland, USA, Ukraine)"
     ],
     "projects": [
       "Stavební právo – příprava podkladů pro stavby, zastupování v územním a stavebním řízení, sousedská práva ve vztahu k pozemku a stavbám, development – zelené a nízkoenergetické stavby, alternativní formy bydlení (např. tiny houses).",
@@ -112,21 +233,49 @@
       "Pojišťovnické právo – zastupování klientů pojišťoven v případech pojistného plnění.",
       "Spolkové právo – obrana člena spolku před vyloučením, registrace spolku, tvorba stanov a spolková agenda obecně, vztahy spolku a třetích stran.",
       "Komplexní právní servis při organizování hudebního festivalu, podpora start-upů a neformálních občanských iniciativ."
+    ],
+    "projects_en": [
+      "Construction Law – preparation of documentation for construction projects, representation in planning and building permit proceedings, neighbours' rights in relation to land and buildings, property development – green and low-energy buildings, alternative forms of housing (e.g. tiny houses).",
+      "Environmental Law – Environmental Due Diligence, IPPC, green investments and European Union funds, renewable energy sources, protection of air, soil and water, brownfield regeneration, protection of endangered animal and plant species, environmental standards in planning and construction.",
+      "Civil and Commercial Law – drafting contracts and amendments thereto, legal relationships relating to property, international cooperation and trade, sustainable mobility.",
+      "Litigation – conducting disputes and negotiations before courts and administrative authorities.",
+      "Corporate law – incorporation and restructuring of companies in the Czech Republic and abroad (Germany, USA, Ukraine), relations between company bodies and liability towards third parties.",
+      "Intellectual property law – registration of patents and trade marks, protection of registered rights.",
+      "Family law – joint marital property and the regulation of property relations before and during marriage, divorce proceedings, maintenance for spouses and children.",
+      "Insolvency law – representing clients in debt relief matters, including personal bankruptcies, representing creditors, and incidental disputes.",
+      "Employment law – employment disputes, remuneration and working conditions of employees, handling cases involving directors in an employment relationship.",
+      "Insurance law – representing clients of insurance companies in claims for insurance benefits.",
+      "Association law – defending association members against expulsion, registration of associations, drafting of articles of association and general association matters, and relations between associations and third parties.",
+      "Comprehensive legal services for organising music festivals, and support for start-ups and informal civic initiatives."
+    ],
+    "projects_de": [
+      "Baurecht – Vorbereitung von Unterlagen für Bauvorhaben, Vertretung in Raumordnungs- und Bauverfahren, Nachbarrechte in Bezug auf Grundstücke und Bauwerke, Immobilienentwicklung – ökologische und Niedrigenergiegebäude, alternative Wohnformen (z. B. Tiny Houses).",
+      "Umweltrecht – Environmental Due Diligence, IPPC, grüne Investitionen und Fonds der Europäischen Union, erneuerbare Energien, Luft-, Boden- und Gewässerschutz, Sanierung von Brachflächen, Schutz gefährdeter Tier- und Pflanzenarten, Umweltstandards in der Raumplanung und im Bauwesen.",
+      "Zivil- und Handelsrecht – Ausarbeitung von Verträgen und deren Änderungen, Rechtsbeziehungen im Zusammenhang mit Immobilien, internationale Zusammenarbeit und Handel, nachhaltige Mobilität.",
+      "Prozessführung – Führung von Rechtsstreitigkeiten und Verhandlungen vor Gerichten und Verwaltungsbehörden.",
+      "Gesellschaftsrecht – Gründung und Umgestaltung von Gesellschaften in der Tschechischen Republik und im Ausland (Deutschland, USA, Ukraine), Beziehungen zwischen den Gesellschaftsorganen und Haftung gegenüber Dritten.",
+      "Recht des geistigen Eigentums – Anmeldung von Patenten und Marken, Schutz eingetragener Rechte.",
+      "Familienrecht – gemeinschaftliches Ehevermögen und Regelung der vermögensrechtlichen Beziehungen vor und während der Ehe, Scheidungsangelegenheiten, Unterhalt für Ehepartner und Kinder.",
+      "Insolvenzrecht – Vertretung von Mandanten in Entschuldungsangelegenheiten einschließlich Privatinsolvenzen, Vertretung von Gläubigern, Nebenstreitigkeiten.",
+      "Arbeitsrecht – arbeitsrechtliche Streitigkeiten, Vergütung und Arbeitsbedingungen von Arbeitnehmern, Regelung von Fällen, in denen Geschäftsführer in einem Arbeitsverhältnis stehen.",
+      "Versicherungsrecht – Vertretung von Mandanten von Versicherungsgesellschaften in Fällen von Versicherungsleistungen.",
+      "Vereinsrecht – Verteidigung von Vereinsmitgliedern gegen den Ausschluss, Registrierung von Vereinen, Erstellung von Satzungen und allgemeine Vereinsangelegenheiten, Beziehungen zwischen Vereinen und Dritten.",
+      "Umfassende rechtliche Betreuung bei der Organisation von Musikfestivals, Unterstützung von Start-ups und informellen Bürgerinitiativen."
     ]
   },
   {
     "id": "vladimir-lajsek",
     "name": "JUDr. Ing. Vladimír Lajsek, Ph.D., MBA",
     "position": "Advokát",
+    "position_en": "Solicitor",
+    "position_de": "Rechtsanwalt",
     "photo": "",
     "email": "kancelar@equitylegal.cz",
     "phone": "",
-    "languages": [
-      "CS",
-      "EN",
-      "DE"
-    ],
+    "languages": ["CS", "EN", "DE"],
     "bio": "<p>Vladimír pochází z právnické rodiny, a svět paragrafů ho tak fascinoval od dětství. K advokacii jej přivedl hluboký zájem o hledání efektivních řešení lidských problémů. V našem týmu se specializuje především na soudní spory, smluvní právo, mediaci, právo nemovitostí, ochranu osobních údajů (GDPR) a duševní vlastnictví.</p><p>Před příchodem do EQUITY LEGAL získával cenné zkušenosti napříč celým právním systémem – působil v justici (na civilním, trestním a exekučním úseku a jako tiskový mluvčí soudu), v bankovním sektoru i v předních advokátních kancelářích. Od roku 2024 rozvinul svou praxi o oblast mediace, v níž pomáhá klientům řešit spory smírnou cestou.</p><p>Je absolventem Právnické fakulty Univerzity Karlovy, kde rovněž vyučoval. Své právní vzdělání neustále obohacuje o ekonomický rozměr – má titul MBA z VŠE (obor Nemovitosti a jejich oceňování) a Ing. z Projektového řízení inovací na ČVUT. Prošel zahraničními pobyty na univerzitách v britském Lancasteru a německých Drážďanech a specializovaným studiem při Úřadu průmyslového vlastnictví.</p><p>Vedle bohaté publikační a akademické činnosti se aktivně angažuje ve veřejné sféře – v roce 2021 byl zvolen členem Kárné komise České advokátní komory, od roku 2025 je potom členem Kontrolní rady České advokátní komory. Hovoří anglicky a německy, omezeně též francouzsky a rusky, přičemž v oblasti angličtiny působí i jako překladatel právních textů.</p><p>Rovnováhu k náročné právní praxi nachází v tichu přírody, u dobré knihy nebo při svém velkém koníčku – sběratelství bibliofilií, které v sobě spojuje smysl pro detail s radostí z objevování.</p>",
+    "bio_en": "<p>Vladimír comes from a family of lawyers, and has been fascinated by the world of the law since childhood. He was drawn to the legal profession by a deep interest in finding effective solutions to people's problems. Within our team, he specialises primarily in litigation, contract law, mediation, property law, data protection (GDPR) and intellectual property.</p><p>Before joining EQUITY LEGAL, he gained valuable experience across the entire legal system – he worked in the judiciary (in the civil, criminal and enforcement divisions, and as a court spokesperson), in the banking sector and at leading law firms. Since 2024, he has expanded his practice to include mediation, where he helps clients resolve disputes amicably.</p><p>He is a graduate of the Faculty of Law at Charles University, where he has also taught. He continually enriches his legal education with an economic dimension – he holds an MBA from the University of Economics, Prague (specialising in Real Estate and Valuation) and an Ing. degree in Innovation Project Management from the Czech Technical University in Prague. He has undertaken study visits to universities in Lancaster, UK, and Dresden, Germany, as well as specialised studies at the Industrial Property Office.</p><p>Alongside his extensive publishing and academic activities, he is actively involved in the public sphere – in 2021 he was elected a member of the Disciplinary Committee of the Czech Bar Association, and since 2025 he has been a member of the Supervisory Board of the Czech Bar Association. He speaks English and German, and has a limited command of French and Russian; he also works as a translator of legal texts in English.</p><p>He finds a balance to his demanding legal practice in the tranquillity of nature, with a good book, or through his great passion – collecting bibliophile editions, which combines a keen eye for detail with the joy of discovery.</p>",
+    "bio_de": "<p>Vladimír stammt aus einer Juristenfamilie, weshalb ihn die Welt der Gesetze schon seit seiner Kindheit faszinierte. Zu seinem Beruf als Rechtsanwalt führte ihn sein tiefes Interesse an der Suche nach effektiven Lösungen für menschliche Probleme. In unserem Team ist er vor allem auf Rechtsstreitigkeiten, Vertragsrecht, Mediation, Immobilienrecht, Datenschutz (DSGVO) und geistiges Eigentum spezialisiert.</p><p>Bevor er zu EQUITY LEGAL kam, sammelte er wertvolle Erfahrungen im gesamten Rechtssystem – er war in der Justiz (in den Bereichen Zivil-, Straf- und Vollstreckungsrecht sowie als Pressesprecher des Gerichts), im Bankensektor und in führenden Anwaltskanzleien tätig. Seit 2024 hat er seine Tätigkeit um den Bereich der Mediation erweitert, in dem er Mandanten dabei unterstützt, Streitigkeiten auf gütlichem Wege beizulegen.</p><p>Er ist Absolvent der Juristischen Fakultät der Karlsuniversität, an der er auch lehrte. Er ergänzt seine juristische Ausbildung kontinuierlich um wirtschaftliche Aspekte – er verfügt über einen MBA der Wirtschaftsuniversität Prag (Fachrichtung Immobilien und deren Bewertung) sowie einen Ing.-Abschluss in Innovationsprojektmanagement der Technischen Universität Prag. Er absolvierte Auslandsaufenthalte an den Universitäten in Lancaster (Großbritannien) und Dresden (Deutschland) sowie ein Fachstudium beim Amt für gewerbliches Eigentum.</p><p>Neben seiner umfangreichen publizistischen und akademischen Tätigkeit engagiert er sich aktiv im öffentlichen Leben – im Jahr 2021 wurde er zum Mitglied der Disziplinarkommission der Tschechischen Anwaltskammer gewählt, seit 2025 ist er Mitglied des Kontrollrats der Tschechischen Anwaltskammer. Er spricht Englisch und Deutsch sowie in begrenztem Umfang auch Französisch und Russisch; im Bereich Englisch ist er zudem als Übersetzer von Rechtstexten tätig.</p><p>Das Gleichgewicht zu seiner anspruchsvollen Anwaltstätigkeit findet er in der Stille der Natur, bei einem guten Buch oder bei seinem großen Hobby – dem Sammeln von Bibliophilien, das den Sinn für Details mit der Freude am Entdecken verbindet.</p>",
     "specializations": [
       "Soudní spory",
       "Smluvní právo",
@@ -135,19 +284,37 @@
       "Ochrana osobních údajů (GDPR)",
       "Duševní vlastnictví"
     ],
+    "specializations_en": [
+      "Litigation",
+      "Contract law",
+      "Mediation",
+      "Property law",
+      "Data protection (GDPR)",
+      "Intellectual property"
+    ],
+    "specializations_de": [
+      "Rechtsstreitigkeiten",
+      "Vertragsrecht",
+      "Mediation",
+      "Immobilienrecht",
+      "Datenschutz (DSGVO)",
+      "Geistiges Eigentum"
+    ],
     "projects": []
   },
   {
     "id": "vojtech-prikopa",
     "name": "JUDr. Vojtěch Příkopa, Ph.D.",
     "position": "Advokát",
+    "position_en": "Solicitor",
+    "position_de": "Rechtsanwalt",
     "photo": "",
     "email": "kancelar@equitylegal.cz",
     "phone": "",
-    "languages": [
-      "CS"
-    ],
+    "languages": ["CS"],
     "bio": "<p>(*1987) je absolventem Právnické fakulty Univerzity Palackého v Olomouci (2012). Na ní pokračoval i ve studiu doktorského studijního programu v oboru správní právo, který v roce 2018 úspěšně završil obhajobou disertační práce, jež následně vyšla i knižně (Příkopa, V. Veřejnoprávní smlouvy koordinační. Praha: C. H. Beck, 2018. 152 s.). Rigorózní řízení v oboru správní právo absolvoval v roce 2021 na Právnické fakultě Univerzity Karlovy.</p><p>Vojtěch nejdříve působil jako exekutorský koncipient a následně jako koncipient advokátní v kanceláři BROŽ &amp; PARTNER, advokáti, s níž spolupracoval i jako advokát, a to v letech 2016 až 2021. Dalších pět let působil v Advokátní kanceláři Brož, Sedlatý, s.r.o. Členem Equity Legal, s.r.o. je od 1. 11. 2025.</p><p>Ve své právní praxi se Vojtěch věnuje zejména soudním sporům; je předním odborníkem na pozemkové restituce (Příkopa, V. Restituce podle zákona o půdě. Praha: C. H. Beck, 2021. 128. s.), manželské majetkové právo a exekuce.</p><p>Vojtěch také pravidelně publikuje v odborných časopisech a dlouhodobě spolupracuje s nakladatelstvím C. H. Beck, pro něhož komentuje judikaturu Nejvyššího soudu v rámci projektu Ius Focus a aktuálně se podílí na vývoji AI systému Noxtua.</p>",
+    "bio_en": "<p>(*1987) is a graduate of the Faculty of Law at Palacký University in Olomouc (2012). He went on to pursue a doctoral programme in administrative law at the same university, which he successfully completed in 2018 by defending his doctoral thesis, which was subsequently published as a book (Příkopa, V. Public Law Coordination Agreements. Prague: C. H. Beck, 2018. 152 pp.). He completed his rigorous examination in administrative law in 2021 at the Faculty of Law, Charles University.</p><p>Vojtěch initially worked as a trainee bailiff and subsequently as a trainee solicitor at the law firm BROŽ &amp; PARTNER, advokáti, with which he also collaborated as a solicitor between 2016 and 2021. He spent the following five years at the law firm Brož, Sedlatý, s.r.o. He has been a member of Equity Legal, s.r.o. since 1 November 2025.</p><p>In his legal practice, Vojtěch focuses primarily on litigation; he is a leading expert on land restitution (Příkopa, V. Restitution under the Land Act. Prague: C. H. Beck, 2021. 128 pp.), matrimonial property law and enforcement proceedings.</p><p>Vojtěch also publishes regularly in specialist journals and has a long-standing collaboration with the publishing house C. H. Beck, for whom he commentates on Supreme Court case law as part of the Ius Focus project and is currently involved in the development of the Noxtua AI system.</p>",
+    "bio_de": "<p>(*1987) ist Absolvent der Juristischen Fakultät der Palacký-Universität in Olomouc (2012). Dort setzte er sein Studium im Doktorandenprogramm im Fach Verwaltungsrecht fort, das er 2018 mit der Verteidigung seiner Dissertation erfolgreich abschloss, die anschließend auch als Buch erschien (Příkopa, V. Veřejnoprávní smlouvy koordinační. Prag: C. H. Beck, 2018. 152 S.). Das Rigorosum im Fach Verwaltungsrecht legte er 2021 an der Juristischen Fakultät der Karlsuniversität ab.</p><p>Vojtěch war zunächst als Gerichtsvollzieherreferendar und anschließend als Anwaltsreferendar in der Kanzlei BROŽ &amp; PARTNER, Rechtsanwälte, tätig, mit der er von 2016 bis 2021 auch als Rechtsanwalt zusammenarbeitete. Die folgenden fünf Jahre war er in der Anwaltskanzlei Brož, Sedlatý, s.r.o. tätig. Seit dem 1. November 2025 ist er Mitglied von Equity Legal, s.r.o.</p><p>In seiner anwaltlichen Tätigkeit widmet sich Vojtěch vor allem Rechtsstreitigkeiten; er ist ein führender Experte für Grundstücksrestitutionen (Příkopa, V. Restitutionen nach dem Grundstücksgesetz. Prag: C. H. Beck, 2021. 128 S.), Ehegüterrecht und Zwangsvollstreckung.</p><p>Vojtěch veröffentlicht zudem regelmäßig in Fachzeitschriften und arbeitet seit Langem mit dem Verlag C. H. Beck zusammen, für den er im Rahmen des Projekts „Ius Focus“ die Rechtsprechung des Obersten Gerichts kommentiert und derzeit an der Entwicklung des KI-Systems „Noxtua“ mitwirkt.</p>",
     "specializations": [
       "Soudní spory",
       "Pozemkové restituce",
@@ -155,24 +322,54 @@
       "Exekuce",
       "Správní právo"
     ],
+    "specializations_en": [
+      "Litigation",
+      "Land restitution",
+      "Matrimonial property law",
+      "Enforcement",
+      "Administrative law"
+    ],
+    "specializations_de": [
+      "Rechtsstreitigkeiten",
+      "Grundstücksrückgabe",
+      "Ehegüterrecht",
+      "Zwangsvollstreckung",
+      "Verwaltungsrecht"
+    ],
     "projects": []
   },
   {
     "id": "tana-olivova",
     "name": "Mgr. Táňa Olivová",
     "position": "Advokátka",
+    "position_en": "Solicitor",
+    "position_de": "Rechtsanwältin",
     "photo": "",
     "email": "tana.olivova@equitylegal.cz",
-    "languages": [
-      "CS"
-    ],
+    "languages": ["CS"],
     "bio": "<p>Absolvovala Právnickou fakultu Univerzity Karlovy v roce 2007. Během studia rozšířila své odborné i osobní zkušenosti ročním studijním pobytem v Nizozemí. Již v průběhu studia získávala praktické zkušenosti v advokátním prostředí.</p><p>Po ukončení studia působila jako advokátní koncipientka v advokátní kanceláři advokáta, který byl zároveň insolvenčním správcem. Tato praxe jí umožnila získat hlubší vhled do problematiky občanského práva i souvisejících oblastí, zejména v kontextu řešení majetkových vztahů a složitějších právních situací.</p><p>Po úspěšném složení advokátních zkoušek začala v roce 2010 vykonávat advokacii jako samostatná advokátka. Ve své praxi se dlouhodobě věnuje občanskému právu, v jehož rámci poskytuje právní služby v širokém spektru oblastí, zejména při převodech nemovitostí, v rodinném právu (včetně vypořádání společného jmění manželů), dále v otázkách spoluvlastnictví a svěřenských fondů, při přípravě a sjednávání smluv, a to i mezi podnikateli, a v oblasti občanského soudního řízení.</p><p>Významnou součást její praxe tvoří rovněž pracovní právo, kde pomáhá jak s nastavením právního prostředí pro zaměstnavatele, tak s ochranou práv zaměstnanců. Dále se věnuje obchodnímu právu, zejména při zakládání obchodních společností a realizaci korporátních změn.</p><p>Na advokacii ji přitahuje především její různorodost a možnost pomáhat klientům nejen při řešení sporů, ale i při jejich předcházení. Za klíčovou považuje kvalitní nastavení právních vztahů a srozumitelnou komunikaci, která klientům umožňuje činit informovaná rozhodnutí.</p><p>Ve volném čase se věnuje četbě, turistice a cestování, ráda tráví čas s rodinou, což jí pomáhá udržovat potřebný nadhled a rovnováhu v náročné advokátní profesi.</p>",
+    "bio_en": "<p>She graduated from the Faculty of Law at Charles University in 2007. During her studies, she broadened her professional and personal experience through a one-year study placement in the Netherlands. She began gaining practical experience in a legal practice whilst still a student.</p><p>After graduating, she worked as a trainee solicitor at a law firm run by a solicitor who was also an insolvency practitioner. This experience enabled her to gain a deeper insight into civil law and related areas, particularly in the context of resolving property disputes and more complex legal situations.</p><p>After successfully passing her bar exams, she began practising law as an independent solicitor in 2010. In her practice, she has long specialised in civil law, within which she provides legal services across a wide range of areas, particularly in property transfers, family law (including the division of marital property), as well as in matters of co-ownership and trust funds, in the drafting and negotiation of contracts – including those between businesses – and in civil litigation.</p><p>Labour law also forms a significant part of her practice, where she assists both with establishing the legal framework for employers and with protecting employees' rights. She also specialises in commercial law, particularly in the incorporation of companies and the implementation of corporate changes.</p><p>What attracts her most to the legal profession is its diversity and the opportunity to assist clients not only in resolving disputes but also in preventing them. She considers the proper structuring of legal relationships and clear communication, which enables clients to make informed decisions, to be key.</p><p>In her spare time, she enjoys reading, hiking and travelling, and she likes spending time with her family, which helps her maintain the necessary perspective and balance in the demanding legal profession.</p>",
+    "bio_de": "<p>Sie schloss ihr Studium an der Juristischen Fakultät der Karlsuniversität im Jahr 2007 ab. Während ihres Studiums erweiterte sie ihre fachlichen und persönlichen Erfahrungen durch einen einjährigen Studienaufenthalt in den Niederlanden. Bereits während ihres Studiums sammelte sie praktische Erfahrungen in einer Anwaltskanzlei.</p><p>Nach Abschluss ihres Studiums war sie als Rechtsreferendarin in der Kanzlei eines Rechtsanwalts tätig, der zugleich Insolvenzverwalter war. Diese Tätigkeit ermöglichte ihr einen tieferen Einblick in die Problematik des Zivilrechts und verwandter Bereiche, insbesondere im Zusammenhang mit der Regelung von Vermögensverhältnissen und komplexeren Rechtssituationen.</p><p>Nach dem erfolgreichen Bestehen der Anwaltsprüfungen begann sie im Jahr 2010 als selbstständige Rechtsanwältin tätig zu sein. In ihrer Praxis widmet sie sich seit langem dem Zivilrecht, in dessen Rahmen sie Rechtsdienstleistungen in einem breiten Spektrum von Bereichen erbringt, insbesondere bei Immobilienübertragungen, im Familienrecht (einschließlich der Aufteilung des ehelichen Güterrechts), sowie in Fragen des Miteigentums und der Treuhandfonds, bei der Ausarbeitung und Aushandlung von Verträgen, auch zwischen Unternehmern, und im Bereich der Zivilprozessführung.</p><p>Ein wesentlicher Bestandteil ihrer Tätigkeit ist zudem das Arbeitsrecht, wo sie sowohl bei der Gestaltung des rechtlichen Rahmens für Arbeitgeber als auch beim Schutz der Arbeitnehmerrechte unterstützt. Darüber hinaus widmet sie sich dem Handelsrecht, insbesondere bei der Gründung von Handelsgesellschaften und der Durchführung von Unternehmensumwandlungen.</p><p>An der Anwaltschaft reizt sie vor allem deren Vielseitigkeit und die Möglichkeit, Mandanten nicht nur bei der Beilegung von Streitigkeiten, sondern auch bei deren Vermeidung zu unterstützen. Als entscheidend erachtet sie eine qualitativ hochwertige Gestaltung der Rechtsbeziehungen und eine verständliche Kommunikation, die es den Mandanten ermöglicht, fundierte Entscheidungen zu treffen.</p><p>In ihrer Freizeit widmet sie sich dem Lesen, Wandern und Reisen; sie verbringt gerne Zeit mit ihrer Familie, was ihr hilft, den nötigen Überblick und das Gleichgewicht in ihrem anspruchsvollen Anwaltsberuf zu bewahren.</p>",
     "specializations": [
       "Občanské právo",
       "Rodinné právo (SJM, rozvody)",
       "Právo nemovitostí",
       "Pracovní právo",
       "Obchodní právo (zakládání společností)"
+    ],
+    "specializations_en": [
+      "Civil law",
+      "Family law (joint property of spouses, divorces)",
+      "Property law",
+      "Employment law",
+      "Commercial law (company formation)"
+    ],
+    "specializations_de": [
+      "Zivilrecht",
+      "Familienrecht (Gemeinschaftsvermögen, Scheidungen)",
+      "Immobilienrecht",
+      "Arbeitsrecht",
+      "Handelsrecht (Gründung von Gesellschaften)"
     ],
     "projects": [
       "Vypracování smluvní dokumentace k nemovitostním, rezidenčním i obchodním projektům, jakož komplexní právní péče o právní vztahy klientů k jejich nemovitostem.",
@@ -184,23 +381,57 @@
       "Poradenství factoringové společnosti při její každodenní obchodní činnosti a její zastupování v soudních sporech.",
       "Poradenství v oblasti ochrany práv duševního vlastnictví, v oblasti práva veřejných zakázek.",
       "Poradenství v rozsáhlých kauzách v oblasti rodinného práva – zejm. bojů o majetek bývalých manželů zahrnující nemovitosti, podíly ve společnostech, podniky fyzických osob, ochranné známky, autorská díla atp., včetně rozvodové agendy a souvisejícího poradenství v oblasti péče a výživy dětí, jakož i dědických řízení."
+    ],
+    "projects_en": [
+      "Drafting of contractual documentation for property, residential and commercial projects, as well as comprehensive legal support for clients' legal relationships regarding their property.",
+      "Incorporation and restructuring of companies, particularly start-ups, including related advice to new entrepreneurs, and the creation of holding structures and groups of companies.",
+      "Representing clients in cases involving the resolution of problematic and contentious relationships between company bodies and shareholders, including handling claims for damages arising from the liability of managing directors and board members towards third parties.",
+      "Conducting litigation and negotiations before courts and administrative authorities, and representing clients in disputes concerning unauthorised energy consumption.",
+      "Advising and representing clients in the recovery of debts ranging from tens to hundreds of millions of crowns, including representing creditors in insolvency proceedings and related incidental disputes.",
+      "Advising and representing clients in insolvency proceedings relating to debt relief, including for business entities.",
+      "Advising a factoring company on its day-to-day business operations and representing it in court proceedings.",
+      "Advice on the protection of intellectual property rights and public procurement law.",
+      "Advice on complex family law cases – in particular disputes over the assets of former spouses, including property, shares in companies, sole traders' businesses, trade marks, copyrighted works, etc., including divorce proceedings and related advice on child custody and maintenance, as well as probate proceedings."
+    ],
+    "projects_de": [
+      "Erstellung von Vertragsunterlagen für Immobilien-, Wohn- und Gewerbeprojekte sowie umfassende rechtliche Betreuung der Rechtsbeziehungen der Mandanten zu ihren Immobilien.",
+      "Gründung und Umgestaltung von Gesellschaften, insbesondere von Start-ups, einschließlich der damit verbundenen Beratung von Existenzgründern, sowie Aufbau von Holdingstrukturen und Unternehmensgruppen.",
+      "Vertretung von Mandanten bei der Lösung problematischer und konfliktreicher Beziehungen zwischen Gesellschaftsorganen und Gesellschaftern, einschließlich der Abwicklung von Schadensersatzklagen aus der Haftung von Geschäftsführern und Vorstandsmitgliedern gegenüber Dritten.",
+      "Führung von Rechtsstreitigkeiten und Verhandlungen vor Gerichten und Verwaltungsbehörden, Vertretung in Streitigkeiten wegen unberechtigter Energieentnahme.",
+      "Beratung und Vertretung bei der Eintreibung von Forderungen in Höhe von mehreren zehn bis mehreren hundert Millionen Kronen, einschließlich der Vertretung von Gläubigern in Insolvenzverfahren und damit verbundenen Nebenstreitigkeiten.",
+      "Beratung und Vertretung in Insolvenzverfahren im Rahmen der Entschuldung, auch von Unternehmen.",
+      "Beratung einer Factoring-Gesellschaft bei ihrer täglichen Geschäftstätigkeit und deren Vertretung in gerichtlichen Streitigkeiten.",
+      "Beratung im Bereich des Schutzes geistigen Eigentums sowie im Vergaberecht.",
+      "Beratung in umfangreichen familienrechtlichen Fällen – insbesondere bei Streitigkeiten um das Vermögen ehemaliger Ehegatten, darunter Immobilien, Unternehmensanteile, Einzelunternehmen, Marken, urheberrechtlich geschützte Werke usw., einschließlich Scheidungsverfahren und der damit verbundenen Beratung in Fragen des Sorgerechts und des Unterhalts für Kinder sowie in Erbschaftsverfahren."
     ]
   },
   {
     "id": "katerina-malcharkova",
     "name": "Mgr. Kateřina Malchárková",
     "position": "Advokátka",
+    "position_en": "Solicitor",
+    "position_de": "Rechtsanwältin",
     "photo": "",
     "email": "kancelar@equitylegal.cz",
     "phone": "",
-    "languages": [
-      "CS"
-    ],
+    "languages": ["CS"],
     "bio": "<p>Proč se Kateřina rozhodla pro studium práv? Odpověď je jednoduchá: silný smysl pro spravedlnost a přirozená touha pomáhat lidem v momentech, kdy si sami neví rady. S touto vizí nastoupila na Právnickou fakultu Univerzity Karlovy v Praze, kterou úspěšně absolvovala v roce 2018. Už v průběhu těchto let se snažila získat co nejvíce profesních zkušeností, aby se mohla rozhodnout, kde nejvíce uplatní své schopnosti. Absolvovala stáž na soudě, státním zastupitelství i v advokátní kanceláři.</p><p>Její profesní dráha ale nakonec neodstartovala v Praze, ale v Ostravě. Tam získala neocenitelnou školu v kanceláři uznávaného trestního advokáta JUDr. Petra Stoklase. Práce na komplikovaných trestních případech zásadně zformovala její právní uvažování. Naučila ji stoprocentní ostražitosti, schopnosti číst mezi řádky a strategickému myšlení pod tlakem.</p><p>Profesní i životní cesta následně Kateřinu zavedla zpět do Prahy. Od roku 2024 je členem naší advokátní kanceláře Equity Legal. Zkušenosti z trestního práva si přinesla s sebou jako obrovskou devízu, kterou dnes úspěšně kloubí se svými hlavními specializacemi.</p><p>Díky zkušenostem z ostré praxe v trestním i civilním právu dokáže v případech dohlédnout tam, kam člověk bez této praxe nedohlédne. Upozorní na skrytá rizika dřív, než se promění v problém, a pro své klienty tak dokáže najít bezpečné a efektivní řešení.</p>",
+    "bio_en": "<p>Why did Kateřina decide to study law? The answer is simple: a strong sense of justice and a natural desire to help people when they are at a loss. With this vision in mind, she enrolled at the Faculty of Law of Charles University in Prague, from which she successfully graduated in 2018. Even during her studies, she strove to gain as much professional experience as possible so that she could decide where she could best apply her skills. She undertook work placements at a court, the public prosecutor's office and a law firm.</p><p>However, her professional career did not ultimately begin in Prague, but in Ostrava. There, she gained invaluable experience at the practice of the renowned criminal defence lawyer JUDr. Petr Stoklas. Working on complex criminal cases fundamentally shaped her legal reasoning. It taught her to be utterly vigilant, to read between the lines and to think strategically under pressure.</p><p>Kateřina's professional and personal journey subsequently led her back to Prague. She has been a member of our law firm, Equity Legal, since 2024. She brought her experience in criminal law with her as a tremendous asset, which she now successfully combines with her main areas of specialisation.</p><p>Thanks to her hands-on experience in both criminal and civil law, she is able to see aspects of a case that someone without such experience would miss. She identifies hidden risks before they turn into problems, enabling her to find safe and effective solutions for her clients.</p>",
+    "bio_de": "<p>Warum hat sich Kateřina für ein Jurastudium entschieden? Die Antwort ist einfach: ein ausgeprägter Gerechtigkeitssinn und der natürliche Wunsch, Menschen in Momenten zu helfen, in denen sie selbst nicht weiterwissen. Mit dieser Vision begann sie ihr Studium an der Juristischen Fakultät der Karlsuniversität in Prag, das sie 2018 erfolgreich abschloss. Bereits während dieser Jahre bemühte sie sich, so viel Berufserfahrung wie möglich zu sammeln, um entscheiden zu können, wo sie ihre Fähigkeiten am besten einsetzen kann. Sie absolvierte Praktika bei einem Gericht, bei der Staatsanwaltschaft sowie in einer Anwaltskanzlei.</p><p>Ihre berufliche Laufbahn begann jedoch letztendlich nicht in Prag, sondern in Ostrava. Dort sammelte sie unschätzbare Erfahrungen in der Kanzlei des renommierten Strafverteidigers JUDr. Petr Stoklas. Die Arbeit an komplizierten Strafsachen prägte ihr juristisches Denken entscheidend. Sie lehrte sie hundertprozentige Wachsamkeit, die Fähigkeit, zwischen den Zeilen zu lesen, und strategisches Denken unter Druck.</p><p>Ihr beruflicher und persönlicher Weg führte Kateřina anschließend zurück nach Prag. Seit 2024 ist sie Mitglied unserer Anwaltskanzlei Equity Legal. Ihre Erfahrungen im Strafrecht brachte sie als enormen Vorteil mit, den sie heute erfolgreich mit ihren Hauptspezialisierungen verbindet.</p><p>Dank ihrer Erfahrungen aus der Praxis im Straf- und Zivilrecht ist sie in der Lage, in Fällen Dinge zu erkennen, die jemand ohne diese Erfahrung übersehen würde. Sie weist auf versteckte Risiken hin, bevor diese zu einem Problem werden, und findet so für ihre Mandanten sichere und effektive Lösungen.</p>",
     "specializations": [
       "Občanské právo (smluvní agenda, spory, ochrana práv)",
       "Rodinné právo (rozvody, péče o děti, majetkové vypořádání)",
       "Trestní právo (obhajoba a zastupování poškozených)"
+    ],
+    "specializations_en": [
+      "Civil law (contracts, disputes, protection of rights)",
+      "Family law (divorces, child custody, property settlement)",
+      "Criminal law (defence and representation of victims)"
+    ],
+    "specializations_de": [
+      "Zivilrecht (Vertragsrecht, Rechtsstreitigkeiten, Rechtsschutz)",
+      "Familienrecht (Scheidungen, Sorgerecht, Vermögensausgleich)",
+      "Strafrecht (Strafverteidigung und Vertretung von Geschädigten)"
     ],
     "projects": []
   },
@@ -208,17 +439,29 @@
     "id": "ondrej-kriz",
     "name": "Mgr. Ondřej Kříž",
     "position": "Advokátní koncipient",
+    "position_en": "Trainee Solicitor",
+    "position_de": "Rechtsreferendar",
     "photo": "",
     "email": "kancelar@equitylegal.cz",
     "phone": "",
-    "languages": [
-      "CS"
-    ],
+    "languages": ["CS"],
     "bio": "<p>Absolvent Právnické fakulty Univerzity Karlovy. Profesní zkušenosti získával od roku 2017 v advokátních kancelářích v České republice.</p><p>K advokacii jej přivedl zájem o soukromé právo a možnost hledat praktická řešení běžných životních situací klientů. Ve své praxi se zaměřuje především na oblast soukromého práva, zajímá se však také o ústavní právo a problematiku státního občanství, které se věnoval i ve své diplomové práci.</p><p>Ve volném čase rád navštěvuje divadlo, cestuje a kdyby si měl pořídit psa, tak to bude jezevčík.</p>",
+    "bio_en": "<p>A graduate of the Faculty of Law at Charles University. He has been gaining professional experience since 2017 at law firms in the Czech Republic.</p><p>He was drawn to the legal profession by his interest in private law and the opportunity to find practical solutions to clients' everyday situations. In his practice, he focuses primarily on private law, but he is also interested in constitutional law and issues of citizenship, which he explored in his master's thesis.</p><p>In his spare time, he enjoys going to the theatre and travelling, and if he were to get a dog, it would be a dachshund.</p>",
+    "bio_de": "<p>Absolvent der Juristischen Fakultät der Karlsuniversität. Seit 2017 sammelte er Berufserfahrung in Anwaltskanzleien in der Tschechischen Republik.</p><p>Sein Interesse am Privatrecht und die Möglichkeit, praktische Lösungen für alltägliche Lebenssituationen seiner Mandanten zu finden, haben ihn zur Anwaltschaft geführt. In seiner Praxis konzentriert er sich vor allem auf den Bereich des Privatrechts, interessiert sich jedoch auch für Verfassungsrecht und Fragen der Staatsangehörigkeit, denen er sich bereits in seiner Diplomarbeit gewidmet hat.</p><p>In seiner Freizeit geht er gerne ins Theater, reist und wenn er sich einen Hund anschaffen würde, dann wäre es ein Dackel.</p>",
     "specializations": [
       "Soukromé právo",
       "Ústavní právo",
       "Státní občanství"
+    ],
+    "specializations_en": [
+      "Private law",
+      "Constitutional law",
+      "Citizenship"
+    ],
+    "specializations_de": [
+      "Privatrecht",
+      "Verfassungsrecht",
+      "Staatsangehörigkeit"
     ],
     "projects": []
   },
@@ -226,37 +469,67 @@
     "id": "lenka-kanovska",
     "name": "Lenka Kaňovská",
     "position": "Poradce v oblasti daní, účetnictví, bezpečnosti a insolvence",
+    "position_en": "Adviser on tax, accounting, security and insolvency",
+    "position_de": "Beraterin in den Bereichen Steuern, Buchhaltung, Sicherheit und Insolvenz",
     "photo": "",
     "email": "lenka.kanovska@equitylegal.cz",
     "phone": "+420 603 347 141",
-    "languages": [
-      "CS"
-    ],
+    "languages": ["CS"],
     "bio": "<p>Absolvovala sociálně právní akademii se zaměřením na ochranu osob a majetku. Specialistka na vedení účetnictví a insolvenční agendu pro insolvenční správce.</p>",
+    "bio_en": "<p>She graduated from the Academy of Social and Legal Studies, specialising in the protection of persons and property. She is a specialist in bookkeeping and insolvency matters for insolvency practitioners.</p>",
+    "bio_de": "<p>Absolventin der Akademie für Sozial- und Rechtswissenschaften mit Schwerpunkt auf Personen- und Vermögensschutz. Spezialistin für Buchhaltung und Insolvenzangelegenheiten für Insolvenzverwalter.</p>",
     "specializations": [
       "Vedení účetnictví",
       "Insolvenční agenda",
       "Daňové poradenství"
     ],
+    "specializations_en": [
+      "Accounting",
+      "Insolvency matters",
+      "Tax consultancy"
+    ],
+    "specializations_de": [
+      "Buchhaltung",
+      "Insolvenzangelegenheiten",
+      "Steuerberatung"
+    ],
     "projects": [
       "Vedení účetnictví fyzických a právnických osob.",
       "Insolvenční řízení – vedení kompletní agendy oddlužení i konkursů pro insolvenční správce."
+    ],
+    "projects_en": [
+      "Accounting services for individuals and companies.",
+      "Insolvency proceedings – handling all aspects of debt relief and bankruptcy proceedings on behalf of insolvency practitioners."
+    ],
+    "projects_de": [
+      "Buchhaltung für natürliche und juristische Personen.",
+      "Insolvenzverfahren – Abwicklung der gesamten Abwicklungs- und Konkursangelegenheiten für Insolvenzverwalter."
     ]
   },
   {
     "id": "ivana-blahutova",
     "name": "Ivana Blahutová",
     "position": "Back office specialistka",
+    "position_en": "Back-office specialist",
+    "position_de": "Backoffice-Spezialistin",
     "photo": "",
     "email": "kancelar@equitylegal.cz",
     "phone": "",
-    "languages": [
-      "CS"
-    ],
+    "languages": ["CS"],
     "bio": "<p>Ve společnosti se stará o to, aby administrativní a provozní zázemí kanceláře fungovalo spolehlivě a bez problémů. Zajišťuje hladký chod kanceláře a poskytuje každodenní operativní podporu celému týmu. Jejím hlavním cílem je vytvářet stabilní a efektivní prostředí, které kolegům umožní se plně soustředit na to nejdůležitější – na právní potřeby klientů.</p><p>Pokud zrovna neorganizuje chod kanceláře, ráda dobíjí baterky v přírodě, u dobrého jídla, cestování a volný čas nejraději tráví s rodinou.</p>",
+    "bio_en": "<p>At the firm, she ensures that the office's administrative and operational infrastructure runs reliably and smoothly. She keeps the office running smoothly and provides day-to-day operational support to the whole team. Her main aim is to create a stable and efficient environment that allows her colleagues to focus fully on what matters most – the legal needs of clients.</p><p>When she's not organising the running of the office, she likes to recharge her batteries in the countryside, over a good meal, or whilst travelling, and she prefers to spend her free time with her family.</p>",
+    "bio_de": "<p>In der Kanzlei sorgt sie dafür, dass die administrativen und betrieblichen Abläufe im Büro zuverlässig und reibungslos funktionieren. Sie gewährleistet den reibungslosen Bürobetrieb und bietet dem gesamten Team tägliche operative Unterstützung. Ihr Hauptziel ist es, ein stabiles und effizientes Umfeld zu schaffen, das es den Kollegen ermöglicht, sich voll und ganz auf das Wesentliche zu konzentrieren – nämlich die rechtlichen Bedürfnisse der Mandanten.</p><p>Wenn sie nicht gerade den Bürobetrieb organisiert, tankt sie gerne neue Energie in der Natur, bei gutem Essen und auf Reisen, und ihre Freizeit verbringt sie am liebsten mit ihrer Familie.</p>",
     "specializations": [
       "Administrativní podpora",
       "Provozní chod kanceláře"
+    ],
+    "specializations_en": [
+      "Administrative support",
+      "Office operations"
+    ],
+    "specializations_de": [
+      "Administrative Unterstützung",
+      "Betrieb der Kanzlei"
     ],
     "projects": []
   },
@@ -264,19 +537,32 @@
     "id": "stephan-vodicka",
     "name": "Stephan Vodicka",
     "position": "Specialista na německou klientelu · German Desk Praha",
+    "position_en": "Specialist in German clients · German Desk Prague",
+    "position_de": "Spezialist für deutsche Mandanten · German Desk Prag",
     "photo": "",
     "email": "kancelar@equitylegal.cz",
     "phone": "",
-    "languages": [
-      "CS",
-      "DE"
-    ],
+    "languages": ["CS", "DE"],
     "bio": "<p>Stephan studoval na Ludwig-Maximilian-Universität v Mnichově (absolvoval 2004) a Karlově univerzitě v Praze (studium orientované na mezinárodní vztahy, 2001–2003).</p><p>Aktuálně působí v Praze v týmu kanceláře orientovaném na německy mluvící klientelu a české subjekty v obchodním nebo privátním kontaktu s německými, rakouskými či švýcarskými firmami, úřady a občany.</p><p>Stephan je rodilý mluvčí českého a německého jazyka. Složené má i oficiální státní zkoušky jako překladatel a tlumočník německého a českého jazyka.</p>",
+    "bio_en": "<p>Stephan studied at Ludwig-Maximilian-Universität in Munich (graduated in 2004) and Charles University in Prague (studies focused on international relations, 2001–2003).</p><p>He currently works in Prague as part of the firm's team specialising in German-speaking clients and Czech entities engaged in commercial or private dealings with German, Austrian or Swiss companies, authorities and citizens.</p><p>Stephan is a native speaker of both Czech and German. He has also passed the official state examinations as a translator and interpreter of German and Czech.</p>",
+    "bio_de": "<p>Stephan studierte an der Ludwig-Maximilians-Universität in München (Abschluss 2004) und an der Karls-Universität in Prag (Studienschwerpunkt Internationale Beziehungen, 2001–2003).</p><p>Derzeit ist er in Prag in einem Team der Kanzlei tätig, das sich auf deutschsprachige Mandanten sowie tschechische Unternehmen und Privatpersonen konzentriert, die geschäftliche oder private Kontakte zu deutschen, österreichischen oder schweizerischen Unternehmen, Behörden und Bürgern unterhalten.</p><p>Stephan ist Muttersprachler in Tschechisch und Deutsch. Er hat zudem die offiziellen staatlichen Prüfungen als Übersetzer und Dolmetscher für Deutsch und Tschechisch abgelegt.</p>",
     "specializations": [
       "Česko-německé obchodní vztahy",
       "Překlady a tlumočení (CS/DE)",
       "Správa pohledávek",
       "Privátní poradenství v česko-německo-rakouských vztazích"
+    ],
+    "specializations_en": [
+      "Czech-German business relations",
+      "Translation and interpreting (CS/DE)",
+      "Debt management",
+      "Private consultancy on Czech-German-Austrian relations"
+    ],
+    "specializations_de": [
+      "Tschechisch-deutsche Handelsbeziehungen",
+      "Übersetzungen und Dolmetschen (CS/DE)",
+      "Forderungsmanagement",
+      "Private Beratung in tschechisch-deutsch-österreichischen Beziehungen"
     ],
     "projects": [
       "Komunikace a správa obchodních vztahů mezi německými a českými firmami, jakož i jejich zahraničními pobočkami, včetně velkých průmyslových podniků (ExxonMobil apod.).",
@@ -287,26 +573,56 @@
       "Autorsky činný na publikacích týkajících se politického a státního systému ČR, jakož i svobody slova a novinářství v ČR.",
       "Synchronní tlumočení řady obchodních jednání včetně právní problematiky."
     ],
+    "projects_en": [
+      "Communication and management of business relations between German and Czech companies, as well as their foreign subsidiaries, including large industrial enterprises (ExxonMobil, etc.).",
+      "Private consultancy on Czech-German-Austrian relations, extending to other countries.",
+      "Management and recovery of creditors' claims, including those of banking and insurance institutions.",
+      "Extensive experience with Business Support Centres for foreign companies in the Czech Republic.",
+      "Advice and support within the scope of the firm's general practice – property transfers, company formations, debt recovery, employment and family law matters, public procurement, etc.",
+      "Author of publications on the political and state system of the Czech Republic, as well as on freedom of speech and journalism in the Czech Republic.",
+      "Simultaneous interpreting at numerous business meetings, including those involving legal matters."
+    ],
+    "projects_de": [
+      "Kommunikation und Pflege von Geschäftsbeziehungen zwischen deutschen und tschechischen Unternehmen sowie deren Auslandsniederlassungen, darunter auch große Industrieunternehmen (ExxonMobil u. a.).",
+      "Private Beratung in tschechisch-deutsch-österreichischen Beziehungen mit Ausweitung auf weitere Länder.",
+      "Verwaltung und Einziehung von Forderungen von Gläubigern, einschließlich Bank- und Versicherungsinstituten.",
+      "Langjährige Erfahrung mit Business Support Centern ausländischer Unternehmen in der Tschechischen Republik.",
+      "Beratung und Unterstützung im Rahmen der allgemeinen Kanzleipraxis – Immobilienübertragungen, Unternehmensgründungen, Forderungseinzug, arbeits- und familienrechtliche Fragen, öffentliches Auftragswesen usw.",
+      "Autor von Publikationen zum politischen und staatlichen System der Tschechischen Republik sowie zur Meinungsfreiheit und zum Journalismus in der Tschechischen Republik.",
+      "Simultandolmetschen bei zahlreichen Geschäftsverhandlungen, einschließlich rechtlicher Fragestellungen."
+    ],
     "external": true
   },
   {
     "id": "arkadiusz-brach",
     "name": "Arkadiusz Brach",
     "position": "Advokát · Specialista na polské právo",
+    "position_en": "Solicitor · Specialist in Polish law",
+    "position_de": "Rechtsanwalt · Spezialist für polnisches Recht",
     "photo": "",
     "email": "kancelar@equitylegal.cz",
     "phone": "",
-    "languages": [
-      "PL",
-      "CS",
-      "EN"
-    ],
+    "languages": ["PL", "CS", "EN"],
     "bio": "<p>Absolvent právnické fakulty ve Varšavě. Specialista na polské obchodní, procesní a správní právo. Zajišťuje právní služby pro klienty ve věcech s polskými prvky.</p>",
+    "bio_en": "<p>A graduate of the Faculty of Law in Warsaw. A specialist in Polish commercial, procedural and administrative law. He provides legal services to clients in matters involving Polish elements.</p>",
+    "bio_de": "<p>Absolvent der juristischen Fakultät in Warschau. Spezialist für polnisches Handels-, Prozess- und Verwaltungsrecht. Er erbringt juristische Dienstleistungen für Mandanten in Angelegenheiten mit polnischen Bezügen.</p>",
     "specializations": [
       "Polské obchodní právo",
       "Zastupování před polskými soudy",
       "Vymáhání pohledávek v Polsku",
       "Veřejné zakázky v Polsku"
+    ],
+    "specializations_en": [
+      "Polish commercial law",
+      "Representation before Polish courts",
+      "Debt recovery in Poland",
+      "Public procurement in Poland"
+    ],
+    "specializations_de": [
+      "Polnisches Handelsrecht",
+      "Vertretung vor polnischen Gerichten",
+      "Forderungseinzug in Polen",
+      "Öffentliche Aufträge in Polen"
     ],
     "projects": [
       "Založení a registrace obchodních společností v Polsku.",
@@ -317,28 +633,56 @@
       "Vymáhání pohledávek v Polsku.",
       "Nároky na náhradu škody v soudním řízení, stejně jako zastoupení poškozených ve vztazích s pojišťovnami, zejména dopravní nehody, pracovní úrazy, pojistné smlouvy, lékařské zákroky."
     ],
+    "projects_en": [
+      "Incorporation and registration of companies in Poland.",
+      "Review and drafting of contracts in accordance with Polish law.",
+      "Handling preparatory and other court proceedings, representing clients before administrative authorities.",
+      "Assistance with the preparation of tender documentation for Polish public procurement contracting authorities.",
+      "Representing clients in courts, before administrative authorities and also in cases before criminal justice authorities in Poland.",
+      "Debt recovery in Poland.",
+      "Claims for damages in court proceedings, as well as representing injured parties in dealings with insurance companies, particularly in relation to road traffic accidents, workplace accidents, insurance contracts and medical procedures."
+    ],
+    "projects_de": [
+      "Gründung und Eintragung von Handelsgesellschaften in Polen.",
+      "Prüfung und Ausarbeitung von Verträgen nach polnischem Recht.",
+      "Durchführung von Vorverfahren und anderen Gerichtsverfahren, Vertretung von Mandanten vor Verwaltungsbehörden.",
+      "Unterstützung bei der Erstellung von Ausschreibungsunterlagen für polnische öffentliche Auftraggeber.",
+      "Vertretung von Mandanten vor Gerichten, Verwaltungsbehörden sowie in Verfahren vor Strafverfolgungsbehörden in Polen.",
+      "Forderungseinzug in Polen.",
+      "Schadensersatzansprüche in Gerichtsverfahren sowie Vertretung von Geschädigten im Verhältnis zu Versicherungsgesellschaften, insbesondere bei Verkehrsunfällen, Arbeitsunfällen, Versicherungsverträgen und medizinischen Eingriffen."
+    ],
     "external": true
   },
   {
     "id": "mark-opanasiuk",
     "name": "M.A. Mark Opanasiuk, LL.M.",
     "position": "Advokát · Specialista na ukrajinské právo",
+    "position_en": "Solicitor · Specialist in Ukrainian law",
+    "position_de": "Rechtsanwalt · Spezialist für ukrainisches Recht",
     "photo": "",
     "email": "kancelar@equitylegal.cz",
     "phone": "",
-    "languages": [
-      "UA",
-      "EN",
-      "DE",
-      "RU",
-      "PL"
-    ],
+    "languages": ["UA", "EN", "DE", "RU", "PL"],
     "bio": "<p>Promoval s titulem LL.M. na Právnické fakultě Univerzity v Arkansasu ve Spojených státech amerických a Univerzitě národního práva Jaroslava Moudrého (Natsional'nyi yurydychnyi universytet imeni Yaroslava Mudroho) na Ukrajině.</p><p>Promoval s titulem M.A. v oboru překladatelství na The Open University na Ukrajině.</p><p>Poskytuje právní poradenství v anglickém, německém, ruském, ukrajinském a polském jazyce.</p>",
+    "bio_en": "<p>He graduated with an LL.M. from the University of Arkansas College of Law in the United States and from the Yaroslav Mudryi National Law University in Ukraine.</p><p>He graduated with an M.A. in Translation from The Open University in Ukraine.</p><p>He provides legal advice in English, German, Russian, Ukrainian and Polish.</p>",
+    "bio_de": "<p>Er erwarb den LL.M.-Abschluss an der Rechtsfakultät der Universität von Arkansas in den Vereinigten Staaten von Amerika und an der Jaroslav-Mudry-Universität für Nationales Recht in der Ukraine.</p><p>Er erwarb den Master-Abschluss (M.A.) im Fachbereich Übersetzungswissenschaft an der Open University in der Ukraine.</p><p>Er bietet Rechtsberatung in Englisch, Deutsch, Russisch, Ukrainisch und Polnisch an.</p>",
     "specializations": [
       "Ukrajinské obchodní právo",
       "Imigrační právo na Ukrajině",
       "Investice na Ukrajině",
       "IT právo a start-upy"
+    ],
+    "specializations_en": [
+      "Ukrainian commercial law",
+      "Immigration law in Ukraine",
+      "Investment in Ukraine",
+      "IT law and start-ups"
+    ],
+    "specializations_de": [
+      "Ukrainisches Wirtschaftsrecht",
+      "Einwanderungsrecht in der Ukraine",
+      "Investitionen in der Ukraine",
+      "IT-Recht und Start-ups"
     ],
     "projects": [
       "Poradenství při zakládání společností (dceřiných firem, poboček) na Ukrajině.",
@@ -349,6 +693,26 @@
       "Zastupování klientů před orgány veřejné správy a dalšími subjekty na Ukrajině.",
       "Poradenství ve věcech obchodního práva, práva společností, pracovního práva a daňového práva na Ukrajině.",
       "Právní podpora pro IT společnosti a startupy na Ukrajině."
+    ],
+    "projects_en": [
+      "Advice on setting up companies (subsidiaries, branches) in Ukraine.",
+      "Due diligence in accordance with Ukrainian law; analysis of the legal risks associated with business partners in Ukraine.",
+      "Legal support in matters of immigration law in Ukraine, processing work permits and residence permits in Ukraine.",
+      "Legal support for investment in Ukraine (acquisition of companies and property).",
+      "Comprehensive services relating to licences and permits for doing business in Ukraine.",
+      "Representing clients before public authorities and other bodies in Ukraine.",
+      "Advice on commercial law, company law, employment law and tax law in Ukraine.",
+      "Legal support for IT companies and start-ups in Ukraine."
+    ],
+    "projects_de": [
+      "Beratung bei der Gründung von Unternehmen (Tochtergesellschaften, Niederlassungen) in der Ukraine.",
+      "Due Diligence nach ukrainischem Recht, Analyse der rechtlichen Risiken von Geschäftspartnern in der Ukraine.",
+      "Rechtliche Unterstützung in Fragen des Einwanderungsrechts in der Ukraine, Beantragung von Arbeits- und Aufenthaltsgenehmigungen in der Ukraine.",
+      "Rechtliche Unterstützung bei Investitionen in der Ukraine (Übernahme von Unternehmen und Immobilien).",
+      "Umfassende Dienstleistungen im Zusammenhang mit Lizenzen und Genehmigungen für die Geschäftstätigkeit in der Ukraine.",
+      "Vertretung von Mandanten vor Behörden und anderen Stellen in der Ukraine.",
+      "Beratung in Fragen des Handelsrechts, des Gesellschaftsrechts, des Arbeitsrechts und des Steuerrechts in der Ukraine.",
+      "Rechtliche Unterstützung für IT-Unternehmen und Start-ups in der Ukraine."
     ],
     "external": true
   }

@@ -1,25 +1,55 @@
 {
     "home": {
         "hero_label": "Advokátní kancelář · Praha",
+        "hero_label_en": "Law firm · Prague",
+        "hero_label_de": "Anwaltskanzlei · Prag",
         "hero_title": "Naše poslání je <em>váš úspěch</em>",
+        "hero_title_en": "Our mission is <em>your success</em>",
+        "hero_title_de": "Unsere Mission ist <em>Ihr Erfolg</em>",
         "hero_desc": "EQUITY LEGAL kombinuje hlubokou znalost práva s kreativním přístupem k řešení složitých právních případů. Poskytujeme poradenství v češtině, angličtině, němčině a dalších jazycích.",
+        "hero_desc_en": "EQUITY LEGAL combines in-depth legal expertise with a creative approach to resolving complex legal cases. We provide advice in Czech, English, German and other languages.",
+        "hero_desc_de": "EQUITY LEGAL kombiniert fundierte Rechtsexpertise mit einem kreativen Ansatz zur Lösung komplexer Rechtsfälle. Wir beraten auf Tschechisch, Englisch, Deutsch und in weiteren Sprachen.",
         "hero_image": "assets/img/hero-bg.jpg",
         "about_title": "Právní kancelář, která hledá řešení",
+        "about_title_en": "A law firm that seeks solutions",
+        "about_title_de": "Eine Anwaltskanzlei, die nach Lösungen sucht",
         "about_text1": "EQUITY LEGAL poskytuje právní poradenství a zastupování klientů s důrazem na odbornost a praktické výsledky. Název EQUITY vyjadřuje naši schopnost hledat spravedlivá a efektivní řešení i ve složitých právních situacích. LEGAL představuje hlubokou znalost práva, preciznost a odborné dovednosti, o které se naši klienti mohou opřít.",
+        "about_text1_en": "EQUITY LEGAL provides legal advice and representation to clients, with an emphasis on expertise and practical results. The name EQUITY reflects our ability to seek fair and effective solutions even in complex legal situations. LEGAL represents the in-depth knowledge of the law, precision and professional skills on which our clients can rely.",
+        "about_text1_de": "EQUITY LEGAL bietet Mandanten Rechtsberatung und -vertretung mit Schwerpunkt auf Fachkompetenz und praktischen Ergebnissen. Der Name EQUITY spiegelt unsere Fähigkeit wider, faire und wirksame Lösungen auch in komplexen Rechtssituationen zu finden. LEGAL steht für die fundierte Rechtskenntnis, Präzision und fachliche Kompetenz, auf die sich unsere Mandanten verlassen können.",
         "about_text2": "Aktivně pracujeme s moderními technologiemi a orientujeme se v oblasti ICT práva, startupů, ochrany dat i duševního vlastnictví. Díky tomu dokážeme poskytovat efektivní a aktuální právní řešení. Jsme partnerem pro růst i oporou v náročných situacích.",
+        "about_text2_en": "We actively utilise modern technologies and specialise in ICT law, start-ups, data protection and intellectual property. This enables us to provide effective and up-to-date legal solutions. We are a partner for growth and a source of support in challenging situations.",
+        "about_text2_de": "Wir setzen aktiv moderne Technologien ein und sind spezialisiert auf IT-Recht, Start-ups, Datenschutz und geistiges Eigentum. Dadurch können wir effektive und aktuelle Rechtslösungen anbieten. Wir sind Partner für Wachstum und Stütze in schwierigen Situationen.",
         "about_text3": "Naši kancelář najdete v Praze 3 na Vinohradech.",
+        "about_text3_en": "Our office is located in Prague 3, in the Vinohrady district.",
+        "about_text3_de": "Unsere Kanzlei befindet sich in Prag 3, im Stadtteil Vinohrady.",
         "about_image": "assets/img/office.jpg",
         "cta_title": "Potřebujete právní pomoc?",
-        "cta_text": "Kontaktujte nás pro konzultaci."
+        "cta_title_en": "Do you need legal assistance?",
+        "cta_title_de": "Benötigen Sie rechtliche Hilfe?",
+        "cta_text": "Kontaktujte nás pro konzultaci.",
+        "cta_text_en": "Contact us for a consultation.",
+        "cta_text_de": "Kontaktieren Sie uns für eine Beratung."
     },
     "sluzby": {
         "hero_label": "Co nabízíme",
+        "hero_label_en": "What we offer",
+        "hero_label_de": "Was wir bieten",
         "hero_title": "Právní služby",
-        "hero_desc": "Poskytujeme komplexní právní poradenství a zastupování v 13 specializovaných oblastech práva. Každé řešení přizpůsobujeme individuálním potřebám klienta."
+        "hero_title_en": "Legal services",
+        "hero_title_de": "Rechtsdienstleistungen",
+        "hero_desc": "Poskytujeme komplexní právní poradenství a zastupování v 13 specializovaných oblastech práva. Každé řešení přizpůsobujeme individuálním potřebám klienta.",
+        "hero_desc_en": "We provide comprehensive legal advice and representation across 13 specialist areas of law. We tailor every solution to the client's individual needs.",
+        "hero_desc_de": "Wir bieten umfassende Rechtsberatung und -vertretung in 13 spezialisierten Rechtsgebieten. Jede Lösung passen wir den individuellen Bedürfnissen des Mandanten an."
     },
     "tym": {
         "hero_label": "Lidé kanceláře",
+        "hero_label_en": "Staff of the firm",
+        "hero_label_de": "Mitarbeiter der Kanzlei",
         "hero_title": "Náš tým",
-        "hero_desc": "Tým EQUITY LEGAL tvoří zkušení advokáti a specialisté s českou i mezinárodní praxí."
+        "hero_title_en": "Our team",
+        "hero_title_de": "Unser Team",
+        "hero_desc": "Tým EQUITY LEGAL tvoří zkušení advokáti a specialisté s českou i mezinárodní praxí.",
+        "hero_desc_en": "The EQUITY LEGAL team consists of experienced solicitors and specialists with both Czech and international experience.",
+        "hero_desc_de": "Das Team von EQUITY LEGAL besteht aus erfahrenen Rechtsanwälten und Spezialisten mit tschechischer und internationaler Erfahrung."
     }
 }

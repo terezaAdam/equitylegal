@@ -2,6 +2,7 @@
 // ── admin/includes/layout.php ──
 // Helper: render admin page wrapper
 // Usage: adminHeader('Page Title'); ... content ... adminFooter();
+require_once __DIR__ . '/lang-fields.php';
 
 function adminHeader(string $title, string $activeLink = ''): void {
   $flash = getFlash();
@@ -97,6 +98,20 @@ function adminFooter(): void {
     </div><!-- /page -->
   </div><!-- /main-content -->
 </div><!-- /admin-layout -->
+<script>
+document.querySelectorAll('.lang-switch').forEach(function (sw) {
+  sw.addEventListener('click', function (e) {
+    var btn = e.target.closest('.lang-switch__btn');
+    if (!btn) return;
+    var lang = btn.dataset.lang;
+    var scope = sw.closest('form') || document;
+    sw.querySelectorAll('.lang-switch__btn').forEach(function (b) { b.classList.toggle('active', b === btn); });
+    scope.querySelectorAll('.lang-field').forEach(function (f) {
+      f.style.display = (f.dataset.lang === lang) ? '' : 'none';
+    });
+  });
+});
+</script>
 </body>
 </html>
 <?php

@@ -21,27 +21,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $origId = trim($_POST['orig_id'] ?? '');
   $id     = trim($_POST['id']      ?? '') ?: slugify($_POST['name'] ?? '');
   $name   = trim($_POST['name']    ?? '');
-  $pos    = trim($_POST['position'] ?? '');
   $photo  = trim($_POST['photo']   ?? '');
   $email  = trim($_POST['email']   ?? '');
   $phone  = trim($_POST['phone']   ?? '');
-  $bio    = trim($_POST['bio']     ?? '');
   $langs  = array_filter(array_map('trim', explode(',', $_POST['languages'] ?? '')));
-  $specs  = array_filter(array_map('trim', explode("\n", $_POST['specializations'] ?? '')));
-  $projs  = array_filter(array_map('trim', explode("\n", $_POST['projects'] ?? '')));
 
-  $record = [
-    'id'              => $id,
-    'name'            => $name,
-    'position'        => $pos,
-    'photo'           => $photo,
-    'email'           => $email,
-    'phone'           => $phone,
-    'languages'       => array_values(array_map('strtoupper', $langs)),
-    'bio'             => $bio,
-    'specializations' => array_values($specs),
-    'projects'        => array_values($projs),
-  ];
+  $record = array_merge(
+    [
+      'id'        => $id,
+      'name'      => $name,
+      'photo'     => $photo,
+      'email'     => $email,
+      'phone'     => $phone,
+      'languages' => array_values(array_map('strtoupper', $langs)),
+    ],
+    langPostScalar('position'),
+    langPostScalar('bio'),
+    langPostList('specializations'),
+    langPostList('projects')
+  );
+  if (!empty($_POST['external'])) $record['external'] = true;
 
   $found = false;
   foreach ($team as &$m) {
@@ -113,19 +112,19 @@ adminHeader('Náš tým', 'team');
         <label>Jazyky (zkratky oddělené čárkou)</label>
         <input type="text" name="languages" value="<?= htmlspecialchars(implode(', ', $editing['languages'] ?? [])) ?>" placeholder="CS, EN, DE">
       </div>
-      <div class="form-group form-full">
-        <label>Bio</label>
-        <div class="rich-hint">Podporuje HTML: <code>&lt;p&gt;</code> <code>&lt;strong&gt;</code> <code>&lt;em&gt;</code></div>
-        <textarea name="bio" rows="6"><?= htmlspecialchars($editing['bio'] ?? '') ?></textarea>
+      <div class="form-group" style="display:flex;align-items:center;gap:.5rem;padding-top:1.6rem;">
+        <input type="checkbox" name="external" id="external" value="1" style="width:auto;" <?= !empty($editing['external']) ? 'checked' : '' ?>>
+        <label for="external" style="margin:0;">Externí spolupracovník</label>
       </div>
-      <div class="form-group form-full">
-        <label>Specializace (jedna na řádek)</label>
-        <textarea name="specializations" rows="6"><?= htmlspecialchars(implode("\n", $editing['specializations'] ?? [])) ?></textarea>
-      </div>
-      <div class="form-group form-full">
-        <label>Referenční projekty (jeden na řádek)</label>
-        <textarea name="projects" rows="8"><?= htmlspecialchars(implode("\n", $editing['projects'] ?? [])) ?></textarea>
-      </div>
+    </div>
+
+    <?php langSwitch(); ?>
+
+    <div class="form-grid">
+      <?php langInput('position', 'Pozice / Titul', $editing ?? [], 'Advokát · Partner'); ?>
+      <?php langTextarea('bio', 'Bio', $editing ?? [], 6, 'Podporuje HTML: &lt;p&gt; &lt;strong&gt; &lt;em&gt;'); ?>
+      <?php langListTextarea('specializations', 'Specializace (jedna na řádek)', $editing ?? [], 6); ?>
+      <?php langListTextarea('projects', 'Referenční projekty (jeden na řádek)', $editing ?? [], 8); ?>
     </div>
 
     <div style="display:flex;gap:.75rem;margin-top:.5rem;">

@@ -10,7 +10,11 @@
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D.",
       "Mgr. Kryštof Kobeda"
-    ]
+    ],
+    "title_en": "Civil Procedure – Casebook",
+    "description_en": "This book presents civil law in a new form, unique within the Czech legal context. The team of authors provides an explanation of the institutions and issues of civil procedure in the context of the most significant court decisions. The casebook is divided into four parts – contentious proceedings, enforcement proceedings, proceedings under the Act on Special Judicial Proceedings, and proceedings in matters decided by another authority. Each chapter is devoted to an explanation of the relevant topic, supplemented by court decisions and a discussion of specific related issues.",
+    "title_de": "Zivilprozess – Casebook",
+    "description_de": "Das Buch stellt das Zivilrecht in einer neuen, im tschechischen Rechtsraum einzigartigen Form dar. Das Autorenteam erläutert hier die Institute und Problemstellungen des Zivilverfahrens im Kontext der wichtigsten Gerichtsentscheidungen. Das Casebook ist in vier Teile gegliedert – das streitige Verfahren, das Vollstreckungsverfahren, das Verfahren nach dem Gesetz über besondere Gerichtsverfahren und das Verfahren in Angelegenheiten, über die bereits eine andere Behörde entschieden hat. Jedes einzelne Kapitel widmet sich der Erläuterung des jeweiligen Themas, ergänzt durch Gerichtsentscheidungen und eine Diskussion konkreter damit zusammenhängender Fragen."
   },
   {
     "id": 2,
@@ -22,7 +26,11 @@
     "image": "/assets/img/publications/os-komentar-2vydani.jpg",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "Code of Civil Procedure – Commentary, 2nd edition",
+    "description_en": "The second edition of this highly successful commentary responds to changes to the Code of Civil Procedure that have taken place since the first edition was published in 2013. The updates concern, for example, the enforcement of judgments through the sale of immovable property, the conditions for the admissibility of appeals, and the regime governing the enforcement of claims against property held in the joint property of spouses and the property of a spouse who is the debtor. The commentary also takes into account developments in case law – for example, landmark decisions of the Constitutional Court, which offer a new interpretation of the essence of the court’s duty to advise a party of the likelihood of failure in a dispute.",
+    "title_de": "Zivilprozessordnung – Kommentar, 2. Auflage",
+    "description_de": "Die zweite Auflage des sehr erfolgreichen Kommentars trägt den Änderungen der Zivilprozessordnung Rechnung, die seit der ersten Auflage aus dem Jahr 2013 vorgenommen wurden. Die Neuerungen betreffen beispielsweise die Vollstreckung von Entscheidungen durch den Verkauf von Immobilien, die Voraussetzungen für die Zulässigkeit einer Rechtsbeschwerde sowie die Regelung der Pfändung von Vermögen, das sich im gemeinschaftlichen Vermögen der Ehegatten befindet, und des Vermögens des verpflichteten Ehegatten. Der Kommentar berücksichtigt zudem die Entwicklung der Rechtsprechung – beispielsweise wegweisende Entscheidungen des Verfassungsgerichts, die den Kern der Belehrungspflicht des Gerichts hinsichtlich eines drohenden Scheiterns im Rechtsstreit neu auslegen."
   },
   {
     "id": 3,
@@ -57,7 +65,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "Active standing to sue and the suspension of the limitation period",
+    "description_en": "Academic article published in the journal Soudní rozhledy, No. 4, Vol. 21.",
+    "title_de": "Aktive Klagebefugnis und Hemmung der Verjährung",
+    "description_de": "Fachbeitrag, veröffentlicht in der Zeitschrift „Soudní rozhledy“, Nr. 4, Jahrgang 21."
   },
   {
     "id": 6,
@@ -68,7 +80,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "Interim measures prohibiting a contracting authority from concluding a public procurement contract",
+    "description_en": "Academic article published in the journal Soudní rozhledy, Nos. 7–8, Vol. 20.",
+    "title_de": "Einstweilige Verfügung, die dem öffentlichen Auftraggeber den Abschluss eines öffentlichen Auftrags verbietet",
+    "description_de": "Fachbeitrag, veröffentlicht in der Zeitschrift „Soudní rozhledy“, Nr. 7–8, Jahrgang 20."
   },
   {
     "id": 7,
@@ -79,7 +95,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "A Comparison of the Legal Framework for Interim Measures in the USA and the Czech Republic",
+    "description_en": "Academic article published in the journal Právní rozhledy, 2014, No. 12.",
+    "title_de": "Vergleich der Rechtsvorschriften zu einstweiligen Verfügungen in den USA und in der Tschechischen Republik",
+    "description_de": "Fachbeitrag, veröffentlicht in der Zeitschrift „Právní rozhledy“, 2014, Nr. 12."
   },
   {
     "id": 8,
@@ -90,7 +110,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "Security deposits to guarantee compensation for damages and legal costs, including issues relating to their timely, delayed and late payment",
+    "description_en": "Academic article published in the journal Právní rozhledy, No. 21, Vol. 21.",
+    "title_de": "Sicherheiten zur Gewährleistung des Schadenersatzes und zur Deckung der Verfahrenskosten, einschließlich der Problematik ihrer fristgerechten, verspäteten und zu späten Hinterlegung",
+    "description_de": "Fachbeitrag, veröffentlicht in der Zeitschrift „Právní rozhledy“, Nr. 21, Jahrgang 21."
   },
   {
     "id": 9,
@@ -101,7 +125,11 @@
     "link": "http://PRAVNIRADCE.IHNED.CZ/c1-48644740-vyzva-k-zaplaceni-aneb-cim-vsim-je-veritel-opravnen-hrozit",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "A demand for payment, or what a creditor is entitled to threaten",
+    "description_en": "Academic article published in the journal Právní rádce, 2010, No. 12.",
+    "title_de": "Mahnung – oder womit darf ein Gläubiger drohen?",
+    "description_de": "Fachbeitrag, veröffentlicht in der Zeitschrift „Právní rádce“, 2010, Nr. 12."
   },
   {
     "id": 10,
@@ -112,7 +140,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "On the unconstitutionality and ill-conceived nature of the legal provisions governing interim measures under the Code of Civil Procedure",
+    "description_en": "Academic article published in the journal Právní rozhledy, 2010, No. 10.",
+    "title_de": "Zur Verfassungswidrigkeit und Unausgereiftheit der gesetzlichen Regelung der einstweiligen Verfügung nach der Zivilprozessordnung",
+    "description_de": "Fachbeitrag veröffentlicht in der Zeitschrift „Právní rozhledy“, 2010, Nr. 10."
   },
   {
     "id": 11,
@@ -123,7 +155,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "The (semi-)truth about the amount of unjust enrichment in investments in third-party property",
+    "description_en": "Academic article published in the journal Právní rozhledy, No. 21, Vol. 21.",
+    "title_de": "Die (Halb-)Wahrheit über die Höhe der ungerechtfertigten Bereicherung bei Investitionen in fremde Immobilien",
+    "description_de": "Fachbeitrag veröffentlicht in der Zeitschrift „Právní rozhledy“, 2010, Nr. 1."
   },
   {
     "id": 12,
@@ -134,7 +170,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "The right to service and to a hearing of an appeal concerning only the costs of proceedings",
+    "description_en": "Academic article published in the journal Právní rozhledy, 2009, No. 9.",
+    "title_de": "Das Recht auf Zustellung und Verhandlung einer Berufung, die sich ausschließlich auf die Verfahrenskosten bezieht",
+    "description_de": "Fachbeitrag, veröffentlicht in der Zeitschrift „Právní rozhledy“, 2009, Nr. 9."
   },
   {
     "id": 13,
@@ -145,7 +185,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "Actus reus and Mens Rea",
+    "description_en": "Academic article published in Common Law Review 2006, Issue Focus: Crime and Punishment.",
+    "title_de": "Actus reus und Mens Rea",
+    "description_de": "Fachbeitrag veröffentlicht in der Zeitschrift „Common Law Review“ 2006, Schwerpunkt: Crime and Punishment."
   },
   {
     "id": 14,
@@ -156,7 +200,11 @@
     "link": "",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "Public participation and environmental protection in the building permit and land use process — a comparison of Oregon and Czech law",
+    "description_en": "Professional article published in 32 J. Envtl. L. & Litig. 247–270 (2017).",
+    "title_de": "Öffentliche Beteiligung und Umweltschutz im Baugenehmigungs- und Flächennutzungsverfahren – ein Vergleich zwischen dem Recht des US-Bundesstaates Oregon und dem tschechischen Recht",
+    "description_de": "Fachbeitrag veröffentlicht in 32 J. Envtl. L. & Litig. 247–270 (2017)."
   },
   {
     "id": 15,
@@ -168,7 +216,11 @@
     "image": "/assets/img/publications/os-komentar-4vydani.jpg",
     "authors": [
       "JUDr. Vít Hrnčiřík, LL.M., Ph.D."
-    ]
+    ],
+    "title_en": "The Code of Civil Procedure – Commentary, 4th edition",
+    "description_en": "Civil procedure is constantly evolving, and keeping pace with ongoing amendments is crucial for legal practice. That is why, after four years, a completely revised and updated edition of this essential commentary on the Code of Civil Procedure is being published by C. H. Beck. The commentary reflects all legislative changes and case law from the past four years. The book was produced by a team of experienced judges, academics and solicitors who are among the very best in the field of civil procedural law, including JUDr. Vít Hrnčířik, Ph.D., LL.M., a solicitor and managing partner at Equity Legal. For this edition, he comprehensively compiled the section dealing with judgements, orders, payment orders, European payment orders and bill of exchange payment orders (Sections 152 to 175).",
+    "title_de": "Zivilprozessordnung – Kommentar, 4. Auflage",
+    "description_de": "Das Zivilverfahren entwickelt sich ständig weiter, und es ist für die Rechtspraxis von entscheidender Bedeutung, mit den ständigen Gesetzesänderungen Schritt zu halten. Deshalb erscheint nach vier Jahren eine vollständig überarbeitete und aktualisierte Auflage dieses grundlegenden Kommentars zur Zivilprozessordnung im C. H. Beck Verlag. Der Kommentar berücksichtigt alle gesetzlichen Änderungen und die Rechtsprechung der letzten vier Jahre. An dem Buch hat ein Team aus erfahrenen Richtern, Wissenschaftlern und Rechtsanwälten gearbeitet, die zu den absoluten Spitzenkräften im Bereich des Zivilprozessrechts zählen, darunter JUDr. Vít Hrnčířik, Ph.D., LL.M., Rechtsanwalt und Geschäftsführer der Kanzlei Equity Legal. Für diese Ausgabe hat er den Teil, der sich mit Urteilen, Beschlüssen, Zahlungsbefehlen, dem europäischen Zahlungsbefehl und dem Wechsel-Zahlungsbefehl befasst (§ 152 bis 175), umfassend bearbeitet."
   },
   {
     "id": 16,
@@ -180,7 +232,11 @@
     "image": "/assets/img/publications/prisedici-a-laicky-prvek-v-justici.jpg",
     "authors": [
       "JUDr. Ing. Vladimír Lajsek, Ph.D., MBA"
-    ]
+    ],
+    "title_en": "Lay Judges and the Lay Element in the Judiciary",
+    "description_en": "This monograph examines the questions of whether the lay element in the judiciary remains a democratising factor; whether, in the case of lay judges, the constitutional requirements for an independent, impartial and lawful judge are sufficiently met; whether democratic or professional legitimacy should take precedence; and, finally, whether the lay element in the Czech judiciary should be retained.",
+    "title_de": "Laienrichter und das Laienelement in der Justiz",
+    "description_de": "Die Monografie befasst sich mit den Fragen, ob das Laienelement in der Justiz nach wie vor ein demokratisierendes Element ist, ob im Falle der Laienrichter die verfassungsrechtlichen Voraussetzungen für einen unabhängigen, unparteiischen und gesetzmäßigen Richter ausreichend erfüllt sind, ob eher die demokratische oder die fachliche Legitimität überwiegen sollte und schließlich, ob das Laienelement in der tschechischen Justiz beibehalten werden sollte."
   },
   {
     "id": 17,
@@ -192,7 +248,11 @@
     "image": "/assets/img/publications/verejnopravni-smlouvy-koordinacni.jpg",
     "authors": [
       "JUDr. Vojtěch Příkopa, Ph.D."
-    ]
+    ],
+    "title_en": "Public-Law Coordination Agreements",
+    "description_en": "This publication examines public-law coordination agreements within the Czech legal system. Its aim is to attempt a systematic classification of these agreements and to evaluate their regulation in terms of both substantive and procedural law. All this is done whilst taking into account both domestic and foreign literature and the case law of the Supreme Administrative Court.",
+    "title_de": "Koordinierungsverträge des öffentlichen Rechts",
+    "description_de": "Die Publikation befasst sich mit öffentlich-rechtlichen Koordinierungsverträgen im tschechischen Rechtssystem. Ihr Ziel ist es, diese Verträge systematisch zu klassifizieren und ihre materiell-rechtliche sowie prozessrechtliche Regelung zu bewerten. Dabei werden sowohl die inländische als auch die ausländische Literatur sowie die Rechtsprechung des Obersten Verwaltungsgerichts berücksichtigt."
   },
   {
     "id": 18,
@@ -204,6 +264,10 @@
     "image": "/assets/img/publications/restituce-podle-zakona-o-pude.jpg",
     "authors": [
       "JUDr. Vojtěch Příkopa, Ph.D."
-    ]
+    ],
+    "title_en": "Restitution under the Land Act",
+    "description_en": "The book deals with the issue of the judicial settlement of restitution claims through the transfer of other agricultural land owned by the state. Case law has gradually established, within the domestic legal environment, a wholly unique and distinct body of legal rules designed to ensure that one of the purposes of the Land Act can be fulfilled at all, namely the redress of certain property injustices arising from the violation of generally recognised human rights and freedoms by the state under the former regime. It is precisely the analysis of this judicial case law that forms the bulk of this publication.",
+    "title_de": "Restitution nach dem Bodengesetz",
+    "description_de": "Das Buch befasst sich mit der Problematik der gerichtlichen Durchsetzung von Restitutionsansprüchen durch die Übertragung anderer landwirtschaftlicher Grundstücke im Staatsbesitz. Die Rechtsprechung hat nach und nach einen für das tschechische Rechtsumfeld völlig einzigartigen und eigenständigen Bereich von Rechtsvorschriften geschaffen, der dazu dient, einen der Zwecke des Bodengesetzes überhaupt zu erfüllen, nämlich die Milderung bestimmter Vermögensungerechtigkeiten, die in der Verletzung allgemein anerkannter Menschenrechte und Freiheiten durch den Staat unter dem früheren Regime bestehen. Der überwiegende Teil dieser Publikation widmet sich gerade der Analyse dieser gerichtlichen Rechtsprechung."
   }
 ]

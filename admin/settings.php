@@ -14,26 +14,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if (empty($errors)) {
-    $settings = [
-      'company_name'    => trim($_POST['company_name'] ?? ''),
-      'address_street'  => trim($_POST['address_street'] ?? ''),
-      'address_city'    => trim($_POST['address_city'] ?? ''),
-      'address_country' => trim($_POST['address_country'] ?? ''),
-      'ico'             => trim($_POST['ico'] ?? ''),
-      'dic'             => trim($_POST['dic'] ?? ''),
-      'databox'         => trim($_POST['databox'] ?? ''),
-      'phone'           => trim($_POST['phone'] ?? ''),
-      'email'           => $email,
-      'hours'           => trim($_POST['hours'] ?? ''),
-      'map_url'         => trim($_POST['map_url'] ?? ''),
-      'map_lat'         => trim($_POST['map_lat'] ?? ''),
-      'map_lng'         => trim($_POST['map_lng'] ?? ''),
-      'social_youtube'  => trim($_POST['social_youtube'] ?? ''),
-      'social_linkedin' => trim($_POST['social_linkedin'] ?? ''),
-      'social_facebook' => trim($_POST['social_facebook'] ?? ''),
-      'footer_text'     => trim($_POST['footer_text'] ?? ''),
-      'bar_membership'  => trim($_POST['bar_membership'] ?? ''),
-    ];
+    $settings = array_merge(
+      [
+        'company_name'    => trim($_POST['company_name'] ?? ''),
+        'address_street'  => trim($_POST['address_street'] ?? ''),
+        'address_city'    => trim($_POST['address_city'] ?? ''),
+        'ico'             => trim($_POST['ico'] ?? ''),
+        'dic'             => trim($_POST['dic'] ?? ''),
+        'databox'         => trim($_POST['databox'] ?? ''),
+        'phone'           => trim($_POST['phone'] ?? ''),
+        'email'           => $email,
+        'hours'           => trim($_POST['hours'] ?? ''),
+        'map_url'         => trim($_POST['map_url'] ?? ''),
+        'map_lat'         => trim($_POST['map_lat'] ?? ''),
+        'map_lng'         => trim($_POST['map_lng'] ?? ''),
+        'social_youtube'  => trim($_POST['social_youtube'] ?? ''),
+        'social_linkedin' => trim($_POST['social_linkedin'] ?? ''),
+        'social_facebook' => trim($_POST['social_facebook'] ?? ''),
+      ],
+      langPostScalar('address_country'),
+      langPostScalar('footer_text'),
+      langPostScalar('bar_membership')
+    );
     writeJson('settings.json', $settings);
     flash('Nastavení bylo uloženo a projeví se ihned na webu.');
     header('Location: /admin/settings.php');
@@ -51,6 +53,8 @@ adminHeader('Kontakty a nastavení', 'settings');
 
 <form method="POST">
   <?= csrfField() ?>
+  <?php langSwitch(); ?>
+  <p class="form-hint" style="margin-bottom:1.5rem;">Přepínač jazyka se vztahuje na pole „Země“, „Členství“ a „Text v patičce“ — jediné přeložitelné údaje na této stránce.</p>
 
   <div class="card" style="margin-bottom:1.5rem;">
     <div class="card__title">Základní údaje</div>
@@ -68,10 +72,7 @@ adminHeader('Kontakty a nastavení', 'settings');
         <input type="text" id="address_city" name="address_city" value="<?= htmlspecialchars($s['address_city']) ?>">
       </div>
     </div>
-    <div class="form-group">
-      <label for="address_country">Země</label>
-      <input type="text" id="address_country" name="address_country" value="<?= htmlspecialchars($s['address_country']) ?>">
-    </div>
+    <?php langInput('address_country', 'Země', $s); ?>
   </div>
 
   <div class="card" style="margin-bottom:1.5rem;">
@@ -90,10 +91,7 @@ adminHeader('Kontakty a nastavení', 'settings');
       <label for="databox">ID datové schránky</label>
       <input type="text" id="databox" name="databox" value="<?= htmlspecialchars($s['databox']) ?>">
     </div>
-    <div class="form-group">
-      <label for="bar_membership">Členství (např. Česká advokátní komora)</label>
-      <input type="text" id="bar_membership" name="bar_membership" value="<?= htmlspecialchars($s['bar_membership']) ?>">
-    </div>
+    <?php langInput('bar_membership', 'Členství (např. Česká advokátní komora)', $s); ?>
   </div>
 
   <div class="card" style="margin-bottom:1.5rem;">
@@ -150,10 +148,7 @@ adminHeader('Kontakty a nastavení', 'settings');
 
   <div class="card" style="margin-bottom:1.5rem;">
     <div class="card__title">Text v patičce</div>
-    <div class="form-group">
-      <label for="footer_text">Krátký popis kanceláře v patičce webu</label>
-      <textarea id="footer_text" name="footer_text" rows="3"><?= htmlspecialchars($s['footer_text']) ?></textarea>
-    </div>
+    <?php langTextarea('footer_text', 'Krátký popis kanceláře v patičce webu', $s, 3); ?>
   </div>
 
   <button type="submit" class="btn btn--primary">Uložit a publikovat</button>

@@ -3,6 +3,8 @@
     "address_street": "Chrudimská 1418/2",
     "address_city": "130 00 Praha 3, Vinohrady",
     "address_country": "Česká republika",
+    "address_country_en": "Czech Republic",
+    "address_country_de": "Tschechische Republik",
     "ico": "03562795",
     "dic": "",
     "databox": "2fr4sth",
@@ -16,5 +18,9 @@
     "social_linkedin": "",
     "social_facebook": "",
     "footer_text": "Prémiové právní poradenství a zastupování s více jak 15letou zkušeností. Individuální přístup ke každému klientovi.",
-    "bar_membership": "Člen České advokátní komory"
+    "footer_text_en": "Premium legal advice and representation with over 15 years' experience. A personalised approach to every client.",
+    "footer_text_de": "Erstklassige Rechtsberatung und Vertretung mit mehr als 15 Jahren Erfahrung. Individuelle Betreuung jedes Mandanten.",
+    "bar_membership": "Člen České advokátní komory",
+    "bar_membership_en": "Member of the Czech Bar Association",
+    "bar_membership_de": "Mitglied der Tschechischen Anwaltskammer"
 }

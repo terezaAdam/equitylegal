@@ -1,11 +1,13 @@
 <?php
 // ── includes/header.php ──
 // $pageTitle, $pageDesc must be set before including
+require_once __DIR__ . '/i18n.php';
+$locale = elLocale();
 $pageTitle = $pageTitle ?? 'Advokátní kancelář EQUITY LEGAL';
 $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Praha, mezinárodní právo, více jak 15 let zkušeností.';
 ?>
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="<?= htmlspecialchars(t('html_lang')) ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,22 +27,27 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
 
 <!-- ── Navigation ── -->
 <header>
-  <nav class="nav" role="navigation" aria-label="Hlavní menu">
+  <nav class="nav" role="navigation" aria-label="<?= htmlspecialchars(t('nav_aria')) ?>">
     <div class="nav__inner">
-      <a href="/index.php" class="nav__logo" aria-label="EQUITY LEGAL – úvodní stránka">
-        <img src="/assets/img/logo-transparent.png" alt="EQUITY LEGAL – advokátní kancelář" class="nav__logo-img" style="height:46px;max-height:46px;width:auto;display:block;">
+      <a href="<?= lu('/index.php') ?>" class="nav__logo" aria-label="<?= htmlspecialchars(t('nav_logo_aria')) ?>">
+        <img src="/assets/img/logo-transparent.png" alt="EQUITY LEGAL" class="nav__logo-img" style="height:46px;max-height:46px;width:auto;display:block;">
       </a>
 
       <ul class="nav__links" role="list">
-        <li><a href="/sluzby.php"   class="nav__link">Právní služby</a></li>
-        <li><a href="/pripady.php"  class="nav__link">Blog</a></li>
-        <li><a href="/tym.php"      class="nav__link">Náš tým</a></li>
-        <li><a href="/publikace.php" class="nav__link">Publikace</a></li>
-        <li><a href="/kontakty.php" class="nav__link">Kontakty</a></li>
+        <li><a href="<?= lu('/sluzby.php') ?>"    class="nav__link"><?= htmlspecialchars(t('nav_services')) ?></a></li>
+        <li><a href="<?= lu('/pripady.php') ?>"   class="nav__link"><?= htmlspecialchars(t('nav_blog')) ?></a></li>
+        <li><a href="<?= lu('/tym.php') ?>"       class="nav__link"><?= htmlspecialchars(t('nav_team')) ?></a></li>
+        <li><a href="<?= lu('/publikace.php') ?>" class="nav__link"><?= htmlspecialchars(t('nav_publications')) ?></a></li>
+        <li><a href="<?= lu('/kontakty.php') ?>"  class="nav__link"><?= htmlspecialchars(t('nav_contacts')) ?></a></li>
       </ul>
 
       <div class="nav__controls">
-        <button class="nav__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <div class="nav__lang" role="list" aria-label="<?= htmlspecialchars(t('nav_lang_switch')) ?>">
+          <?php foreach (EL_LOCALES as $loc): ?>
+            <a href="<?= lu('/index.php', $loc) ?>" class="nav__lang-link<?= $loc === $locale ? ' active' : '' ?>"><?= strtoupper($loc) ?></a>
+          <?php endforeach; ?>
+        </div>
+        <button class="nav__hamburger" id="hamburger" aria-label="<?= htmlspecialchars(t('nav_open_menu')) ?>" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -49,11 +56,16 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
 
   <!-- Mobile nav -->
   <div class="nav__mobile" id="mobileNav" role="list">
-    <a href="/sluzby.php"    class="nav__link" role="listitem">Právní služby</a>
-    <a href="/pripady.php"   class="nav__link" role="listitem">Blog</a>
-    <a href="/tym.php"       class="nav__link" role="listitem">Náš tým</a>
-    <a href="/publikace.php" class="nav__link" role="listitem">Publikace</a>
-    <a href="/kontakty.php"  class="nav__link" role="listitem">Kontakty</a>
+    <a href="<?= lu('/sluzby.php') ?>"    class="nav__link" role="listitem"><?= htmlspecialchars(t('nav_services')) ?></a>
+    <a href="<?= lu('/pripady.php') ?>"   class="nav__link" role="listitem"><?= htmlspecialchars(t('nav_blog')) ?></a>
+    <a href="<?= lu('/tym.php') ?>"       class="nav__link" role="listitem"><?= htmlspecialchars(t('nav_team')) ?></a>
+    <a href="<?= lu('/publikace.php') ?>" class="nav__link" role="listitem"><?= htmlspecialchars(t('nav_publications')) ?></a>
+    <a href="<?= lu('/kontakty.php') ?>"  class="nav__link" role="listitem"><?= htmlspecialchars(t('nav_contacts')) ?></a>
+    <div class="nav__lang nav__lang--mobile" role="list" aria-label="<?= htmlspecialchars(t('nav_lang_switch')) ?>">
+      <?php foreach (EL_LOCALES as $loc): ?>
+        <a href="<?= lu('/index.php', $loc) ?>" class="nav__lang-link<?= $loc === $locale ? ' active' : '' ?>"><?= strtoupper($loc) ?></a>
+      <?php endforeach; ?>
+    </div>
   </div>
 </header>
 

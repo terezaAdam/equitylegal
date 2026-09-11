@@ -159,6 +159,26 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
   gap: .75rem;
 }
+.nav__lang {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: var(--font-h);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.nav__lang-link {
+  color: var(--text-muted);
+  transition: color var(--tr);
+}
+.nav__lang-link:hover { color: var(--navy); }
+.nav__lang-link.active { color: var(--burgundy); }
+.nav__lang--mobile {
+  margin-top: 1.5rem;
+  justify-content: center;
+  font-size: .85rem;
+}
 
 .nav__hamburger {
   display: none;

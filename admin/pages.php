@@ -9,15 +9,26 @@ $pageNames  = ['home' => 'Domovská stránka', 'sluzby' => 'Právní služby', '
 $current    = $_GET['page'] ?? 'home';
 if (!in_array($current, $validPages, true)) $current = 'home';
 
+// Base (Czech) field names per page — the _en/_de variants are derived from these.
+$baseFields = [
+  'home'   => ['hero_label', 'hero_title', 'hero_desc', 'hero_image', 'about_title', 'about_text1', 'about_text2', 'about_text3', 'about_image', 'cta_title', 'cta_text'],
+  'sluzby' => ['hero_label', 'hero_title', 'hero_desc'],
+  'tym'    => ['hero_label', 'hero_title', 'hero_desc'],
+];
+$nonTranslatable = ['hero_image', 'about_image'];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   requireCsrf();
   $postedPage = $_POST['page'] ?? '';
   if (in_array($postedPage, $validPages, true)) {
     $all = readJson('pages.json');
-    $fields = array_keys(elPage($postedPage));
     $record = [];
-    foreach ($fields as $f) {
-      $record[$f] = trim($_POST[$f] ?? '');
+    foreach ($baseFields[$postedPage] as $f) {
+      if (in_array($f, $nonTranslatable, true)) {
+        $record[$f] = trim($_POST[$f] ?? '');
+      } else {
+        $record += langPostScalar($f);
+      }
     }
     $all[$postedPage] = $record;
     writeJson('pages.json', $all);
@@ -43,23 +54,13 @@ adminHeader('Stránky', 'pages');
   <?= csrfField() ?>
   <input type="hidden" name="page" value="<?= htmlspecialchars($current) ?>">
 
+  <?php langSwitch(); ?>
+
   <div class="card" style="margin-bottom:1.5rem;">
     <div class="card__title">Úvodní sekce</div>
-    <div class="form-group">
-      <label for="hero_label">Krátký popisek nad nadpisem</label>
-      <input type="text" id="hero_label" name="hero_label" value="<?= htmlspecialchars($data['hero_label']) ?>">
-    </div>
-    <div class="form-group">
-      <label for="hero_title">Hlavní nadpis</label>
-      <input type="text" id="hero_title" name="hero_title" value="<?= htmlspecialchars($data['hero_title']) ?>">
-      <?php if ($current === 'home'): ?>
-        <p style="font-size:.78rem;color:var(--muted);margin-top:.3rem;">Část textu lze zvýraznit značkami &lt;em&gt;…&lt;/em&gt;, stejně jako je tomu teď.</p>
-      <?php endif; ?>
-    </div>
-    <div class="form-group">
-      <label for="hero_desc">Úvodní text</label>
-      <textarea id="hero_desc" name="hero_desc" rows="3"><?= htmlspecialchars($data['hero_desc']) ?></textarea>
-    </div>
+    <?php langInput('hero_label', 'Krátký popisek nad nadpisem', $data); ?>
+    <?php langInput('hero_title', 'Hlavní nadpis', $data, '', $current === 'home' ? 'Část textu lze zvýraznit značkami &lt;em&gt;…&lt;/em&gt;, stejně jako je tomu teď.' : ''); ?>
+    <?php langTextarea('hero_desc', 'Úvodní text', $data, 3); ?>
     <?php if ($current === 'home'): ?>
       <div class="form-group">
         <label for="hero_image">Hlavní obrázek</label>
@@ -79,22 +80,10 @@ adminHeader('Stránky', 'pages');
   <?php if ($current === 'home'): ?>
     <div class="card" style="margin-bottom:1.5rem;">
       <div class="card__title">Sekce „O nás“</div>
-      <div class="form-group">
-        <label for="about_title">Nadpis</label>
-        <input type="text" id="about_title" name="about_title" value="<?= htmlspecialchars($data['about_title']) ?>">
-      </div>
-      <div class="form-group">
-        <label for="about_text1">Text – odstavec 1</label>
-        <textarea id="about_text1" name="about_text1" rows="3"><?= htmlspecialchars($data['about_text1']) ?></textarea>
-      </div>
-      <div class="form-group">
-        <label for="about_text2">Text – odstavec 2</label>
-        <textarea id="about_text2" name="about_text2" rows="3"><?= htmlspecialchars($data['about_text2']) ?></textarea>
-      </div>
-      <div class="form-group">
-        <label for="about_text3">Text – odstavec 3</label>
-        <textarea id="about_text3" name="about_text3" rows="2"><?= htmlspecialchars($data['about_text3']) ?></textarea>
-      </div>
+      <?php langInput('about_title', 'Nadpis', $data); ?>
+      <?php langTextarea('about_text1', 'Text – odstavec 1', $data, 3); ?>
+      <?php langTextarea('about_text2', 'Text – odstavec 2', $data, 3); ?>
+      <?php langTextarea('about_text3', 'Text – odstavec 3', $data, 2); ?>
       <div class="form-group">
         <label for="about_image">Obrázek kanceláře</label>
         <select id="about_image" name="about_image">
@@ -110,14 +99,8 @@ adminHeader('Stránky', 'pages');
 
     <div class="card" style="margin-bottom:1.5rem;">
       <div class="card__title">Závěrečná výzva ke kontaktu</div>
-      <div class="form-group">
-        <label for="cta_title">Nadpis</label>
-        <input type="text" id="cta_title" name="cta_title" value="<?= htmlspecialchars($data['cta_title']) ?>">
-      </div>
-      <div class="form-group">
-        <label for="cta_text">Text</label>
-        <input type="text" id="cta_text" name="cta_text" value="<?= htmlspecialchars($data['cta_text']) ?>">
-      </div>
+      <?php langInput('cta_title', 'Nadpis', $data); ?>
+      <?php langInput('cta_text', 'Text', $data); ?>
     </div>
   <?php endif; ?>
 

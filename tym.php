@@ -1,8 +1,10 @@
 <?php
 require_once __DIR__ . '/includes/data.php';
+require_once __DIR__ . '/includes/i18n.php';
+$locale = elLocale();
 $p = elPage('tym');
-$pageTitle = 'Náš tým – EQUITY LEGAL';
-$pageDesc  = 'Tým advokátní kanceláře EQUITY LEGAL: zkušení advokáti s mezinárodní praxí poskytující poradenství v češtině, angličtině, němčině a dalších jazycích.';
+$pageTitle = tm('tym_title');
+$pageDesc  = tm('tym_desc');
 
 $team = json_decode(file_get_contents(__DIR__ . '/data/team.json'), true) ?? [];
 $coreTeam     = array_filter($team, fn($m) => empty($m['external']));
@@ -40,13 +42,13 @@ $teamJs = [];
 foreach ($team as $m) {
   $teamJs[$m['id']] = [
     'name'            => $m['name'],
-    'position'        => $m['position'],
+    'position'        => tf($m, 'position'),
     'photo'           => $m['photo'] ?? '',
     'email'           => $m['email'],
     'phone'           => $m['phone'] ?? '',
-    'bio'             => $m['bio'],
-    'specializations' => $m['specializations'] ?? [],
-    'projects'        => $m['projects'] ?? [],
+    'bio'             => tf($m, 'bio'),
+    'specializations' => tfArr($m, 'specializations'),
+    'projects'        => tfArr($m, 'projects'),
   ];
 }
 
@@ -56,10 +58,10 @@ include 'includes/header.php';
 
 <section class="page-hero">
   <div class="container">
-    <p class="page-hero__label"><?= htmlspecialchars($p['hero_label']) ?></p>
-    <h1 class="page-hero__title"><?= htmlspecialchars($p['hero_title']) ?></h1>
+    <p class="page-hero__label"><?= htmlspecialchars(tf($p, 'hero_label')) ?></p>
+    <h1 class="page-hero__title"><?= htmlspecialchars(tf($p, 'hero_title')) ?></h1>
     <div class="page-hero__desc">
-      <p><?= htmlspecialchars($p['hero_desc']) ?></p>
+      <p><?= htmlspecialchars(tf($p, 'hero_desc')) ?></p>
     </div>
   </div>
 </section>
@@ -80,7 +82,7 @@ include 'includes/header.php';
           </div>
           <div class="team-card__body">
             <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
-            <div class="team-card__title"><?= htmlspecialchars($m['position']) ?></div>
+            <div class="team-card__title"><?= htmlspecialchars(tf($m, 'position')) ?></div>
             <div class="team-card__langs">
               <?php foreach (($m['languages'] ?? []) as $lang): ?>
                 <span class="lang-tag"><?= htmlspecialchars($lang) ?></span>
@@ -105,7 +107,7 @@ include 'includes/header.php';
           </div>
           <div class="team-card__body">
             <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
-            <div class="team-card__title"><?= htmlspecialchars($m['position']) ?></div>
+            <div class="team-card__title"><?= htmlspecialchars(tf($m, 'position')) ?></div>
             <div class="team-card__langs">
               <?php foreach (($m['languages'] ?? []) as $lang): ?>
                 <span class="lang-tag"><?= htmlspecialchars($lang) ?></span>
@@ -121,9 +123,9 @@ include 'includes/header.php';
 <?php if (!empty($externalTeam)): ?>
 <section class="section section--alt">
   <div class="container">
-    <p class="section-label">Spolupráce</p>
-    <h2>Externí spolupracující osoby</h2>
-    <p class="external-intro">Na vybraných zahraničních agendách spolupracujeme s prověřenými externími specialisty.</p>
+    <p class="section-label"><?= htmlspecialchars(t('team_collaboration_label')) ?></p>
+    <h2><?= htmlspecialchars(t('team_external_title')) ?></h2>
+    <p class="external-intro"><?= htmlspecialchars(t('team_external_intro')) ?></p>
     <div class="team-grid team-grid--compact">
       <?php foreach ($externalTeam as $m):
         $initials = '';
@@ -138,7 +140,7 @@ include 'includes/header.php';
           </div>
           <div class="team-card__body">
             <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
-            <div class="team-card__title"><?= htmlspecialchars($m['position']) ?></div>
+            <div class="team-card__title"><?= htmlspecialchars(tf($m, 'position')) ?></div>
             <div class="team-card__langs">
               <?php foreach (($m['languages'] ?? []) as $lang): ?>
                 <span class="lang-tag"><?= htmlspecialchars($lang) ?></span>
@@ -178,15 +180,15 @@ include 'includes/header.php';
     </div>
     <div class="modal__body">
       <div class="modal__section">
-        <div class="modal__section-title">Bio</div>
+        <div class="modal__section-title"><?= htmlspecialchars(t('team_modal_bio')) ?></div>
         <div id="mBio"></div>
       </div>
       <div class="modal__section">
-        <div class="modal__section-title">Specializace</div>
+        <div class="modal__section-title"><?= htmlspecialchars(t('team_modal_spec')) ?></div>
         <ul id="mSpecializations" style="list-style:none;display:flex;flex-direction:column;gap:.4rem;"></ul>
       </div>
       <div class="modal__section">
-        <div class="modal__section-title">Referenční projekty</div>
+        <div class="modal__section-title"><?= htmlspecialchars(t('team_modal_projects')) ?></div>
         <ul id="mProjects" style="list-style:none;display:flex;flex-direction:column;gap:.5rem;"></ul>
       </div>
     </div>
@@ -215,9 +217,9 @@ include 'includes/header.php';
 
 <section class="cta-banner">
   <div class="container">
-    <h2>Chcete s námi spolupracovat?</h2>
-    <p>Kontaktujte konkrétního advokáta nebo nám napište na kancelář@equitylegal.cz.</p>
-    <a href="/kontakty.php" class="btn btn--primary">Poslat poptávku</a>
+    <h2><?= htmlspecialchars(t('team_cta_title')) ?></h2>
+    <p><?= htmlspecialchars(t('team_cta_text')) ?></p>
+    <a href="<?= lu('/kontakty.php') ?>" class="btn btn--primary"><?= htmlspecialchars(t('btn_send_enquiry')) ?></a>
   </div>
 </section>
 

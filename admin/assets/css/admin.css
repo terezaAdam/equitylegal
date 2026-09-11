@@ -163,6 +163,44 @@ tr:hover td { background: #fafafa; }
 .form-group textarea { resize: vertical; min-height: 160px; }
 .form-hint { font-size: .75rem; color: var(--muted); margin-top: .3rem; }
 
+/* ── Language tabs (multi-language content fields) ── */
+.lang-switch {
+  display: inline-flex;
+  gap: .25rem;
+  margin-bottom: 1.25rem;
+  padding: .25rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+}
+.lang-switch__btn {
+  font-family: var(--font-h);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: .35rem .9rem;
+  border-radius: calc(var(--r) - 2px);
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  cursor: pointer;
+  transition: background var(--tr), color var(--tr);
+}
+.lang-switch__btn:hover { color: var(--text); }
+.lang-switch__btn.active { background: var(--burgundy); color: #fff; }
+.lang-field[data-lang="en"], .lang-field[data-lang="de"] { display: none; }
+.lang-field-label {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: var(--burgundy);
+  background: rgba(144,78,85,.08);
+  padding: .1rem .5rem;
+  border-radius: 9999px;
+  margin-bottom: .35rem;
+}
+
 /* ── Alert / Flash ── */
 .alert { padding: .75rem 1rem; border-radius: var(--r); margin-bottom: 1rem; font-size: .88rem; }
 .alert--success { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
