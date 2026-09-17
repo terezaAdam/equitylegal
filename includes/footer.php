@@ -1,4 +1,3 @@
-<!-- ── Footer ── -->
 </main>
 
 <?php
@@ -22,6 +21,7 @@ $fSettings = elSettings();
           <li><a href="<?= lu('/tym.php') ?>"><?= htmlspecialchars(t('nav_team')) ?></a></li>
           <li><a href="<?= lu('/publikace.php') ?>"><?= htmlspecialchars(t('nav_publications')) ?></a></li>
           <li><a href="<?= lu('/kontakty.php') ?>"><?= htmlspecialchars(t('nav_contacts')) ?></a></li>
+          <li><a href="<?= lu('/ochrana-osobnich-udaju.php') ?>"><?= htmlspecialchars(t('nav_privacy')) ?></a></li>
         </ul>
       </div>
       <div>

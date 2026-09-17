@@ -1,6 +1,13 @@
 <?php
-// ── includes/i18n.php ──
 // Minimal i18n layer: locale is read from the URL prefix (/en/, /de/, else cs).
+
+// Never leak stack traces / file paths to visitors; still log errors server-side.
+if (!in_array($_SERVER['SERVER_NAME'] ?? '', ['localhost', '127.0.0.1'], true)) {
+  ini_set('display_errors', '0');
+  ini_set('display_startup_errors', '0');
+  error_reporting(E_ALL);
+  ini_set('log_errors', '1');
+}
 
 define('EL_LOCALES', ['cs', 'en', 'de']);
 
@@ -21,10 +28,72 @@ function elLocalePrefix(?string $locale = null): string {
   return $locale === 'cs' ? '' : '/' . $locale;
 }
 
-// Build a localized link to a site-root-relative path, e.g. lu('/sluzby.php') -> /en/sluzby.php
+// Maps a canonical page (PHP filename without extension) to its clean,
+// per-locale URL slug. Pages not listed here keep their .php filename.
+function elSlugMap(): array {
+  return [
+    'sluzby'                 => ['cs' => 'sluzby',                 'en' => 'services',      'de' => 'leistungen'],
+    'pripady'                 => ['cs' => 'pripady',                'en' => 'blog',          'de' => 'blog'],
+    'tym'                     => ['cs' => 'tym',                    'en' => 'team',          'de' => 'team'],
+    'publikace'               => ['cs' => 'publikace',              'en' => 'publications',  'de' => 'publikationen'],
+    'kontakty'                => ['cs' => 'kontakty',               'en' => 'contact',       'de' => 'kontakt'],
+    'ochrana-osobnich-udaju'  => ['cs' => 'ochrana-osobnich-udaju', 'en' => 'privacy-policy','de' => 'datenschutz'],
+  ];
+}
+
+// Given a locale and a translated slug, returns the canonical PHP filename
+// (without extension), or null if the slug isn't recognized.
+function elSlugToFile(string $locale, string $slug): ?string {
+  foreach (elSlugMap() as $file => $slugs) {
+    if (($slugs[$locale] ?? null) === $slug) return $file;
+  }
+  return null;
+}
+
+// Determines the canonical page (PHP filename without extension) being requested,
+// regardless of which locale's slug was used in the URL. Falls back to 'index'.
+function elCurrentPage(): string {
+  $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
+  $locale = elLocale();
+  $prefix = elLocalePrefix($locale);
+  $rest = $prefix !== '' && str_starts_with($path, $prefix) ? substr($path, strlen($prefix)) : $path;
+  $rest = trim($rest, '/');
+
+  if ($rest === '') return 'index';
+
+  if (str_ends_with($rest, '.php')) {
+    return basename($rest, '.php');
+  }
+
+  $file = elSlugToFile($locale, $rest);
+  return $file ?? $rest;
+}
+
+// Builds a link to switch the current page into another locale, preserving
+// the page and its query string (e.g. staying on "services" when switching to DE).
+function luSwitchLocale(string $locale): string {
+  $url = lu('/' . elCurrentPage() . '.php', $locale);
+  $query = $_SERVER['QUERY_STRING'] ?? '';
+  return $query !== '' ? $url . '?' . $query : $url;
+}
+
+// Build a localized link to a site-root-relative path, e.g. lu('/sluzby.php') -> /en/services
 // Preserves an optional query string passed separately.
 function lu(string $path, ?string $locale = null): string {
+  $locale = $locale ?? elLocale();
   $path = '/' . ltrim($path, '/');
+  $base = basename($path, '.php');
+
+  if ($base === 'index') {
+    return elLocalePrefix($locale) . '/';
+  }
+
+  $map = elSlugMap();
+  if (isset($map[$base])) {
+    $slug = $map[$base][$locale] ?? $map[$base]['cs'];
+    return elLocalePrefix($locale) . '/' . $slug;
+  }
+
   return elLocalePrefix($locale) . $path;
 }
 
@@ -153,7 +222,12 @@ function elDict(): array {
     'form_service_select' => ['cs' => '— Vyberte oblast —', 'en' => '— Select an area —','de' => '— Bereich auswählen —'],
     'form_message'        => ['cs' => 'Váš dotaz', 'en' => 'Your enquiry',               'de' => 'Ihre Anfrage'],
     'form_message_ph'     => ['cs' => 'Popište váš právní dotaz nebo situaci…', 'en' => 'Please describe your legal enquiry or situation...', 'de' => 'Beschreiben Sie bitte Ihre rechtliche Anfrage oder Situation...'],
-    'form_gdpr'           => ['cs' => 'Souhlasím se zpracováním osobních údajů za účelem zodpovězení mého dotazu dle zásad ochrany osobních údajů.', 'en' => 'I consent to the processing of my personal data for the purpose of responding to my enquiry in accordance with the privacy policy.', 'de' => 'Ich stimme der Verarbeitung meiner personenbezogenen Daten zur Beantwortung meiner Anfrage gemäß der Datenschutzrichtlinie zu.'],
+    'form_gdpr'           => ['cs' => 'Odesláním formuláře berete na vědomí zpracování osobních údajů za účelem vyřízení vašeho dotazu. Podrobné informace o zpracování osobních údajů naleznete v [Zásadách ochrany osobních údajů].', 'en' => 'By submitting the form, you acknowledge the processing of your personal data for the purpose of handling your enquiry. Detailed information on the processing of personal data can be found in our [Privacy Policy].', 'de' => 'Mit dem Absenden des Formulars nehmen Sie die Verarbeitung Ihrer personenbezogenen Daten zur Bearbeitung Ihrer Anfrage zur Kenntnis. Ausführliche Informationen zur Verarbeitung personenbezogener Daten finden Sie in den [Datenschutzbestimmungen].'],
+    'gdpr_link_text'      => ['cs' => 'Zásadách ochrany osobních údajů', 'en' => 'Privacy Policy', 'de' => 'Datenschutzbestimmungen'],
+
+    // Privacy policy page
+    'nav_privacy'         => ['cs' => 'Ochrana osobních údajů', 'en' => 'Privacy Policy', 'de' => 'Datenschutz'],
+    'privacy_hero_label'  => ['cs' => 'Ochrana osobních údajů', 'en' => 'Data protection', 'de' => 'Datenschutz'],
 
     // Blog / articles
     'blog_hero_label'    => ['cs' => 'Aktuality a řešené případy', 'en' => 'News and cases handled', 'de' => 'Aktuelles und bearbeitete Fälle'],

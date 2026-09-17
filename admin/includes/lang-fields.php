@@ -1,5 +1,4 @@
 <?php
-// ── admin/includes/lang-fields.php ──
 // Renders a CS/EN/DE language switcher and multi-language form fields.
 // Convention: the Czech value lives under the bare field name, EN/DE under
 // `{field}_en` / `{field}_de` — matching includes/i18n.php's tf()/tfArr().

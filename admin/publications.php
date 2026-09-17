@@ -5,7 +5,6 @@ requireAuth();
 
 $pubs = readJson('publications.json');
 
-// ── DELETE ──
 if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
   $delId = (int)$_GET['delete'];
   $pubs = array_values(array_filter($pubs, fn($p) => $p['id'] !== $delId));
@@ -15,7 +14,6 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
   exit;
 }
 
-// ── SAVE ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   requireCsrf();
   $id      = isset($_POST['id']) && $_POST['id'] !== '' ? (int)$_POST['id'] : null;

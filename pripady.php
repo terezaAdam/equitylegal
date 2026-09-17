@@ -64,7 +64,6 @@ include 'includes/header.php';
 </section>
 
 <?php if ($article): ?>
-<!-- ── Article detail ── -->
 <section class="section">
   <div class="container">
     <div class="article-detail">
@@ -105,7 +104,6 @@ include 'includes/header.php';
 </section>
 
 <?php else: ?>
-<!-- ── Article listing ── -->
 <section class="section">
   <div class="container">
 

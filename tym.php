@@ -154,7 +154,6 @@ include 'includes/header.php';
 </section>
 <?php endif; ?>
 
-<!-- ── Team Modal ── -->
 <div class="modal-overlay" id="teamModal" role="dialog" aria-modal="true" aria-label="Detail člena týmu">
   <div class="modal">
     <button class="modal__close" id="modalClose" aria-label="Zavřít">×</button>

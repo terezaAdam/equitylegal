@@ -1,5 +1,4 @@
 <?php
-// ── admin/includes/config.example.php ──
 // Šablona konfiguračního souboru. Zkopírujte na server jako "config.php"
 // (mimo Git) a vložte skutečný hash hesla.
 //

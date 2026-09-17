@@ -1,5 +1,4 @@
 <?php
-// ── includes/services-data.php ──
 // Central multilingual content for the 13 legal service areas, shared by
 // index.php (teaser grid) and sluzby.php (full detail sections).
 // Each entry keeps the original Czech field plus _en / _de counterparts,

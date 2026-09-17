@@ -199,12 +199,13 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = 'Odesílání…';
 
     try {
-      const res = await fetch('send-contact.php', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
+        headers: { Accept: 'application/json' },
         body: new FormData(form),
       });
       const json = await res.json();
-      if (json.ok) {
+      if (json.success) {
         form.reset();
         if (successMsg) successMsg.classList.add('visible');
         btn.textContent = 'Odesláno ✓';

@@ -1,5 +1,4 @@
 <?php
-// ── includes/data.php ──
 // Shared JSON data-store helpers, used by both the public site and the admin.
 
 require_once __DIR__ . '/i18n.php';

@@ -6,7 +6,6 @@ requireAuth();
 $articles = readJson('articles.json');
 $allServices = readJson('services.json');
 
-// ── DELETE ──
 if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
   $delId = (int)$_GET['delete'];
   $articles = array_values(array_filter($articles, fn($a) => $a['id'] !== $delId));
@@ -16,7 +15,6 @@ if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
   exit;
 }
 
-// ── SAVE (new or edit) ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   requireCsrf();
   $id       = isset($_POST['id']) && $_POST['id'] !== '' ? (int)$_POST['id'] : null;
@@ -57,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   exit;
 }
 
-// ── EDIT form ──
 $editing = null;
 if (isset($_GET['edit'])) {
   foreach ($articles as $a) {
@@ -72,7 +69,6 @@ adminHeader('Blog / Články', 'articles');
 ?>
 
 <?php if ($editing || $isNew): ?>
-<!-- ── FORM ── -->
 <div style="margin-bottom:1rem;">
   <a href="/admin/articles.php" class="btn btn--outline btn--sm">← Zpět na seznam</a>
 </div>
@@ -140,7 +136,6 @@ adminHeader('Blog / Články', 'articles');
 </div>
 
 <?php else: ?>
-<!-- ── LIST ── -->
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;">
   <p style="color:var(--muted);font-size:.88rem;">Celkem <?= count($articles) ?> článků / případů</p>
   <a href="/admin/articles.php?new=1" class="btn btn--primary">+ Nový článek</a>

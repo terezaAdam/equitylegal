@@ -1,5 +1,4 @@
 <?php
-// ── admin/includes/auth.php ──
 require_once __DIR__ . '/../../includes/data.php';
 
 ini_set('session.cookie_httponly', '1');
@@ -10,13 +9,13 @@ if (!empty($_SERVER['HTTPS'])) {
 session_start();
 
 // Skutečné heslo je v admin/includes/config.php, který NENÍ v Gitu.
-// Pokud chybí (např. čerstvý checkout), použije se dočasné nouzové heslo
-// jen pro lokální vývoj – před nasazením na produkci vždy vytvořte config.php.
+// Pokud chybí, přihlášení musí selhat – žádné výchozí/nouzové heslo.
 $configFile = __DIR__ . '/config.php';
 if (file_exists($configFile)) {
   require_once $configFile;
 } else {
-  define('ADMIN_PASSWORD_HASH', password_hash('ZmenteMe123!', PASSWORD_DEFAULT));
+  http_response_code(500);
+  exit('Admin configuration missing.');
 }
 
 define('DATA_DIR', EL_DATA_DIR);
@@ -106,7 +105,6 @@ function logout(): void {
   session_destroy();
 }
 
-// ── CSRF ──
 function csrfToken(): string {
   if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -130,13 +128,11 @@ function requireCsrf(): void {
   }
 }
 
-// ── Logging ──
 function elLogSecurity(string $msg): void {
   $line = '[' . date('Y-m-d H:i:s') . '] ' . $msg . "\n";
   @file_put_contents(__DIR__ . '/../../data/.security.log', $line, FILE_APPEND | LOCK_EX);
 }
 
-// ── JSON storage (delegates to shared helper) ──
 function readJson(string $file): array { return elReadJson($file); }
 function writeJson(string $file, array $data): bool { return elWriteJson($file, $data); }
 

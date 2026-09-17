@@ -6,7 +6,6 @@ $pageDesc  = tm('home_desc');
 include 'includes/header.php';
 ?>
 
-<!-- ── Hero ── -->
 <section class="hero" aria-label="Úvod">
   <div class="hero__image-side">
     <img src="/<?= htmlspecialchars(ltrim($p['hero_image'], '/')) ?>" alt="EQUITY LEGAL" loading="eager">
@@ -27,7 +26,6 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ── Hodnoty ── -->
 <section class="section" aria-labelledby="values-heading">
   <div class="container">
     <p class="section-label"><?= htmlspecialchars(t('why_us')) ?></p>
@@ -71,7 +69,6 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ── Přehled služeb ── -->
 <section class="section section--alt" aria-labelledby="services-heading">
   <div class="container">
     <p class="section-label"><?= htmlspecialchars(t('what_we_offer')) ?></p>
@@ -96,7 +93,6 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ── Recenze klientů ── -->
 <section class="section" aria-labelledby="reviews-heading">
   <div class="container">
     <p class="section-label"><?= htmlspecialchars(t('client_reviews_label')) ?></p>
@@ -146,7 +142,6 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ── O kanceláři ── -->
 <section class="section" aria-labelledby="about-heading">
   <div class="container">
     <div class="about__grid">
@@ -189,7 +184,6 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ── Aktuality ── -->
 <section class="section" aria-labelledby="news-heading">
   <div class="container">
     <p class="section-label"><?= htmlspecialchars(t('news_label')) ?></p>
@@ -232,7 +226,6 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ── CTA Banner ── -->
 <section class="cta-banner" aria-label="Kontaktujte nás">
   <div class="container">
     <h2><?= htmlspecialchars(tf($p, 'cta_title')) ?></h2>

@@ -16,7 +16,6 @@ const ALLOWED_MIME = [
 $media = readJson('media.json');
 $errors = [];
 
-// ── UPLOAD ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
   requireCsrf();
   $file = $_FILES['image'];
@@ -65,7 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
   exit;
 }
 
-// ── DELETE ──
 if (isset($_POST['delete_id'])) {
   requireCsrf();
   $delId = (int)$_POST['delete_id'];

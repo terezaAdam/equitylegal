@@ -1,5 +1,4 @@
 <?php
-// ── admin/includes/layout.php ──
 // Helper: render admin page wrapper
 // Usage: adminHeader('Page Title'); ... content ... adminFooter();
 require_once __DIR__ . '/lang-fields.php';

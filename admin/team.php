@@ -5,7 +5,6 @@ requireAuth();
 
 $team = readJson('team.json');
 
-// ── DELETE ──
 if (isset($_GET['delete'])) {
   $delId = $_GET['delete'];
   $team = array_values(array_filter($team, fn($m) => $m['id'] !== $delId));
@@ -15,7 +14,6 @@ if (isset($_GET['delete'])) {
   exit;
 }
 
-// ── SAVE ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   requireCsrf();
   $origId = trim($_POST['orig_id'] ?? '');

@@ -88,7 +88,6 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- ── Cover lightbox ── -->
 <div class="img-lightbox" id="imgLightbox" role="dialog" aria-modal="true" aria-label="Zvětšená obálka">
   <button class="img-lightbox__close" id="imgLightboxClose" aria-label="<?= htmlspecialchars(t('btn_close')) ?>">×</button>
   <img id="imgLightboxImg" src="" alt="">

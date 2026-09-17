@@ -1,17 +1,12 @@
-# ── EQUITY LEGAL – webkitty .htaccess ──
-
 Options -Indexes
 ServerSignature Off
 
-# ── Character encoding ──
 AddDefaultCharset UTF-8
 
-# ── Compression ──
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json
 </IfModule>
 
-# ── Browser caching ──
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/css "access plus 1 month"
@@ -22,15 +17,27 @@ AddDefaultCharset UTF-8
   ExpiresByType image/webp "access plus 6 months"
 </IfModule>
 
-# ── Security headers ──
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'"
 </IfModule>
 
-# ── Protect data directory ──
+# Block access to sensitive/hidden files regardless of directory
+<FilesMatch "^\.(?!well-known)|\.(env|json|log|md|lock)$">
+  Require all denied
+</FilesMatch>
+<Files "composer.json">
+  Require all denied
+</Files>
+<Files "composer.lock">
+  Require all denied
+</Files>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
@@ -45,15 +52,59 @@ AddDefaultCharset UTF-8
   RewriteRule ^administrace/?$ admin/index.php [L]
   RewriteRule ^administrace/([a-zA-Z0-9_-]+)/?$ admin/$1.php [L,QSA]
 
-  # Language mutations: /en/... and /de/... map to the same PHP files at the root.
+  # Canonical redirects: old .php URLs -> clean, translated slugs
+  RewriteRule ^index\.php$ / [R=301,L]
+  RewriteRule ^en/index\.php$ /en/ [R=301,L]
+  RewriteRule ^de/index\.php$ /de/ [R=301,L]
+
+  RewriteRule ^sluzby\.php$ /sluzby [R=301,L]
+  RewriteRule ^pripady\.php$ /pripady [R=301,L]
+  RewriteRule ^tym\.php$ /tym [R=301,L]
+  RewriteRule ^publikace\.php$ /publikace [R=301,L]
+  RewriteRule ^kontakty\.php$ /kontakty [R=301,L]
+  RewriteRule ^ochrana-osobnich-udaju\.php$ /ochrana-osobnich-udaju [R=301,L]
+
+  RewriteRule ^en/sluzby\.php$ /en/services [R=301,L]
+  RewriteRule ^en/pripady\.php$ /en/blog [R=301,L]
+  RewriteRule ^en/tym\.php$ /en/team [R=301,L]
+  RewriteRule ^en/publikace\.php$ /en/publications [R=301,L]
+  RewriteRule ^en/kontakty\.php$ /en/contact [R=301,L]
+  RewriteRule ^en/ochrana-osobnich-udaju\.php$ /en/privacy-policy [R=301,L]
+
+  RewriteRule ^de/sluzby\.php$ /de/leistungen [R=301,L]
+  RewriteRule ^de/pripady\.php$ /de/blog [R=301,L]
+  RewriteRule ^de/tym\.php$ /de/team [R=301,L]
+  RewriteRule ^de/publikace\.php$ /de/publikationen [R=301,L]
+  RewriteRule ^de/kontakty\.php$ /de/kontakt [R=301,L]
+  RewriteRule ^de/ochrana-osobnich-udaju\.php$ /de/datenschutz [R=301,L]
+
+  # Clean translated URLs -> actual files
+  RewriteRule ^sluzby/?$ sluzby.php [L,QSA]
+  RewriteRule ^pripady/?$ pripady.php [L,QSA]
+  RewriteRule ^tym/?$ tym.php [L,QSA]
+  RewriteRule ^publikace/?$ publikace.php [L,QSA]
+  RewriteRule ^kontakty/?$ kontakty.php [L,QSA]
+  RewriteRule ^ochrana-osobnich-udaju/?$ ochrana-osobnich-udaju.php [L,QSA]
+
+  RewriteRule ^en/services/?$ sluzby.php [L,QSA]
+  RewriteRule ^en/blog/?$ pripady.php [L,QSA]
+  RewriteRule ^en/team/?$ tym.php [L,QSA]
+  RewriteRule ^en/publications/?$ publikace.php [L,QSA]
+  RewriteRule ^en/contact/?$ kontakty.php [L,QSA]
+  RewriteRule ^en/privacy-policy/?$ ochrana-osobnich-udaju.php [L,QSA]
+
+  RewriteRule ^de/leistungen/?$ sluzby.php [L,QSA]
+  RewriteRule ^de/blog/?$ pripady.php [L,QSA]
+  RewriteRule ^de/team/?$ tym.php [L,QSA]
+  RewriteRule ^de/publikationen/?$ publikace.php [L,QSA]
+  RewriteRule ^de/kontakt/?$ kontakty.php [L,QSA]
+  RewriteRule ^de/datenschutz/?$ ochrana-osobnich-udaju.php [L,QSA]
+
+  # Language mutation roots; any other .php file under /en/ or /de/ (e.g. clanek.php)
+  # keeps working under its Czech filename as a legacy fallback.
   RewriteCond %{REQUEST_URI} !^/(en|de)/(assets|admin|data|download)/
   RewriteRule ^(en|de)/?$ index.php [L,QSA]
   RewriteRule ^(en|de)/([a-zA-Z0-9_-]+)\.php$ $2.php [L,QSA]
-
-  # Optional: clean URLs (remove .php)
-  # RewriteCond %{REQUEST_FILENAME} !-f
-  # RewriteCond %{REQUEST_FILENAME} !-d
-  # RewriteRule ^([^\.]+)$ $1.php [NC,L]
 </IfModule>
 
 # ── Block PHP execution inside uploads folders ──

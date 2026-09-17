@@ -1,5 +1,4 @@
 <?php
-// ── includes/header.php ──
 // $pageTitle, $pageDesc must be set before including
 require_once __DIR__ . '/i18n.php';
 $locale = elLocale();
@@ -25,7 +24,6 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
 </head>
 <body>
 
-<!-- ── Navigation ── -->
 <header>
   <nav class="nav" role="navigation" aria-label="<?= htmlspecialchars(t('nav_aria')) ?>">
     <div class="nav__inner">
@@ -44,7 +42,7 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
       <div class="nav__controls">
         <div class="nav__lang" role="list" aria-label="<?= htmlspecialchars(t('nav_lang_switch')) ?>">
           <?php foreach (EL_LOCALES as $loc): ?>
-            <a href="<?= lu('/index.php', $loc) ?>" class="nav__lang-link<?= $loc === $locale ? ' active' : '' ?>"><?= strtoupper($loc) ?></a>
+            <a href="<?= luSwitchLocale($loc) ?>" class="nav__lang-link<?= $loc === $locale ? ' active' : '' ?>"><?= strtoupper($loc) ?></a>
           <?php endforeach; ?>
         </div>
         <button class="nav__hamburger" id="hamburger" aria-label="<?= htmlspecialchars(t('nav_open_menu')) ?>" aria-expanded="false">
@@ -63,7 +61,7 @@ $pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Pr
     <a href="<?= lu('/kontakty.php') ?>"  class="nav__link" role="listitem"><?= htmlspecialchars(t('nav_contacts')) ?></a>
     <div class="nav__lang nav__lang--mobile" role="list" aria-label="<?= htmlspecialchars(t('nav_lang_switch')) ?>">
       <?php foreach (EL_LOCALES as $loc): ?>
-        <a href="<?= lu('/index.php', $loc) ?>" class="nav__lang-link<?= $loc === $locale ? ' active' : '' ?>"><?= strtoupper($loc) ?></a>
+        <a href="<?= luSwitchLocale($loc) ?>" class="nav__lang-link<?= $loc === $locale ? ' active' : '' ?>"><?= strtoupper($loc) ?></a>
       <?php endforeach; ?>
     </div>
   </div>

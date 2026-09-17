@@ -108,24 +108,28 @@ include 'includes/header.php';
           </div>
 
           <form id="contactForm" novalidate>
+            <input type="hidden" name="access_key" value="db1222d4-3525-45a8-9471-25fbf0c9c087">
+            <input type="hidden" name="subject" value="Nový dotaz z webu EQUITY LEGAL">
+            <input type="hidden" name="from_name" value="Web EQUITY LEGAL">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form-row">
               <div class="form-group">
                 <label for="fname"><?= htmlspecialchars(t('form_name')) ?></label>
-                <input type="text" id="fname" name="name" required placeholder="Jan Novák" autocomplete="name">
+                <input type="text" id="fname" name="jmeno" required autocomplete="name">
               </div>
               <div class="form-group">
                 <label for="femail"><?= htmlspecialchars(t('form_email')) ?></label>
-                <input type="email" id="femail" name="email" required placeholder="jan@firma.cz" autocomplete="email">
+                <input type="email" id="femail" name="email" required autocomplete="email">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
                 <label for="fphone"><?= htmlspecialchars(t('form_phone_optional')) ?> <span style="font-weight:400;text-transform:none;font-size:.85em;"><?= htmlspecialchars(t('form_optional')) ?></span></label>
-                <input type="tel" id="fphone" name="phone" placeholder="+420 xxx xxx xxx" autocomplete="tel">
+                <input type="tel" id="fphone" name="telefon" autocomplete="tel">
               </div>
               <div class="form-group">
                 <label for="fservice"><?= htmlspecialchars(t('form_service')) ?></label>
-                <select id="fservice" name="service">
+                <select id="fservice" name="sluzba">
                   <option value=""><?= htmlspecialchars(t('form_service_select')) ?></option>
                   <?php
                   $formServices = require __DIR__ . '/includes/services-data.php';
@@ -137,12 +141,16 @@ include 'includes/header.php';
             </div>
             <div class="form-group">
               <label for="fmsg"><?= htmlspecialchars(t('form_message')) ?></label>
-              <textarea id="fmsg" name="message" required placeholder="<?= htmlspecialchars(t('form_message_ph')) ?>"></textarea>
+              <textarea id="fmsg" name="zprava" required placeholder="<?= htmlspecialchars(t('form_message_ph')) ?>"></textarea>
             </div>
             <div class="form-group" style="display:flex;align-items:flex-start;gap:.75rem;">
-              <input type="checkbox" id="fgdpr" name="gdpr" required style="width:auto;margin-top:.2rem;flex-shrink:0;">
+              <input type="checkbox" id="fgdpr" required style="width:auto;margin-top:.2rem;flex-shrink:0;">
               <label for="fgdpr" style="font-family:var(--font-b);font-size:.8rem;text-transform:none;letter-spacing:0;color:var(--text-muted);">
-                <?= htmlspecialchars(t('form_gdpr')) ?>
+                <?php
+                  $gdprText = htmlspecialchars(t('form_gdpr'));
+                  $gdprLink = '<a href="' . htmlspecialchars(lu('/ochrana-osobnich-udaju.php')) . '" target="_blank" rel="noopener" style="color:var(--burgundy);text-decoration:underline;">' . htmlspecialchars(t('gdpr_link_text')) . '</a>';
+                  echo preg_replace('/\[.*?\]/', $gdprLink, $gdprText);
+                ?>
               </label>
             </div>
             <button type="submit" class="btn btn--primary"><?= htmlspecialchars(t('btn_submit_enquiry')) ?></button>
