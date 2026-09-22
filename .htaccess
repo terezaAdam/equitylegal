@@ -17,6 +17,16 @@ AddDefaultCharset UTF-8
   ExpiresByType image/webp "access plus 6 months"
 </IfModule>
 
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'"
+</IfModule>
+
 # Block access to sensitive/hidden files regardless of directory
 <FilesMatch "^\.(?!well-known)|\.(env|json|log|md|lock)$">
   Require all denied
@@ -46,29 +56,50 @@ AddDefaultCharset UTF-8
   # Absolute https:// target avoids a redirect loop behind a CDN/load balancer
   # that terminates TLS before it reaches Apache (mod_rewrite can't see HTTPS
   # was used, so a scheme-relative target would fall back to http://).
+  RewriteCond %{THE_REQUEST} \s/+index\.php[?\s] [NC]
   RewriteRule ^index\.php$ https://%{HTTP_HOST}/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+en/index\.php[?\s] [NC]
   RewriteRule ^en/index\.php$ https://%{HTTP_HOST}/en/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+de/index\.php[?\s] [NC]
   RewriteRule ^de/index\.php$ https://%{HTTP_HOST}/de/ [R=301,L]
 
+  RewriteCond %{THE_REQUEST} \s/+sluzby\.php[?\s] [NC]
   RewriteRule ^sluzby\.php$ https://%{HTTP_HOST}/sluzby [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+pripady\.php[?\s] [NC]
   RewriteRule ^pripady\.php$ https://%{HTTP_HOST}/pripady [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+tym\.php[?\s] [NC]
   RewriteRule ^tym\.php$ https://%{HTTP_HOST}/tym [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+publikace\.php[?\s] [NC]
   RewriteRule ^publikace\.php$ https://%{HTTP_HOST}/publikace [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+kontakty\.php[?\s] [NC]
   RewriteRule ^kontakty\.php$ https://%{HTTP_HOST}/kontakty [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+ochrana-osobnich-udaju\.php[?\s] [NC]
   RewriteRule ^ochrana-osobnich-udaju\.php$ https://%{HTTP_HOST}/ochrana-osobnich-udaju [R=301,L]
 
+  RewriteCond %{THE_REQUEST} \s/+en/sluzby\.php[?\s] [NC]
   RewriteRule ^en/sluzby\.php$ https://%{HTTP_HOST}/en/services [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+en/pripady\.php[?\s] [NC]
   RewriteRule ^en/pripady\.php$ https://%{HTTP_HOST}/en/blog [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+en/tym\.php[?\s] [NC]
   RewriteRule ^en/tym\.php$ https://%{HTTP_HOST}/en/team [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+en/publikace\.php[?\s] [NC]
   RewriteRule ^en/publikace\.php$ https://%{HTTP_HOST}/en/publications [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+en/kontakty\.php[?\s] [NC]
   RewriteRule ^en/kontakty\.php$ https://%{HTTP_HOST}/en/contact [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+en/ochrana-osobnich-udaju\.php[?\s] [NC]
   RewriteRule ^en/ochrana-osobnich-udaju\.php$ https://%{HTTP_HOST}/en/privacy-policy [R=301,L]
 
+  RewriteCond %{THE_REQUEST} \s/+de/sluzby\.php[?\s] [NC]
   RewriteRule ^de/sluzby\.php$ https://%{HTTP_HOST}/de/leistungen [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+de/pripady\.php[?\s] [NC]
   RewriteRule ^de/pripady\.php$ https://%{HTTP_HOST}/de/blog [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+de/tym\.php[?\s] [NC]
   RewriteRule ^de/tym\.php$ https://%{HTTP_HOST}/de/team [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+de/publikace\.php[?\s] [NC]
   RewriteRule ^de/publikace\.php$ https://%{HTTP_HOST}/de/publikationen [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+de/kontakty\.php[?\s] [NC]
   RewriteRule ^de/kontakty\.php$ https://%{HTTP_HOST}/de/kontakt [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+de/ochrana-osobnich-udaju\.php[?\s] [NC]
   RewriteRule ^de/ochrana-osobnich-udaju\.php$ https://%{HTTP_HOST}/de/datenschutz [R=301,L]
 
   # Clean translated URLs -> actual files
