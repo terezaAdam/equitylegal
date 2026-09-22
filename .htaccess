@@ -17,16 +17,6 @@ AddDefaultCharset UTF-8
   ExpiresByType image/webp "access plus 6 months"
 </IfModule>
 
-<IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-Frame-Options "SAMEORIGIN"
-  Header set X-XSS-Protection "1; mode=block"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
-  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'"
-</IfModule>
-
 # Block access to sensitive/hidden files regardless of directory
 <FilesMatch "^\.(?!well-known)|\.(env|json|log|md|lock)$">
   Require all denied
