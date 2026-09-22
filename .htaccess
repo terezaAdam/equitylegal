@@ -53,30 +53,33 @@ AddDefaultCharset UTF-8
   RewriteRule ^administrace/([a-zA-Z0-9_-]+)/?$ admin/$1.php [L,QSA]
 
   # Canonical redirects: old .php URLs -> clean, translated slugs
-  RewriteRule ^index\.php$ / [R=301,L]
-  RewriteRule ^en/index\.php$ /en/ [R=301,L]
-  RewriteRule ^de/index\.php$ /de/ [R=301,L]
+  # Absolute https:// target avoids a redirect loop behind a CDN/load balancer
+  # that terminates TLS before it reaches Apache (mod_rewrite can't see HTTPS
+  # was used, so a scheme-relative target would fall back to http://).
+  RewriteRule ^index\.php$ https://%{HTTP_HOST}/ [R=301,L]
+  RewriteRule ^en/index\.php$ https://%{HTTP_HOST}/en/ [R=301,L]
+  RewriteRule ^de/index\.php$ https://%{HTTP_HOST}/de/ [R=301,L]
 
-  RewriteRule ^sluzby\.php$ /sluzby [R=301,L]
-  RewriteRule ^pripady\.php$ /pripady [R=301,L]
-  RewriteRule ^tym\.php$ /tym [R=301,L]
-  RewriteRule ^publikace\.php$ /publikace [R=301,L]
-  RewriteRule ^kontakty\.php$ /kontakty [R=301,L]
-  RewriteRule ^ochrana-osobnich-udaju\.php$ /ochrana-osobnich-udaju [R=301,L]
+  RewriteRule ^sluzby\.php$ https://%{HTTP_HOST}/sluzby [R=301,L]
+  RewriteRule ^pripady\.php$ https://%{HTTP_HOST}/pripady [R=301,L]
+  RewriteRule ^tym\.php$ https://%{HTTP_HOST}/tym [R=301,L]
+  RewriteRule ^publikace\.php$ https://%{HTTP_HOST}/publikace [R=301,L]
+  RewriteRule ^kontakty\.php$ https://%{HTTP_HOST}/kontakty [R=301,L]
+  RewriteRule ^ochrana-osobnich-udaju\.php$ https://%{HTTP_HOST}/ochrana-osobnich-udaju [R=301,L]
 
-  RewriteRule ^en/sluzby\.php$ /en/services [R=301,L]
-  RewriteRule ^en/pripady\.php$ /en/blog [R=301,L]
-  RewriteRule ^en/tym\.php$ /en/team [R=301,L]
-  RewriteRule ^en/publikace\.php$ /en/publications [R=301,L]
-  RewriteRule ^en/kontakty\.php$ /en/contact [R=301,L]
-  RewriteRule ^en/ochrana-osobnich-udaju\.php$ /en/privacy-policy [R=301,L]
+  RewriteRule ^en/sluzby\.php$ https://%{HTTP_HOST}/en/services [R=301,L]
+  RewriteRule ^en/pripady\.php$ https://%{HTTP_HOST}/en/blog [R=301,L]
+  RewriteRule ^en/tym\.php$ https://%{HTTP_HOST}/en/team [R=301,L]
+  RewriteRule ^en/publikace\.php$ https://%{HTTP_HOST}/en/publications [R=301,L]
+  RewriteRule ^en/kontakty\.php$ https://%{HTTP_HOST}/en/contact [R=301,L]
+  RewriteRule ^en/ochrana-osobnich-udaju\.php$ https://%{HTTP_HOST}/en/privacy-policy [R=301,L]
 
-  RewriteRule ^de/sluzby\.php$ /de/leistungen [R=301,L]
-  RewriteRule ^de/pripady\.php$ /de/blog [R=301,L]
-  RewriteRule ^de/tym\.php$ /de/team [R=301,L]
-  RewriteRule ^de/publikace\.php$ /de/publikationen [R=301,L]
-  RewriteRule ^de/kontakty\.php$ /de/kontakt [R=301,L]
-  RewriteRule ^de/ochrana-osobnich-udaju\.php$ /de/datenschutz [R=301,L]
+  RewriteRule ^de/sluzby\.php$ https://%{HTTP_HOST}/de/leistungen [R=301,L]
+  RewriteRule ^de/pripady\.php$ https://%{HTTP_HOST}/de/blog [R=301,L]
+  RewriteRule ^de/tym\.php$ https://%{HTTP_HOST}/de/team [R=301,L]
+  RewriteRule ^de/publikace\.php$ https://%{HTTP_HOST}/de/publikationen [R=301,L]
+  RewriteRule ^de/kontakty\.php$ https://%{HTTP_HOST}/de/kontakt [R=301,L]
+  RewriteRule ^de/ochrana-osobnich-udaju\.php$ https://%{HTTP_HOST}/de/datenschutz [R=301,L]
 
   # Clean translated URLs -> actual files
   RewriteRule ^sluzby/?$ sluzby.php [L,QSA]
