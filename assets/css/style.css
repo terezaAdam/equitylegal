@@ -1568,6 +1568,8 @@ body { padding-top: var(--nh); }
   .section { padding: 60px 0; }
   .page-hero { padding: 60px 0 48px; }
   .pub-item { grid-template-columns: 1fr; }
+  .pub-item--book .pub-item__row { flex-direction: column; }
+  .pub-item--book .pub-item__thumb { width: 120px; height: 170px; }
   .values__grid { grid-template-columns: 1fr; }
 }
 
