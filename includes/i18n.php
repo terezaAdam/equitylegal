@@ -1,7 +1,4 @@
 <?php
-// Minimal i18n layer: locale is read from the URL prefix (/en/, /de/, else cs).
-
-// Never leak stack traces / file paths to visitors; still log errors server-side.
 if (!in_array($_SERVER['SERVER_NAME'] ?? '', ['localhost', '127.0.0.1'], true)) {
   ini_set('display_errors', '0');
   ini_set('display_startup_errors', '0');
@@ -28,8 +25,6 @@ function elLocalePrefix(?string $locale = null): string {
   return $locale === 'cs' ? '' : '/' . $locale;
 }
 
-// Maps a canonical page (PHP filename without extension) to its clean,
-// per-locale URL slug. Pages not listed here keep their .php filename.
 function elSlugMap(): array {
   return [
     'sluzby'                 => ['cs' => 'sluzby',                 'en' => 'services',      'de' => 'leistungen'],
@@ -41,8 +36,6 @@ function elSlugMap(): array {
   ];
 }
 
-// Given a locale and a translated slug, returns the canonical PHP filename
-// (without extension), or null if the slug isn't recognized.
 function elSlugToFile(string $locale, string $slug): ?string {
   foreach (elSlugMap() as $file => $slugs) {
     if (($slugs[$locale] ?? null) === $slug) return $file;
@@ -50,8 +43,6 @@ function elSlugToFile(string $locale, string $slug): ?string {
   return null;
 }
 
-// Determines the canonical page (PHP filename without extension) being requested,
-// regardless of which locale's slug was used in the URL. Falls back to 'index'.
 function elCurrentPage(): string {
   $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
   $locale = elLocale();
@@ -69,16 +60,12 @@ function elCurrentPage(): string {
   return $file ?? $rest;
 }
 
-// Builds a link to switch the current page into another locale, preserving
-// the page and its query string (e.g. staying on "services" when switching to DE).
 function luSwitchLocale(string $locale): string {
   $url = lu('/' . elCurrentPage() . '.php', $locale);
   $query = $_SERVER['QUERY_STRING'] ?? '';
   return $query !== '' ? $url . '?' . $query : $url;
 }
 
-// Build a localized link to a site-root-relative path, e.g. lu('/sluzby.php') -> /en/services
-// Preserves an optional query string passed separately.
 function lu(string $path, ?string $locale = null): string {
   $locale = $locale ?? elLocale();
   $path = '/' . ltrim($path, '/');
@@ -97,8 +84,6 @@ function lu(string $path, ?string $locale = null): string {
   return elLocalePrefix($locale) . $path;
 }
 
-// Locale-aware field reader: for a given data array and base field name,
-// returns $arr[field_LOCALE] if present and non-empty, otherwise falls back to $arr[field] (Czech).
 function tf(array $arr, string $field, ?string $locale = null): string {
   $locale = $locale ?? elLocale();
   if ($locale !== 'cs') {
@@ -108,7 +93,6 @@ function tf(array $arr, string $field, ?string $locale = null): string {
   return (string)($arr[$field] ?? '');
 }
 
-// Same as tf() but for array-valued fields (e.g. specializations, projects lists).
 function tfArr(array $arr, string $field, ?string $locale = null): array {
   $locale = $locale ?? elLocale();
   if ($locale !== 'cs') {
@@ -334,7 +318,6 @@ function t(string $key): string {
   return $d[$key][$locale] ?? $d[$key]['cs'] ?? $key;
 }
 
-// Translates an article/blog category value (stored in Czech in the data files).
 function catLabel(string $category): string {
   $map = [
     'Aktuality'        => ['en' => 'News',         'de' => 'Aktuelles'],

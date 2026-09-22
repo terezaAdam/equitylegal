@@ -53,8 +53,8 @@ include 'includes/header.php';
             </ul>
           </div>
         <?php endforeach; ?>
-      </div><!-- /content -->
-    </div><!-- /services-layout -->
+      </div>
+    </div>
   </div>
 </section>
 
