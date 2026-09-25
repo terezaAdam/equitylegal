@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Přihlášení – EQUITY LEGAL Admin</title>
   <meta name="robots" content="noindex,nofollow">
-  <link rel="stylesheet" href="/admin/assets/css/admin.css">
+  <link rel="stylesheet" href="/admin/assets/css/admin.css?v=<?= filemtime(__DIR__ . "/assets/css/admin.css") ?>">
 </head>
 <body>
 <div class="login-page">
