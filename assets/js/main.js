@@ -191,12 +191,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Contact form ── */
   const form = document.getElementById('contactForm');
+  // Bots fill and submit instantly; a person needs at least a few seconds.
+  const MIN_FILL_MS = 3000;
+  const formLoadedAt = Date.now();
+
+  const setFieldError = (field, message) => {
+    const group = field.closest('.form-group');
+    if (!group) return;
+    let msg = group.querySelector('.form-error-msg');
+    if (message) {
+      group.classList.add('has-error');
+      field.setAttribute('aria-invalid', 'true');
+      if (!msg) {
+        msg = document.createElement('span');
+        msg.className = 'form-error-msg';
+        msg.id = field.id + '-error';
+        // The consent checkbox sits in a flex row with its label; put the message under the label text.
+        (field.type === 'checkbox' ? group.querySelector('label') : group).appendChild(msg);
+        field.setAttribute('aria-describedby', msg.id);
+      }
+      msg.textContent = message;
+    } else {
+      group.classList.remove('has-error');
+      field.removeAttribute('aria-invalid');
+      msg?.remove();
+      field.removeAttribute('aria-describedby');
+    }
+  };
+
+  const validateField = (field) => {
+    const m = form.dataset;
+    if (field.type === 'checkbox') return field.checked ? '' : m.msgGdpr;
+    if (field.required && !field.value.trim()) return m.msgRequired;
+    if (field.type === 'email' && !field.validity.valid) return m.msgEmail;
+    return '';
+  };
+
+  const fieldsToCheck = form ? [...form.querySelectorAll('[required]')] : [];
+  fieldsToCheck.forEach((field) => {
+    const evt = field.type === 'checkbox' ? 'change' : 'input';
+    field.addEventListener(evt, () => {
+      if (field.closest('.form-group')?.classList.contains('has-error')) setFieldError(field, validateField(field));
+    });
+  });
+
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const m = form.dataset;
     const btn = form.querySelector('[type=submit]');
     const successMsg = document.getElementById('formSuccess');
+    const alertBox = document.getElementById('formAlert');
+    if (alertBox) alertBox.hidden = true;
+
+    let firstInvalid = null;
+    fieldsToCheck.forEach((field) => {
+      const error = validateField(field);
+      setFieldError(field, error);
+      if (error && !firstInvalid) firstInvalid = field;
+    });
+    if (firstInvalid) {
+      firstInvalid.focus();
+      return;
+    }
+
+    if (Date.now() - formLoadedAt < MIN_FILL_MS) {
+      if (alertBox) {
+        alertBox.textContent = m.msgTooFast;
+        alertBox.hidden = false;
+      }
+      return;
+    }
+
+    const btnLabel = btn.textContent;
     btn.disabled = true;
-    btn.textContent = 'Odesílání…';
+    btn.textContent = m.msgSending;
 
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
@@ -208,14 +276,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (json.success) {
         form.reset();
         if (successMsg) successMsg.classList.add('visible');
-        btn.textContent = 'Odesláno ✓';
+        btn.textContent = m.msgSent;
       } else {
-        btn.textContent = 'Chyba – zkuste znovu';
+        btn.textContent = m.msgError;
         btn.disabled = false;
+        setTimeout(() => { btn.textContent = btnLabel; }, 4000);
       }
     } catch {
-      btn.textContent = 'Chyba – zkuste znovu';
+      btn.textContent = m.msgError;
       btn.disabled = false;
+      setTimeout(() => { btn.textContent = btnLabel; }, 4000);
     }
   });
 

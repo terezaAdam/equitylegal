@@ -212,6 +212,13 @@ function elDict(): array {
     'form_message_ph'     => ['cs' => 'Popište váš právní dotaz nebo situaci…', 'en' => 'Please describe your legal enquiry or situation...', 'de' => 'Beschreiben Sie bitte Ihre rechtliche Anfrage oder Situation...'],
     'form_gdpr'           => ['cs' => 'Odesláním formuláře berete na vědomí zpracování osobních údajů za účelem vyřízení vašeho dotazu. Podrobné informace o zpracování osobních údajů naleznete v [Zásadách ochrany osobních údajů].', 'en' => 'By submitting the form, you acknowledge the processing of your personal data for the purpose of handling your enquiry. Detailed information on the processing of personal data can be found in our [Privacy Policy].', 'de' => 'Mit dem Absenden des Formulars nehmen Sie die Verarbeitung Ihrer personenbezogenen Daten zur Bearbeitung Ihrer Anfrage zur Kenntnis. Ausführliche Informationen zur Verarbeitung personenbezogener Daten finden Sie in den [Datenschutzbestimmungen].'],
     'gdpr_link_text'      => ['cs' => 'Zásadách ochrany osobních údajů', 'en' => 'Privacy Policy', 'de' => 'Datenschutzbestimmungen'],
+    'form_sending'        => ['cs' => 'Odesílání…', 'en' => 'Sending…', 'de' => 'Wird gesendet…'],
+    'form_sent'           => ['cs' => 'Odesláno ✓', 'en' => 'Sent ✓', 'de' => 'Gesendet ✓'],
+    'form_error'          => ['cs' => 'Chyba – zkuste znovu', 'en' => 'Error – please try again', 'de' => 'Fehler – bitte erneut versuchen'],
+    'form_err_required'   => ['cs' => 'Vyplňte prosím toto pole.', 'en' => 'Please fill in this field.', 'de' => 'Bitte füllen Sie dieses Feld aus.'],
+    'form_err_email'      => ['cs' => 'Zadejte prosím platný e-mail.', 'en' => 'Please enter a valid e-mail address.', 'de' => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.'],
+    'form_err_gdpr'       => ['cs' => 'Pro odeslání je potřeba potvrdit souhlas.', 'en' => 'Please confirm your consent to send the form.', 'de' => 'Bitte bestätigen Sie Ihre Einwilligung, um das Formular zu senden.'],
+    'form_err_too_fast'   => ['cs' => 'Formulář byl odeslán příliš rychle. Zkuste to prosím za pár sekund znovu.', 'en' => 'The form was submitted too quickly. Please try again in a few seconds.', 'de' => 'Das Formular wurde zu schnell gesendet. Bitte versuchen Sie es in einigen Sekunden erneut.'],
 
     // Privacy policy page
     'nav_privacy'         => ['cs' => 'Ochrana osobních údajů', 'en' => 'Privacy Policy', 'de' => 'Datenschutz'],

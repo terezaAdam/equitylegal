@@ -107,7 +107,15 @@ include 'includes/header.php';
             <?= htmlspecialchars(t('contact_form_success')) ?>
           </div>
 
-          <form id="contactForm" novalidate>
+          <form id="contactForm" novalidate
+            data-msg-sending="<?= htmlspecialchars(t('form_sending')) ?>"
+            data-msg-sent="<?= htmlspecialchars(t('form_sent')) ?>"
+            data-msg-error="<?= htmlspecialchars(t('form_error')) ?>"
+            data-msg-required="<?= htmlspecialchars(t('form_err_required')) ?>"
+            data-msg-email="<?= htmlspecialchars(t('form_err_email')) ?>"
+            data-msg-gdpr="<?= htmlspecialchars(t('form_err_gdpr')) ?>"
+            data-msg-too-fast="<?= htmlspecialchars(t('form_err_too_fast')) ?>">
+            <div class="form-alert" id="formAlert" role="alert" hidden></div>
             <input type="hidden" name="access_key" value="db1222d4-3525-45a8-9471-25fbf0c9c087">
             <input type="hidden" name="subject" value="Nový dotaz z webu EQUITY LEGAL">
             <input type="hidden" name="from_name" value="Web EQUITY LEGAL">
