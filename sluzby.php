@@ -3,7 +3,7 @@ require_once __DIR__ . '/includes/data.php';
 $p = elPage('sluzby');
 $pageTitle = tm('sluzby_title');
 $pageDesc  = tm('sluzby_desc');
-$services = require __DIR__ . '/includes/services-data.php';
+$services = elServices();
 include 'includes/header.php';
 ?>
 

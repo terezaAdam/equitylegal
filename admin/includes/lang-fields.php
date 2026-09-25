@@ -25,7 +25,7 @@ function langInput(string $name, string $label, array $data, string $placeholder
       $field = $code === 'cs' ? $name : $name . '_' . $code;
       $value = $data[$field] ?? '';
     ?>
-      <div class="lang-field" data-lang="<?= $code ?>">
+      <div class="lang-field" data-lang="<?= $code ?>"<?= $code !== 'cs' ? ' hidden' : '' ?>>
         <?php if ($code !== 'cs'): ?><span class="lang-field-label"><?= $langLabel ?></span><?php endif; ?>
         <input type="text" name="<?= htmlspecialchars($field) ?>" value="<?= htmlspecialchars($value) ?>" placeholder="<?= htmlspecialchars($placeholder) ?>">
       </div>
@@ -44,7 +44,7 @@ function langTextarea(string $name, string $label, array $data, int $rows = 3, s
       $field = $code === 'cs' ? $name : $name . '_' . $code;
       $value = $data[$field] ?? '';
     ?>
-      <div class="lang-field" data-lang="<?= $code ?>">
+      <div class="lang-field" data-lang="<?= $code ?>"<?= $code !== 'cs' ? ' hidden' : '' ?>>
         <?php if ($code !== 'cs'): ?><span class="lang-field-label"><?= $langLabel ?></span><?php endif; ?>
         <textarea name="<?= htmlspecialchars($field) ?>" rows="<?= $rows ?>"><?= htmlspecialchars($value) ?></textarea>
       </div>
@@ -63,7 +63,7 @@ function langListTextarea(string $name, string $label, array $data, int $rows = 
       $field = $code === 'cs' ? $name : $name . '_' . $code;
       $value = implode("\n", $data[$field] ?? []);
     ?>
-      <div class="lang-field" data-lang="<?= $code ?>">
+      <div class="lang-field" data-lang="<?= $code ?>"<?= $code !== 'cs' ? ' hidden' : '' ?>>
         <?php if ($code !== 'cs'): ?><span class="lang-field-label"><?= $langLabel ?></span><?php endif; ?>
         <textarea name="<?= htmlspecialchars($field) ?>" rows="<?= $rows ?>"><?= htmlspecialchars($value) ?></textarea>
       </div>

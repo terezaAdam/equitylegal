@@ -160,6 +160,10 @@ function elDict(): array {
     'lang_advice'        => ['cs' => 'jazyků poradenství', 'en' => 'languages of advice','de' => 'Beratungssprachen'],
     'areas_of_law'       => ['cs' => 'oblastí práva', 'en' => 'areas of law',            'de' => 'Rechtsgebiete'],
     'personalised'       => ['cs' => 'individuální přístup', 'en' => 'personalised approach', 'de' => 'individueller Ansatz'],
+    'stat_years_num'     => ['cs' => '15+',  'en' => '15+',  'de' => '15+'],
+    'stat_langs_num'     => ['cs' => '9',    'en' => '9',    'de' => '9'],
+    'stat_areas_num'     => ['cs' => '13',   'en' => '13',   'de' => '13'],
+    'stat_personal_num'  => ['cs' => '100%', 'en' => '100%', 'de' => '100%'],
     'news_label'         => ['cs' => 'Co je nového', 'en' => 'What’s new',              'de' => 'Aktuelles'],
     'news_title'         => ['cs' => 'Z aktualit', 'en' => 'From the news',              'de' => 'Aus den Neuigkeiten'],
     'cta_help_title'      => ['cs' => 'Potřebujete právní pomoc?', 'en' => 'Do you need legal assistance?', 'de' => 'Benötigen Sie rechtliche Hilfe?'],
@@ -234,6 +238,21 @@ function elDict(): array {
     'pub_type_article'   => ['cs' => 'Odborný článek', 'en' => 'Professional article',   'de' => 'Fachartikel'],
     'pub_cta_title'      => ['cs' => 'Chcete vědět více?', 'en' => 'Would you like to know more?', 'de' => 'Möchten Sie mehr wissen?'],
     'pub_cta_text'       => ['cs' => 'Kontaktujte nás pro odbornou konzultaci.', 'en' => 'Contact us for a specialist consultation.', 'de' => 'Kontaktieren Sie uns für eine Fachberatung.'],
+    'pub_cover'          => ['cs' => 'Obálka', 'en' => 'Cover', 'de' => 'Cover'],
+    'pub_cover_zoom'     => ['cs' => 'Zvětšit obálku', 'en' => 'Enlarge cover', 'de' => 'Cover vergrößern'],
+    'pub_cover_zoomed'   => ['cs' => 'Zvětšená obálka', 'en' => 'Enlarged cover', 'de' => 'Vergrößertes Cover'],
+
+    // Article categories
+    'cat_news'           => ['cs' => 'Aktuality', 'en' => 'News', 'de' => 'Aktuelles'],
+    'cat_cases'          => ['cs' => 'Řešené případy', 'en' => 'Case studies', 'de' => 'Fallstudien'],
+
+    // Accessibility labels (read by screen readers, not shown)
+    'aria_intro'         => ['cs' => 'Úvod', 'en' => 'Introduction', 'de' => 'Einleitung'],
+    'aria_contact_us'    => ['cs' => 'Kontaktujte nás', 'en' => 'Contact us', 'de' => 'Kontaktieren Sie uns'],
+    'aria_rating'        => ['cs' => 'Hodnocení 5 z 5 hvězdiček', 'en' => 'Rated 5 out of 5 stars', 'de' => 'Bewertung 5 von 5 Sternen'],
+    'aria_prev_review'   => ['cs' => 'Předchozí recenze', 'en' => 'Previous review', 'de' => 'Vorherige Bewertung'],
+    'aria_next_review'   => ['cs' => 'Další recenze', 'en' => 'Next review', 'de' => 'Nächste Bewertung'],
+    'aria_team_detail'   => ['cs' => 'Detail člena týmu', 'en' => 'Team member details', 'de' => 'Details zum Teammitglied'],
   ];
   return $d;
 }
@@ -242,6 +261,16 @@ function elMetaDict(): array {
   static $m = null;
   if ($m !== null) return $m;
   $m = [
+    'default_title' => [
+      'cs' => 'Advokátní kancelář EQUITY LEGAL',
+      'en' => 'EQUITY LEGAL Law Firm',
+      'de' => 'Anwaltskanzlei EQUITY LEGAL',
+    ],
+    'default_desc' => [
+      'cs' => 'Prémiové právní poradenství a zastupování. Praha, mezinárodní právo, více jak 15 let zkušeností.',
+      'en' => 'Premium legal advice and representation. Prague, international law, more than 15 years of experience.',
+      'de' => 'Erstklassige Rechtsberatung und Vertretung. Prag, internationales Recht, mehr als 15 Jahre Erfahrung.',
+    ],
     'home_title' => [
       'cs' => 'Advokátní kancelář EQUITY LEGAL – Vaše právo, náš závazek',
       'en' => 'EQUITY LEGAL Law Firm – Your Rights, Our Commitment',
@@ -318,11 +347,8 @@ function t(string $key): string {
   return $d[$key][$locale] ?? $d[$key]['cs'] ?? $key;
 }
 
+// Article categories are stored under their Czech name and translated for display.
 function catLabel(string $category): string {
-  $map = [
-    'Aktuality'        => ['en' => 'News',         'de' => 'Aktuelles'],
-    'Řešené případy'   => ['en' => 'Case studies', 'de' => 'Fallstudien'],
-  ];
-  $locale = elLocale();
-  return $map[$category][$locale] ?? $category;
+  $keys = ['Aktuality' => 'cat_news', 'Řešené případy' => 'cat_cases'];
+  return isset($keys[$category]) ? t($keys[$category]) : $category;
 }

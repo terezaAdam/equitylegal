@@ -1,12 +1,14 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/includes/rich-editor.php';
 requireAuth();
 
 $team = readJson('team.json');
 
-if (isset($_GET['delete'])) {
-  $delId = $_GET['delete'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
+  requireCsrf();
+  $delId = (string)$_POST['delete_id'];
   $team = array_values(array_filter($team, fn($m) => $m['id'] !== $delId));
   writeJson('team.json', $team);
   flash('Člen týmu byl smazán.');
@@ -90,10 +92,6 @@ adminHeader('Náš tým', 'team');
         <div class="form-hint">Unikátní identifikátor. Ponechte prázdné pro automatické generování.</div>
       </div>
       <div class="form-group">
-        <label>Pozice / Titul</label>
-        <input type="text" name="position" value="<?= htmlspecialchars($editing['position'] ?? '') ?>" placeholder="Advokát · Partner">
-      </div>
-      <div class="form-group">
         <label>E-mail</label>
         <input type="email" name="email" value="<?= htmlspecialchars($editing['email'] ?? '') ?>">
       </div>
@@ -120,7 +118,7 @@ adminHeader('Náš tým', 'team');
 
     <div class="form-grid">
       <?php langInput('position', 'Pozice / Titul', $editing ?? [], 'Advokát · Partner'); ?>
-      <?php langTextarea('bio', 'Bio', $editing ?? [], 6, 'Podporuje HTML: &lt;p&gt; &lt;strong&gt; &lt;em&gt;'); ?>
+      <?php langTextarea('bio', 'Bio', $editing ?? [], 6, 'Tučné písmo, kurzívu, odrážky a odkazy nastavíte tlačítky v liště editoru.'); ?>
       <?php langListTextarea('specializations', 'Specializace (jedna na řádek)', $editing ?? [], 6); ?>
       <?php langListTextarea('projects', 'Referenční projekty (jeden na řádek)', $editing ?? [], 8); ?>
     </div>
@@ -131,6 +129,7 @@ adminHeader('Náš tým', 'team');
     </div>
   </form>
 </div>
+<?php richEditor('bio', '', 350); ?>
 
 <?php else: ?>
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;">
@@ -155,7 +154,11 @@ adminHeader('Náš tým', 'team');
             <td style="font-size:.78rem;color:var(--muted);"><?= htmlspecialchars(implode(', ', $m['languages'] ?? [])) ?></td>
             <td style="white-space:nowrap;text-align:right;">
               <a href="/admin/team.php?edit=<?= urlencode($m['id']) ?>" class="btn btn--sm btn--outline">Upravit</a>
-              <a href="/admin/team.php?delete=<?= urlencode($m['id']) ?>" class="btn btn--sm btn--danger" onclick="return confirm('Opravdu smazat?')">Smazat</a>
+              <form method="POST" style="display:inline;" onsubmit="return confirm('Opravdu smazat?');">
+                <?= csrfField() ?>
+                <input type="hidden" name="delete_id" value="<?= htmlspecialchars($m['id']) ?>">
+                <button type="submit" class="btn btn--sm btn--danger">Smazat</button>
+              </form>
             </td>
           </tr>
         <?php endforeach; ?>

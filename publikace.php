@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/data.php';
 $pageTitle = tm('pub_title_meta');
 $pageDesc  = tm('pub_desc_meta');
 
@@ -43,7 +43,7 @@ include 'includes/header.php';
             <div class="pub-item__title"><?= htmlspecialchars(tf($p, 'title')) ?></div>
             <div class="pub-item__row">
               <?php if (!empty($p['image'])): ?>
-                <img class="pub-item__thumb" src="<?= htmlspecialchars($p['image']) ?>" alt="Obálka: <?= htmlspecialchars(tf($p, 'title')) ?>" loading="lazy" data-lightbox="<?= htmlspecialchars($p['image']) ?>" data-title="<?= htmlspecialchars(tf($p, 'title')) ?>" role="button" tabindex="0" aria-label="Zvětšit obálku: <?= htmlspecialchars(tf($p, 'title')) ?>">
+                <img class="pub-item__thumb" src="<?= htmlspecialchars($p['image']) ?>" alt="<?= htmlspecialchars(t('pub_cover')) ?>: <?= htmlspecialchars(tf($p, 'title')) ?>" loading="lazy" data-lightbox="<?= htmlspecialchars($p['image']) ?>" data-title="<?= htmlspecialchars(tf($p, 'title')) ?>" role="button" tabindex="0" aria-label="<?= htmlspecialchars(t('pub_cover_zoom')) ?>: <?= htmlspecialchars(tf($p, 'title')) ?>">
               <?php endif; ?>
               <div class="pub-item__content">
                 <p class="pub-item__desc"><?= htmlspecialchars(tf($p, 'description')) ?></p>
@@ -88,7 +88,7 @@ include 'includes/header.php';
   </div>
 </section>
 
-<div class="img-lightbox" id="imgLightbox" role="dialog" aria-modal="true" aria-label="Zvětšená obálka">
+<div class="img-lightbox" id="imgLightbox" role="dialog" aria-modal="true" aria-label="<?= htmlspecialchars(t('pub_cover_zoomed')) ?>">
   <button class="img-lightbox__close" id="imgLightboxClose" aria-label="<?= htmlspecialchars(t('btn_close')) ?>">×</button>
   <img id="imgLightboxImg" src="" alt="">
 </div>

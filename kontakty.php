@@ -132,7 +132,7 @@ include 'includes/header.php';
                 <select id="fservice" name="sluzba">
                   <option value=""><?= htmlspecialchars(t('form_service_select')) ?></option>
                   <?php
-                  $formServices = require __DIR__ . '/includes/services-data.php';
+                  $formServices = elServices();
                   foreach ($formServices as $fs): ?>
                     <option><?= htmlspecialchars(tf($fs, 'label')) ?></option>
                   <?php endforeach; ?>

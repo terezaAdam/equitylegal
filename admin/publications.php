@@ -5,8 +5,9 @@ requireAuth();
 
 $pubs = readJson('publications.json');
 
-if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
-  $delId = (int)$_GET['delete'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
+  requireCsrf();
+  $delId = (int)$_POST['delete_id'];
   $pubs = array_values(array_filter($pubs, fn($p) => $p['id'] !== $delId));
   writeJson('publications.json', $pubs);
   flash('Publikace byla smazána.');
@@ -133,7 +134,11 @@ adminHeader('Publikace', 'publications');
             <td><?= date('j.n.Y', strtotime($p['date'])) ?></td>
             <td style="white-space:nowrap;text-align:right;">
               <a href="/admin/publications.php?edit=<?= $p['id'] ?>" class="btn btn--sm btn--outline">Upravit</a>
-              <a href="/admin/publications.php?delete=<?= $p['id'] ?>" class="btn btn--sm btn--danger" onclick="return confirm('Opravdu smazat?')">Smazat</a>
+              <form method="POST" style="display:inline;" onsubmit="return confirm('Opravdu smazat?');">
+                <?= csrfField() ?>
+                <input type="hidden" name="delete_id" value="<?= htmlspecialchars($p['id']) ?>">
+                <button type="submit" class="btn btn--sm btn--danger">Smazat</button>
+              </form>
             </td>
           </tr>
         <?php endforeach; ?>

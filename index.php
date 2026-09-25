@@ -6,7 +6,7 @@ $pageDesc  = tm('home_desc');
 include 'includes/header.php';
 ?>
 
-<section class="hero" aria-label="Úvod">
+<section class="hero" aria-label="<?= htmlspecialchars(t('aria_intro')) ?>">
   <div class="hero__image-side">
     <img src="/<?= htmlspecialchars(ltrim($p['hero_image'], '/')) ?>" alt="EQUITY LEGAL" loading="eager">
     <div class="hero__overlay"></div>
@@ -77,7 +77,7 @@ include 'includes/header.php';
     <div class="services-grid">
 
       <?php
-      $services = require __DIR__ . '/includes/services-data.php';
+      $services = elServices();
       foreach (array_slice($services, 0, 6) as $s): ?>
         <div class="service-card fade-in">
           <div class="service-card__title"><?= htmlspecialchars(tf($s, 'label')) ?></div>
@@ -99,43 +99,24 @@ include 'includes/header.php';
     <h2 class="section-title" id="reviews-heading"><?= htmlspecialchars(t('client_reviews')) ?></h2>
     <div class="divider"></div>
 
-    <?php
-    $reviews = [
-      ['Lukáš Topinka', [
-        'cs' => 'Společnost Equity Legal jsem požádal o pomoc při řešení problému s koupí nemovitosti. Spolupráce byla perfektní a velmi profesionální. Mohu jedině doporučit!',
-        'en' => 'I asked Equity Legal for help resolving an issue with a property purchase. The cooperation was perfect and highly professional. I can only recommend them!',
-        'de' => 'Ich habe Equity Legal um Hilfe bei einem Problem mit einem Immobilienkauf gebeten. Die Zusammenarbeit war perfekt und sehr professionell. Ich kann sie nur empfehlen!',
-      ]],
-      ['Maxim Vrána', [
-        'cs' => 'Potřeboval jsem profi poradenství a zastupování při řešení nemovitosti a musím říct, že jsem byl maximálně spokojen. Rychlé, efektivní, super komunikace. Proste děkuji 👍',
-        'en' => 'I needed professional advice and representation in dealing with a property matter, and I have to say I was extremely satisfied. Fast, efficient, great communication. Simply, thank you 👍',
-        'de' => 'Ich brauchte professionelle Beratung und Vertretung bei einer Immobilienangelegenheit und muss sagen, dass ich äußerst zufrieden war. Schnell, effizient, super Kommunikation. Einfach danke 👍',
-      ]],
-      ['Pervushyn Andrij', [
-        'cs' => 'S potěšením doporučuji Equity Legal a děkuji jejich týmu za úspěšné vyřešení mé záležitosti s mým bývalým zaměstnavatelem.',
-        'en' => 'I am delighted to recommend Equity Legal and would like to thank their team for successfully resolving my matter with my former employer.',
-        'de' => 'Ich empfehle Equity Legal gerne weiter und danke dem Team für die erfolgreiche Lösung meiner Angelegenheit mit meinem ehemaligen Arbeitgeber.',
-      ]],
-    ];
-    $reviewLocale = elLocale();
-    ?>
+    <?php $reviews = array_filter($p['reviews'] ?? [], fn($r) => trim($r['name'] ?? '') !== '' || trim($r['text'] ?? '') !== ''); ?>
 
     <div class="reviews-carousel" data-reviews-carousel>
       <div class="reviews-carousel__track">
-        <?php foreach ($reviews as $r): $reviewText = $r[1][$reviewLocale] ?? $r[1]['cs']; ?>
+        <?php foreach ($reviews as $r): ?>
           <div class="review-card__slide">
             <div class="review-card">
-              <div class="review-card__stars" aria-label="Hodnocení 5 z 5 hvězdiček">★★★★★</div>
-              <p class="review-card__text">„<?= htmlspecialchars($reviewText) ?>“</p>
-              <div class="review-card__author"><?= htmlspecialchars($r[0]) ?></div>
+              <div class="review-card__stars" aria-label="<?= htmlspecialchars(t('aria_rating')) ?>">★★★★★</div>
+              <p class="review-card__text">„<?= htmlspecialchars(tf($r, 'text')) ?>“</p>
+              <div class="review-card__author"><?= htmlspecialchars($r['name'] ?? '') ?></div>
             </div>
           </div>
         <?php endforeach; ?>
       </div>
       <div class="reviews-carousel__controls">
-        <button type="button" class="reviews-carousel__btn" data-reviews-prev aria-label="Předchozí recenze">←</button>
+        <button type="button" class="reviews-carousel__btn" data-reviews-prev aria-label="<?= htmlspecialchars(t('aria_prev_review')) ?>">←</button>
         <div class="reviews-carousel__dots" data-reviews-dots></div>
-        <button type="button" class="reviews-carousel__btn" data-reviews-next aria-label="Další recenze">→</button>
+        <button type="button" class="reviews-carousel__btn" data-reviews-next aria-label="<?= htmlspecialchars(t('aria_next_review')) ?>">→</button>
       </div>
     </div>
 
@@ -156,19 +137,19 @@ include 'includes/header.php';
   <p><?= htmlspecialchars(tf($p, 'about_text3')) ?></p>
         <div class="about__stats">
           <div>
-            <div class="about__stat-num">15+</div>
+            <div class="about__stat-num"><?= htmlspecialchars(t('stat_years_num')) ?></div>
             <div class="about__stat-label"><?= htmlspecialchars(t('years_exp')) ?></div>
           </div>
           <div>
-            <div class="about__stat-num">9</div>
+            <div class="about__stat-num"><?= htmlspecialchars(t('stat_langs_num')) ?></div>
             <div class="about__stat-label"><?= htmlspecialchars(t('lang_advice')) ?></div>
           </div>
           <div>
-            <div class="about__stat-num">13</div>
+            <div class="about__stat-num"><?= htmlspecialchars(t('stat_areas_num')) ?></div>
             <div class="about__stat-label"><?= htmlspecialchars(t('areas_of_law')) ?></div>
           </div>
           <div>
-            <div class="about__stat-num">100%</div>
+            <div class="about__stat-num"><?= htmlspecialchars(t('stat_personal_num')) ?></div>
             <div class="about__stat-label"><?= htmlspecialchars(t('personalised')) ?></div>
           </div>
         </div>
@@ -226,7 +207,7 @@ include 'includes/header.php';
   </div>
 </section>
 
-<section class="cta-banner" aria-label="Kontaktujte nás">
+<section class="cta-banner" aria-label="<?= htmlspecialchars(t('aria_contact_us')) ?>">
   <div class="container">
     <h2><?= htmlspecialchars(tf($p, 'cta_title')) ?></h2>
     <p><?= htmlspecialchars(tf($p, 'cta_text')) ?></p>

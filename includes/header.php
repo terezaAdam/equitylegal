@@ -2,8 +2,8 @@
 // $pageTitle, $pageDesc must be set before including
 require_once __DIR__ . '/i18n.php';
 $locale = elLocale();
-$pageTitle = $pageTitle ?? 'Advokátní kancelář EQUITY LEGAL';
-$pageDesc  = $pageDesc  ?? 'Prémiové právní poradenství a zastupování. Praha, mezinárodní právo, více jak 15 let zkušeností.';
+$pageTitle = $pageTitle ?? tm('default_title');
+$pageDesc  = $pageDesc  ?? tm('default_desc');
 ?>
 <!DOCTYPE html>
 <html lang="<?= htmlspecialchars(t('html_lang')) ?>">

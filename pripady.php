@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/includes/i18n.php';
+require_once __DIR__ . '/includes/data.php';
 $pageTitle = tm('blog_title_meta');
 $pageDesc  = tm('blog_desc_meta');
 
@@ -86,7 +86,7 @@ include 'includes/header.php';
           <div class="article-sidebar__title"><?= htmlspecialchars(t('article_related_services')) ?></div>
           <ul style="display:flex;flex-direction:column;gap:.5rem;">
             <?php
-            $allServices = require __DIR__ . '/includes/services-data.php';
+            $allServices = elServices();
             $selectedServices = $article['services'] ?? [];
             if (empty($selectedServices)): ?>
               <li><a href="<?= lu('/sluzby.php') ?>" style="font-size:.88rem;"><?= htmlspecialchars(t('nav_services')) ?></a></li>

@@ -1,11 +1,12 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/includes/rich-editor.php';
 requireAuth();
 require_once __DIR__ . '/../includes/data.php';
 
-$validPages = ['home', 'sluzby', 'tym'];
-$pageNames  = ['home' => 'Domovská stránka', 'sluzby' => 'Právní služby', 'tym' => 'Náš tým'];
+$validPages = ['home', 'sluzby', 'tym', 'ochrana'];
+$pageNames  = ['home' => 'Domovská stránka', 'sluzby' => 'Právní služby', 'tym' => 'Náš tým', 'ochrana' => 'Ochrana osobních údajů'];
 $current    = $_GET['page'] ?? 'home';
 if (!in_array($current, $validPages, true)) $current = 'home';
 
@@ -14,6 +15,7 @@ $baseFields = [
   'home'   => ['hero_label', 'hero_title', 'hero_desc', 'hero_image', 'about_title', 'about_text1', 'about_text2', 'about_text3', 'about_image', 'cta_title', 'cta_text'],
   'sluzby' => ['hero_label', 'hero_title', 'hero_desc'],
   'tym'    => ['hero_label', 'hero_title', 'hero_desc'],
+  'ochrana'=> ['hero_title', 'hero_desc', 'content'],
 ];
 $nonTranslatable = ['hero_image', 'about_image'];
 
@@ -28,6 +30,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $record[$f] = trim($_POST[$f] ?? '');
       } else {
         $record += langPostScalar($f);
+      }
+    }
+    if ($postedPage === 'home') {
+      $record['reviews'] = [];
+      foreach ((array)($_POST['reviews'] ?? []) as $r) {
+        $review = [
+          'name'    => trim($r['name'] ?? ''),
+          'text'    => trim($r['text'] ?? ''),
+          'text_en' => trim($r['text_en'] ?? ''),
+          'text_de' => trim($r['text_de'] ?? ''),
+        ];
+        if (empty($r['delete']) && ($review['name'] !== '' || $review['text'] !== '')) {
+          $record['reviews'][] = $review;
+        }
       }
     }
     $all[$postedPage] = $record;
@@ -58,7 +74,9 @@ adminHeader('Stránky', 'pages');
 
   <div class="card" style="margin-bottom:1.5rem;">
     <div class="card__title">Úvodní sekce</div>
-    <?php langInput('hero_label', 'Krátký popisek nad nadpisem', $data); ?>
+    <?php if ($current !== 'ochrana'): ?>
+      <?php langInput('hero_label', 'Krátký popisek nad nadpisem', $data); ?>
+    <?php endif; ?>
     <?php langInput('hero_title', 'Hlavní nadpis', $data, '', $current === 'home' ? 'Část textu lze zvýraznit značkami &lt;em&gt;…&lt;/em&gt;, stejně jako je tomu teď.' : ''); ?>
     <?php langTextarea('hero_desc', 'Úvodní text', $data, 3); ?>
     <?php if ($current === 'home'): ?>
@@ -98,13 +116,55 @@ adminHeader('Stránky', 'pages');
     </div>
 
     <div class="card" style="margin-bottom:1.5rem;">
+      <div class="card__title">Recenze klientů</div>
+      <p class="form-hint" style="margin:-.25rem 0 1rem;">Pro odebrání recenze zaškrtněte „Smazat“ a uložte. Novou recenzi přidáte vyplněním prázdného bloku na konci.</p>
+      <?php
+        $reviews   = array_values($data['reviews'] ?? []);
+        $reviews[] = ['name' => '', 'text' => '', 'text_en' => '', 'text_de' => ''];
+        foreach ($reviews as $i => $r):
+          $isBlank = $i === count($reviews) - 1;
+      ?>
+        <div class="review-block">
+          <div class="review-block__head">
+            <strong><?= $isBlank ? 'Nová recenze' : 'Recenze ' . ($i + 1) ?></strong>
+            <?php if (!$isBlank): ?>
+              <label class="review-block__delete"><input type="checkbox" name="reviews[<?= $i ?>][delete]" value="1"> Smazat</label>
+            <?php endif; ?>
+          </div>
+          <div class="form-group">
+            <label>Jméno klienta</label>
+            <input type="text" name="reviews[<?= $i ?>][name]" value="<?= htmlspecialchars($r['name'] ?? '') ?>">
+          </div>
+          <div class="form-group">
+            <label>Text recenze</label>
+            <?php foreach (EL_ADMIN_LOCALES as $code => $langLabel): $f = $code === 'cs' ? 'text' : 'text_' . $code; ?>
+              <div class="lang-field" data-lang="<?= $code ?>"<?= $code !== 'cs' ? ' hidden' : '' ?>>
+                <?php if ($code !== 'cs'): ?><span class="lang-field-label"><?= $langLabel ?></span><?php endif; ?>
+                <textarea name="reviews[<?= $i ?>][<?= $f ?>]" rows="3"><?= htmlspecialchars($r[$f] ?? '') ?></textarea>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+
+    <div class="card" style="margin-bottom:1.5rem;">
       <div class="card__title">Závěrečná výzva ke kontaktu</div>
       <?php langInput('cta_title', 'Nadpis', $data); ?>
       <?php langInput('cta_text', 'Text', $data); ?>
     </div>
   <?php endif; ?>
 
+  <?php if ($current === 'ochrana'): ?>
+    <div class="card" style="margin-bottom:1.5rem;">
+      <div class="card__title">Text zásad</div>
+      <?php langTextarea('content', 'Obsah stránky', $data, 30, 'Nadpisy, odrážky a odkazy nastavíte tlačítky v liště editoru. Nezapomeňte upravit i datum poslední aktualizace na konci textu.'); ?>
+    </div>
+  <?php endif; ?>
+
   <button type="submit" class="btn btn--primary">Uložit a publikovat</button>
 </form>
+
+<?php if ($current === 'ochrana') richEditor('content'); ?>
 
 <?php adminFooter(); ?>

@@ -1,64 +1,18 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/includes/media-upload.php';
 requireAuth();
 
-define('UPLOAD_DIR', __DIR__ . '/../assets/uploads/');
-define('UPLOAD_URL', '/assets/uploads/');
-define('MAX_UPLOAD_BYTES', 5 * 1024 * 1024); // 5 MB
-const ALLOWED_MIME = [
-  'image/jpeg' => 'jpg',
-  'image/png'  => 'png',
-  'image/webp' => 'webp',
-  'image/gif'  => 'gif',
-];
-
 $media = readJson('media.json');
-$errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
   requireCsrf();
-  $file = $_FILES['image'];
-
-  if ($file['error'] !== UPLOAD_ERR_OK) {
-    $errors[] = 'Nahrání souboru se nezdařilo.';
-  } elseif ($file['size'] > MAX_UPLOAD_BYTES) {
-    $errors[] = 'Soubor je příliš velký (max 5 MB).';
+  $result = saveUploadedImage($_FILES['image'], $_POST['alt'] ?? '');
+  if (isset($result['error'])) {
+    flash($result['error'], 'error');
   } else {
-    $finfo = finfo_open(FILEINFO_MIME_TYPE);
-    $mime  = finfo_file($finfo, $file['tmp_name']);
-    finfo_close($finfo);
-
-    if (!isset(ALLOWED_MIME[$mime])) {
-      $errors[] = 'Nepovolený typ souboru. Povoleny jsou JPG, PNG, WebP a GIF.';
-    } elseif (!@getimagesize($file['tmp_name'])) {
-      $errors[] = 'Soubor není platný obrázek.';
-    } else {
-      $ext  = ALLOWED_MIME[$mime];
-      $base = slugify(pathinfo($file['name'], PATHINFO_FILENAME)) ?: 'obrazek';
-      $name = $base . '-' . substr(bin2hex(random_bytes(4)), 0, 8) . '.' . $ext;
-      while (file_exists(UPLOAD_DIR . $name)) {
-        $name = $base . '-' . substr(bin2hex(random_bytes(4)), 0, 8) . '.' . $ext;
-      }
-      if (move_uploaded_file($file['tmp_name'], UPLOAD_DIR . $name)) {
-        $media[] = [
-          'id'       => nextId($media),
-          'file'     => $name,
-          'url'      => UPLOAD_URL . $name,
-          'alt'      => trim($_POST['alt'] ?? ''),
-          'caption'  => trim($_POST['caption'] ?? ''),
-          'uploaded' => date('c'),
-        ];
-        writeJson('media.json', $media);
-        flash('Obrázek byl nahrán.');
-      } else {
-        $errors[] = 'Soubor se nepodařilo uložit na server.';
-      }
-    }
-  }
-
-  if (!empty($errors)) {
-    flash(implode(' ', $errors), 'error');
+    flash('Obrázek byl nahrán.');
   }
   header('Location: /admin/media.php');
   exit;

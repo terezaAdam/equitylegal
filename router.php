@@ -5,6 +5,26 @@ require_once __DIR__ . '/includes/i18n.php';
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+// Block direct access to admin/includes/
+if (strpos($path, '/admin/includes/') === 0) {
+  http_response_code(403);
+  return true;
+}
+
+// Friendly admin URLs
+if (preg_match('#^/prihlaseni/?$#', $path)) {
+  require __DIR__ . '/admin/login.php';
+  return true;
+}
+if (preg_match('#^/administrace/?$#', $path)) {
+  require __DIR__ . '/admin/index.php';
+  return true;
+}
+if (preg_match('#^/administrace/([a-zA-Z0-9_-]+)/?$#', $path, $m) && is_file(__DIR__ . '/admin/' . $m[1] . '.php')) {
+  require __DIR__ . '/admin/' . $m[1] . '.php';
+  return true;
+}
+
 // Serve real files/assets as-is.
 if ($path !== '/' && file_exists(__DIR__ . $path) && !is_dir(__DIR__ . $path)) {
   return false;

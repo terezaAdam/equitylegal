@@ -154,9 +154,9 @@ include 'includes/header.php';
 </section>
 <?php endif; ?>
 
-<div class="modal-overlay" id="teamModal" role="dialog" aria-modal="true" aria-label="Detail člena týmu">
+<div class="modal-overlay" id="teamModal" role="dialog" aria-modal="true" aria-label="<?= htmlspecialchars(t('aria_team_detail')) ?>">
   <div class="modal">
-    <button class="modal__close" id="modalClose" aria-label="Zavřít">×</button>
+    <button class="modal__close" id="modalClose" aria-label="<?= htmlspecialchars(t('btn_close')) ?>">×</button>
     <div class="modal__header">
       <div>
         <img id="mPhoto" src="" alt="" class="modal__photo" style="display:none;">

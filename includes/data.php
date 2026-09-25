@@ -64,6 +64,26 @@ function elPage(string $page): array {
       'about_image'   => 'assets/img/office.jpg',
       'cta_title'     => 'Potřebujete právní pomoc?',
       'cta_text'      => 'Kontaktujte nás pro konzultaci.',
+      'reviews'       => [
+        [
+          'name'    => 'Lukáš Topinka',
+          'text'    => 'Společnost Equity Legal jsem požádal o pomoc při řešení problému s koupí nemovitosti. Spolupráce byla perfektní a velmi profesionální. Mohu jedině doporučit!',
+          'text_en' => 'I asked Equity Legal for help resolving an issue with a property purchase. The cooperation was perfect and highly professional. I can only recommend them!',
+          'text_de' => 'Ich habe Equity Legal um Hilfe bei einem Problem mit einem Immobilienkauf gebeten. Die Zusammenarbeit war perfekt und sehr professionell. Ich kann sie nur empfehlen!',
+        ],
+        [
+          'name'    => 'Maxim Vrána',
+          'text'    => 'Potřeboval jsem profi poradenství a zastupování při řešení nemovitosti a musím říct, že jsem byl maximálně spokojen. Rychlé, efektivní, super komunikace. Proste děkuji 👍',
+          'text_en' => 'I needed professional advice and representation in dealing with a property matter, and I have to say I was extremely satisfied. Fast, efficient, great communication. Simply, thank you 👍',
+          'text_de' => 'Ich brauchte professionelle Beratung und Vertretung bei einer Immobilienangelegenheit und muss sagen, dass ich äußerst zufrieden war. Schnell, effizient, super Kommunikation. Einfach danke 👍',
+        ],
+        [
+          'name'    => 'Pervushyn Andrij',
+          'text'    => 'S potěšením doporučuji Equity Legal a děkuji jejich týmu za úspěšné vyřešení mé záležitosti s mým bývalým zaměstnavatelem.',
+          'text_en' => 'I am delighted to recommend Equity Legal and would like to thank their team for successfully resolving my matter with my former employer.',
+          'text_de' => 'Ich empfehle Equity Legal gerne weiter und danke dem Team für die erfolgreiche Lösung meiner Angelegenheit mit meinem ehemaligen Arbeitgeber.',
+        ],
+      ],
     ],
     'sluzby' => [
       'hero_label' => 'Co nabízíme',
@@ -76,6 +96,19 @@ function elPage(string $page): array {
       'hero_desc'  => 'Tým EQUITY LEGAL tvoří zkušení advokáti a specialisté s českou i mezinárodní praxí.',
     ],
   ];
-  $all = elReadJson('pages.json');
-  return array_merge($defaults[$page] ?? [], $all[$page] ?? []);
+  $base = $page === 'ochrana' ? require __DIR__ . '/privacy-default.php' : ($defaults[$page] ?? []);
+  $all  = elReadJson('pages.json');
+  return array_merge($base, $all[$page] ?? []);
+}
+
+// The legal service areas (label, short description, bullet points in CS/EN/DE).
+// Edited in the admin and stored in data/services.json; falls back to the
+// original copy in services-data.php until then.
+function elServices(): array {
+  static $services = null;
+  if ($services !== null) return $services;
+  $saved = elReadJson('services.json');
+  $isFull = !empty($saved) && isset($saved[0]['desc']);
+  $services = $isFull ? $saved : require __DIR__ . '/services-data.php';
+  return $services;
 }

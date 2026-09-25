@@ -36,6 +36,10 @@ function adminHeader(string $title, string $activeLink = ''): void {
         <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><line x1="4" y1="9" x2="20" y2="9"/></svg>
         Stránky
       </a>
+      <a href="/admin/services.php" class="sidebar__link <?= $activeLink === 'services' ? 'active' : '' ?>">
+        <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0z"/><path d="M19 7l-3 7a3 3 0 0 0 6 0z"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+        Právní služby
+      </a>
       <a href="/admin/articles.php" class="sidebar__link <?= $activeLink === 'articles' ? 'active' : '' ?>">
         <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         Blog
@@ -106,10 +110,24 @@ document.querySelectorAll('.lang-switch').forEach(function (sw) {
     var scope = sw.closest('form') || document;
     sw.querySelectorAll('.lang-switch__btn').forEach(function (b) { b.classList.toggle('active', b === btn); });
     scope.querySelectorAll('.lang-field').forEach(function (f) {
-      f.style.display = (f.dataset.lang === lang) ? '' : 'none';
+      f.hidden = f.dataset.lang !== lang;
     });
   });
 });
+
+// Warn before leaving a page with unsaved edits in a POST form.
+(function () {
+  var dirty = false;
+  document.querySelectorAll('form[method="POST"]').forEach(function (form) {
+    form.addEventListener('input', function (e) {
+      if (e.target.type !== 'search') dirty = true;
+    });
+    form.addEventListener('submit', function () { dirty = false; });
+  });
+  window.addEventListener('beforeunload', function (e) {
+    if (dirty) { e.preventDefault(); e.returnValue = ''; }
+  });
+})();
 </script>
 </body>
 </html>
