@@ -1,13 +1,12 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/layout.php';
-require_once __DIR__ . '/includes/media-upload.php';
+require_once __DIR__ . '/includes/image-picker.php';
 require_once __DIR__ . '/includes/rich-editor.php';
 requireAuth();
 
 $articles = readJson('articles.json');
 $allServices = elServices();
-$media = readJson('media.json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
   requireCsrf();
@@ -30,20 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $services = array_values((array)($_POST['services'] ?? []));
   $imageFit = ($_POST['imageFit'] ?? '') === 'contain' ? 'contain' : 'cover';
 
-  // Thumbnail: removal wins, then a fresh upload, then a pick from the media library.
-  $image = trim($_POST['image'] ?? '');
-  if (strpos($image, '/assets/') !== 0) $image = '';
-  $uploadError = null;
-  if (!empty($_POST['remove_image'])) {
-    $image = '';
-  } elseif (($_FILES['image_file']['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_NO_FILE) {
-    $result = saveUploadedImage($_FILES['image_file'], $title);
-    if (isset($result['url'])) {
-      $image = $result['url'];
-    } else {
-      $uploadError = $result['error'];
-    }
-  }
+  ['image' => $image, 'error' => $uploadError] = imagePickerPost($title);
 
   $record = array_merge(
     compact('slug', 'category', 'date', 'author', 'services', 'image', 'imageFit'),
@@ -126,51 +112,7 @@ adminHeader('Blog / Články', 'articles');
         <label>Autor</label>
         <input type="text" name="author" value="<?= htmlspecialchars($editing['author'] ?? '') ?>" placeholder="Jméno autora">
       </div>
-      <div class="form-group form-full">
-        <label>Náhledový obrázek</label>
-        <?php
-          $curImage = $editing['image'] ?? '';
-          $curFit   = $editing['imageFit'] ?? 'cover';
-        ?>
-        <div class="image-picker">
-          <div class="image-picker__preview<?= $curFit === 'contain' ? ' is-contain' : '' ?>" id="imgPreview">
-            <?php if ($curImage): ?>
-              <img src="<?= htmlspecialchars($curImage) ?>" alt="">
-            <?php else: ?>
-              <span>Bez obrázku</span>
-            <?php endif; ?>
-          </div>
-          <div class="image-picker__fields">
-            <div class="form-group">
-              <label for="image_file">Nahrát nový obrázek</label>
-              <input type="file" id="image_file" name="image_file" accept="image/jpeg,image/png,image/webp,image/gif">
-              <div class="form-hint">JPG, PNG, WebP nebo GIF, max 5 MB. Obrázek se uloží i do sekce Média.</div>
-            </div>
-            <div class="form-group">
-              <label for="image">…nebo vybrat z Médií</label>
-              <select id="image" name="image">
-                <option value="">— bez obrázku —</option>
-                <?php $found = $curImage === ''; foreach (array_reverse($media) as $m): if ($m['url'] === $curImage) $found = true; ?>
-                  <option value="<?= htmlspecialchars($m['url']) ?>" <?= $m['url'] === $curImage ? 'selected' : '' ?>><?= htmlspecialchars($m['file']) ?></option>
-                <?php endforeach; ?>
-                <?php if (!$found): ?>
-                  <option value="<?= htmlspecialchars($curImage) ?>" selected><?= htmlspecialchars(basename($curImage)) ?> (aktuální)</option>
-                <?php endif; ?>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="imageFit">Zobrazení v náhledu</label>
-              <select id="imageFit" name="imageFit">
-                <option value="cover" <?= $curFit === 'cover' ? 'selected' : '' ?>>Vyplnit rámeček (fotografie)</option>
-                <option value="contain" <?= $curFit === 'contain' ? 'selected' : '' ?>>Zobrazit celý obrázek (loga, grafika)</option>
-              </select>
-            </div>
-            <?php if ($curImage): ?>
-              <label class="image-picker__remove"><input type="checkbox" name="remove_image" value="1" id="removeImage"> Odebrat obrázek</label>
-            <?php endif; ?>
-          </div>
-        </div>
-      </div>
+      <?php imagePicker('Náhledový obrázek', $editing['image'] ?? '', $editing['imageFit'] ?? 'cover'); ?>
       <div class="form-group form-full">
         <label>Související služby</label>
         <div class="form-hint">Zobrazí se jako prolinky v postranním panelu u článku. Nevyberete-li nic, zobrazí se obecný odkaz na Právní služby.</div>
@@ -204,39 +146,6 @@ adminHeader('Blog / Články', 'articles');
   </form>
 </div>
 
-<script>
-(function () {
-  var preview = document.getElementById('imgPreview');
-  var fileIn  = document.getElementById('image_file');
-  var select  = document.getElementById('image');
-  var fit     = document.getElementById('imageFit');
-  var remove  = document.getElementById('removeImage');
-
-  function show(src) {
-    preview.innerHTML = '';
-    if (src) {
-      var img = document.createElement('img');
-      img.src = src;
-      img.alt = '';
-      preview.appendChild(img);
-    } else {
-      var span = document.createElement('span');
-      span.textContent = 'Bez obrázku';
-      preview.appendChild(span);
-    }
-  }
-  function refresh() {
-    if (remove && remove.checked) return show('');
-    if (fileIn.files && fileIn.files[0]) return show(URL.createObjectURL(fileIn.files[0]));
-    show(select.value);
-  }
-
-  fileIn.addEventListener('change', refresh);
-  select.addEventListener('change', function () { fileIn.value = ''; refresh(); });
-  if (remove) remove.addEventListener('change', refresh);
-  fit.addEventListener('change', function () { preview.classList.toggle('is-contain', fit.value === 'contain'); });
-})();
-</script>
 <?php richEditor('content', 'Odstavec=p; Nadpis=h3'); ?>
 
 <?php else: ?>

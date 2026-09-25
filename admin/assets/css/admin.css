@@ -194,6 +194,8 @@ tr:hover td { background: #fafafa; }
   color: var(--muted); font-size: .78rem; text-align: center; padding: .5rem;
 }
 .image-picker__preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Book cover: same 150×212 frame as on the public Publications page */
+.image-picker__preview.is-portrait { width: 150px; aspect-ratio: 150 / 212; }
 .image-picker__preview.is-contain { background: #fff; }
 .image-picker__preview.is-contain img { object-fit: contain; }
 .image-picker__fields { flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: .75rem; }

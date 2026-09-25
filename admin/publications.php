@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/layout.php';
+require_once __DIR__ . '/includes/image-picker.php';
 requireAuth();
 
 $pubs = readJson('publications.json');
@@ -22,9 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $date    = trim($_POST['date']        ?? date('Y-m-d'));
   $link    = trim($_POST['link']        ?? '');
   $authors = array_filter(array_map('trim', explode("\n", $_POST['authors'] ?? '')));
+  ['image' => $image, 'error' => $uploadError] = imagePickerPost(trim($_POST['title'] ?? ''));
 
   $record = array_merge(
-    ['type' => $type, 'date' => $date, 'link' => $link, 'authors' => array_values($authors)],
+    ['type' => $type, 'date' => $date, 'link' => $link, 'authors' => array_values($authors), 'image' => $image],
     langPostScalar('title'),
     langPostScalar('description')
   );
@@ -34,14 +36,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       if ($p['id'] === $id) { $p = array_merge($p, $record); break; }
     }
     unset($p);
-    flash('Publikace byla uložena.');
+    $msg = 'Publikace byla uložena.';
   } else {
     $record['id'] = nextId($pubs);
     $pubs[] = $record;
-    flash('Publikace byla vytvořena.');
+    $msg = 'Publikace byla vytvořena.';
   }
 
   writeJson('publications.json', array_values($pubs));
+  if ($uploadError) {
+    flash($msg . ' Obrázek se ale nepodařilo nahrát: ' . $uploadError, 'error');
+  } else {
+    flash($msg);
+  }
   header('Location: /admin/publications.php');
   exit;
 }
@@ -63,14 +70,14 @@ adminHeader('Publikace', 'publications');
 </div>
 <div class="card">
   <div class="card__title"><?= $editing ? 'Upravit publikaci' : 'Nová publikace' ?></div>
-  <form method="POST">
+  <form method="POST" enctype="multipart/form-data">
     <?= csrfField() ?>
     <?php if ($editing): ?><input type="hidden" name="id" value="<?= $editing['id'] ?>"><?php endif; ?>
 
     <div class="form-grid">
       <div class="form-group">
         <label>Typ *</label>
-        <select name="type">
+        <select name="type" id="pubType">
           <option value="article" <?= ($editing['type'] ?? 'article') === 'article' ? 'selected' : '' ?>>Odborný článek</option>
           <option value="book"    <?= ($editing['type'] ?? '') === 'book' ? 'selected' : '' ?>>Kniha</option>
         </select>
@@ -88,7 +95,15 @@ adminHeader('Publikace', 'publications');
         <div class="form-hint">Jména autorů se nepřekládají, jsou stejná pro všechny jazykové mutace.</div>
         <textarea name="authors" rows="4"><?= htmlspecialchars(implode("\n", $editing['authors'] ?? [])) ?></textarea>
       </div>
+      <div id="coverField" class="form-full"<?= ($editing['type'] ?? 'article') === 'book' ? '' : ' hidden' ?>>
+        <?php imagePicker('Obálka knihy', $editing['image'] ?? '', null, true, 'Na webu se zobrazí ve stejném rámečku jako ostatní obálky (poměr cca 7 : 10, na výšku).'); ?>
+      </div>
     </div>
+    <script>
+    document.getElementById('pubType').addEventListener('change', function () {
+      document.getElementById('coverField').hidden = this.value !== 'book';
+    });
+    </script>
 
     <?php langSwitch(); ?>
 
