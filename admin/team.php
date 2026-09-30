@@ -2,6 +2,7 @@
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/layout.php';
 require_once __DIR__ . '/includes/rich-editor.php';
+require_once __DIR__ . '/includes/image-picker.php';
 requireAuth();
 
 $team = readJson('team.json');
@@ -21,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $origId = trim($_POST['orig_id'] ?? '');
   $id     = trim($_POST['id']      ?? '') ?: slugify($_POST['name'] ?? '');
   $name   = trim($_POST['name']    ?? '');
-  $photo  = trim($_POST['photo']   ?? '');
+  ['image' => $photo, 'error' => $uploadError] = imagePickerPost($name);
   $email  = trim($_POST['email']   ?? '');
   $phone  = trim($_POST['phone']   ?? '');
   $langs  = array_filter(array_map('trim', explode(',', $_POST['languages'] ?? '')));
@@ -48,14 +49,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
   unset($m);
 
-  if (!$found) {
-    $team[] = $record;
-    flash('Člen týmu byl přidán.');
-  } else {
-    flash('Člen týmu byl uložen.');
-  }
+  if (!$found) $team[] = $record;
+  $msg = $found ? 'Člen týmu byl uložen.' : 'Člen týmu byl přidán.';
 
   writeJson('team.json', array_values($team));
+  if ($uploadError) {
+    flash($msg . ' Fotku se ale nepodařilo nahrát: ' . $uploadError, 'error');
+  } else {
+    flash($msg);
+  }
   header('Location: /admin/team.php');
   exit;
 }
@@ -77,7 +79,7 @@ adminHeader('Náš tým', 'team');
 </div>
 <div class="card">
   <div class="card__title"><?= $editing ? 'Upravit člena týmu' : 'Přidat člena týmu' ?></div>
-  <form method="POST">
+  <form method="POST" enctype="multipart/form-data">
     <?= csrfField() ?>
     <input type="hidden" name="orig_id" value="<?= htmlspecialchars($editing['id'] ?? '') ?>">
 
@@ -99,11 +101,7 @@ adminHeader('Náš tým', 'team');
         <label>Telefon</label>
         <input type="text" name="phone" value="<?= htmlspecialchars($editing['phone'] ?? '') ?>" placeholder="+420 xxx xxx xxx">
       </div>
-      <div class="form-group form-full">
-        <label>Fotografie (URL nebo cesta)</label>
-        <input type="text" name="photo" value="<?= htmlspecialchars($editing['photo'] ?? '') ?>" placeholder="/assets/img/team/jan-novak.jpg">
-        <div class="form-hint">Doporučená velikost: 400×530 px (poměr 3:4). Ponechte prázdné pro zobrazení iniciál.</div>
-      </div>
+      <?php imagePicker('Fotografie', $editing['photo'] ?? '', null, true, 'Doporučená velikost 400×530 px (na výšku, 3 : 4). Bez fotky se zobrazí iniciály.'); ?>
       <div class="form-group">
         <label>Jazyky (zkratky oddělené čárkou)</label>
         <input type="text" name="languages" value="<?= htmlspecialchars(implode(', ', $editing['languages'] ?? [])) ?>" placeholder="CS, EN, DE">

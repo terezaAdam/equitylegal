@@ -3,3 +3,8 @@ data/.login_attempts.json
 data/.security.log
 admin/includes/config.php
 .DS_Store
+
+# Obsah spravovaný přes admin na serveru – nikdy necommitovat
+data/
+assets/uploads/*
+!assets/uploads/.htaccess

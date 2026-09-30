@@ -78,7 +78,11 @@ include 'includes/header.php';
       ?>
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
-            <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
+            <?php if (!empty($m['photo'])): ?>
+              <img class="team-card__photo" src="<?= htmlspecialchars($m['photo']) ?>" alt="<?= htmlspecialchars($m['name']) ?>" loading="lazy">
+            <?php else: ?>
+              <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
+            <?php endif; ?>
           </div>
           <div class="team-card__body">
             <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
@@ -103,7 +107,11 @@ include 'includes/header.php';
       ?>
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
-            <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
+            <?php if (!empty($m['photo'])): ?>
+              <img class="team-card__photo" src="<?= htmlspecialchars($m['photo']) ?>" alt="<?= htmlspecialchars($m['name']) ?>" loading="lazy">
+            <?php else: ?>
+              <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
+            <?php endif; ?>
           </div>
           <div class="team-card__body">
             <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
@@ -136,7 +144,11 @@ include 'includes/header.php';
       ?>
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
-            <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
+            <?php if (!empty($m['photo'])): ?>
+              <img class="team-card__photo" src="<?= htmlspecialchars($m['photo']) ?>" alt="<?= htmlspecialchars($m['name']) ?>" loading="lazy">
+            <?php else: ?>
+              <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
+            <?php endif; ?>
           </div>
           <div class="team-card__body">
             <div class="team-card__name"><?= htmlspecialchars($m['name']) ?></div>
