@@ -30,6 +30,39 @@ function teamRoleRank(string $position): int {
   return 2;
 }
 
+// Small square avatar cropped from the top of the photo, generated once and
+// cached in assets/uploads/thumbs/. Browsers scale a 400px portrait down to a
+// 56px circle poorly, so the card gets a pre-sized image. Falls back to the
+// original photo if the thumbnail can't be made.
+function teamAvatar(string $photo, int $size = 168): string {
+  $path = parse_url($photo, PHP_URL_PATH) ?: '';
+  if (strpos($path, '/assets/') !== 0 || strpos($path, '..') !== false) return $photo;
+  $src = __DIR__ . $path;
+  if (!is_file($src)) return $photo;
+
+  $name  = pathinfo($path, PATHINFO_FILENAME) . '-' . $size . '.jpg';
+  $dir   = __DIR__ . '/assets/uploads/thumbs/';
+  $thumb = $dir . $name;
+  $url   = '/assets/uploads/thumbs/' . $name;
+  if (is_file($thumb) && filemtime($thumb) >= filemtime($src)) return $url;
+
+  $info = @getimagesize($src);
+  $loaders = [IMAGETYPE_JPEG => 'imagecreatefromjpeg', IMAGETYPE_PNG => 'imagecreatefrompng', IMAGETYPE_WEBP => 'imagecreatefromwebp'];
+  $loader  = $loaders[$info[2] ?? 0] ?? null;
+  $img     = $loader ? @$loader($src) : false;
+  if (!$img) return $photo;
+
+  [$w, $h] = [$info[0], $info[1]];
+  $side = min($w, $h);
+  $out  = imagecreatetruecolor($size, $size);
+  imagefill($out, 0, 0, imagecolorallocate($out, 255, 255, 255));
+  imagecopyresampled($out, $img, 0, 0, (int)(($w - $side) / 2), 0, $size, $size, $side, $side);
+
+  if (!is_dir($dir)) @mkdir($dir, 0755, true);
+  $ok = @imagejpeg($out, $thumb, 88);
+  return $ok ? $url : $photo;
+}
+
 $restTeam  = array_filter($coreTeam, fn($m) => !in_array($m['id'], $leaderIds, true));
 usort($restTeam, function ($a, $b) use ($titleWords) {
   $roleCmp = teamRoleRank($a['position']) <=> teamRoleRank($b['position']);
@@ -79,7 +112,7 @@ include 'includes/header.php';
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
             <?php if (!empty($m['photo'])): ?>
-              <img class="team-card__photo" src="<?= htmlspecialchars($m['photo']) ?>" alt="<?= htmlspecialchars($m['name']) ?>" loading="lazy">
+              <img class="team-card__avatar-img" src="<?= htmlspecialchars(teamAvatar($m['photo'])) ?>" alt="<?= htmlspecialchars($m['name']) ?>" width="56" height="56" loading="lazy">
             <?php else: ?>
               <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
             <?php endif; ?>
@@ -108,7 +141,7 @@ include 'includes/header.php';
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
             <?php if (!empty($m['photo'])): ?>
-              <img class="team-card__photo" src="<?= htmlspecialchars($m['photo']) ?>" alt="<?= htmlspecialchars($m['name']) ?>" loading="lazy">
+              <img class="team-card__avatar-img" src="<?= htmlspecialchars(teamAvatar($m['photo'])) ?>" alt="<?= htmlspecialchars($m['name']) ?>" width="56" height="56" loading="lazy">
             <?php else: ?>
               <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
             <?php endif; ?>
@@ -145,7 +178,7 @@ include 'includes/header.php';
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
             <?php if (!empty($m['photo'])): ?>
-              <img class="team-card__photo" src="<?= htmlspecialchars($m['photo']) ?>" alt="<?= htmlspecialchars($m['name']) ?>" loading="lazy">
+              <img class="team-card__avatar-img" src="<?= htmlspecialchars(teamAvatar($m['photo'])) ?>" alt="<?= htmlspecialchars($m['name']) ?>" width="56" height="56" loading="lazy">
             <?php else: ?>
               <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
             <?php endif; ?>
