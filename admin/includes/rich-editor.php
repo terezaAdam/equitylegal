@@ -12,8 +12,9 @@ function richEditor(string $name, string $blockFormats = 'Odstavec=p; Nadpis=h2;
     $selectors[] = 'textarea[name="' . $field . '"]';
   }
   ?>
-<script src="https://cdn.jsdelivr.net/npm/tinymce@7.9.3/tinymce.min.js" referrerpolicy="origin"></script>
-<script src="https://cdn.jsdelivr.net/npm/tinymce-i18n@26.9.21/langs7/cs.js"></script>
+<!-- integrity: the browser refuses the file if the CDN ever serves different content (update the hash with the version) -->
+<script src="https://cdn.jsdelivr.net/npm/tinymce@7.9.3/tinymce.min.js" integrity="sha384-Ovv1ZPEkpW4ElBKDKaEIPkNfTTadFpifFwNJOBnuStg0PQ0RBln5Lsf9AI8BsCmx" crossorigin="anonymous" referrerpolicy="origin"></script>
+<script src="https://cdn.jsdelivr.net/npm/tinymce-i18n@26.9.21/langs7/cs.js" integrity="sha384-uDQwc4pDr7UPgC57VMFbtdq4jOQ3kTh383dVIn9sjB5S6wGApRYEFMQR27B7z/hf" crossorigin="anonymous"></script>
 <script>
 if (window.tinymce) {
   tinymce.init({

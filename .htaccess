@@ -18,6 +18,9 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 <IfModule mod_headers.c>
+  # Hide the PHP version; PHP-FPM adds this header outside the default table, so "always" is needed
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
@@ -43,6 +46,7 @@ AddDefaultCharset UTF-8
 
   # Block direct access to data/*.json
   RewriteRule ^data/ - [F,L]
+  RewriteRule ^(includes/|router\.php$) - [F,L]
 
   # Block direct access to admin/includes/
   RewriteRule ^admin/includes/ - [F,L]

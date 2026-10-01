@@ -70,7 +70,7 @@ function adminHeader(string $title, string $activeLink = ''): void {
       </a>
     </nav>
     <div class="sidebar__footer">
-      <a href="/admin/logout.php">Odhlásit se</a>
+      <form method="POST" action="/admin/logout.php"><?= csrfField() ?><button type="submit">Odhlásit se</button></form>
     </div>
   </aside>
 
@@ -83,7 +83,7 @@ function adminHeader(string $title, string $activeLink = ''): void {
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Web
         </a>
-        <a href="/admin/logout.php" class="btn btn--outline btn--sm">Odhlásit</a>
+        <form method="POST" action="/admin/logout.php" style="display:inline"><?= csrfField() ?><button type="submit" class="btn btn--outline btn--sm">Odhlásit</button></form>
       </div>
     </div>
     <div class="page">
@@ -118,7 +118,8 @@ document.querySelectorAll('.lang-switch').forEach(function (sw) {
 // Warn before leaving a page with unsaved edits in a POST form.
 (function () {
   var dirty = false;
-  document.querySelectorAll('form[method="POST"]').forEach(function (form) {
+  // The logout form is left out so logging out still warns about unsaved edits.
+  document.querySelectorAll('form[method="POST"]:not([action="/admin/logout.php"])').forEach(function (form) {
     form.addEventListener('input', function (e) {
       if (e.target.type !== 'search') dirty = true;
     });
