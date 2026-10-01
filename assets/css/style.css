@@ -909,8 +909,9 @@ body { padding-top: var(--nh); }
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  overflow: hidden;
 }
+/* No dark backdrop behind a photo: it would show as a jagged rim at the edge */
+.team-card--compact .team-card__avatar:has(.team-card__avatar-img) { background: none; }
 .team-card--compact .team-card__avatar-img {
   display: block;
   width: 100%;
@@ -918,6 +919,8 @@ body { padding-top: var(--nh); }
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
+  /* Hairline ring softens the circle's edge on standard-density screens */
+  box-shadow: 0 0 0 1px rgba(31, 42, 68, .12);
 }
 .team-card--compact .team-card__initials {
   font-size: 1rem;

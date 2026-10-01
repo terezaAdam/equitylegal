@@ -63,6 +63,18 @@ function teamAvatar(string $photo, int $size = 168): string {
   return $ok ? $url : $photo;
 }
 
+// Avatar <img> with 1x/2x/3x thumbnails so every display gets an image at its
+// exact pixel size and the browser never has to downscale it.
+function teamAvatarImg(array $m, int $css = 56): string {
+  $srcset = [];
+  foreach ([1, 2, 3] as $x) {
+    $srcset[] = htmlspecialchars(teamAvatar($m['photo'], $css * $x)) . ' ' . $x . 'x';
+  }
+  return '<img class="team-card__avatar-img" src="' . htmlspecialchars(teamAvatar($m['photo'], $css)) . '"'
+    . ' srcset="' . implode(', ', $srcset) . '"'
+    . ' alt="' . htmlspecialchars($m['name']) . '" width="' . $css . '" height="' . $css . '" loading="lazy">';
+}
+
 $restTeam  = array_filter($coreTeam, fn($m) => !in_array($m['id'], $leaderIds, true));
 usort($restTeam, function ($a, $b) use ($titleWords) {
   $roleCmp = teamRoleRank($a['position']) <=> teamRoleRank($b['position']);
@@ -112,7 +124,7 @@ include 'includes/header.php';
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
             <?php if (!empty($m['photo'])): ?>
-              <img class="team-card__avatar-img" src="<?= htmlspecialchars(teamAvatar($m['photo'])) ?>" alt="<?= htmlspecialchars($m['name']) ?>" width="56" height="56" loading="lazy">
+              <?= teamAvatarImg($m) ?>
             <?php else: ?>
               <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
             <?php endif; ?>
@@ -141,7 +153,7 @@ include 'includes/header.php';
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
             <?php if (!empty($m['photo'])): ?>
-              <img class="team-card__avatar-img" src="<?= htmlspecialchars(teamAvatar($m['photo'])) ?>" alt="<?= htmlspecialchars($m['name']) ?>" width="56" height="56" loading="lazy">
+              <?= teamAvatarImg($m) ?>
             <?php else: ?>
               <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
             <?php endif; ?>
@@ -178,7 +190,7 @@ include 'includes/header.php';
         <div class="team-card team-card--compact fade-in" data-member="<?= htmlspecialchars($m['id']) ?>" role="button" tabindex="0" aria-label="Detail: <?= htmlspecialchars($m['name']) ?>">
           <div class="team-card__avatar">
             <?php if (!empty($m['photo'])): ?>
-              <img class="team-card__avatar-img" src="<?= htmlspecialchars(teamAvatar($m['photo'])) ?>" alt="<?= htmlspecialchars($m['name']) ?>" width="56" height="56" loading="lazy">
+              <?= teamAvatarImg($m) ?>
             <?php else: ?>
               <span class="team-card__initials"><?= htmlspecialchars($initials) ?></span>
             <?php endif; ?>
