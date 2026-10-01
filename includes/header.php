@@ -17,7 +17,9 @@ $pageDesc  = $pageDesc  ?? tm('default_desc');
   <meta property="og:description" content="<?= htmlspecialchars($pageDesc) ?>">
   <meta property="og:type"        content="website">
   <meta property="og:image"       content="/assets/img/og-image.jpg">
-  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/img/fav.equity.png" type="image/png">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css?v=<?= filemtime(__DIR__ . '/../assets/css/style.css') ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
