@@ -52,7 +52,12 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 600;
   line-height: 1.25;
   color: var(--navy);
+  /* A word longer than the line (German compounds on phones) may break instead of overflowing. */
+  overflow-wrap: anywhere;
 }
+.service-card__title { overflow-wrap: anywhere; }
+/* German has very long compound words: let the browser hyphenate them. */
+html:lang(de) body { -webkit-hyphens: auto; hyphens: auto; }
 h1 { font-size: clamp(2rem,4vw,3.2rem); }
 h2 { font-size: clamp(1.5rem,2.8vw,2.2rem); }
 h3 { font-size: clamp(1.1rem,1.8vw,1.4rem); }
@@ -1058,6 +1063,9 @@ body { padding-top: var(--nh); }
 }
 .pub-tab.active,
 .pub-tab:hover { color: var(--burgundy); border-bottom-color: var(--burgundy); }
+@media (max-width: 600px) {
+  .pub-tab { padding: .75rem .8rem; letter-spacing: .03em; }
+}
 .pub-panel { display: none; }
 .pub-panel.active { display: block; }
 .publications-list { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -1258,6 +1266,10 @@ body { padding-top: var(--nh); }
   grid-template-columns: 1fr 1.5fr;
   gap: 5rem;
 }
+/* Grid items default to min-width:auto, so a select with a long option (the
+   German service names) widened the column past the phone screen. */
+.contact-layout > *,
+.form-row > * { min-width: 0; }
 .contact-info__item {
   display: flex;
   gap: 1rem;
@@ -1398,6 +1410,11 @@ body { padding-top: var(--nh); }
   text-transform: uppercase;
 }
 .billing-info dd { font-size: .9rem; }
+/* Phones: label above value; the long German labels pushed the values off-screen. */
+@media (max-width: 600px) {
+  .billing-info dl { grid-template-columns: 1fr; row-gap: .15rem; }
+  .billing-info dd { margin-bottom: .6rem; }
+}
 
 /* ── Footer ── */
 .footer {
